@@ -7,7 +7,7 @@ const router = Router();
 // router.use("/",viewRouter);
 
 router.get("/",(req,res)=>{
-    res.send("hola jantoki")
+    res.send("hola jantokiiiii")
 })
 
 router.use("/",authRouter);
