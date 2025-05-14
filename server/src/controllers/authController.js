@@ -21,11 +21,13 @@ const login = async(req,res)=>{
 
 const register = async(req,res)=>{
     const {email,password,username} = req.body;
+
     const user = await userModel.findOne({email});
     const usernameUser = await userModel.findOne({username});
     if(user){
         return res.status(400).json({error:"Email already in use"});
     }
+
     if(usernameUser){
         return res.status(400).json({error:"Username already in use"});
     }
