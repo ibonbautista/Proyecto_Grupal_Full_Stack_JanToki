@@ -31,7 +31,7 @@ const AuthProvider = ({children}) => {
             console.log("login", result)
             setUserData(result.user);
             saveToken(result.token);
-            navigate("/trivias");
+            navigate("/");
             return null;
         }
     }
