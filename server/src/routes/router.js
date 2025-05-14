@@ -1,5 +1,7 @@
 import { Router } from "express";
 import authRouter from "./authRouter.js";
+import favoriteRouter from "./favoriteRouter.js";
+import reviewRouter from "./reviewRouter.js";
 import restaurantRouter from "./restaurantRouter.js";
 import userRouter from "./userRouter.js";
 
@@ -13,6 +15,8 @@ router.get("/",(req,res)=>{
 })
 
 router.use("/",authRouter);
+router.use("/favorite", favoriteRouter);
+router.use("/review", reviewRouter);
 router.use("/restaurant",restaurantRouter);
 router.use("/user",userRouter);
 
