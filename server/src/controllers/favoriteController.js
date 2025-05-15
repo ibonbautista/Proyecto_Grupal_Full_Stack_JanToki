@@ -6,7 +6,15 @@ dotenv.config();
 
 const showFavorite = async (req, res) => {
   try {
-    const token = req.cookies?.token;
+     const authHeader = req.headers.authorization;
+    if (!authHeader || !authHeader.startsWith("Bearer ")) {
+      return res.status(401).json({ error: "No autorizado" });
+    }
+
+    const token = authHeader.split(" ")[1];
+    if (!token) {
+      return res.status(401).send("No autorizado");
+    }
     let user = null;
 
     if (token) {
@@ -14,7 +22,7 @@ const showFavorite = async (req, res) => {
     }
 
     const favorites = user
-      ? await favoriteModel.find({ userId: user.id }).populate("restaurantId")
+      ? await favoriteModel.find({ userId: user._id }).populate("restaurantId")
       : [];
 
     res.status(200).json({ favorites, user });
@@ -27,16 +35,22 @@ const showFavorite = async (req, res) => {
 
 const addFavorite = async (req, res) => {
   try {
-    const token = req.cookies.token;
+    //const token = req.cookies.token;
+    const authHeader = req.headers.authorization;
+    if (!authHeader || !authHeader.startsWith("Bearer ")) {
+      return res.status(401).json({ error: "No autorizado" });
+    }
+
+    const token = authHeader.split(" ")[1];
     if (!token) {
       return res.status(401).send("No autorizado");
     }
 
     const user = jwt.verify(token, process.env.JWT_SECRET);
-    const { restaurantId } = req.body;
-
+    const restaurantId = req.params.id;
+    
     await favoriteModel.create({
-      userId: user.id,
+      userId: user._id,
       restaurantId,
     });
 

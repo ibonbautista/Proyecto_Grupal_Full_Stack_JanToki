@@ -1,11 +1,32 @@
 import restaurantModel from "../models/restaurant.js"
 
-const getRestaurants = async(req,res)=>{
+const getRestaurants = async (req, res) => {
+  try {
+    const { category, ubication, rating } = req.query;
 
-    const restaurants = await restaurantModel.find();
+    const filter = {};
 
+    if (category) {
+      filter.category = category;
+    }
+
+    if (ubication) {
+      filter["ubication.town"] = ubication;
+    }
+
+    if (rating) {
+      filter.rating = { $gte: Number(rating) };
+    }
+
+    const restaurants = await restaurantModel.find(filter);
     res.json(restaurants);
-}
+
+  } catch (error) {
+    console.error("Error al obtener restaurantes:", error);
+    res.status(500).json({ error: "Error al obtener restaurantes" });
+  }
+};
+
 
 const getRestaurantById = async(req,res)=>{
     const id = req.params.id;
