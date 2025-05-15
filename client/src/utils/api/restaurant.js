@@ -4,6 +4,7 @@ const BASE_URL = "http://localhost:3003";
 
 async function getAllRestaurants() {
     const restaurants = await fetchData("/restaurant")
+	console.log("restaurante", restaurants);
     return restaurants;
 }
 

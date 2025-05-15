@@ -3,7 +3,6 @@ import { useLoaderData } from "react-router-dom";
 
 import RestaurantCard from "../restaurantCard/RestaurantCard";
 import { getAllRestaurants } from "../../utils/api/restaurant";
-import RouteContext from "../../context/RouteContext";
 import './RestaurantsList.css';
 
 
