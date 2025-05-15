@@ -20,13 +20,19 @@ const login = async(req,res)=>{
 }
 
 const register = async(req,res)=>{
-    const {email,password} = req.body;
+    const {email,password,username} = req.body;
+
     const user = await userModel.findOne({email});
+    const usernameUser = await userModel.findOne({username});
     if(user){
         return res.status(400).json({error:"Email already in use"});
     }
+
+    if(usernameUser){
+        return res.status(400).json({error:"Username already in use"});
+    }
     const hashedPassword = await bcrypt.hash(password,10);
-    const newUser = new userModel({email,password:hashedPassword});
+    const newUser = new userModel({email,password:hashedPassword,username});
     await newUser.save();
     res.json({message:"User created"});
 }

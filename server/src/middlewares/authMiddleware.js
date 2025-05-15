@@ -1,9 +1,10 @@
 import { verifyToken } from "../utils/token.js";
+
 function isLoggedInAPI(req,res,next){
     const authorization  = req.headers.authorization;
     console.log("authorization",authorization);
     if(!authorization){
-        res.status(401).json({error:"You shall not pass"});
+        res.status(401).json({error:"You shall not pass, you are not logged in"});
     }
     let token = authorization.split(" "); // si no hay bearer espacio fallaria
     token = token.pop();
