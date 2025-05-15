@@ -8,8 +8,8 @@ async function getAllRestaurants() {
     return restaurants;
 }
 
-async function getRestaurantById(id) {
-    const restaurant = await fetchData(`/restaurant/${id}`)
+async function getRestaurantById({params}) {
+    const restaurant = await fetchData(`/restaurant/${params.id}`)
     return restaurant;
 }
 
