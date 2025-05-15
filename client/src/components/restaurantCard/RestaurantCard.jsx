@@ -1,7 +1,6 @@
 import './RestaurantCard.css';
 
 function RestaurantCard ({restaurant}){
-
     return(
         <article className="article restaurant">
             <section className="restaurant-image">

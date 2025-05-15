@@ -11,7 +11,7 @@ const router  = createBrowserRouter([
         element: <Root />,
         children: [
             {
-                path: "/restaurants",
+                path: "/restaurant",
                 element: <RestaurantsList />,
                 loader: getAllRestaurants
             },

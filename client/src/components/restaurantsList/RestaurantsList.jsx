@@ -1,14 +1,14 @@
 import { useState, useEffect, useContext, useRef } from "react";
 import { useLoaderData } from "react-router-dom";
 
-import RestaurantCard from "../../components/restaurantCard/RestaurantCard";
+import RestaurantCard from "../restaurantCard/RestaurantCard";
 import { getAllRestaurants } from "../../utils/api/restaurant";
 import RouteContext from "../../context/RouteContext";
 import './RestaurantsList.css';
 
 
 function RestaurantsList() {
-    const allRestaurants = useLoaderData();
+    const allRestaurants = useLoaderData();    
 
     return (
         <section className="restaurants-list">
