@@ -52,13 +52,16 @@ const restaurantSchema = new mongoose.Schema({
     socialMedia: {
         type: String,
         required:false,
-        enum: ["facebook","instagram","twitter"],
-        default: "instagram"
+        enum: ["facebook","instagram","twitter"]
     },
     rating: {
         type: Number,
         required:false,
         default: 0
+    },
+    image: {
+        type: String,
+        required:false
     }
 });
 
