@@ -1,10 +1,12 @@
-import RestaurantsList from "../publication/restaurantsList/RestaurantsList";
+import RestaurantsList from "../../components/restaurantsList/RestaurantsList";
 import SearchFilter from "../../components/searchFilter/SearchFilter";
-import { useEffect, useState } from 'react';
+import { useLoaderData } from "react-router-dom";
+//import { useEffect, useState } from 'react';
 
 import './Home.css';
 
 function Home() {
+	const restaurants = useLoaderData();
     
     return (
         <article className="home-page">

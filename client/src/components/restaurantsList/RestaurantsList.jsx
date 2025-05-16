@@ -6,17 +6,15 @@ import { getAllRestaurants } from "../../utils/api/restaurant";
 import './RestaurantsList.css';
 
 
-function RestaurantsList() {
-    const allRestaurants = useLoaderData();    
+function RestaurantsList({ restaurants }) {
 
     return (
         <section className="restaurants-list">
             <h1>Restaurantes</h1>
             <section className="restaurants-list--restaurants">
-                {allRestaurants.map(restaurants => {
-                    return <RestaurantCard restaurants={restaurants} key={restaurants.restaurants_id} />
-                })
-                }
+                {restaurants.map(restaurant => (
+					<RestaurantCard restaurant={restaurant} key={restaurant._id} />
+                ))}
             </section>
         </section>
     )
