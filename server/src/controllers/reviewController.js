@@ -1,42 +1,38 @@
 import reviewModel from "../models/review.js";
+import { paginateQuery } from "../utils/paginate.js";
 
 const showReviewByUser = async (req, res) => {
   try {
     const userId = req.user?._id;
 
-    let pageNumber = parseInt(req.query.page, 10) || 1;
-    let limitNumber = parseInt(req.query.limit, 10) || 10;
+    const { page, limit, total, totalPages, results } = await paginateQuery(
+      reviewModel,
+      { userId },
+      {
+        page: req.query.page,
+        limit: req.query.limit,
+        populate: ["restaurantId"],
+        sort: { createdAt: -1 },
+      }
+    );
 
-    if (pageNumber < 1) pageNumber = 1;
-    if (limitNumber < 1) limitNumber = 10;
-
-    const skip = (pageNumber - 1) * limitNumber;
-
-    const reviews = await reviewModel
-      .find({ userId })
-      .populate("restaurantId")
-      .skip(skip)
-      .limit(limitNumber);
-
-    const total = await reviewModel.countDocuments({ userId });
-
-    const formattedReviews = reviews.map((review) => ({
+    const formattedReviews = results.map((review) => ({
       text: review.text,
       rating: review.rating,
-      restaurant: review.restaurantId ? review.restaurantId.name : null,
+      restaurant: review.restaurantId?.name || null,
       createdAt: review.createdAt,
     }));
 
     res.status(200).json({
-      page: pageNumber,
-      limit: limitNumber,
+      page,
+      limit,
       total,
-      totalPages: Math.ceil(total / limitNumber),
+      totalPages,
       reviews: formattedReviews,
     });
 
   } catch (error) {
-    console.error("Error al obtener reviews:", error);
+    console.error("Error al obtener reviews del usuario:", error);
     res.status(500).json({ error: "Error en el servidor" });
   }
 };
@@ -45,44 +41,34 @@ const showReviewByRestaurant = async (req, res) => {
   try {
     const restaurantId = req.params.restaurantId;
 
-    let pageNumber = parseInt(req.query.page, 10) || 1;
-    let limitNumber = parseInt(req.query.limit, 10) || 10;
+    const data = await paginateQuery(reviewModel, { restaurantId }, {
+      page: req.query.page,
+      limit: req.query.limit,
+      populate: [
+        { path: "restaurantId", select: "name" },
+        { path: "userId", select: "username" }
+      ],
+      sort: { createdAt: -1 },
+    });
 
-    if (pageNumber < 1) pageNumber = 1;
-    if (limitNumber < 1) limitNumber = 10;
-
-    const skip = (pageNumber - 1) * limitNumber;
-
-    const reviews = await reviewModel
-      .find({ restaurantId })
-      .populate("restaurantId")
-      .populate("userId")
-      .skip(skip)
-      .limit(limitNumber);
-
-    const total = await reviewModel.countDocuments({ restaurantId });
-
-    const formattedReviews = reviews.map((review) => ({
+    const formattedReviews = data.results.map((review) => ({
       text: review.text,
       rating: review.rating,
-      restaurant: review.restaurantId ? review.restaurantId.name : null,
-      user: review.userId?.username,
+      restaurant: review.restaurantId?.name || null,
+      user: review.userId?.username || null,
       createdAt: review.createdAt,
     }));
 
     res.status(200).json({
-      page: pageNumber,
-      limit: limitNumber,
-      total,
-      totalPages: Math.ceil(total / limitNumber),
-      reviews: formattedReviews,
+      ...data,
+      results: formattedReviews,
     });
-
   } catch (error) {
-    console.error("Error al obtener reviews:", error);
-    res.status(500).json({ error: "Error en el servidor" });
+    console.error("Error al obtener reviews:", error.message);
+    res.status(400).json({ error: error.message });
   }
 };
+
 
 const addReview = async (req, res) => {
   try {

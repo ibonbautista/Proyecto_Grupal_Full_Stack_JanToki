@@ -1,39 +1,23 @@
 import favoriteModel from "../models/favorite.js";
+import { paginateQuery } from "../utils/paginate.js";
 
 const showFavorite = async (req, res) => {
   try {
     const userId = req.user._id;
-    let { page = 1, limit = 10 } = req.query;
 
-    page = parseInt(page, 10);
-    limit = parseInt(limit, 10);
-
-    if (isNaN(page) || page < 1) page = 1;
-    if (isNaN(limit) || limit < 1) limit = 10;
-
-    const skip = (page - 1) * limit;
-
-    const favorites = await favoriteModel
-      .find({ userId })
-      .populate("restaurantId")
-      .skip(skip)
-      .limit(limit);
-
-    const total = await favoriteModel.countDocuments({ userId });
-
-    res.status(200).json({
-      page,
-      limit,
-      total,
-      totalPages: Math.ceil(total / limit),
-      favorites,
+    const data = await paginateQuery(favoriteModel, { userId }, {
+      page: req.query.page,
+      limit: req.query.limit,
+      populate: [{ path: "restaurantId" }],
     });
 
+    res.status(200).json(data);
   } catch (error) {
-    console.error("Error al obtener favoritos:", error);
-    res.status(500).json({ error: "Error en el servidor" });
+    console.error("Error al obtener favoritos:", error.message);
+    res.status(400).json({ error: error.message });
   }
 };
+
 
 const addFavorite = async (req, res) => {
   try {
