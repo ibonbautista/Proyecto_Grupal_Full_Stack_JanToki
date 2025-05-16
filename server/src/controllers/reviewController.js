@@ -2,10 +2,23 @@ import reviewModel from "../models/review.js";
 
 const showReviewByUser = async (req, res) => {
   try {
+    const userId = req.user?._id;
 
-  const userId = req.user?._id;
+    let pageNumber = parseInt(req.query.page, 10) || 1;
+    let limitNumber = parseInt(req.query.limit, 10) || 10;
 
-  const reviews = await reviewModel.find({ userId }).populate("restaurantId");
+    if (pageNumber < 1) pageNumber = 1;
+    if (limitNumber < 1) limitNumber = 10;
+
+    const skip = (pageNumber - 1) * limitNumber;
+
+    const reviews = await reviewModel
+      .find({ userId })
+      .populate("restaurantId")
+      .skip(skip)
+      .limit(limitNumber);
+
+    const total = await reviewModel.countDocuments({ userId });
 
     const formattedReviews = reviews.map((review) => ({
       text: review.text,
@@ -14,7 +27,13 @@ const showReviewByUser = async (req, res) => {
       createdAt: review.createdAt,
     }));
 
-    res.status(200).json({ reviews: formattedReviews });
+    res.status(200).json({
+      page: pageNumber,
+      limit: limitNumber,
+      total,
+      totalPages: Math.ceil(total / limitNumber),
+      reviews: formattedReviews,
+    });
 
   } catch (error) {
     console.error("Error al obtener reviews:", error);
@@ -22,12 +41,26 @@ const showReviewByUser = async (req, res) => {
   }
 };
 
-const showReviewByRestaurant= async (req, res) => {
+const showReviewByRestaurant = async (req, res) => {
   try {
+    const restaurantId = req.params.restaurantId;
 
-  const restaurantId = req.params.restaurantId;
+    let pageNumber = parseInt(req.query.page, 10) || 1;
+    let limitNumber = parseInt(req.query.limit, 10) || 10;
 
-  const reviews = await reviewModel.find({ restaurantId }).populate("restaurantId").populate("userId");
+    if (pageNumber < 1) pageNumber = 1;
+    if (limitNumber < 1) limitNumber = 10;
+
+    const skip = (pageNumber - 1) * limitNumber;
+
+    const reviews = await reviewModel
+      .find({ restaurantId })
+      .populate("restaurantId")
+      .populate("userId")
+      .skip(skip)
+      .limit(limitNumber);
+
+    const total = await reviewModel.countDocuments({ restaurantId });
 
     const formattedReviews = reviews.map((review) => ({
       text: review.text,
@@ -37,7 +70,13 @@ const showReviewByRestaurant= async (req, res) => {
       createdAt: review.createdAt,
     }));
 
-    res.status(200).json({ reviews: formattedReviews });
+    res.status(200).json({
+      page: pageNumber,
+      limit: limitNumber,
+      total,
+      totalPages: Math.ceil(total / limitNumber),
+      reviews: formattedReviews,
+    });
 
   } catch (error) {
     console.error("Error al obtener reviews:", error);

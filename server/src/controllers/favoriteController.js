@@ -3,10 +3,31 @@ import favoriteModel from "../models/favorite.js";
 const showFavorite = async (req, res) => {
   try {
     const userId = req.user._id;
+    let { page = 1, limit = 10 } = req.query;
 
-    const favorites = await favoriteModel.find({ userId }).populate("restaurantId");
+    page = parseInt(page, 10);
+    limit = parseInt(limit, 10);
 
-    res.status(200).json({ favorites });
+    if (isNaN(page) || page < 1) page = 1;
+    if (isNaN(limit) || limit < 1) limit = 10;
+
+    const skip = (page - 1) * limit;
+
+    const favorites = await favoriteModel
+      .find({ userId })
+      .populate("restaurantId")
+      .skip(skip)
+      .limit(limit);
+
+    const total = await favoriteModel.countDocuments({ userId });
+
+    res.status(200).json({
+      page,
+      limit,
+      total,
+      totalPages: Math.ceil(total / limit),
+      favorites,
+    });
 
   } catch (error) {
     console.error("Error al obtener favoritos:", error);

@@ -4,6 +4,12 @@ const getRestaurants = async (req, res) => {
   try {
     const { category, ubication, rating } = req.query;
 
+    let pageNumber = parseInt(req.query.page, 10) || 1;
+    let limitNumber = parseInt(req.query.limit, 10) || 10;
+
+    if (pageNumber < 1) pageNumber = 1;
+    if (limitNumber < 1) limitNumber = 10;
+
     const filter = {};
 
     if (category) {
@@ -15,11 +21,27 @@ const getRestaurants = async (req, res) => {
     }
 
     if (rating) {
-      filter.rating = { $gte: Number(rating) };
+      const ratingNum = Number(rating);
+      if (!isNaN(ratingNum)) {
+        filter.rating = { $gte: ratingNum };
+      }
     }
 
-    const restaurants = await restaurantModel.find(filter);
-    res.json(restaurants);
+    const skip = (pageNumber - 1) * limitNumber;
+
+    const restaurants = await restaurantModel.find(filter)
+      .skip(skip)
+      .limit(limitNumber);
+
+    const total = await restaurantModel.countDocuments(filter);
+
+    res.json({
+      page: pageNumber,
+      limit: limitNumber,
+      total,
+      totalPages: Math.ceil(total / limitNumber),
+      restaurants,
+    });
 
   } catch (error) {
     console.error("Error al obtener restaurantes:", error);
