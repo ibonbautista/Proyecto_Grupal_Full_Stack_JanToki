@@ -17,7 +17,7 @@ function MapLeaflet({ latitude, longitude }) {
 	const position = [parseFloat(latitude), parseFloat(longitude)];
 	
 	return (
-	  <MapContainer center={position} zoom={12} style={{ height: '100vh' }}>
+	  <MapContainer center={position} zoom={15} style={{ height: '100vh' }}>
 		<TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
 			return (
 			  <Marker position={position} />
