@@ -1,4 +1,5 @@
 import { Router } from "express";
+import { isLoggedInAPI } from "../middlewares/authMiddleware.js";
 import authRouter from "./authRouter.js";
 import favoriteRouter from "./favoriteRouter.js";
 import reviewRouter from "./reviewRouter.js";
@@ -15,8 +16,8 @@ router.get("/",(req,res)=>{
 })
 
 router.use("/",authRouter);
-router.use("/favorite", favoriteRouter);
-router.use("/review", reviewRouter);
+router.use("/favorite", isLoggedInAPI, favoriteRouter);
+router.use("/review", isLoggedInAPI, reviewRouter);
 router.use("/restaurant",restaurantRouter);
 router.use("/user",userRouter);
 

@@ -1,31 +1,11 @@
 import reviewModel from "../models/review.js";
-import dotenv from "dotenv";
-import jwt from "jsonwebtoken";
 
-dotenv.config();
-
-const showReview = async (req, res) => {
+const showReviewByUser = async (req, res) => {
   try {
-    const authHeader = req.headers.authorization;
-    if (!authHeader || !authHeader.startsWith("Bearer ")) {
-      return res.status(401).json({ error: "No autorizado" });
-    }
 
-    const token = authHeader.split(" ")[1];
-    let user = null;
+  const userId = req.user?._id;
 
-    if (token) {
-      user = jwt.verify(token, process.env.JWT_SECRET);
-    }
-
-    const reviews = user
-      ? await reviewModel.find({ userId: user._id }).populate("restaurantId")
-      : [];
-    // Aquí saco por consola los ids
-    console.log("Reviews obtenidas:");
-    reviews.forEach((r) => {
-      console.log(`- id: ${r._id}, text: "${r.text}"`);
-    });
+  const reviews = await reviewModel.find({ userId }).populate("restaurantId");
 
     const formattedReviews = reviews.map((review) => ({
       text: review.text,
@@ -42,23 +22,37 @@ const showReview = async (req, res) => {
   }
 };
 
+const showReviewByRestaurant= async (req, res) => {
+  try {
+
+  const restaurantId = req.params.restaurantId;
+
+  const reviews = await reviewModel.find({ restaurantId }).populate("restaurantId").populate("userId");
+
+    const formattedReviews = reviews.map((review) => ({
+      text: review.text,
+      rating: review.rating,
+      restaurant: review.restaurantId ? review.restaurantId.name : null,
+      user: review.userId?.username,
+      createdAt: review.createdAt,
+    }));
+
+    res.status(200).json({ reviews: formattedReviews });
+
+  } catch (error) {
+    console.error("Error al obtener reviews:", error);
+    res.status(500).json({ error: "Error en el servidor" });
+  }
+};
 
 const addReview = async (req, res) => {
   try {
-    const authHeader = req.headers.authorization;
-    if (!authHeader || !authHeader.startsWith("Bearer ")) {
-      return res.status(401).json({ error: "No autorizado" });
-    }
-    const token = authHeader.split(" ")[1];
-    if (!token) {
-      return res.status(401).send("No autorizado");
-    }
-
-    const user = jwt.verify(token, process.env.JWT_SECRET);
-    const { restaurantId, text, rating } = req.body;
+    const userId = req.user?._id;
+    const restaurantId = req.params.restaurantId;
+    const { text, rating } = req.body;
     
     await reviewModel.create({
-      userId: user._id,
+      userId: userId,
       restaurantId,
       text,
       rating
@@ -76,15 +70,19 @@ const updateReview = async (req, res) => {
   try {
     const { text, rating } = req.body;
 
-    const updatedReview = await reviewModel.findByIdAndUpdate(
-      req.params.id,
-      { text, rating },
-      { new: true }
-    ).populate("restaurantId", "name");
+    const review = await reviewModel.findById(req.params.id).populate("restaurantId", "name");
 
-    if (!updatedReview) {
+    if (!review) {
       return res.status(404).json({ error: "Review no encontrada" });
     }
+
+    if (review.userId.toString() !== req.user._id.toString()) {
+      return res.status(403).json({ error: "No autorizado para modificar esta review" });
+    }
+
+    review.text = text;
+    review.rating = rating;
+    const updatedReview = await review.save();
 
     const formattedReview = {
       text: updatedReview.text,
@@ -105,16 +103,24 @@ const deleteReview = async (req, res) => {
   const reviewId = req.params.id;
 
   try {
-    const deletedReview = await reviewModel.findByIdAndDelete(reviewId);
-    if (!deletedReview) {
+    const review = await reviewModel.findById(reviewId);
+
+    if (!review) {
       return res.status(404).json({ error: "Review no encontrada" });
     }
-    res.status(200).json({ message: "Review eliminado correctamente" });
+
+    if (review.userId.toString() !== req.user._id.toString()) {
+      return res.status(403).json({ error: "No autorizado para eliminar esta review" });
+    }
+
+    await review.deleteOne();
+
+    res.status(200).json({ message: "Review eliminada correctamente" });
+
   } catch (error) {
     console.error("Error al eliminar la review:", error);
     res.status(500).json({ error: "Error del servidor" });
   }
 };
 
-
-export default { showReview, addReview, updateReview, deleteReview };
+export default { showReviewByUser, showReviewByRestaurant, addReview, updateReview, deleteReview };
