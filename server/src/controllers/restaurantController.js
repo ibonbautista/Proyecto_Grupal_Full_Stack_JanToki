@@ -1,4 +1,5 @@
 import restaurantModel from "../models/restaurant.js"
+import { paginateQuery } from "../utils/paginate.js";
 
 const getRestaurants = async (req, res) => {
   try {
@@ -15,11 +16,29 @@ const getRestaurants = async (req, res) => {
     }
 
     if (rating) {
-      filter.rating = { $gte: Number(rating) };
+      const ratingNum = Number(rating);
+      if (!isNaN(ratingNum)) {
+        filter.rating = { $gte: ratingNum };
+      }
     }
 
-    const restaurants = await restaurantModel.find(filter);
-    res.json(restaurants);
+    const { page, limit, total, totalPages, results } = await paginateQuery(
+      restaurantModel,
+      filter,
+      {
+        page: req.query.page,
+        limit: req.query.limit,
+        sort: { name: 1 },
+      }
+    );
+
+    res.status(200).json({
+      page,
+      limit,
+      total,
+      totalPages,
+      restaurants: results,
+    });
 
   } catch (error) {
     console.error("Error al obtener restaurantes:", error);
