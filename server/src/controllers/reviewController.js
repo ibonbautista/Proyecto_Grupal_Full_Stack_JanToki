@@ -208,36 +208,38 @@ const deleteReviewImage = async (req, res) => {
 
     const review = await reviewModel.findById(reviewId);
     if (!review) {
-      return res.status(404).json({ error: "Review no encontrada" });
+      return res.status(404).json({ error: "Review not found" });
     }
 
+    // Se asegura de: que tenga una imagen/ que sea un string valido/ que no este vacio
     if (!review.image || typeof review.image !== "string" || review.image.trim() === "") {
-      return res.status(400).json({ error: "No hay imagen válida asociada a esta review" });
+      return res.status(400).json({ error: "Not a valid image in this review" });
     }
 
     const imagePath = path.join(__dirname, "../public/images", review.image);
-    console.log("Ruta absoluta de la imagen:", imagePath); // <- VERIFICA esta ruta
+    /* console.log("Ruta absoluta de la imagen:", imagePath); // <- VERIFICA esta ruta */
 
     try {
       await fs.unlink(imagePath);
-      console.log("Imagen borrada correctamente");
+      console.log("Image deleted successfully");
     } catch (err) {
       if (err.code === "ENOENT") {
         // Archivo no existe, ignorar
-        console.warn("La imagen no existía en el servidor, se ignoró");
+        console.warn("Image not found, skipping deletion");
       } else {
-        console.error("Error al eliminar la imagen del servidor:", err);
-        return res.status(500).json({ error: "Error al eliminar la imagen del servidor" });
+        console.error("Error deleting image from server:", err);
+        return res.status(500).json({ error: "Error deleting image from server" });
       }
     }
 
+    // Actualizar la review sin la imagen
     review.image = null;
     await review.save();
 
-    return res.json({ message: "Imagen eliminada correctamente" });
+    return res.json({ message: "Image deleted successfully" });
   } catch (error) {
-    console.error("Error general:", error);
-    return res.status(500).json({ error: "Error al eliminar la imagen" });
+    console.error("General error:", error);
+    return res.status(500).json({ error: "Error deleting image" });
   }
 };
 
