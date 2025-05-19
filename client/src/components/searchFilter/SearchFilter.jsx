@@ -34,7 +34,7 @@ function SearchFilter ({onSearch}) {
 					/>
 					<input 
 						type="text" 
-						placeholder="Filtrar por oblación" 
+						placeholder="Filtrar por población" 
 						value={town} 
 						onChange={(e) => setTown(e.target.value)} 
 						className="right-input"
