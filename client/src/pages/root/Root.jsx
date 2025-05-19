@@ -8,7 +8,6 @@ function Root() {
                 <Navbar />
             </header>
             <main>
-                <h1>JanToki</h1>
                 <Outlet />
             </main>
             <footer>

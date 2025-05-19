@@ -12,7 +12,8 @@ function isLoggedInAPI(req,res,next){
     console.log("token verified",result);
     if(result){
         req.user = {
-            _id: result._id 
+            _id: result._id,
+            role: result.role
         }
         next();
     }else{

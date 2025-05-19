@@ -1,30 +1,47 @@
-import { useState,useRef } from "react";
+import { useState } from "react";
+import { useSearchParams } from "react-router-dom";
+import "./SearchFilter.css";
 
 function SearchFilter ({onSearch}) {
-    const [searchName, setsearchName] = useState("");
-    // const [searchCouncil, setSearchCouncil] = useState(""); /* TODO AÑADIR BÚSQUEDA POR COUNCIL */
-    const timeoutRef = useRef(null);
+	const [searchParams, setSearchParams] = useSearchParams();
+    const [name, setName] = useState(searchParams.get("name") || "");
+    const [town, setTown] = useState(searchParams.get("town") || "");
 
     const handleSearchName= (e)=>{
-        const data = e.target.value;
-        clearTimeout(timeoutRef.current);
-        timeoutRef.current = setTimeout(()=>{
-            console.log("busqueda",data);
-            onSearch(data);
-        },500)
-        setsearchName(data);
+        e.preventDefault();
+		const params = {};
+		if (name.trim()) {
+			params.name = name.trim();
+		} else if (town.trim()) {
+			params.town = town.trim();
+		}
+		params.page = 1;
+		setSearchParams(params);
+		setName("");
+		setTown("");
     }
-
-    // const handleSearchCouncil= (e)=>{
-    //     const data = e.target.value;
-    //     setSearchCouncil(data);
-    // }
 
     return(
         <section className="search-bar">
-            <h2>{searchName}</h2>
-            <input onChange={handleSearchName} />
-            {/* <select name="council" id="select-council"></select> */}
+            <form onSubmit={handleSearchName} className="search-filter">
+				<div className="search-input">
+					<input 
+						type="text" 
+						placeholder="Buscar por nombre" 
+						value={name} 
+						onChange={(e) => setName(e.target.value)}
+						className="left-input"
+					/>
+					<input 
+						type="text" 
+						placeholder="Filtrar por oblación" 
+						value={town} 
+						onChange={(e) => setTown(e.target.value)} 
+						className="right-input"
+					/>
+				</div>
+				<button type="submit" className="search-button">Buscar</button>
+			</form>
         </section>
     )
 }

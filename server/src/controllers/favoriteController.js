@@ -1,44 +1,39 @@
 import favoriteModel from "../models/favorite.js";
-import dotenv from "dotenv";
-import jwt from "jsonwebtoken";
-
-dotenv.config();
+import { paginateQuery } from "../utils/paginate.js";
 
 const showFavorite = async (req, res) => {
   try {
-    const token = req.cookies?.token;
-    let user = null;
+    const userId = req.user._id;
 
-    if (token) {
-      user = jwt.verify(token, process.env.JWT_SECRET);
-    }
+    const data = await paginateQuery(favoriteModel, { userId }, {
+      page: req.query.page,
+      limit: req.query.limit,
+      populate: [{ path: "restaurantId" }],
+    });
 
-    const favorites = user
-      ? await favoriteModel.find({ userId: user.id }).populate("restaurantId")
-      : [];
-
-    res.status(200).json({ favorites, user });
-
+    res.status(200).json(data);
   } catch (error) {
-    console.error("Error al obtener favoritos:", error);
-    res.status(500).json({ error: "Error en el servidor" });
+    console.error("Error al obtener favoritos:", error.message);
+    res.status(400).json({ error: error.message });
   }
 };
 
+
 const addFavorite = async (req, res) => {
   try {
-    const token = req.cookies.token;
-    if (!token) {
-      return res.status(401).send("No autorizado");
+    const userId = req.user._id;
+    const restaurantId = req.params.restaurantId;
+
+    if (!restaurantId) {
+      return res.status(400).json({ error: "Falta el ID del restaurante" });
     }
 
-    const user = jwt.verify(token, process.env.JWT_SECRET);
-    const { restaurantId } = req.body;
+    const existingFavorite = await favoriteModel.findOne({ userId, restaurantId });
+    if (existingFavorite) {
+      return res.status(400).json({ error: "Favorito ya agregado" });
+    }
 
-    await favoriteModel.create({
-      userId: user.id,
-      restaurantId,
-    });
+    await favoriteModel.create({ userId, restaurantId });
 
     res.status(201).json({ message: "Favorito agregado correctamente" });
 
@@ -49,16 +44,27 @@ const addFavorite = async (req, res) => {
 };
 
 const deleteFavorite = async (req, res) => {
-  const favoriteId = req.params.id;
+  const userId = req.user._id;
+  const favoriteId = req.params.favoriteId;
 
   try {
-    await favoriteModel.findByIdAndDelete(favoriteId);
+    const favorite = await favoriteModel.findById(favoriteId);
+
+    if (!favorite) {
+      return res.status(404).json({ error: "Favorito no encontrado" });
+    }
+
+    if (favorite.userId.toString() !== userId.toString()) {
+      return res.status(403).json({ error: "No autorizado para eliminar este favorito" });
+    }
+
+    await favorite.deleteOne();
+
     res.status(200).json({ message: "Favorito eliminado correctamente" });
   } catch (error) {
     console.error("Error al eliminar el favorito:", error);
     res.status(500).json({ error: "Error del servidor" });
   }
 };
-
 
 export default { showFavorite, addFavorite, deleteFavorite };

@@ -1,9 +1,11 @@
 import {createBrowserRouter} from 'react-router-dom';
 import Root from './pages/root/Root';
-import RestaurantsList from './pages/restaurantsList/RestaurantsList';
-import Auth from './pages/auth/Auth';
+import Home from './pages/home/Home';
 
-import { getAllRestaurants } from './utils/api/restaurant';
+import { getAllRestaurants, getRestaurantById } from './utils/api/restaurant';
+import RestaurantDetail from './pages/restaurantDetail/restaurantDetail';
+import Profile from './pages/profile/Profile';
+import { get } from 'mongoose';
 
 const router  = createBrowserRouter([
     {
@@ -11,10 +13,19 @@ const router  = createBrowserRouter([
         element: <Root />,
         children: [
             {
-                path: "/restaurant",
-                element: <RestaurantsList />,
+                path: "/",
+                element: <Home />,
                 loader: getAllRestaurants
             },
+			{
+				path: "/restaurant/:id",
+				element: <RestaurantDetail />,
+				loader: getRestaurantById
+			},
+            {
+                path: "/profile",
+                element: <Profile />,
+            }
         ]
     },
     

@@ -29,9 +29,15 @@ async function register(name, email, password) {
     return result;
 }
 
+async function profile(){
+    const result = await fetchData("/profile");
+    return result;
+}
+
 export {
     login,
     logout,
     getUserInfo,
-    register
+    register,
+    profile
 }
