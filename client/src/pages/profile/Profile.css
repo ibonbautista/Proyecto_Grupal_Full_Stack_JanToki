@@ -9,6 +9,9 @@
     border-radius: 20px;
 
     margin: 10%;
+
+    width: 100%;
+    max-width: 1500px;
 }
 
 .my-profile__index {
@@ -41,7 +44,7 @@
     width: 70%;
 }
 
-.my-profile__data {
+.my-profile__data.active {
     display: flex;
     flex-flow: column;
     gap: 2em;
@@ -98,7 +101,7 @@
     background-color: red;
 }
 
-.my-profile__restaurants, .my-profile__reviews {
+.my-profile__restaurants.hidden, .my-profile__reviews.hidden, .my-profile__saved-restaurants.hidden {
     display: none;
 
     flex-flow: column;

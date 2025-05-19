@@ -1,6 +1,5 @@
 import { useLoaderData } from "react-router-dom";
 
-import CategoryIcon from "../categoryIcon/CategoryIcon";
 import './CategoriesList.css';
 
 
@@ -10,12 +9,38 @@ function CategoriesList() {
     return (
         <section className="categories-list">
             <h1>Categorías</h1>
-            <section className="categories-list--categories">
-                {allCategories.map(categories => {
-                    return <CategoryIcon categories={categories} />
-                })
-                }
-            </section>
+            <ul className="categories-list--categories">
+                <li className="categories-item">
+                    <p>Asador</p>
+                </li>
+                <li className="categories-item">
+                    <p>Asador</p>
+                </li>
+                <li className="categories-item">
+                    <p>Asador</p>
+                </li>
+                <li className="categories-item">
+                    <p>Asador</p>
+                </li>
+                <li className="categories-item">
+                    <p>Asador</p>
+                </li>
+                <li className="categories-item">
+                    <p>Asador</p>
+                </li>
+                <li className="categories-item">
+                    <p>Asador</p>
+                </li>
+                <li className="categories-item">
+                    <p>Asador</p>
+                </li>
+                <li className="categories-item">
+                    <p>Asador</p>
+                </li>
+                <li className="categories-item">
+                    <p>Asador</p>
+                </li>
+            </ul>
         </section>
     )
 }

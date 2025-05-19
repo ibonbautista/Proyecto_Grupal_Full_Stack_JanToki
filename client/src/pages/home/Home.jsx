@@ -1,4 +1,5 @@
 import RestaurantsList from "../../components/restaurantsList/RestaurantsList";
+import CategoriesList from "../../components/categoriesList/CategoriesList";
 import SearchFilter from "../../components/searchFilter/SearchFilter";
 import { useLoaderData, useSearchParams, useNavigate } from "react-router-dom";
 //import { useEffect, useState } from 'react';
@@ -22,6 +23,7 @@ function Home() {
                 <SearchFilter />
             </section>
             {/* <img src="/src/assets/logotipo.svg" alt="logotipo" className='logotipo-home-page' /> */}
+			<CategoriesList />
             <RestaurantsList restaurants={restaurants} />
 
 			<section className="pagination">
