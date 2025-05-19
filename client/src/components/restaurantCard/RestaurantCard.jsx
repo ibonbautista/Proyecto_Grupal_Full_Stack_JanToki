@@ -11,7 +11,7 @@ function RestaurantCard ({restaurant}){
 				</section> */}
 				<section className="restaurant-data">
 					<h2>{restaurant.name}</h2>
-					<p className="restaurant-council">{restaurant.council}</p>
+					<p className="restaurant-council">{restaurant.ubication?.town}</p>
 					{restaurant.rating && <p className="restaurant-rating">{restaurant.rating}</p> }
 				</section>
 			</Link>
