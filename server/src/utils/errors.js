@@ -81,7 +81,22 @@ class ProductNotFound extends Error{
         this.statusCode = 404;
     }
 }
+/**
+ *  authController
+ */
 
+class EmailNotFound extends Error{
+    constructor(){
+        super("User email does not exist");
+        this.statusCode = 400;
+    }
+}
+class IncorrectPassword extends Error{
+    constructor(){
+        super("Incorrect password");
+        this.statusCode = 400;
+    }
+}
 /**
  *  userController
  */
@@ -179,6 +194,8 @@ export {
     ProductStockNotProvided,
     ProductStockNotValid,
     ProductNotFound,
+    EmailNotFound,
+    IncorrectPassword,
     UserNameNotProvided,
     UserEmailNotProvided,
     UserPasswordNotProvided,
