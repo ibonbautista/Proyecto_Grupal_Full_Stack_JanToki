@@ -3,7 +3,7 @@ import { paginateQuery } from "../utils/paginate.js";
 
 const getRestaurants = async (req, res) => {
   try {
-    const { category, ubication, rating } = req.query;
+    const { category, ubication, rating, name } = req.query;
 
     const filter = {};
 
@@ -12,7 +12,7 @@ const getRestaurants = async (req, res) => {
     }
 
     if (ubication) {
-      filter["ubication.town"] = ubication;
+      filter["ubication.town"] = {$regex: ubication, $options: "i"};
     }
 
     if (rating) {
@@ -21,6 +21,10 @@ const getRestaurants = async (req, res) => {
         filter.rating = { $gte: ratingNum };
       }
     }
+
+	if (name) {
+	  filter.name = { $regex: name, $options: "i" };
+	}
 
     const { page, limit, total, totalPages, results } = await paginateQuery(
       restaurantModel,
