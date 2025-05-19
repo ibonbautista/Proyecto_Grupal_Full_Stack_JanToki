@@ -45,42 +45,42 @@ class StandNotFound extends Error {
 /**
  * Favorite
  */
-class ProductNameNotProvided extends Error{
-    constructor(){
-        super("Product name not provided");
-        this.statusCode = 400;
-    }
+class NoFavoritesFound extends Error {
+  constructor() {
+    super("No favorites yet");
+    this.name = "NoFavoritesFound";
+    this.statusCode = 404;
+  }
 }
-class ProductPriceNotProvided extends Error{
-    constructor(){
-        super("Product price not provided");
-        this.statusCode = 400;
-    }
+class InvalidRestaurantId extends Error {
+  constructor() {
+    super("ID restaurant is not provided");
+    this.name = "InvalidRestaurantId";
+    this.statusCode = 400;
+  }
 }
-class ProductPriceNotValid extends Error{
-    constructor(){
-        super("Product price must be a number");
-        this.statusCode = 400;
-    }
+
+class FavoriteAlreadyExists extends Error {
+  constructor() {
+    super("The restaurant is already in favorites");
+    this.name = "FavoriteAlreadyExists";
+    this.statusCode = 400;
+  }
 }
-class ProductStockNotProvided extends Error{
-    constructor(){
-        super("Product stock not provided");
-        this.statusCode = 400;
-    }
+class FavoriteNotFound extends Error {
+  constructor() {
+    super("Favorite not found");
+    this.statusCode = 404;
+  }
 }
-class ProductStockNotValid extends Error{
-    constructor(){
-        super("Product stock must be a number");
-        this.statusCode = 400;
-    }
+
+class NotAuthorizedToDeleteFavorite extends Error {
+  constructor() {
+    super("Not authorized to delete another user's favorites");
+    this.statusCode = 403;
+  }
 }
-class ProductNotFound extends Error{
-    constructor(){
-        super("Product not found");
-        this.statusCode = 404;
-    }
-}
+
 /**
  *  authController
  */
@@ -188,12 +188,11 @@ export {
     StandCategoryNotProvided,
     StandCategoryNotFound,
     StandNotFound,
-    ProductNameNotProvided,
-    ProductPriceNotProvided,
-    ProductPriceNotValid,
-    ProductStockNotProvided,
-    ProductStockNotValid,
-    ProductNotFound,
+    NoFavoritesFound,
+    InvalidRestaurantId,
+    FavoriteAlreadyExists,
+    FavoriteNotFound,
+    NotAuthorizedToDeleteFavorite,
     EmailNotFound,
     IncorrectPassword,
     UserNameNotProvided,
