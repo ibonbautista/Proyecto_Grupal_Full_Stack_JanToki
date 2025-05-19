@@ -24,11 +24,18 @@ const login = async (req, res) => {
     { expiresIn: "24h" }
   );
 
-  res.json({ token });
+  res.json({ 
+	token,
+	user: {
+		id: user.user_id,
+		name: user.name,
+		email: user.email,
+		role: user.role
+	} });
 };
 
 const register = async(req,res)=>{
-    const {email,password,username, role} = req.body;
+    const {email,password,username} = req.body;
 
     const user = await userModel.findOne({email});
     const usernameUser = await userModel.findOne({username});
@@ -40,7 +47,7 @@ const register = async(req,res)=>{
         return res.status(400).json({error:"Username already in use"});
     }
     const hashedPassword = await bcrypt.hash(password,10);
-    const newUser = new userModel({email,password:hashedPassword,username, role});
+    const newUser = new userModel({email,password:hashedPassword,username});
     await newUser.save();
     res.json({message:"User created"});
 }
