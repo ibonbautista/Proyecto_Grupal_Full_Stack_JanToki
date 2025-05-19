@@ -1,3 +1,5 @@
+import { InvalidPaginationParams } from "./errors.js";
+
 export const paginateQuery = async (model, filter = {}, options = {}) => {
   const {
     page = 1,
@@ -11,7 +13,7 @@ export const paginateQuery = async (model, filter = {}, options = {}) => {
   const limitNumber = parseInt(limit, 10);
 
   if (isNaN(pageNumber) || isNaN(limitNumber) || pageNumber <= 0 || limitNumber <= 0) {
-    throw new Error("Parámetros de paginación inválidos");
+    throw new InvalidPaginationParams();
   }
 
   const skip = (pageNumber - 1) * limitNumber;

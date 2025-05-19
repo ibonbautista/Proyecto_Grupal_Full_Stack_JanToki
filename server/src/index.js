@@ -4,6 +4,7 @@ import router from "./routes/router.js";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import { connectDB } from "./config/mongoose.js";
+import errorHandler from "./middlewares/errorHandler.js";
 
 dotenv.config();
 connectDB();
@@ -23,7 +24,7 @@ app.use(express.urlencoded({extended:true})); // para Vistas (formato formulario
 
 
 app.use("/",router);
-
+app.use(errorHandler);
 
 
 app.listen(3000,()=>{
