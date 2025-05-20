@@ -4,9 +4,14 @@ function saveToLocalStorage(key, value) {
 
 function getFromLocalStorage(key, defaultValue = null) {
     const result = localStorage.getItem(key);
-    if (result) {
+    if (!result || result === "undefined") {
+        return defaultValue;
+    }
+
+    try {
         return JSON.parse(result);
-    } else {
+    } catch (e) {
+        console.error(`Error parsing localStorage key "${key}":`, e);
         return defaultValue;
     }
 }

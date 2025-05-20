@@ -81,6 +81,7 @@ const getRestaurants = async (req, res) => {
 const getRestaurantById = async (req, res, next) => {
   const id = req.params.id;
 
+
   if (!mongoose.Types.ObjectId.isValid(id)) {
     return next(new InvalidRestaurantId());
   }

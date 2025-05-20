@@ -66,6 +66,12 @@ const register = async (req, res, next) => {
       role,
     });
 
+
+    if(usernameUser){
+        return res.status(400).json({error:"Username already in use"});
+    }
+    const hashedPassword = await bcrypt.hash(password,10);
+    const newUser = new userModel({email,password:hashedPassword,username});
     await newUser.save();
 
     const userToReturn = newUser.toObject();
