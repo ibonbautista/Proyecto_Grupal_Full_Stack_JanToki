@@ -1,8 +1,20 @@
 import userModel from "../models/user.js";
 import mongoose from "mongoose";
 import { paginateQuery } from "../utils/paginate.js";
+import {
+  UserNameNotProvided,
+  UserEmailNotProvided,
+  UserPasswordNotProvided,
+  UserRoleNotProvided,
+  UserRoleIncorrect,
+  UserEmailAlreadyExists,
+  UsernameAlreadyExists,
+  NoUsersFound,
+  InvalidUserId,
+  UserNotFound
+} from "../utils/errors.js";
 
-const getUsers = async (req, res) => {
+const getUsers = async (req, res, next) => {
   try {
     const data = await paginateQuery(userModel, {}, {
       page: req.query.page,
@@ -11,39 +23,52 @@ const getUsers = async (req, res) => {
       sort: { createdAt: -1 },
     });
 
+    !data.results.length && (() => { throw new NoUsersFound(); })();
+
+
     res.json(data);
   } catch (error) {
-    console.error("Error al obtener usuarios:", error.message);
-    res.status(400).json({ error: error.message });
+    next(error);
   }
 };
 
-const getUserById = async (req, res) => {
+const getUserById = async (req, res, next) => {
   const id = req.params.id;
 
   if (!mongoose.Types.ObjectId.isValid(id)) {
-    return res.status(400).json({ error: "ID inválido" });
+    return next(new InvalidUserId());
   }
 
   try {
     const user = await userModel.findById(id).select("-password");
 
     if (!user) {
-      return res.status(404).json({ error: "Usuario no encontrado" });
+      throw new UserNotFound();
     }
 
     res.json(user);
   } catch (error) {
-    console.error("Error al obtener usuario:", error);
-    res.status(500).json({ error: "Error del servidor" });
+    next(error);
   }
 };
 
-const createUser = async (req, res) => {
-  const data = req.body;
-
+const createUser = async (req, res, next) => {
   try {
-    const newUser = new userModel(data);
+    const { username, email, password, role } = req.body;
+
+    if (!username) throw new UserNameNotProvided();
+    if (!email) throw new UserEmailNotProvided();
+    if (!password) throw new UserPasswordNotProvided();
+    if (!role) throw new UserRoleNotProvided();
+    if (role && !["client", "admin"].includes(role)) throw new UserRoleIncorrect();
+
+    const existingEmail = await userModel.findOne({ email });
+    if (existingEmail) throw new UserEmailAlreadyExists();
+    const existingUsername = await userModel.findOne({ username });
+    if (existingUsername) throw new UsernameAlreadyExists();
+
+
+    const newUser = new userModel({ username, email, password, role });
     await newUser.save();
 
     const userToReturn = newUser.toObject();
@@ -51,17 +76,16 @@ const createUser = async (req, res) => {
 
     res.status(201).json(userToReturn);
   } catch (error) {
-    console.error("Error al crear usuario:", error);
-    res.status(500).json({ error: "Error del servidor" });
+      next(error);
   }
 };
 
-const updateUser = async (req, res) => {
+const updateUser = async (req, res, next) => {
   const id = req.params.id;
   const data = req.body;
 
   if (!mongoose.Types.ObjectId.isValid(id)) {
-    return res.status(400).json({ error: "ID inválido" });
+    return next(new InvalidUserId());
   }
 
   try {
@@ -71,34 +95,33 @@ const updateUser = async (req, res) => {
     }).select("-password");
 
     if (!updatedUser) {
-      return res.status(404).json({ error: "Usuario no encontrado" });
+      throw new UserNotFound();
     }
 
     res.json(updatedUser);
   } catch (error) {
-    console.error("Error al actualizar usuario:", error);
-    res.status(500).json({ error: "Error del servidor" });
+    next(error);
   }
 };
 
-const deleteUser = async (req, res) => {
+
+const deleteUser = async (req, res, next) => {
   const id = req.params.id;
 
   if (!mongoose.Types.ObjectId.isValid(id)) {
-    return res.status(400).json({ error: "ID inválido" });
+    return next(new InvalidUserId());
   }
 
   try {
     const deletedUser = await userModel.findByIdAndDelete(id).select("-password");
 
     if (!deletedUser) {
-      return res.status(404).json({ error: "Usuario no encontrado" });
+      throw new UserNotFound();
     }
 
     res.json({ message: "Usuario eliminado correctamente", user: deletedUser });
   } catch (error) {
-    console.error("Error al eliminar usuario:", error);
-    res.status(500).json({ error: "Error del servidor" });
+    next(error);
   }
 };
 

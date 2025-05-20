@@ -1,47 +1,71 @@
 import userModel from "../models/user.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
+import {
+  UserNameNotProvided,
+  UserEmailNotProvided,
+  UserPasswordNotProvided,
+  EmailNotFound,
+  IncorrectPassword,
+  UserRoleNotProvided,
+  UserRoleIncorrect,
+  UserEmailAlreadyExists,
+  UsernameAlreadyExists
+} from "../utils/errors.js";
 
-const login = async (req, res) => {
-  const { email, password } = req.body;
+const login = async (req, res, next) => {
+  try {
+    const { email, password } = req.body;
 
-  const user = await userModel.findOne({ email });
-  if (!user) {
-    return res.status(400).json({ error: "Invalid credentials" });
+    if (!email) throw new UserEmailNotProvided();
+    if (!password) throw new UserPasswordNotProvided();
+
+    const user = await userModel.findOne({ email });
+    if (!user) throw new EmailNotFound();
+
+    const isMatch = await bcrypt.compare(password, user.password);
+    if (!isMatch) throw new IncorrectPassword();
+
+    const token = jwt.sign(
+      {
+        _id: user._id,
+        role: user.role,
+      },
+      process.env.JWT_SECRET,
+      { expiresIn: "24h" }
+    );
+
+    res.json({ token });
+  } catch (error) {
+    next(error);
   }
-
-  const isMatch = await bcrypt.compare(password, user.password);
-  if (!isMatch) {
-    return res.status(400).json({ error: "Invalid credentials" });
-  }
-
-  const token = jwt.sign(
-    {
-      _id: user._id,
-      role: user.role
-    },
-    process.env.JWT_SECRET,
-    { expiresIn: "24h" }
-  );
-
-  res.json({ 
-	token,
-	user: {
-		id: user.user_id,
-		name: user.name,
-		email: user.email,
-		role: user.role
-	} });
 };
 
-const register = async(req,res)=>{
-    const {email,password,username} = req.body;
+const register = async (req, res, next) => {
+  try {
+    const { email, password, username, role } = req.body;
 
-    const user = await userModel.findOne({email});
-    const usernameUser = await userModel.findOne({username});
-    if(user){
-        return res.status(400).json({error:"Email already in use"});
-    }
+    if (!email) throw new UserEmailNotProvided();
+    if (!password) throw new UserPasswordNotProvided();
+    if (!username) throw new UserNameNotProvided();
+    if (!role) throw new UserRoleNotProvided();
+    if (role && !["client", "admin"].includes(role)) throw new UserRoleIncorrect();
+
+    const existingEmail = await userModel.findOne({ email });
+    if (existingEmail) throw new UserEmailAlreadyExists();
+
+    const existingUsername = await userModel.findOne({ username });
+    if (existingUsername) throw new UsernameAlreadyExists();
+
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    const newUser = new userModel({
+      email,
+      password: hashedPassword,
+      username,
+      role,
+    });
+
 
     if(usernameUser){
         return res.status(400).json({error:"Username already in use"});
@@ -49,7 +73,16 @@ const register = async(req,res)=>{
     const hashedPassword = await bcrypt.hash(password,10);
     const newUser = new userModel({email,password:hashedPassword,username});
     await newUser.save();
-    res.json({message:"User created"});
-}
 
+    const userToReturn = newUser.toObject();
+    delete userToReturn.password;
+
+    res.status(201).json({
+      message: "Usuario creado correctamente",
+      user: userToReturn,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
 export default {login,register};
