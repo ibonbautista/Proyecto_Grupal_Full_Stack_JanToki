@@ -8,6 +8,28 @@ import { useState } from "react";
 function Root() {
 	const [showLoginModal, setShowLoginModal] = useState(false);
 	const [showRegisterModal, setShowRegisterModal] = useState(false);
+
+    useEffect(() => {
+        const toggleButton = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        const toggleTheme = () => {
+            body.classList.toggle('light-theme');
+
+            if (body.classList.contains('light-theme')) {
+                toggleButton.textContent = 'Activar tema oscuro';
+            } else {
+                toggleButton.textContent = 'Activar tema claro';
+            }
+        };
+        
+        toggleButton?.addEventListener('click', toggleTheme);
+
+        return () => {
+          toggleButton?.removeEventListener('click', toggleTheme);
+        };
+      }, []);
+      
     return (
         <AuthProvider>
             <header>

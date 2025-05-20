@@ -270,7 +270,6 @@ const deleteRestaurant = async (req, res, next) => {
 export default {
     getRestaurants,
     getRestaurantById,
-    getRestaurantByCategory,
     createRestaurant,
     updateRestaurant,
     deleteRestaurant
