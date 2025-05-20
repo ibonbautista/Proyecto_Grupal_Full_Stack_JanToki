@@ -18,7 +18,7 @@ router.get("/",(req,res)=>{
 
 router.use("/",authRouter);
 router.use("/favorite", isLoggedInAPI, favoriteRouter);
-router.use("/review", isLoggedInAPI, reviewRouter);
+router.use("/review", reviewRouter);
 router.use("/restaurant",restaurantRouter);
 router.use("/user", isLoggedInAPI, isAdmin, userRouter);
 

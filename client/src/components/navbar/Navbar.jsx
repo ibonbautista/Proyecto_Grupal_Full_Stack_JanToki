@@ -1,9 +1,8 @@
 import { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext';
-import user from '../../../../server/src/models/user';
-import './Navbar.css';
-function Navbar() {
+// import './Navbar.css';
+function Navbar({onLoginClick, onRegisterClick}) {
     const { onLogout, userData } = useContext(AuthContext);
     return (
         <nav>
@@ -12,27 +11,17 @@ function Navbar() {
                     <NavLink to="/">JanToki</NavLink>
                 </li>
 
-                <div className="nav-items">
-                {userData ? (
+                {!userData ? (
                     <>
-                        <li className="nav-item">
-                            <NavLink to="/profile">{userData.username}</NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <button onClick={onLogout}>Logout</button>
-                        </li>
+                        <button onClick={onLoginClick}>Iniciar Sesión</button>
+						<button onClick={onRegisterClick}>Registrarme</button>
                     </>
 
                 ) : (
-                    <>
-                        <li className='nav-item'>
-                            <NavLink to="/login">Login</NavLink>
-                        </li>
-
-                        <li className='nav-item'>
-                            <NavLink to="/register">Register</NavLink>
-                        </li>
-                    </>
+                    <li className={"nav-item "}>
+						<span>{userData.username}</span>
+                        <button onClick={onLogout}>Logout</button>
+                    </li>
                 )}
                 </div>
             </ul>

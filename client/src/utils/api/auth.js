@@ -11,18 +11,14 @@ async function login(email, password){
 async function logout(){
     const result = await fetchData("/logout","POST");
 }
-async function getUserInfo(){
-    const result = await fetchData("/user-info");
-    return result;
-}
 
-async function register(name, email, password) {
+async function register(username, email, password) {
     const data = {
-        name,
+        username,
         email,
         password
     }
-    const result = await fetchData("/auth/register", "POST", data);
+    const result = await fetchData("/register", "POST", data);
     if (result.token) {
         saveToken(result.token);
     }
@@ -37,7 +33,5 @@ async function profile(){
 export {
     login,
     logout,
-    getUserInfo,
-    register,
-    profile
+    register
 }
