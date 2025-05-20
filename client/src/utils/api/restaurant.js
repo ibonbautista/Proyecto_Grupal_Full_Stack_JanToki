@@ -26,6 +26,11 @@ async function getRestaurantById({params}) {
     return restaurant;
 }
 
+async function getRestaurantByCategory({params}) {
+    const restaurant = await fetchData(`/restaurant/category/${params.category}`)
+    return restaurant;
+}
+
 async function deleteRestaurant(id) {
     const response = await fetchData(`/restaurant/${id}`, "DELETE")
     return response
@@ -60,6 +65,7 @@ export {
     deleteRestaurant,
     createRestaurant,
     getRestaurantById,
+    getRestaurantByCategory,
     editRestaurant,
     getRestaurantImage
 }

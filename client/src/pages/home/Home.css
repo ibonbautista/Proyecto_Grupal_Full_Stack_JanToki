@@ -8,11 +8,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: red;
+    background-color: var(--button-color);
 }
 
 .search-bar {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: var(--items-color);
     padding: 2em;
 
     border-radius: 20px;
@@ -38,8 +38,8 @@
 
     font-size: 1rem;
 
-    background-color: white;
-    color: black;
+    background-color: var(--input-color);
+    color: var(--text-color);
 }
 
 .search-button {
@@ -48,7 +48,7 @@
     padding: .5em 1em;
     font-size: 1rem;
 
-    background-color: red;
+    background-color: var(--button-color);
 }
 
 

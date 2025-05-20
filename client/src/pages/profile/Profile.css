@@ -2,8 +2,8 @@
     display: flex;
     flex-flow: row;
     gap: 1em;
-    background-color: rgba(255, 255, 255, 0.5);
-    color: black;
+    background-color: var(--items-color);
+    color: var(--text-color);
 
     padding: 2em;
     border-radius: 20px;
@@ -22,7 +22,7 @@
     width: 30%;
 
     padding-right: 1em;
-    border-right: 1px solid black;
+    border-right: 1px solid var(--text-color);
 }
 
 .index-item {
@@ -36,7 +36,7 @@
     background-color: transparent;
     border: none;
     font-size: 1rem;
-    color: black;
+    color: var(--text-color);
     text-align: left;
 }
 
@@ -77,8 +77,8 @@
     border: none;
     border-radius: 10px;
 
-    background-color: white;
-    color: black;
+    background-color: var(--input-color);
+    color: var(--text-color);
 
     font-size: 1rem;
 }
@@ -98,7 +98,7 @@
 
     width: 100%;
 
-    background-color: red;
+    background-color: var(--button-color);
 }
 
 .my-profile__restaurants.hidden, .my-profile__reviews.hidden, .my-profile__saved-restaurants.hidden {

@@ -19,7 +19,7 @@
 }
 
 .categories-item {
-    background-color: red;
+    background-color: var(--button-color);
     padding: 1em;
     border-radius: 100px;
 
