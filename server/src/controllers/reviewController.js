@@ -85,14 +85,15 @@ const addReview = async (req, res) => {
     const userId = req.user?._id;
     const restaurantId = req.params.restaurantId;
     const { text, rating } = req.body;
-    const image = req.file ? req.file.filename : null;
+
+    const images = req.files ? req.files.map(file => file.filename) : [];
     
     await reviewModel.create({
       userId: userId,
       restaurantId,
       text,
       rating,
-      image: image
+      images: images
     });
 
     res.status(201).json({ message: "Review agregado correctamente" });
