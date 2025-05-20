@@ -37,14 +37,84 @@ class ValidationError extends Error {
     this.name = "ValidationError";
     this.statusCode = 400;
 
-    // Aseguramos que el mensaje esté presente
     if (!message) {
       this.message = "Error de validación";
     }
   }
 }
-
-
+/**
+ * Review
+ */
+class NoReviewsFound extends Error {
+  constructor() {
+    super("No reviews for this user");
+    this.name = "NoReviewsFound";
+    this.statusCode = 404;
+  }
+}
+class NoRestaurantReviewsFound extends Error {
+  constructor() {
+    super("No reviews for this restaurant");
+    this.name = "NoReviewsRestaurant";
+    this.statusCode = 404;
+  }
+}
+class MissingReviewFields extends Error {
+  constructor() {
+    super("The text or rating is missing");
+    this.name = "MissingReviewFields";
+    this.statusCode = 404;
+  }
+}
+class ReviewAlreadyExists extends Error {
+  constructor() {
+    super("Review already exist");
+    this.name = "ReviewAlreadyExists";
+    this.statusCode = 404;
+  }
+}
+class ReviewNotFound extends Error {
+  constructor() {
+    super("Review not Found");
+    this.name = "ReviewNotFound";
+    this.statusCode = 404;
+  }
+}
+class NotAuthorizedToUpdateReview extends Error {
+  constructor() {
+    super("No authorized to update this review");
+    this.name = "NoAuthorizedToUpdateReview";
+    this.statusCode = 404;
+  }
+}
+class NoImageProvided extends Error {
+  constructor() {
+    super("No image provided");
+    this.name = "NoImageProvided";
+    this.statusCode = 404;
+  }
+}
+class NotAuthorizedToDeleteReview extends Error {
+  constructor() {
+    super("No authorized to delete this review");
+    this.name = "NoAuthorizedToDeleteReview";
+    this.statusCode = 404;
+  }
+}
+class ReviewImageNotValid extends Error {
+  constructor() {
+    super("No image to delete");
+    this.name = "ReviewImageNotValid";
+    this.statusCode = 404;
+  }
+}
+class ErrorDeleteImage extends Error {
+  constructor() {
+    super("Error to delete");
+    this.name = "ErrorDeleteImage";
+    this.statusCode = 404;
+  }
+}
 /**
  * Favorite
  */
@@ -217,6 +287,16 @@ export {
     NoFavoritesFound,
     RestaurantIdNotProvided,
     ValidationError,
+    NoReviewsFound,
+    NoRestaurantReviewsFound,
+    MissingReviewFields,
+    ReviewAlreadyExists,
+    ReviewNotFound,
+    NotAuthorizedToUpdateReview,
+    NotAuthorizedToDeleteReview,
+    ReviewImageNotValid,
+    ErrorDeleteImage,
+    NoImageProvided,
     FavoriteAlreadyExists,
     FavoriteNotFound,
     NotAuthorizedToDeleteFavorite,

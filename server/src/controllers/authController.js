@@ -65,11 +65,7 @@ const register = async (req, res, next) => {
       username,
       role,
     });
-
-
-    if(usernameUser){
-        return res.status(400).json({error:"Username already in use"});
-    }
+    
     await newUser.save();
 
     const userToReturn = newUser.toObject();

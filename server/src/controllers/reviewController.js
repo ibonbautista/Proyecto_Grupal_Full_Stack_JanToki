@@ -4,13 +4,24 @@ import path from "path"; //Modulo path para trabajar con rutas sin confundir sla
 import fs from "fs/promises"; //Modulo fs para trabajar con archivos y promesas para poder usar await
 import { fileURLToPath } from 'url'; //Funcion para convertir URL en path de sistema de archivos
 import { dirname } from 'path'; //Funcion que extrae solo la carpeta de un path
-
+import {
+  NoReviewsFound,
+  NoRestaurantReviewsFound,
+  MissingReviewFields,
+  ReviewAlreadyExists,
+  ReviewNotFound,
+  NotAuthorizedToUpdateReview,
+  NoImageProvided,
+  NotAuthorizedToDeleteReview,
+  ReviewImageNotValid,
+  ErrorDeleteImage,
+} from "../utils/errors.js";
 //Con import y export ya no existen las variables globales filename y dirname del require
 const __filename = fileURLToPath(import.meta.url); //Crea una ruta completa como string
 const __dirname = dirname(__filename);
 
 
-const showReviewByUser = async (req, res) => {
+const showReviewByUser = async (req, res, next) => {
   try {
     const userId = req.user?._id;
 
@@ -24,6 +35,10 @@ const showReviewByUser = async (req, res) => {
         sort: { createdAt: -1 },
       }
     );
+
+    if (!results.length) {
+      throw new NoReviewsFound();
+    }
 
     const formattedReviews = results.map((review) => ({
       text: review.text,
@@ -41,12 +56,11 @@ const showReviewByUser = async (req, res) => {
     });
 
   } catch (error) {
-    console.error("Error al obtener reviews del usuario:", error);
-    res.status(500).json({ error: "Error en el servidor" });
+    next(error);
   }
 };
 
-const showReviewByRestaurant = async (req, res) => {
+const showReviewByRestaurant = async (req, res, next) => {
   try {
     const restaurantId = req.params.restaurantId;
 
@@ -59,6 +73,10 @@ const showReviewByRestaurant = async (req, res) => {
       ],
       sort: { createdAt: -1 },
     });
+
+    if (!data.results.length) {
+      throw new NoRestaurantReviewsFound();
+    }
 
     const formattedReviews = data.results.map((review) => ({
       text: review.text,
@@ -74,47 +92,58 @@ const showReviewByRestaurant = async (req, res) => {
       results: formattedReviews,
     });
   } catch (error) {
-    console.error("Error al obtener reviews:", error.message);
-    res.status(400).json({ error: error.message });
+    next(error);
   }
 };
 
 
-const addReview = async (req, res) => {
+
+const addReview = async (req, res, next) => {
   try {
     const userId = req.user?._id;
     const restaurantId = req.params.restaurantId;
     const { text, rating } = req.body;
     const image = req.file ? req.file.filename : null;
-    
+
+    if (!text || typeof rating === "undefined") {
+      throw new MissingReviewFields();
+    }
+
+    const existingReview = await reviewModel.findOne({ userId, restaurantId });
+    if (existingReview) {
+      throw new ReviewAlreadyExists();
+    }
+
     await reviewModel.create({
-      userId: userId,
+      userId,
       restaurantId,
       text,
       rating,
-      image: image
+      image
     });
 
-    res.status(201).json({ message: "Review agregado correctamente" });
-
+    res.status(201).json({ message: "Review agregada correctamente" });
   } catch (error) {
-    console.error("Error al agregar la review:", error);
-    res.status(500).json({ error: "Error al agregar la review" });
+    next(error);
   }
 };
-
-const updateReview = async (req, res) => {
+const updateReview = async (req, res, next) => {
   try {
     const { text, rating } = req.body;
+    const userId = req.user._id;
+
+    if (!text || typeof rating === "undefined") {
+      throw new MissingReviewFields();
+    }
 
     const review = await reviewModel.findById(req.params.id).populate("restaurantId", "name");
 
     if (!review) {
-      return res.status(404).json({ error: "Review no encontrada" });
+      throw new ReviewNotFound();
     }
 
-    if (review.userId.toString() !== req.user._id.toString()) {
-      return res.status(403).json({ error: "No autorizado para modificar esta review" });
+    if (review.userId.toString() !== userId.toString()) {
+      throw new NotAuthorizedToUpdateReview();
     }
 
     review.text = text;
@@ -124,72 +153,65 @@ const updateReview = async (req, res) => {
     const formattedReview = {
       text: updatedReview.text,
       rating: updatedReview.rating,
-      restaurant: updatedReview.restaurantId ? updatedReview.restaurantId.name : null,
+      restaurant: updatedReview.restaurantId?.name || null,
       createdAt: updatedReview.createdAt,
     };
 
     res.status(200).json({ message: "Review actualizada", review: formattedReview });
 
   } catch (error) {
-    console.error("Error al actualizar la review:", error);
-    res.status(500).json({ error: "Error en el servidor" });
+    next(error);
   }
 };
-
-const updateReviewImage = async (req, res) => {
+const updateReviewImage = async (req, res, next) => {
   try {
     const { reviewId } = req.params;
     const newImage = req.file;
 
     if (!newImage) {
-      return res.status(400).json({ error: "New image not found" });
+      throw new NoImageProvided();
     }
 
     const review = await reviewModel.findById(reviewId);
     if (!review) {
-      return res.status(404).json({ error: "Review not found" });
+      throw new ReviewNotFound();
     }
 
-    // Si la review ya tiene una imagen
     if (review.image) {
-      // Eliminar la imagen anterior
       const oldImagePath = path.join(__dirname, "../public/images", review.image);
-      // Verificar si la imagen anterior existe
       if (fs.existsSync(oldImagePath)) {
-        await fs.unlink(oldImagePath, (err) => {
-          if (err) {
-            console.error("Error deleting old image:", err);
-          }
-        });
+        try {
+          fs.unlinkSync(oldImagePath);
+        } catch (err) {
+          console.error("Error al eliminar la imagen anterior:", err);
+        }
       }
     }
 
-    // Actualizar la review con la nueva imagen
     review.image = newImage.filename;
     await review.save();
 
     res.json({
-      message: "Image updated successfully",
+      message: "Imagen actualizada correctamente",
       image: newImage.filename,
     });
+
   } catch (error) {
-    console.error("Error updating review image:", error);
-    res.status(500).json({ error: "Error updating review image" });
+    next(error);
   }
 };
 
-const deleteReview = async (req, res) => {
-  const reviewId = req.params.id;
-
+const deleteReview = async (req, res, next) => {
   try {
-    const review = await reviewModel.findById(reviewId);
+    const reviewId = req.params.id;
 
+    const review = await reviewModel.findById(reviewId);
     if (!review) {
-      return res.status(404).json({ error: "Review no encontrada" });
+      throw new ReviewNotFound();
     }
 
     if (review.userId.toString() !== req.user._id.toString()) {
-      return res.status(403).json({ error: "No autorizado para eliminar esta review" });
+      throw new NotAuthorizedToDeleteReview();
     }
 
     await review.deleteOne();
@@ -197,49 +219,43 @@ const deleteReview = async (req, res) => {
     res.status(200).json({ message: "Review eliminada correctamente" });
 
   } catch (error) {
-    console.error("Error al eliminar la review:", error);
-    res.status(500).json({ error: "Error del servidor" });
+    next(error);
   }
 };
 
-const deleteReviewImage = async (req, res) => {
+const deleteReviewImage = async (req, res, next) => {
   try {
     const { reviewId } = req.params;
 
     const review = await reviewModel.findById(reviewId);
     if (!review) {
-      return res.status(404).json({ error: "Review not found" });
+      throw new ReviewNotFound();
     }
 
-    // Se asegura de: que tenga una imagen/ que sea un string valido/ que no este vacio
     if (!review.image || typeof review.image !== "string" || review.image.trim() === "") {
-      return res.status(400).json({ error: "Not a valid image in this review" });
+      throw new ReviewImageNotValid();
     }
 
     const imagePath = path.join(__dirname, "../public/images", review.image);
-    /* console.log("Ruta absoluta de la imagen:", imagePath); // <- VERIFICA esta ruta */
 
     try {
       await fs.unlink(imagePath);
       console.log("Image deleted successfully");
     } catch (err) {
       if (err.code === "ENOENT") {
-        // Archivo no existe, ignorar
         console.warn("Image not found, skipping deletion");
       } else {
         console.error("Error deleting image from server:", err);
-        return res.status(500).json({ error: "Error deleting image from server" });
+        throw new ErrorDeleteImage();
       }
     }
 
-    // Actualizar la review sin la imagen
     review.image = null;
     await review.save();
 
-    return res.json({ message: "Image deleted successfully" });
+    res.json({ message: "Imagen eliminada correctamente" });
   } catch (error) {
-    console.error("General error:", error);
-    return res.status(500).json({ error: "Error deleting image" });
+    next(error);
   }
 };
 
