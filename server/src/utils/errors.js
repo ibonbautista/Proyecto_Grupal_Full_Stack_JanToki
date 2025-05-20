@@ -184,6 +184,30 @@ class InvalidPaginationParams extends Error {
     this.statusCode = 400;
   }
 }
+//authMiddleware
+class UnauthorizedError extends Error {
+  constructor(message = "No estás autorizado") {
+    super(message);
+    this.name = "UnauthorizedError";
+    this.statusCode = 401;
+  }
+}
+
+class TokenExpiredError extends Error {
+  constructor(message = "Token expirado") {
+    super(message);
+    this.name = "TokenExpiredError";
+    this.statusCode = 401;
+  }
+}
+
+class InvalidTokenError extends Error {
+  constructor(message = "Token inválido") {
+    super(message);
+    this.name = "InvalidTokenError";
+    this.statusCode = 401;
+  }
+}
 
 export {
     RestaurantNotFound ,
@@ -209,5 +233,8 @@ export {
     NoUsersFound,
     InvalidUserId,
     UserNotFound,
-    InvalidPaginationParams
+    InvalidPaginationParams,
+    UnauthorizedError,
+    TokenExpiredError,
+    InvalidTokenError
 }
