@@ -43,13 +43,11 @@ const login = async (req, res, next) => {
 
 const register = async (req, res, next) => {
   try {
-    const { email, password, username, role } = req.body;
+    const { email, password, username} = req.body;
 
     if (!email) throw new UserEmailNotProvided();
     if (!password) throw new UserPasswordNotProvided();
     if (!username) throw new UserNameNotProvided();
-    if (!role) throw new UserRoleNotProvided();
-    if (role && !["client", "admin"].includes(role)) throw new UserRoleIncorrect();
 
     const existingEmail = await userModel.findOne({ email });
     if (existingEmail) throw new UserEmailAlreadyExists();
@@ -62,8 +60,7 @@ const register = async (req, res, next) => {
     const newUser = new userModel({
       email,
       password: hashedPassword,
-      username,
-      role,
+      username
     });
     
     await newUser.save();
