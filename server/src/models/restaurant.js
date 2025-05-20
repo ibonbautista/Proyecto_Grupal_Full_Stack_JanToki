@@ -11,40 +11,60 @@ const restaurantSchema = new mongoose.Schema({
         required:true,
         trim:true
     },
-    ubication: {
-        town: {
-            type: String,
-            required:true,
-            trim:true
-        }, 
-        address: {
-            type: String,
-            required:true,
-            trim:true
-        },
-        latitude: {
-            type: Number,
-            required:true
-        },
-        longitude: {
-            type: Number,
-            required:true
-        }
-    },
-    category: {
+    town: {
         type: String,
         required:true,
-        enum: ["asador","sideria","fusion","alta cocina","tradicional","pintxos",
-               "variado","marisqueria","asiatica","vegetariano","halal","vegano",
-               "francesa","italiana","riojana","mediterranea","internacional"],
-        default: "tradicional"
+        trim:true
+    }, 
+    municipality: {
+      type: String,
+      required: true,
+    },
+    address: {
+        type: String,
+        required:true,
+        trim:true
+    },
+    latitude: {
+        type: Number,
+        required:true
+    },
+    longitude: {
+        type: Number,
+        required:true
+    },
+    category: {
+        cuisineType: {
+          type: String,
+          required: true,
+          enum: ["asador","sideria","fusion","alta cocina","tradicional","pintxos",
+                 "variado","marisqueria","asiatica","vegetariano","halal","vegano",
+                 "francesa","italiana","riojana","mediterranea","internacional"],
+          default: "tradicional"
+        },
+        brands: {
+            type: [String],
+            required: false,
+        },
+        michelinStars: {
+            type: Number,
+            required: false,
+        },
+        repsolSuns: {
+            type: Number,
+            required: false,
+        },
+        recommended: {
+            type: Boolean,
+            required: false,
+        }
     },
     phone: {
         type: String,
         required:true,
         trim:true
     },
-    webPage: {
+    website: {
         type: String,
         required: false,
         trim:true
@@ -52,16 +72,17 @@ const restaurantSchema = new mongoose.Schema({
     socialMedia: {
         type: String,
         required:false,
-        enum: ["facebook","instagram","twitter"]
+        enum: ["facebook","instagram","twitter"],
+        default: null
+    },
+    image: {
+        type: String,
+        required:false
     },
     rating: {
         type: Number,
         required:false,
         default: 0
-    },
-    image: {
-        type: String,
-        required:false
     }
 });
 
