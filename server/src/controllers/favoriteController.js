@@ -2,7 +2,7 @@ import favoriteModel from "../models/favorite.js";
 import { paginateQuery } from "../utils/paginate.js";
 import {
   NoFavoritesFound,
-  InvalidRestaurantId,
+  RestaurantIdNotProvided,
   FavoriteAlreadyExists,
   FavoriteNotFound,
   NotAuthorizedToDeleteFavorite
@@ -40,7 +40,7 @@ const addFavorite = async (req, res, next) => {
     const restaurantId = req.params.restaurantId;
 
     if (!restaurantId) {
-      return next(new InvalidRestaurantId());
+      return next(new RestaurantIdNotProvided());
     }
 
     const existingFavorite = await favoriteModel.findOne({ userId, restaurantId });

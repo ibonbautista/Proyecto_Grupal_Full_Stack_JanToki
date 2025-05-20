@@ -1,6 +1,8 @@
 const errorHandler = (err, req, res, next) => {
   if (err.statusCode) {
-    return res.status(err.statusCode).json({ error: err.message });
+    return res.status(err.statusCode).json({
+      error: err.message || "Error de validación",
+    });
   }
 
   console.error("Error inesperado:", err);

@@ -1,47 +1,50 @@
 /**
- * Review
+ * Restaurant
  */
-
-class CustomError extends Error {
-  constructor(statusCode, message) {
+class RestaurantNotFound extends Error {
+  constructor(message = "Restaurante no encontrado") {
     super(message);
-    this.statusCode = statusCode;
-    Error.captureStackTrace(this, this.constructor);
+    this.name = "RestaurantNotFound";
+    this.statusCode = 404;
+  }
+}
+
+class InvalidRestaurantId extends Error {
+  constructor() {
+    super("ID de restaurante no válido");
+    this.name = "InvalidRestaurantId";
+    this.statusCode = 400;
+  }
+}
+class InvalidRestaurantData extends Error {
+  constructor(message = "Datos inválidos para crear un restaurante") {
+    super(message);
+    this.name = "InvalidRestaurantData";
+    this.statusCode = 400;
+  }
+}
+
+class RestaurantAlreadyExists extends Error {
+  constructor() {
+    super("Ya existe un restaurante con ese nombre en esa ubicación");
+    this.name = "RestaurantAlreadyExists";
+    this.statusCode = 409;
+  }
+}
+class ValidationError extends Error {
+  constructor(message) {
+    super(message);
+    this.name = "ValidationError";
+    this.statusCode = 400;
+
+    // Aseguramos que el mensaje esté presente
+    if (!message) {
+      this.message = "Error de validación";
+    }
   }
 }
 
 
-class StandNameNotProvided extends Error{
-    constructor(){
-        super("Stand name not provided");
-        this.statusCode = 400;
-    }
-}
-
-class IncorrectStandSize extends Error {
-    constructor(){
-        super("Stand size must be 'small', 'medium' or 'large'");
-        this.statusCode = 400;
-    }
-}
-class StandCategoryNotProvided extends Error{
-    constructor(){
-        super("stand_category_id not provided");
-        this.statusCode = 400;
-    }
-}
-class StandCategoryNotFound extends Error {
-    constructor(){
-        super("The stand category provided does not exist");
-        this.statusCode = 400;
-    }
-}
-class StandNotFound extends Error {
-    constructor(){
-        super("Stand not found");
-        this.statusCode = 404;
-    }
-}
 /**
  * Favorite
  */
@@ -52,10 +55,10 @@ class NoFavoritesFound extends Error {
     this.statusCode = 404;
   }
 }
-class InvalidRestaurantId extends Error {
+class RestaurantIdNotProvided extends Error {
   constructor() {
     super("ID restaurant is not provided");
-    this.name = "InvalidRestaurantId";
+    this.name = "RestaurantIdNotProvided";
     this.statusCode = 400;
   }
 }
@@ -183,13 +186,13 @@ class InvalidPaginationParams extends Error {
 }
 
 export {
-    StandNameNotProvided,
-    IncorrectStandSize,
-    StandCategoryNotProvided,
-    StandCategoryNotFound,
-    StandNotFound,
-    NoFavoritesFound,
+    RestaurantNotFound ,
     InvalidRestaurantId,
+    InvalidRestaurantData,
+    RestaurantAlreadyExists,
+    NoFavoritesFound,
+    RestaurantIdNotProvided,
+    ValidationError,
     FavoriteAlreadyExists,
     FavoriteNotFound,
     NotAuthorizedToDeleteFavorite,
