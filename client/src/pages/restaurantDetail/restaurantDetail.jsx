@@ -51,18 +51,18 @@ function RestaurantDetail() {
 	return (
 		<article className="restaurant-page">
 			<section className="restaurant-detail">
-				<h1>{restaurant.name}</h1>
-				<img src={restaurant.image} alt={restaurant.name} />
+				<h1>{restaurant.Name}</h1>
+				<img src={restaurant.Image} alt={restaurant.Name} />
 				<div className="restaurant-address">
-					<p>{restaurant.ubication.address}</p>
-					<p>{restaurant.ubication.town}</p>
-					<p>{restaurant.phone}</p>
+					<p>{restaurant.Address}</p>
+					<p>{restaurant.Town}</p>
+					<p>{restaurant.Phone}</p>
 				</div>
-				<p>{restaurant.category}</p>
-				<p>{restaurant.description}</p>
-				<p>{restaurant.webPage}</p>
+				<p>{restaurant.Categories.CuisineType}</p>
+				<p>{restaurant.Description}</p>
+				<p>{restaurant.Website}</p>
 				<p>{restaurant.rating}</p>
-				<MapLeaflet latitude={restaurant.ubication.latitude} longitude={restaurant.ubication.longitude} />
+				<MapLeaflet latitude={restaurant.Latitude} longitude={restaurant.Longitude} />
 			</section>
 			<section className="restaurant-reviews">
 				<h2>Reseñas</h2>
