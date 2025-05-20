@@ -57,6 +57,13 @@ const getRestaurantById = async(req,res)=>{
     res.json(restaurant);
 }
 
+// ANAÍS (POR SI LA LIO)
+const getRestaurantByCategory = async(req,res)=>{
+    const category = req.params.category;
+    const restaurant = await restaurantModel.find({categories});
+    res.json(restaurant);
+}
+
 const createRestaurant = async(req,res)=>{
     const data = req.body;
     console.log("data",data);
@@ -84,6 +91,7 @@ const deleteRestaurant = async(req,res)=>{
 export default {
     getRestaurants,
     getRestaurantById,
+    getRestaurantByCategory,
     createRestaurant,
     updateRestaurant,
     deleteRestaurant
