@@ -4,6 +4,8 @@ import { AuthContext } from '../../context/AuthContext';
 import './Navbar.css';
 function Navbar({ onLoginClick, onRegisterClick }) {
     const { onLogout, userData } = useContext(AuthContext);
+	console.log("userData", userData);
+	
     return (
         <nav>
             <ul className="nav-list">
@@ -17,7 +19,6 @@ function Navbar({ onLoginClick, onRegisterClick }) {
                             <button onClick={onLoginClick} className='nav-item'>Iniciar Sesión</button>
                             <button onClick={onRegisterClick} className='nav-item'>Registrarme</button>
                         </>
-
                     ) : (
                         <li className={"nav-item "}>
                             <span className='nav-item'>{userData.username}</span>

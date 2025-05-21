@@ -11,32 +11,33 @@ import {
 
 const getRestaurants = async (req, res) => {
   try {
-    const { category, ubication, rating, name } = req.query;
+    const { Category, Municipality, Rating, Name } = req.query;
 
     const filter = {};
     let activeFilters = [];
 
-    if (category) {
-      filter.category = category;
-      activeFilters.push(`de categoría "${category}"`);
+    if (Category) {
+      filter["Category.CuisineType"] = Category;
+      activeFilters.push(`de categoría "${Category}"`);
+    }
+    console.log("Filtro construido:", filter);
+
+    if (Municipality) {
+      filter["Municipality"] = { $regex: Municipality, $options: "i" };
+      activeFilters.push(`en la ubicación "${Municipality}"`);
     }
 
-    if (ubication) {
-      filter["ubication.town"] = { $regex: ubication, $options: "i" };
-      activeFilters.push(`en la ubicación "${ubication}"`);
-    }
-
-    if (rating) {
-      const ratingNum = Number(rating);
+    if (Rating) {
+      const ratingNum = Number(Rating);
       if (!isNaN(ratingNum)) {
-        filter.rating = { $gte: ratingNum };
-        activeFilters.push(`con valoración mínima de ${rating}`);
+        filter.Rating = { $gte: ratingNum };
+        activeFilters.push(`con valoración mínima de ${Rating}`);
       }
     }
 
-    if (name) {
-      filter.name = { $regex: name, $options: "i" };
-      activeFilters.push(`con nombre parecido a "${name}"`);
+    if (Name) {
+      filter.Name = { $regex: Name, $options: "i" };
+      activeFilters.push(`con nombre parecido a "${Name}"`);
     }
 
     const { page, limit, total, totalPages, results } = await paginateQuery(
@@ -48,7 +49,6 @@ const getRestaurants = async (req, res) => {
         sort: { name: 1 },
       }
     );
-
     if (results.length === 0) {
       const message = activeFilters.length > 0
         ? `No se encontraron restaurantes ${activeFilters.join(", ")}.`
@@ -63,7 +63,7 @@ const getRestaurants = async (req, res) => {
         limit,
       });
     }
-
+  
     res.status(200).json({
       restaurants: results,
       total,
@@ -103,21 +103,21 @@ const createRestaurant = async (req, res, next) => {
   try {
     const data = req.body;
 
-    if (!data.name || !data.ubication || !data.category) {
-      throw new InvalidRestaurantData("Faltan campos obligatorios (name, ubication o category)");
+    if (!data.Name || !data.Municipality || !data.Category) {
+      throw new InvalidRestaurantData("Faltan campos obligatorios (Name, Municipality o category)");
     }
 
-    if (data.rating !== undefined) {
-      const ratingNum = Number(data.rating);
+    if (data.Rating !== undefined) {
+      const ratingNum = Number(data.Rating);
       if (isNaN(ratingNum) || ratingNum < 1 || ratingNum > 10) {
         throw new InvalidRestaurantData("El rating debe ser un número entre 1 y 10");
       }
-      data.rating = ratingNum;
+      data.Rating = ratingNum;
     }
 
     const existingRestaurant = await restaurantModel.findOne({
-      name: data.name,
-      "ubication.town": data.ubication.town,
+      Name: data.Name,
+      "Municipality": data.Municipality,
     });
 
     if (existingRestaurant) {
@@ -134,26 +134,23 @@ const createRestaurant = async (req, res, next) => {
   }
 };
 
-const validCategories = [
-  "asador","sideria","fusion","alta cocina","tradicional","pintxos",
-  "variado","marisqueria","asiatica","vegetariano","halal","vegano",
-  "francesa","italiana","riojana","mediterranea","internacional"
-];
 
 const validSocialMedia = ["facebook","instagram","twitter"];
 
 const updateRestaurant = async (req, res, next) => {
   const id = req.params.id;
   const {
-    name,
-    description,
-    ubication,
-    category,
-    phone,
-    webPage,
-    socialMedia,
-    rating,
-    image,
+    Name,
+    Description,
+    Town,
+    Municipality,
+    Address,
+    Category,
+    Phone,
+    Website,
+    SocialMedia,
+    Rating,
+    Image,
   } = req.body || {};
 
   if (!mongoose.Types.ObjectId.isValid(id)) {
@@ -161,73 +158,84 @@ const updateRestaurant = async (req, res, next) => {
   }
 
   try {
-    if (name !== undefined && typeof name !== "string") {
+    if (Name !== undefined && typeof Name !== "string") {
       return next(new ValidationError("El nombre debe ser una cadena de texto"));
     }
-    if (description !== undefined && typeof description !== "string") {
+    if (Description !== undefined && typeof Description !== "string") {
       return next(new ValidationError("La descripción debe ser una cadena de texto"));
     }
-    if (ubication !== undefined) {
-      if (typeof ubication !== "object" || ubication === null) {
-        return next(new ValidationError("Ubicación debe ser un objeto"));
-      }
-      if (
-        ubication.town !== undefined &&
-        (typeof ubication.town !== "string" || ubication.town.trim() === "")
-      ) {
-        return next(new ValidationError("Ubicación: town debe ser texto no vacío"));
-      }
-      if (
-        ubication.address !== undefined &&
-        (typeof ubication.address !== "string" || ubication.address.trim() === "")
-      ) {
-        return next(new ValidationError("Ubicación: address debe ser texto no vacío"));
-      }
-      if (
-        ubication.latitude !== undefined &&
-        typeof ubication.latitude !== "number"
-      ) {
-        return next(new ValidationError("Ubicación: latitude debe ser número"));
-      }
-      if (
-        ubication.longitude !== undefined &&
-        typeof ubication.longitude !== "number"
-      ) {
-        return next(new ValidationError("Ubicación: longitude debe ser número"));
-      }
+    if (Town !== undefined && typeof Town !== "string") {
+      return next(new ValidationError("La ciudad debe ser una cadena de texto"));
     }
-    if (category !== undefined && !validCategories.includes(category)) {
-      return next(new ValidationError("Categoría inválida"));
+    if (Municipality !== undefined && typeof Municipality !== "string") {
+      return next(new ValidationError("El municipio debe ser una cadena de texto"));
     }
-    if (phone !== undefined && typeof phone !== "string") {
+    if (Address !== undefined && typeof Address !== "string") {
+      return next(new ValidationError("La dirección debe ser una cadena de texto"));
+    }
+    if (Category !== undefined) {
+      if (typeof Category !== "object") {
+        return next(new ValidationError("Category debe ser un objeto"));
+      }
+
+      const { CuisineType, Brands, MichelinStars, RepsolSuns, Recommended } = Category;
+
+      const validCategories = [
+        "asador", "sideria", "fusion", "alta cocina", "tradicional", "pintxos",
+        "variado", "marisqueria", "asiatica", "vegetariano", "halal", "vegano",
+        "francesa", "italiana", "riojana", "mediterranea", "internacional"
+      ];
+
+      if (CuisineType !== undefined && !validCategories.includes(CuisineType)) {
+        return next(new ValidationError("CuisineType inválido"));
+      }
+
+      if (Brands !== undefined && !Array.isArray(Brands)) {
+        return next(new ValidationError("Brands debe ser un array de strings"));
+      }
+
+      if (MichelinStars !== undefined && typeof MichelinStars !== "number") {
+        return next(new ValidationError("MichelinStars debe ser un número"));
+      }
+
+      if (RepsolSuns !== undefined && typeof RepsolSuns !== "number") {
+        return next(new ValidationError("RepsolSuns debe ser un número"));
+      }
+
+      if (Recommended !== undefined && typeof Recommended !== "boolean") {
+        return next(new ValidationError("Recommended debe ser booleano"));
+      }
+}
+    if (Phone !== undefined && typeof Phone !== "string") {
       return next(new ValidationError("Teléfono debe ser texto"));
     }
-    if (webPage !== undefined && typeof webPage !== "string") {
-      return next(new ValidationError("WebPage debe ser texto"));
+    if (Website !== undefined && typeof Website !== "string") {
+      return next(new ValidationError("Website debe ser texto"));
     }
-    if (socialMedia !== undefined && !validSocialMedia.includes(socialMedia)) {
+    if (SocialMedia !== undefined && !validSocialMedia.includes(SocialMedia)) {
       return next(new ValidationError("Red social inválida"));
     }
-    if (rating !== undefined) {
-      if (typeof rating !== "number" || rating < 1 || rating > 10) {
+    if (Rating !== undefined) {
+      if (typeof Rating !== "number" || Rating < 1 || Rating > 10) {
         return next(new ValidationError("La valoración debe estar entre 1 y 10"));
       }
     }
-    if (image !== undefined && typeof image !== "string") {
+    if (Image !== undefined && typeof Image !== "string") {
       return next(new ValidationError("Image debe ser texto"));
     }
 
-    // Solo actualizar campos que están definidos
     const updateData = {};
-    if (name !== undefined) updateData.name = name;
-    if (description !== undefined) updateData.description = description;
-    if (ubication !== undefined) updateData.ubication = ubication;
-    if (category !== undefined) updateData.category = category;
-    if (phone !== undefined) updateData.phone = phone;
-    if (webPage !== undefined) updateData.webPage = webPage;
-    if (socialMedia !== undefined) updateData.socialMedia = socialMedia;
-    if (rating !== undefined) updateData.rating = rating;
-    if (image !== undefined) updateData.image = image;
+    if (Name !== undefined) updateData.Name = Name;
+    if (Description !== undefined) updateData.Description = Description;
+    if (Town !== undefined) updateData.Town = Town;
+    if (Municipality !== undefined) updateData.Municipality = Municipality;
+    if (Address !== undefined) updateData.Address = Address;
+    if (Category !== undefined) updateData.Category = Category;
+    if (Phone !== undefined) updateData.Phone = Phone;
+    if (Website !== undefined) updateData.Website = Website;
+    if (SocialMedia !== undefined) updateData.SocialMedia = SocialMedia;
+    if (Rating !== undefined) updateData.Rating = Rating;
+    if (Image !== undefined) updateData.Image = Image;
 
     const updatedRestaurant = await restaurantModel.findByIdAndUpdate(
       id,

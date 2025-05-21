@@ -7,8 +7,6 @@ import {
   UserPasswordNotProvided,
   EmailNotFound,
   IncorrectPassword,
-  UserRoleNotProvided,
-  UserRoleIncorrect,
   UserEmailAlreadyExists,
   UsernameAlreadyExists
 } from "../utils/errors.js";
@@ -35,7 +33,14 @@ const login = async (req, res, next) => {
       { expiresIn: "24h" }
     );
 
-    res.json({ token });
+    res.json({ 
+		token,
+		user: {
+			id: user.user_id,
+			name: user.username,
+			email: user.email,
+			role: user.role
+	}});
   } catch (error) {
     next(error);
   }
@@ -43,13 +48,11 @@ const login = async (req, res, next) => {
 
 const register = async (req, res, next) => {
   try {
-    const { email, password, username, role } = req.body;
+    const { email, password, username} = req.body;
 
     if (!email) throw new UserEmailNotProvided();
     if (!password) throw new UserPasswordNotProvided();
     if (!username) throw new UserNameNotProvided();
-    if (!role) throw new UserRoleNotProvided();
-    if (role && !["client", "admin"].includes(role)) throw new UserRoleIncorrect();
 
     const existingEmail = await userModel.findOne({ email });
     if (existingEmail) throw new UserEmailAlreadyExists();
@@ -62,14 +65,9 @@ const register = async (req, res, next) => {
     const newUser = new userModel({
       email,
       password: hashedPassword,
-      username,
-      role,
+      username
     });
-
-
-    if(usernameUser){
-        return res.status(400).json({error:"Username already in use"});
-    }
+    
     await newUser.save();
 
     const userToReturn = newUser.toObject();

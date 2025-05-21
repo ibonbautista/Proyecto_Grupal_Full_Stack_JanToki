@@ -16,6 +16,10 @@ function Home() {
 
 	const currentPage = parseInt(searchParams.get('page') || 1);
 
+	useEffect(() => {
+		window.scrollTo({ top: 0, behavior: 'auto' });
+	}, [currentPage]);
+
 	const goToPage = (newPage) => {
 		navigate(`?page=${newPage}`);
 	};

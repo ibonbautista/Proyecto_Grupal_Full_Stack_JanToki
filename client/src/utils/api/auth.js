@@ -6,6 +6,7 @@ async function login(email, password){
         password
     }
     const result = await fetchData("/login","POST",data);
+	console.log("result.user en el frontend:", result.user);
     return result;
 }
 async function logout(){
