@@ -104,7 +104,7 @@ const addReview = async (req, res, next) => {
     const restaurantId = req.params.restaurantId;
     const { text, rating } = req.body;
 
-    const images = req.files ? req.files.map(file => file.filename) : [];
+    const image = req.file ? req.file.filename : null;
 
     if (!text || typeof rating === "undefined") {
       throw new MissingReviewFields();
@@ -120,7 +120,7 @@ const addReview = async (req, res, next) => {
       restaurantId,
       text,
       rating,
-      images: images
+      image: image
     });
 
     res.status(201).json({ message: "Review agregada correctamente" });
