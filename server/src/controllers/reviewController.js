@@ -103,6 +103,7 @@ const addReview = async (req, res, next) => {
     const userId = req.user?._id;
     const restaurantId = req.params.restaurantId;
     const { text, rating } = req.body;
+
     const image = req.file ? req.file.filename : null;
 
     if (!text || typeof rating === "undefined") {
@@ -119,7 +120,7 @@ const addReview = async (req, res, next) => {
       restaurantId,
       text,
       rating,
-      image
+      image: image
     });
 
     res.status(201).json({ message: "Review agregada correctamente" });

@@ -17,7 +17,7 @@ export const paginateQuery = async (model, filter = {}, options = {}) => {
   }
 
   const skip = (pageNumber - 1) * limitNumber;
-
+  
   const query = model.find(filter).skip(skip).limit(limitNumber).select(select).sort(sort);
 
   if (populate.length) {

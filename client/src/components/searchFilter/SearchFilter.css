@@ -1,0 +1,56 @@
+.searchbar {
+    width: 100%;
+    height: 50vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./public/images/pintxos.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.search-bar {
+    background-color: var(--searchbar-color);
+    padding: 2em;
+
+    border-radius: 20px;
+
+    display: flex;
+    flex-flow: column;
+    gap: 1em;
+}
+
+.search-filter {
+    display: flex;
+    flex-flow: row;
+    gap: 1em;
+}
+
+.search-input {
+    display: flex;
+    flex-flow: row;
+    gap: .5em;
+}
+
+.search-input input {
+    padding: .5em 1em;
+    
+    border: none;
+    border-radius: 10px;
+
+    font-size: 1rem;
+
+    background-color: var(--main-color);
+    color: var(--text-color);
+}
+
+.search-button {
+    border: none;
+    border-radius: 10px;
+    padding: .5em 1em;
+    font-size: 1rem;
+
+    background-color: var(--button-color);
+}
+

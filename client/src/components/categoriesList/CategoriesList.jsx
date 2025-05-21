@@ -1,21 +1,36 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, NavLink } from "react-router-dom";
 
-import CategoryIcon from "../categoryIcon/CategoryIcon";
 import './CategoriesList.css';
 
 
-function CategoriesList() {
-    const allCategories = useLoaderData();    
+function CategoriesList({ onSelectCategory }) {
+
+    const categories = [
+        "asador", "sidreria", "fusion", "alta cocina", "tradicional", "pintxos",
+        "variado", "marisqueria", "asiatica", "vegetariano", "vegano",
+        "francesa", "italiana", "riojana", "mediterranea", "internacional"
+    ]
 
     return (
         <section className="categories-list">
             <h1>Categorías</h1>
-            <section className="categories-list--categories">
-                {allCategories.map(categories => {
-                    return <CategoryIcon categories={categories} />
-                })
-                }
-            </section>
+            <div className="categories-list--categories">
+                <div className="categories-item" onClick={() => onSelectCategory(null)}>
+                    <div className="categories-img">
+                        <img src="https://placehold.co/50x50" alt="category-icon" />
+                    </div>
+                    <p>Todas</p>
+                </div>
+
+                {categories.map((category) => (
+                    <div className="categories-item" onClick={() => onSelectCategory(category)}>
+                        <div className="categories-img">
+                            <img src={`../../../public/images/${category}.jpg`} alt="category-icon" />
+                        </div>
+                        <p>{category}</p>
+                    </div>
+                ))}
+            </div>
         </section>
     )
 }
