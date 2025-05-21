@@ -17,7 +17,7 @@ function CategoriesList({ onSelectCategory }) {
             <div className="categories-list--categories">
                 <div className="categories-item" onClick={() => onSelectCategory(null)}>
                     <div className="categories-img">
-                        <img src="https://placehold.co/50x50" alt="category-icon" />
+                        <img src="../../../public/images/todas.jpg" alt="category-icon" />
                     </div>
                     <p>Todas</p>
                 </div>

@@ -5,3 +5,27 @@
     flex-flow: column;
     gap: 1em;
 }
+
+.restaurants-list--restaurants {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1em;
+}
+
+.restaurants-list--restaurants .restaurant {
+    width: 100%;
+    padding: 1em;
+    background-color: var(--items-color);
+    border-radius: 10px;
+
+    display: flex;
+    flex-flow: column;
+    gap: 1em;
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease;
+}
+
+.restaurants-list--restaurants .restaurant:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
