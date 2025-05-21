@@ -6,9 +6,9 @@ import './CategoriesList.css';
 function CategoriesList({ onSelectCategory }) {
 
     const categories = [
-        "asador", "sidreria", "fusion", "alta cocina", "tradicional", "pintxos",
-        "variado", "marisqueria", "asiatica", "vegetariano", "vegano",
-        "francesa", "italiana", "riojana", "mediterranea", "internacional"
+        "Asador", "Sidrería", "Fusión", "Alta Cocina", "Tradicional", "Pintxos",
+        "Variado", "Marisquería", "Asiática", "Vegetariano", "Vegano",
+        "Francesa", "Italiana", "Riojana", "Mediterránea", "Internacional"
     ]
 
     return (
@@ -25,7 +25,7 @@ function CategoriesList({ onSelectCategory }) {
                 {categories.map((category) => (
                     <div className="categories-item" onClick={() => onSelectCategory(category)}>
                         <div className="categories-img">
-                            <img src={`../../../public/images/${category}.jpg`} alt="category-icon" />
+                            <img src={`../../../public/images/${category.toLowerCase()}.jpg`} alt="category-icon" />
                         </div>
                         <p>{category}</p>
                     </div>

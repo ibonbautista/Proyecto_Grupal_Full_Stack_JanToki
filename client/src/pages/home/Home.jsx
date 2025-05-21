@@ -28,11 +28,10 @@ function Home() {
 		setSelectedCategory(category);
 		if (category) {
 			const filtered = restaurants.filter(r =>
-				r.Categories?.cuisineType?.toLowerCase() === category.toLowerCase(),
+				r.Category?.CuisineType?.toLowerCase() === category.toLowerCase(),
 			);
 			setFilteredRestaurants(filtered);
 			console.log("filtered", filtered)
-
 		} else {
 			setFilteredRestaurants(restaurants);
 		}
