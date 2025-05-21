@@ -25,6 +25,11 @@ async function register(username, email, password) {
     return result;
 }
 
+async function profile(){
+    const result = await fetchData("/profile");
+    return result;
+}
+
 export {
     login,
     logout,

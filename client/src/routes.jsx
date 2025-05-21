@@ -4,6 +4,9 @@ import Home from './pages/home/Home';
 
 import { getAllRestaurants, getRestaurantById } from './utils/api/restaurant';
 import RestaurantDetail from './pages/restaurantDetail/restaurantDetail';
+import Profile from './pages/profile/Profile';
+import { get } from 'mongoose';
+import CategoriesList from './components/categoriesList/CategoriesList';
 
 const router  = createBrowserRouter([
     {
@@ -20,6 +23,10 @@ const router  = createBrowserRouter([
 				element: <RestaurantDetail />,
 				loader: getRestaurantById
 			},
+            {
+                path: "/profile",
+                element: <Profile />,
+            }
         ]
     },
     
