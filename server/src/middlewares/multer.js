@@ -14,6 +14,7 @@ export async function prepareRestaurantName(req, res, next) {
     if (restaurantId) {
       const restaurant = await Restaurant.findById(restaurantId);
       if (!restaurant) return res.status(404).json({ error: "Restaurante no encontrado" });
+
       restaurantName = restaurant.Name.replace(/\s+/g, "_").toLowerCase();
 
     } else if (reviewId) {
@@ -53,7 +54,7 @@ const storage = multer.diskStorage({
   },
   filename: (req, file, cb) => {
     const userId = req.user ? String(req.user._id).slice(0, 5) : "anon";
-    const restaurantName = req.restaurantName || "unknown";
+    const restaurantName = req.restaurantName /* || "unknown" */;
   
     const now = new Date();
     const shortYear = String(now.getFullYear()).slice(2);
