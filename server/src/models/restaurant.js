@@ -1,85 +1,85 @@
 import mongoose from "mongoose";
 
 const restaurantSchema = new mongoose.Schema({
-    name: {
+    Name: {
         type: String,
         required:true,
         trim:true
     },
-    description: {
+    Description: {
         type: String,
         required:true,
         trim:true
     },
-    town: {
+    Town: {
         type: String,
         required:true,
         trim:true
     }, 
-    municipality: {
+    Municipality: {
       type: String,
       required: true,
     },
-    address: {
+    Address: {
         type: String,
         required:true,
         trim:true
     },
-    latitude: {
+    Latitude: {
         type: Number,
         required:true
     },
-    longitude: {
+    Longitude: {
         type: Number,
         required:true
     },
-    category: {
-        cuisineType: {
+    Category: {
+        CuisineType: {
           type: String,
           required: true,
-          enum: ["asador","sideria","fusion","alta cocina","tradicional","pintxos",
+          enum: ["asador","sidreria","fusion","alta cocina","tradicional","pintxos",
                  "variado","marisqueria","asiatica","vegetariano","halal","vegano",
                  "francesa","italiana","riojana","mediterranea","internacional"],
           default: "tradicional"
         },
-        brands: {
+        Brands: {
             type: [String],
             required: false,
         },
-        michelinStars: {
+        MichelinStars: {
             type: Number,
             required: false,
         },
-        repsolSuns: {
+        RepsolSuns: {
             type: Number,
             required: false,
         },
-        recommended: {
+        Recommended: {
             type: Boolean,
             required: false,
         }
     },
-    phone: {
+    Phone: {
         type: String,
         required:true,
         trim:true
     },
-    website: {
+    Website: {
         type: String,
         required: false,
         trim:true
     },
-    socialMedia: {
+    SocialMedia: {
         type: String,
         required:false,
         enum: ["facebook","instagram","twitter"],
         default: null
     },
-    image: {
+    Image: {
         type: String,
         required:false
     },
-    rating: {
+    Rating: {
         type: Number,
         required:false,
         default: 0
