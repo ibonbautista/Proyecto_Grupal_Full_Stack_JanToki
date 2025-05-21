@@ -14,6 +14,7 @@ export async function prepareRestaurantName(req, res, next) {
     if (restaurantId) {
       const restaurant = await Restaurant.findById(restaurantId);
       if (!restaurant) return res.status(404).json({ error: "Restaurante no encontrado" });
+
       restaurantName = restaurant.Name.replace(/\s+/g, "_").toLowerCase();
 
     } else if (reviewId) {
@@ -25,7 +26,7 @@ export async function prepareRestaurantName(req, res, next) {
 
       // Eliminar imagen previa si existe
       if (review.image) {
-        const oldImagePath = path.join("public/images", review.image);
+        const oldImagePath = path.join("public/images/reviews", review.image);
         if (fs.existsSync(oldImagePath)) {
           fs.unlink(oldImagePath, (err) => {
             if (err) console.error("Error eliminando imagen anterior:", err);
@@ -49,11 +50,11 @@ export async function prepareRestaurantName(req, res, next) {
 // Configuración Multer
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "public/images");
+    cb(null, "public/images/reviews");
   },
   filename: (req, file, cb) => {
     const userId = req.user ? String(req.user._id).slice(0, 5) : "anon";
-    const restaurantName = req.restaurantName || "unknown";
+    const restaurantName = req.restaurantName /* || "unknown" */;
   
     const now = new Date();
     const shortYear = String(now.getFullYear()).slice(2);
