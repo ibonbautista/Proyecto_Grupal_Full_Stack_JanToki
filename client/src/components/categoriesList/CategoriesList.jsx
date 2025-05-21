@@ -7,7 +7,7 @@ function CategoriesList({ onSelectCategory }) {
 
     const categories = [
         "asador", "sidreria", "fusion", "alta cocina", "tradicional", "pintxos",
-        "variado", "marisqueria", "asiatica", "vegetariano", "vasca", "vegano",
+        "variado", "marisqueria", "asiatica", "vegetariano", "vegano",
         "francesa", "italiana", "riojana", "mediterranea", "internacional"
     ]
 

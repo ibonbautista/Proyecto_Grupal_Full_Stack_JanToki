@@ -161,7 +161,7 @@ img {
 
   --main-color: #1E1E1E;
   --searchbar-color: #1e1e1ec2;
-  --items-color: #A9927D;
+  --items-color: #444444;
   --button-color: #613d3c;
   --input-color: #4C3A32;
   --text-color: #F2F2F2;
@@ -234,6 +234,7 @@ button:hover {
 
 body.light-theme {
   --main-color: #ebebeb;
+  --searchbar-color: #ebebebbb;
   --items-color: white;
   --button-color: #A43F3F;
   --input-color: #D9BF77;
