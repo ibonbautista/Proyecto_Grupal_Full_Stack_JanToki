@@ -2,27 +2,25 @@ header {
     width: 100vw;
     height: 4em;
 
-    background-color: #1e1e1e;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    background-color: var(--main-color);
     display: flex;
     justify-content: center;  
     align-items: center;  
 }
 
 header nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-
     width: 100%;
     height: 4em;
-    background-color: #1e1e1e;
 
     display: flex;
     flex-flow: row;
     justify-content: center;
     align-items: center;
-
-    z-index: 1;
 }
 
 .nav-list {
@@ -39,10 +37,4 @@ header nav {
     display: flex;
     flex-flow: row;
     gap: 1em;
-}
-
-.nav-item {
-    background-color: red;
-    border-radius: 10px;
-    padding: .5em 1em;
 }

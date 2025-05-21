@@ -24,24 +24,26 @@ function Home() {
 		setSelectedCategory(category);
 		if (category) {
 			const filtered = restaurants.filter(r =>
-				r.category?.cuisineType?.toLowerCase() === category.toLowerCase()
+				r.Categories?.cuisineType?.toLowerCase() === category.toLowerCase(),
 			);
 			setFilteredRestaurants(filtered);
+			console.log("filtered", filtered)
+
 		} else {
-			setFilteredRestaurants(restaurants); // Mostrar todos
+			setFilteredRestaurants(restaurants);
 		}
 	};
 
 	useEffect(() => {
 		setFilteredRestaurants(restaurants);
 	}, [restaurants]);
-    
-    return (
-        <article className="home-page">
-            <section className="searchbar">
-                <SearchFilter />
-            </section>
-            {/* <img src="/src/assets/logotipo.svg" alt="logotipo" className='logotipo-home-page' /> */}
+
+	return (
+		<article className="home-page">
+			<section className="searchbar">
+				<SearchFilter />
+			</section>
+			{/* <img src="/src/assets/logotipo.svg" alt="logotipo" className='logotipo-home-page' /> */}
 			<CategoriesList onSelectCategory={handleCategorySelect} />
 			<RestaurantsList restaurants={filteredRestaurants} />
 
@@ -54,8 +56,8 @@ function Home() {
 					<button onClick={() => goToPage(currentPage + 1)}>Siguiente</button>
 				)}
 			</section>
-        </article>
-    )
+		</article>
+	)
 }
 
 export default Home;

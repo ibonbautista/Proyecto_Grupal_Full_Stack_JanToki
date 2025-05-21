@@ -6,25 +6,29 @@ import './CategoriesList.css';
 function CategoriesList({ onSelectCategory }) {
 
     const categories = [
-        "Asador", "Sidrería", "Fusión", "Alta Cocina", "Tradicional", "Pintxos",
-        "Variado", "Marisquería", "Asiática", "Vegetariano", "Halal", "Vegano",
-        "Francesa", "Italiana", "Riojana", "Mediterránea", "Internacional"
+        "asador", "sidreria", "fusion", "alta cocina", "tradicional", "pintxos",
+        "variado", "marisqueria", "asiatica", "vegetariano", "vasca", "vegano",
+        "francesa", "italiana", "riojana", "mediterranea", "internacional"
     ]
 
     return (
         <section className="categories-list">
             <h1>Categorías</h1>
             <div className="categories-list--categories">
-                <button className="categories-item" onClick={() => onSelectCategory(null)}>Todas</button>
+                <div className="categories-item" onClick={() => onSelectCategory(null)}>
+                    <div className="categories-img">
+                        <img src="https://placehold.co/50x50" alt="category-icon" />
+                    </div>
+                    <p>Todas</p>
+                </div>
 
                 {categories.map((category) => (
-                    <button
-                        key={category}
-                        className="categories-item"
-                        onClick={() => onSelectCategory(category)}
-                    >
-                        {category}
-                    </button>
+                    <div className="categories-item" onClick={() => onSelectCategory(category)}>
+                        <div className="categories-img">
+                            <img src={`../../../public/images/${category}.jpg`} alt="category-icon" />
+                        </div>
+                        <p>{category}</p>
+                    </div>
                 ))}
             </div>
         </section>

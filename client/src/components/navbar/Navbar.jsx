@@ -14,14 +14,14 @@ function Navbar({ onLoginClick, onRegisterClick }) {
                 <div className="nav-items">
                     {!userData ? (
                         <>
-                            <button onClick={onLoginClick}>Iniciar Sesión</button>
-                            <button onClick={onRegisterClick}>Registrarme</button>
+                            <button onClick={onLoginClick} className='nav-item'>Iniciar Sesión</button>
+                            <button onClick={onRegisterClick} className='nav-item'>Registrarme</button>
                         </>
 
                     ) : (
                         <li className={"nav-item "}>
-                            <span>{userData.username}</span>
-                            <button onClick={onLogout}>Logout</button>
+                            <span className='nav-item'>{userData.username}</span>
+                            <button onClick={onLogout} className='nav-item'>Logout</button>
                         </li>
                     )}
                 </div>
