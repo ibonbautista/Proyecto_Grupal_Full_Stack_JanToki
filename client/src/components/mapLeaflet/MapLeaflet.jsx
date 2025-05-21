@@ -1,5 +1,5 @@
 
-import { MapContainer, TileLayer, Marker, useMap} from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup} from "react-leaflet";
 import L from "leaflet";
 
 import "leaflet/dist/leaflet.css";
@@ -15,13 +15,23 @@ L.Icon.Default.mergeOptions({
 
 function MapLeaflet({ latitude, longitude }) {
 	const position = [parseFloat(latitude), parseFloat(longitude)];
-	
+	const googleMapsURL = `https://www.google.com/maps/dir/?api=1&destination=${latitude},${longitude}`;
+
 	return (
 	  <MapContainer center={position} zoom={15} style={{ height: '100vh' }}>
 		<TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-			return (
-			  <Marker position={position} />
-			);
+		<Marker position={position}>
+			<Popup>
+				<a
+					href={googleMapsURL}
+					target="_blank"
+					rel="noopener noreferrer"
+					className="directionsButton"
+				>
+					Cómo llegar ➡️ 
+				</a>
+			</Popup>
+		</Marker>
 	  </MapContainer>
 	);
 }

@@ -55,7 +55,7 @@ function RestaurantDetail() {
 				<img src={restaurant.Image} alt={restaurant.Name} />
 				<div className="restaurant-address">
 					<p>{restaurant.Address}</p>
-					<p>{restaurant.Town}</p>
+					<p>{restaurant.Municipality}</p>
 					<p>{restaurant.Phone}</p>
 				</div>
 				<p>{restaurant.Categories.CuisineType}</p>
