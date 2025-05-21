@@ -4,13 +4,12 @@ import { AuthContext } from '../../context/AuthContext';
 import './Navbar.css';
 function Navbar({ onLoginClick, onRegisterClick }) {
     const { onLogout, userData } = useContext(AuthContext);
-	console.log("userData", userData);
 	
     return (
         <nav>
             <ul className="nav-list">
                 <li className={"nav-logo "} >
-                    <NavLink to="/">JanToki</NavLink>
+                    <NavLink to="/" end>JanToki</NavLink>
                 </li>
 
                 <div className="nav-items">
