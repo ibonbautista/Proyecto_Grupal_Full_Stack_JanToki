@@ -1,7 +1,7 @@
 import reviewModel from "../models/review.js";
 import { paginateQuery } from "../utils/paginate.js";
 import path from "path"; //Modulo path para trabajar con rutas sin confundir slashes
-import fs from "fs/promises"; //Modulo fs para trabajar con archivos y promesas para poder usar await
+import fs from "fs"; //Modulo fs para trabajar con archivos y promesas para poder usar await
 import { fileURLToPath } from 'url'; //Funcion para convertir URL en path de sistema de archivos
 import { dirname } from 'path'; //Funcion que extrae solo la carpeta de un path
 import {
@@ -128,6 +128,7 @@ const addReview = async (req, res, next) => {
     next(error);
   }
 };
+
 const updateReview = async (req, res, next) => {
   try {
     const { text, rating } = req.body;
@@ -164,6 +165,7 @@ const updateReview = async (req, res, next) => {
     next(error);
   }
 };
+
 const updateReviewImage = async (req, res, next) => {
   try {
     const { reviewId } = req.params;
@@ -179,7 +181,7 @@ const updateReviewImage = async (req, res, next) => {
     }
 
     if (review.image) {
-      const oldImagePath = path.join(__dirname, "../public/images", review.image);
+      const oldImagePath = path.join(__dirname, "../../public/images/reviews", review.image);
       if (fs.existsSync(oldImagePath)) {
         try {
           fs.unlinkSync(oldImagePath);
@@ -237,10 +239,10 @@ const deleteReviewImage = async (req, res, next) => {
       throw new ReviewImageNotValid();
     }
 
-    const imagePath = path.join(__dirname, "../public/images", review.image);
+    const imagePath = path.join(__dirname, "../../public/images/reviews", review.image);
 
     try {
-      await fs.unlink(imagePath);
+      fs.unlinkSync(imagePath);
       console.log("Image deleted successfully");
     } catch (err) {
       if (err.code === "ENOENT") {
