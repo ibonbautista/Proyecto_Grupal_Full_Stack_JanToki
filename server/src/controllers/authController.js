@@ -33,7 +33,14 @@ const login = async (req, res, next) => {
       { expiresIn: "24h" }
     );
 
-    res.json({ token });
+    res.json({ 
+		token,
+		user: {
+			id: user.user_id,
+			name: user.username,
+			email: user.email,
+			role: user.role
+	}});
   } catch (error) {
     next(error);
   }

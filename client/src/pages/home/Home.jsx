@@ -1,7 +1,7 @@
 import RestaurantsList from "../../components/restaurantsList/RestaurantsList";
 import SearchFilter from "../../components/searchFilter/SearchFilter";
 import { useLoaderData, useSearchParams, useNavigate } from "react-router-dom";
-//import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 import './Home.css';
 
@@ -11,6 +11,10 @@ function Home() {
 	const navigate = useNavigate();
 
 	const currentPage = parseInt(searchParams.get('page') || 1);
+
+	useEffect(() => {
+		window.scrollTo({ top: 0, behavior: 'auto' });
+	}, [currentPage]);
 
 	const goToPage = (newPage) => {
 		navigate(`?page=${newPage}`);
