@@ -26,20 +26,25 @@ function Home() {
 
 	const handleCategorySelect = (category) => {
 		setSelectedCategory(category);
+		console.log("category", category)
 		if (category) {
 			const filtered = restaurants.filter(r =>
-				r.Category?.CuisineType?.toLowerCase() === category.toLowerCase(),
+				r.Categories?.CuisineType?.toLowerCase() === category.toLowerCase(),
 			);
 			setFilteredRestaurants(filtered);
 			console.log("filtered", filtered)
 		} else {
 			setFilteredRestaurants(restaurants);
+			console.log("restaurants", restaurants);
 		}
 	};
 
 	useEffect(() => {
+	if (!selectedCategory) {
 		setFilteredRestaurants(restaurants);
-	}, [restaurants]);
+	}
+}, [restaurants, selectedCategory]);
+
 
 	return (
 		<article className="home-page">

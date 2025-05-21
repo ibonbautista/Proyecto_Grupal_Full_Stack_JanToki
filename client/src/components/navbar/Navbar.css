@@ -7,7 +7,7 @@ header {
     left: 0;
     z-index: 1;
 
-    background-color: var(--main-color);
+    background-color: var(--searchbar-color);
     display: flex;
     justify-content: center;  
     align-items: center;  

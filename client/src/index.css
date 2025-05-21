@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -104,10 +106,11 @@ section {
 }
 
 body {
-  line-height: 1;
-  font-family: 'Rubik', sans-serif;
-
-  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
 }
 
 ol,
@@ -183,18 +186,30 @@ main {
 }
 
 h1 {
-  font-size: 2rem;
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
   font-weight: 600;
+  font-style: normal;
+
+  font-size: 3rem;
 }
 
 h2 {
-  font-size: 1.8rem;
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
   font-weight: 600;
+  font-style: normal;
+
+  font-size: 2rem;
 }
 
 h3 {
-  font-size: 1.4rem;
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
   font-weight: 600;
+  font-style: normal;
+
+  font-size: 1.4rem;
 }
 
 button {
@@ -211,10 +226,6 @@ button {
   cursor: pointer;
 
   transition: all .3s ease;
-}
-
-button:hover {
-  scale: 110%;
 }
 
 #theme-toggle {

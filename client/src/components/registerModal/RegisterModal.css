@@ -1,0 +1,48 @@
+.register-modal {
+    position: fixed;
+    top: 1em;
+    right: 1em;
+    z-index: 1;
+
+    background-color: var(--searchbar-color);
+    color: var(--text-color);
+    border-radius: 10px;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+
+    padding: 2em;
+    gap: 2em;
+}
+
+.register-modal .close-button {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    cursor: pointer;
+
+    border-radius: 100px;
+    width: 2em;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-modal form {
+    display: flex;
+    flex-flow: column;
+    gap: 1em;
+}
+
+.register-modal form input {
+    padding: .5em;
+    border-radius: 10px;
+    border: none;
+
+    background-color: var(--button-color);
+    color: var(--text-color);
+
+    font-size: 1rem;
+}
