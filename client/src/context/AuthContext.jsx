@@ -1,7 +1,8 @@
 import { createContext,useState,useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { login,logout, register } from "../utils/api/auth";
-import { saveToken, removeToken } from "../utils/localStorage";
+import { saveToken, removeToken, getToken } from "../utils/localStorage";
+import { profile } from "../utils/api/auth";
 
 const AuthContext = createContext({
     userData: {},
@@ -13,6 +14,20 @@ const AuthContext = createContext({
 const AuthProvider = ({children}) => {
     const [userData, setUserData] = useState(null);
     const navigate = useNavigate();
+
+	useEffect(()=>{
+		const token = getToken();
+		if(token){
+			profile().then((data)=>{
+				setUserData(data.user);
+			}).catch(err => {
+				console.error("Error al cargar perfil:", err);
+				removeToken();
+				setUserData(null);
+			});
+		}
+	},[]);
+		
 
     const handleLogin = async (email, password) => {
         const result = await login(email, password);
@@ -39,17 +54,17 @@ const AuthProvider = ({children}) => {
 			removeToken();
 			return {error: result.error};
 		} else {
-			setUserData(result.user);
 			saveToken(result.token);
+			setUserData(result.user);
 			navigate("/");
 			return {success: true};
 		}
 	}
 
     return (
-        <AuthContext value={{userData:userData,onLogin:handleLogin,onLogout:handleLogout, onRegister:handleRegister}}>
+        <AuthContext.Provider value={{userData:userData,onLogin:handleLogin,onLogout:handleLogout, onRegister:handleRegister}}>
             {children}
-        </AuthContext>
+        </AuthContext.Provider>
     )
 }
 
