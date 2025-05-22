@@ -6,14 +6,14 @@ async function getAllRestaurants({ request }) {
 	const url = new URL(request.url); // para acceder a los parámetros
 	const page = url.searchParams.get("page") || 1; // extraer los parámetros
 	const name	= url.searchParams.get("name") || "";
-	const ubication = url.searchParams.get("town") || "";
+	const town = url.searchParams.get("town") || "";
 	
 	// Montar la query para llamar a la API con los filtros
-	let query = `?page=${page}`;
+	let query = `?page=${page}&limit=10`;
 	if (name) {
-		query += `&name=${name}`;
-	} else if (ubication) {
-		query += `&ubication=${ubication}`;
+		query += `&Name=${name}`;
+	} else if (town) {
+		query += `&Municipality=${town}`;
 	}
 	// Llamar a la API con los filtros
     const restaurants = await fetchData(`/restaurant${query}`);

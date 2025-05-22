@@ -32,11 +32,25 @@ const login = async (req, res, next) => {
       process.env.JWT_SECRET,
       { expiresIn: "24h" }
     );
-
-    res.json({ token });
+	const user_pruba = {
+		id: user._id,
+		name: user.username,
+		email: user.email,
+		role: user.role
+	};
+	console.log("user", user_pruba)
+    res.json({ 
+		token,
+		user: {
+			id: user._id,
+			name: user.username,
+			email: user.email,
+			role: user.role
+	}});
   } catch (error) {
     next(error);
   }
+
 };
 
 const register = async (req, res, next) => {

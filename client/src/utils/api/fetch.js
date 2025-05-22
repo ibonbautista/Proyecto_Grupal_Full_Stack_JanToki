@@ -18,13 +18,13 @@ async function fetchData(route,method="GET",data=null){
     if(data){
         options.body = JSON.stringify(data)
     }
-    const response  = await fetch(url,options);
-    const responseText = await response.text();
+    const response = await fetch(url, options);
 	let responseData;
+
 	try {
-		responseData = JSON.parse(responseText);
+		responseData = await response.json();
 	} catch (e) {
-		console.error("La respuesta no es JSON válido:", responseText);
+		console.error("Error al parsear JSON:", e);
 		throw new Error("Respuesta no válida del servidor");
 	}
 

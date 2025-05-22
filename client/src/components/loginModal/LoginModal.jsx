@@ -1,6 +1,8 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../../context/AuthContext";
 
+import "../../styles/ModalBase.css"
+
 function LoginModal({ onClose }) {
 	const { onLogin } = useContext(AuthContext);
 	const [email, setEmail] = useState("");
@@ -19,18 +21,20 @@ function LoginModal({ onClose }) {
 
 	return (
 		<div className="login-modal">
-			<button className="close-button" onClick={onClose}>x</button>
-			<h2>Iniciar Sesión</h2>
-			<form onSubmit={handleSubmit}>
-				<label>Email: 
-					<input type="email" required value={email} onChange={(e) => setEmail(e.target.value)} />
-				</label>
-				<label>Contraseña:
-					<input type="password" required value={password} onChange={(e) => setPassword(e.target.value)} />
-				</label>
-				{error && <p className="modal-error">{error}</p>}
-				<button type="submit">Iniciar Sesión</button>
-			</form>
+			<div className="modal">
+				<button className="close-button" onClick={onClose}>x</button>
+				<h2>Iniciar Sesión</h2>
+				<form onSubmit={handleSubmit}>
+					<label>Email: 
+						<input type="email" required value={email} onChange={(e) => setEmail(e.target.value)} />
+					</label>
+					<label>Contraseña:
+						<input type="password" required value={password} onChange={(e) => setPassword(e.target.value)} />
+					</label>
+					{error && <p className="modal-error">{error}</p>}
+					<button type="submit">Iniciar Sesión</button>
+				</form>
+			</div>
 		</div>
 	)
 }

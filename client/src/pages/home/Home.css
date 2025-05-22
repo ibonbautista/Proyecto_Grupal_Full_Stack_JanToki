@@ -1,0 +1,12 @@
+.home-page {
+    width: 100%;
+
+    display: flex;
+    flex-flow: column;
+    gap: 2em;
+}
+
+.pagination {
+    margin: 1em 10%;
+    text-align: center;
+}
