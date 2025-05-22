@@ -7,6 +7,10 @@ async function addReview(restaurantId, formData) {
 	const url = BASE_URL + "/review/" + restaurantId;
 	const token = getToken();
 
+	if (!token) {
+        throw new Error("No hay token de autenticación");
+    }
+
 	const response = await fetch(url, {
 		method: "POST",
 		headers: {
