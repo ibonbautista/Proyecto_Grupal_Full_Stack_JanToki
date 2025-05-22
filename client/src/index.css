@@ -165,8 +165,8 @@ img {
   --main-color: #1E1E1E;
   --searchbar-color: #1e1e1ec2;
   --items-color: #444444;
-  --button-color: #613d3c;
-  --input-color: #4C3A32;
+  --button-color: #8f0500;
+  --input-color: #000000;
   --text-color: #F2F2F2;
 
 }
@@ -214,6 +214,7 @@ h3 {
 
 button {
   background-color: var(--button-color);
+  color: var(--text-color);
 
   border: none;
   border-radius: 10px;
@@ -245,10 +246,10 @@ button {
 }
 
 body.light-theme {
-  --main-color: #ebebeb;
+  --main-color: #ffeee7;
   --searchbar-color: #ebebebbb;
   --items-color: white;
-  --button-color: #A43F3F;
-  --input-color: #D9BF77;
+  --button-color: #ff8484;
+  --input-color: #ffdbd0;
   --text-color: #3E3E3E;
 }

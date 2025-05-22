@@ -27,12 +27,13 @@ async function register(username, email, password) {
 }
 
 async function profile(){
-    const result = await fetchData("/profile");
+    const result = await fetchData("/profile/:id", "GET");
     return result;
 }
 
 export {
     login,
     logout,
-    register
+    register,
+    profile
 }

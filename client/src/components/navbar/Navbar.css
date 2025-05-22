@@ -7,7 +7,7 @@ header {
     left: 0;
     z-index: 1;
 
-    background-color: var(--searchbar-color);
+    background-color: var(--input-color);
     display: flex;
     justify-content: center;  
     align-items: center;  

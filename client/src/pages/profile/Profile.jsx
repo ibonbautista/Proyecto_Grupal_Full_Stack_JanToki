@@ -1,29 +1,19 @@
 import { useEffect, useState, useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import fetchData from "../../utils/api/fetch";
+
+import { profile } from "../../utils/api/auth";
 import { getAllRestaurants } from "../../utils/api/restaurant";
 // import { getUserImage } from "../../../utils/api/auth";
 
 import './Profile.css';
 
 function Profile() {
-    const profile = useLoaderData();
-    console.log(profile);
-
-    const [user, setUser] = useState(null);
-
+    const { username } = useParams();
+    console.log(username);
     const { userData, onLogout } = useContext(AuthContext);
-    const [favoriteRestaurants, setFavoriteRestaurants] = useState([]);
-
-    // const handleFetchData = async () => {
-    //     const userResponse = await fetchData(`/profile`);
-    //     const allFavoriteRestaurants = await getAllRestaurants();
-    //     const userFavoriteRestaurants = allFavoriteRestaurants.filter(pub => pub.user_id === userData.user_id);
-
-    //     setUser(userResponse);
-    //     setFavoriteRestaurants(userFavoriteRestaurants);
-    // }
+    console.log(userData)
 
     return (
         <article className="my-profile">
@@ -31,7 +21,7 @@ function Profile() {
                 <h2>Jantoki</h2>
                 <div className="index-item">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-bookmark-check" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0" />
+                        <path fillRule="evenodd" d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0" />
                         <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z" />
                     </svg>
                     <p className="saved-restaurants-link">Restaurantes guardados</p>
@@ -51,7 +41,7 @@ function Profile() {
                     <div className="data--info">
                         <img src="https://placehold.co/100x100" className="data--info-logo" alt={"AUX"} />
                         <div className="data--info-name">
-                            <h3 className="data--name-lastname">nombre apellido</h3> {/* TODO CAMBIAR */}
+                            <h3 className="data--name-lastname">nombre</h3> {/* TODO CAMBIAR */}
                             <p className="data--username">@username</p> {/* TODO CAMBIAR */}
                         </div>
                     </div>

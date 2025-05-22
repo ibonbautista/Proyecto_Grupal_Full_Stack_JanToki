@@ -21,7 +21,7 @@ function Navbar({ onLoginClick, onRegisterClick }) {
                         </>
                     ) : (
                         <li className={"nav-item "}>
-                            <p className='nav-item'>{userData.username}</p>
+                            <NavLink to={`/profile/${userData.user_id}`}>{userData.username}</NavLink>
                             <button onClick={onLogout} className='nav-item'>Logout</button>
                         </li>
                     )}

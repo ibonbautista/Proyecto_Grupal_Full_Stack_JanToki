@@ -47,9 +47,9 @@ const AuthProvider = ({children}) => {
 	}
 
     return (
-        <AuthContext value={{userData:userData,onLogin:handleLogin,onLogout:handleLogout, onRegister:handleRegister}}>
+        <AuthContext.Provider value={{userData:userData,onLogin:handleLogin,onLogout:handleLogout, onRegister:handleRegister}}>
             {children}
-        </AuthContext>
+        </AuthContext.Provider>
     )
 }
 
