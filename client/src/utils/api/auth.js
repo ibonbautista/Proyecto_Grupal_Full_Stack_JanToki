@@ -1,4 +1,5 @@
 import fetchData from "./fetch.js";
+import { saveToken, removeToken } from "../localStorage.js";
 
 async function login(email, password){
     const data = {
@@ -6,11 +7,12 @@ async function login(email, password){
         password
     }
     const result = await fetchData("/login","POST",data);
-	console.log("result.user en el frontend:", result.user);
     return result;
 }
 async function logout(){
     const result = await fetchData("/logout","POST");
+	removeToken();
+	return result;
 }
 
 async function register(username, email, password) {
@@ -27,7 +29,7 @@ async function register(username, email, password) {
 }
 
 async function profile(){
-    const result = await fetchData("/profile/:id", "GET");
+    const result = await fetchData("/user");
     return result;
 }
 
@@ -35,5 +37,5 @@ export {
     login,
     logout,
     register,
-    profile
+	profile
 }

@@ -21,7 +21,7 @@ app.use(cookieParser());
 app.use(express.json()); // para API (formato json)
 app.use(express.urlencoded({extended:true})); // para Vistas (formato formulario)
 
-
+app.use(express.static("public"));
 
 app.use("/",router);
 app.use(errorHandler);
