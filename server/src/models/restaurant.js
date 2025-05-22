@@ -33,7 +33,7 @@ const restaurantSchema = new mongoose.Schema({
         type: Number,
         required:true
     },
-    Category: {
+    Categories: {
         CuisineType: {
           type: String,
           required: true,
