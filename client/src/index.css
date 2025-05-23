@@ -214,14 +214,13 @@ h3 {
 
 button {
   background-color: var(--button-color);
-  color: var(--text-color);
+  color: white;
 
   border: none;
   border-radius: 10px;
 
   padding: .5em 1em;
 
-  font-size: 1rem;
   font-weight: 600;
 
   cursor: pointer;
@@ -246,10 +245,10 @@ button {
 }
 
 body.light-theme {
-  --main-color: #ffeee7;
+  --main-color: #ffffff;
   --searchbar-color: #ebebebbb;
+  --button-color: rgb(124, 69, 47);
   --items-color: white;
-  --button-color: #ff8484;
-  --input-color: #ffdbd0;
+  --input-color: #c59e7a;
   --text-color: #3E3E3E;
 }
