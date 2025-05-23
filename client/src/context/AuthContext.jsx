@@ -1,6 +1,6 @@
 import { createContext,useState,useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { login,logout, register, getUserInfo } from "../utils/api/auth";
+import { login,logout, register } from "../utils/api/auth";
 import { saveToken, removeToken, getToken } from "../utils/localStorage";
 
 const AuthContext = createContext({
