@@ -1,6 +1,5 @@
-import { useEffect, useState, useContext } from "react";
+import { useState, useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
-import { useLoaderData, useParams } from "react-router-dom";
 import fetchData from "../../utils/api/fetch";
 
 import { profile } from "../../utils/api/auth";
@@ -10,8 +9,6 @@ import { getAllRestaurants } from "../../utils/api/restaurant";
 import './Profile.css';
 
 function Profile() {
-    const { username } = useParams();
-    console.log(username);
     const { userData, onLogout } = useContext(AuthContext);
     console.log(userData)
 
@@ -41,14 +38,15 @@ function Profile() {
                     <div className="data--info">
                         <img src="https://placehold.co/100x100" className="data--info-logo" alt={"AUX"} />
                         <div className="data--info-name">
-                            <h3 className="data--name-lastname">nombre</h3> {/* TODO CAMBIAR */}
-                            <p className="data--username">@username</p> {/* TODO CAMBIAR */}
+                            <h3 className="data--name">{userData.name}</h3> {/* TODO CAMBIAR */}
+                            <p className="data--email">{userData.email}</p> {/* TODO CAMBIAR */}
                         </div>
                     </div>
                     <form action="POST" className="data--configuration">
-                        <input type="text" placeholder="Nombre" /> {/* TODO CAMBIAR POR DATOS DEL USER */}
-                        <input type="text" placeholder="Email" />
-                        <input type="text" placeholder="Contraseña" />
+                        <input type="text" placeholder={userData.name} /> {/* TODO CAMBIAR POR DATOS DEL USER */}
+                        <input type="text" placeholder={userData.email} />
+                        <input type="password" placeholder="Cambiar contraseña" />
+                        <input type="password" placeholder="Confirmar contraseña" />
                         <div className="configuration-buttons">
                             <button type="submit">Guardar cambios</button>
                             <button className="logout-button" onClick={onLogout}>Logout</button>

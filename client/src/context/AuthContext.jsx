@@ -2,7 +2,6 @@ import { createContext,useState,useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { login,logout, register } from "../utils/api/auth";
 import { saveToken, removeToken, getToken } from "../utils/localStorage";
-import { profile } from "../utils/api/auth";
 
 const AuthContext = createContext({
     userData: {},
@@ -15,31 +14,36 @@ const AuthProvider = ({children}) => {
     const [userData, setUserData] = useState(null);
     const navigate = useNavigate();
 
-	useEffect(()=>{
+	useEffect(() => {
 		const token = getToken();
-		if(token){
-			profile().then((data)=>{
-				setUserData(data.user);
-			}).catch(err => {
-				console.error("Error al cargar perfil:", err);
-				removeToken();
-				setUserData(null);
-			});
+		if(token) {
+			handleGetUserInfo();
 		}
-	},[]);
-		
+	}, [])
+	
+	const handleGetUserInfo = async() => {
+		try {
+			const result = await getUserInfo();
+			if(result.user) {
+				setUserData(result.user);
+			}
+		} catch (error) {
+			console.error("Error al cargar perfil:", error);
+			removeToken(); // Limpia el token si hay error
+			setUserData(null);
+		}
+	}
 
     const handleLogin = async (email, password) => {
         const result = await login(email, password);
-		console.log("result", result);
         if (result.error) {
-            return result.error;
+			removeToken();
+            return {error: result.error};
         } else {
-            console.log("login", result)
             setUserData(result.user);
             saveToken(result.token);
             navigate("/");
-            return null;
+            return { success: true};
         }
     }
     const handleLogout = () => {
@@ -50,13 +54,13 @@ const AuthProvider = ({children}) => {
 
 	const handleRegister = async (name, email, password) => {
 		const result = await register(name, email, password);
+		
 		if (result.error) {
-			removeToken();
 			return {error: result.error};
 		} else {
-			saveToken(result.token);
 			setUserData(result.user);
 			navigate("/");
+			console.log("token",result.token);
 			return {success: true};
 		}
 	}

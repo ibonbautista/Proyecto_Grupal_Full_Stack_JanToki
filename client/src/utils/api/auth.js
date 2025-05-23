@@ -2,12 +2,18 @@ import fetchData from "./fetch.js";
 import { saveToken, removeToken } from "../localStorage.js";
 
 async function login(email, password){
-    const data = {
-        email,
-        password
-    }
-    const result = await fetchData("/login","POST",data);
-    return result;
+	try {
+		const result = await fetchData("/login","POST",{
+			email,
+			password
+		});
+		if (result.token) {
+			saveToken(result.token);
+		}
+		return result;
+	} catch (error) {
+		return { error: error.message };
+	}
 }
 async function logout(){
     const result = await fetchData("/logout","POST");
@@ -16,16 +22,19 @@ async function logout(){
 }
 
 async function register(username, email, password) {
-    const data = {
-        username,
-        email,
-        password
-    }
-    const result = await fetchData("/register", "POST", data);
-    if (result.token) {
-        saveToken(result.token);
-    }
-    return result;
+	try {
+		const result = await fetchData("/register", "POST", {
+			username,
+			email,
+			password
+		});
+		if (result.token) {
+			saveToken(result.token);
+		}
+		return result;
+	} catch (error) {
+		return { error: error.message };
+	}
 }
 
 async function profile(){
@@ -33,9 +42,15 @@ async function profile(){
     return result;
 }
 
+async function getUserInfo() {
+	const result = await fetchData("/user-info");
+	return result;
+}
+
 export {
     login,
     logout,
     register,
-	profile
+	profile,
+	getUserInfo
 }

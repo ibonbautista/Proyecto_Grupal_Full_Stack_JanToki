@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 import restaurantModel from "../models/restaurant.js"
+import reviewModel from "../models/review.js"
 import { paginateQuery } from "../utils/paginate.js";
 import {
   RestaurantNotFound,
@@ -205,7 +206,7 @@ const updateRestaurant = async (req, res, next) => {
       if (Recommended !== undefined && typeof Recommended !== "boolean") {
         return next(new ValidationError("Recommended debe ser booleano"));
       }
-}
+    }
     if (Phone !== undefined && typeof Phone !== "string") {
       return next(new ValidationError("Teléfono debe ser texto"));
     }
@@ -245,6 +246,15 @@ const updateRestaurant = async (req, res, next) => {
 
     if (!updatedRestaurant) {
       return next(new RestaurantNotFound());
+    }
+
+    if (Rating === undefined) {
+      const reviews = await reviewModel.find({ restaurantId: id });
+      const totalRating = reviews.reduce((sum, review) => sum + review.rating, 0);
+      const averageRating = reviews.length > 0 ? totalRating / reviews.length : 0;
+
+      updatedRestaurant.Rating = averageRating;
+      await updatedRestaurant.save();
     }
 
     res.json(updatedRestaurant);

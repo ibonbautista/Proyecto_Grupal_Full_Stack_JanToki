@@ -1,4 +1,5 @@
 import reviewModel from "../models/review.js";
+import restaurantModel from "../models/restaurant.js";
 import { paginateQuery } from "../utils/paginate.js";
 import path from "path"; //Modulo path para trabajar con rutas sin confundir slashes
 import fs from "fs"; //Modulo fs para trabajar con archivos y promesas para poder usar await
@@ -96,8 +97,6 @@ const showReviewByRestaurant = async (req, res, next) => {
   }
 };
 
-
-
 const addReview = async (req, res, next) => {
   try {
     const userId = req.user?._id;
@@ -115,7 +114,7 @@ const addReview = async (req, res, next) => {
       throw new ReviewAlreadyExists();
     }
 
-    await reviewModel.create({
+    const newReview = await reviewModel.create({
       userId,
       restaurantId,
       text,
@@ -123,7 +122,17 @@ const addReview = async (req, res, next) => {
       image: image
     });
 
-    res.status(201).json({ message: "Review agregada correctamente" });
+    const reviews = await reviewModel.find({ restaurantId });
+    const totalRating = reviews.reduce((sum, review) => sum + review.rating, 0);
+    const averageRating = reviews.length > 0 ? (totalRating / reviews.length).toFixed(1) : 0;
+
+    const updatedRestaurant = await restaurantModel.findByIdAndUpdate(
+      restaurantId,
+      { Rating: averageRating },
+      { new: true }
+    );
+
+    res.status(201).json({ message: "Review agregada correctamente", updatedRestaurant });
   } catch (error) {
     next(error);
   }

@@ -56,6 +56,7 @@ const login = async (req, res, next) => {
 const register = async (req, res, next) => {
   try {
     const { email, password, username} = req.body;
+	console.log("req.body", req.body);
 
     if (!email) throw new UserEmailNotProvided();
     if (!password) throw new UserPasswordNotProvided();
@@ -77,15 +78,41 @@ const register = async (req, res, next) => {
     
     await newUser.save();
 
+	const token = jwt.sign(
+		{
+		  _id: newUser._id,
+		  role: newUser.role,
+		},
+		process.env.JWT_SECRET,
+		{ expiresIn: "24h" }
+	  );
+
     const userToReturn = newUser.toObject();
     delete userToReturn.password;
 
     res.status(201).json({
       message: "Usuario creado correctamente",
-      user: userToReturn,
+      token, 
+      user: {
+        id: newUser._id,
+        name: newUser.username,
+        email: newUser.email,
+        role: newUser.role
+      }
     });
   } catch (error) {
     next(error);
   }
 };
-export default {login,register};
+
+async function getUserInfo(req, res) {
+	const id = req.user._id;
+	const result = await userModel.findByPk(id, { attributes: { exclude: ['password'] } });
+	res.send({user: result});
+	
+}
+export default {
+	getUserInfo,
+	login,
+	register
+};

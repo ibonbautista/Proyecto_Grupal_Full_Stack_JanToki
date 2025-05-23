@@ -23,7 +23,7 @@ const router  = createBrowserRouter([
 				loader: getRestaurantById
 			},
             {
-                path: "/profile/:id",
+                path: "/user",
                 element: <Profile />,
             }
         ]
