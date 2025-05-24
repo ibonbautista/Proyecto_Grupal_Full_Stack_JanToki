@@ -1,6 +1,6 @@
 import { createContext,useState,useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { login,logout, register } from "../utils/api/auth";
+import { login,logout, register, getUserInfo } from "../utils/api/auth";
 import { saveToken, removeToken, getToken } from "../utils/localStorage";
 
 const AuthContext = createContext({
@@ -14,13 +14,6 @@ const AuthProvider = ({children}) => {
     const [userData, setUserData] = useState(null);
     const navigate = useNavigate();
 
-	useEffect(() => {
-		const token = getToken();
-		if(token) {
-			handleGetUserInfo();
-		}
-	}, [])
-	
 	const handleGetUserInfo = async() => {
 		try {
 			const result = await getUserInfo();
@@ -29,11 +22,18 @@ const AuthProvider = ({children}) => {
 			}
 		} catch (error) {
 			console.error("Error al cargar perfil:", error);
-			removeToken(); // Limpia el token si hay error
+			removeToken();
 			setUserData(null);
 		}
 	}
 
+	useEffect(() => {
+		const token = getToken();
+		if(token) {
+			handleGetUserInfo();
+		}
+	}, [])
+	
     const handleLogin = async (email, password) => {
         const result = await login(email, password);
         if (result.error) {
@@ -49,6 +49,7 @@ const AuthProvider = ({children}) => {
     const handleLogout = () => {
         logout();
         setUserData(null);
+		removeToken();
         navigate("/");
     }
 
@@ -66,7 +67,7 @@ const AuthProvider = ({children}) => {
 	}
 
     return (
-        <AuthContext.Provider value={{userData:userData,onLogin:handleLogin,onLogout:handleLogout, onRegister:handleRegister}}>
+        <AuthContext.Provider value={{userData, setUserData, onLogin:handleLogin,onLogout:handleLogout, onRegister:handleRegister}}>
             {children}
         </AuthContext.Provider>
     )
