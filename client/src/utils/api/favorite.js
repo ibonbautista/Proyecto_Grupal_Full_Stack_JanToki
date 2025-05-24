@@ -18,7 +18,6 @@ export async function deleteFavorite(favoriteId) {
 
 export async function getFavorites(page = 1, limit=10) {
 	const queryParams = `?page=${page}&limit=${limit}`;
-	console.log("llamando a get/favorite", queryParams);
 	try {
 		const response = await fetchData(`/favorite${queryParams}`);
 		return response;
