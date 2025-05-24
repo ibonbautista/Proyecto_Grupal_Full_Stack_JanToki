@@ -34,7 +34,7 @@ const login = async (req, res, next) => {
     );
 	const user_pruba = {
 		id: user._id,
-		name: user.username,
+		username: user.username,
 		email: user.email,
 		role: user.role
 	};
@@ -43,7 +43,7 @@ const login = async (req, res, next) => {
 		token,
 		user: {
 			id: user._id,
-			name: user.username,
+			username: user.username,
 			email: user.email,
 			role: user.role
 	}});
@@ -95,7 +95,7 @@ const register = async (req, res, next) => {
       token, 
       user: {
         id: newUser._id,
-        name: newUser.username,
+        username: newUser.username,
         email: newUser.email,
         role: newUser.role
       }
@@ -106,9 +106,23 @@ const register = async (req, res, next) => {
 };
 
 async function getUserInfo(req, res) {
-	const id = req.user._id;
-	const result = await userModel.findByPk(id, { attributes: { exclude: ['password'] } });
-	res.send({user: result});
+	try {
+		const id = req.user._id;
+		const user = await userModel.findById(id).select("-password");
+		if (!user) {
+			return res.status(404).json({ error: "Usuario no encontrado" });
+		}
+		res.json({
+			user: {
+				id: user._id,
+				username: user.username,
+				email: user.email,
+				role: user.role
+			}
+		});
+	} catch (error) {
+		next(error);
+	}
 	
 }
 export default {
