@@ -47,8 +47,12 @@ async function deleteReview(reviewId) {
 
 async function getReviewsByRestaurant(restaurantId) {
 	const response = await fetchData("/review/restaurant/" + restaurantId, "GET");
+	return response;	
+}
+
+async function getReviewsByUser() {
+	const response = await fetchData("/review/user", "GET");
 	return response;
-	
 }
 
 
@@ -56,5 +60,6 @@ export {
 	addReview,
 	updateReview,
 	deleteReview,
-	getReviewsByRestaurant
+	getReviewsByRestaurant,
+	getReviewsByUser
 };

@@ -1,6 +1,7 @@
 import userModel from "../models/user.js";
 import mongoose from "mongoose";
 import { paginateQuery } from "../utils/paginate.js";
+import { hash } from "../utils/bcrypt.js";
 import {
   UserNameNotProvided,
   UserEmailNotProvided,
@@ -89,6 +90,10 @@ const updateUser = async (req, res, next) => {
   }
 
   try {
+	if (data.password) {
+		data.password = await hash(data.password);
+	}
+	
     const updatedUser = await userModel.findByIdAndUpdate(id, data, {
       new: true,
       runValidators: true,
@@ -125,10 +130,35 @@ const deleteUser = async (req, res, next) => {
   }
 };
 
+const updateCurrentUser = async (req, res, next) => {
+	const id = req.user._id;
+	const data = req.body;
+  
+	try {
+	  if (data.password && data.password.trim() !== "") {
+		  data.password = await hash(data.password);
+	  } else {
+		  delete data.password;
+	  }
+  
+	  const updatedUser = await userModel.findByIdAndUpdate(id, data, {
+		  new: true,
+		  runValidators: true,
+	  }).select("-password");
+  
+	  if (!updatedUser) throw new UserNotFound();
+  
+	  res.json(updatedUser);
+	} catch (error) {
+	  next(error);
+	}
+  };
+
 export default {
   getUsers,
   getUserById,
   createUser,
   updateUser,
   deleteUser,
+  updateCurrentUser
 };

@@ -47,7 +47,7 @@ const getRestaurants = async (req, res) => {
       {
         page: req.query.page,
         limit: req.query.limit,
-        sort: { name: 1 },
+        sort: { Name: 1 },
       }
     );
     if (results.length === 0) {

@@ -23,9 +23,13 @@ services:
       - ${DB_PORT}:27017
     networks:
       - jantoki_network
+    volumes:
+      - mongo_data:/data/db
   
 volumes:
   node_modules:
+  mongo_data:
+
 networks:
   jantoki_network:
     
