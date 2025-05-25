@@ -22,10 +22,6 @@ const showFavorite = async (req, res, next) => {
       }
     );
 
-    if (!data.results.length) {
-      throw new NoFavoritesFound();
-    }
-
     res.status(200).json(data);
   } catch (error) {
     next(error);

@@ -4,6 +4,7 @@ import { AuthContext } from "../../context/AuthContext";
 import { FavoritesList } from "../../components/favoritesList/FavoritesList";
 import { ReviewsList } from "../../components/reviewsList/ReviewsList";
 import { updateUser } from "../../utils/api/user";
+import { CreateRestaurantForm } from "../../components/createRestaurantForm/CreateRestaurantForm";
 
 import './Profile.css';
 
@@ -20,6 +21,7 @@ function Profile() {
     const [confirmPassword, setConfirmPassword] = useState("");
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
+	const [showCreateForm, setShowCreateForm] = useState(false);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -74,6 +76,14 @@ function Profile() {
             <section className="my-profile__content">
                 <section className={`my-profile__data ${activeSection === "profile" ? "active" : "hidden"}`}>
                     <h2>Datos personales</h2>
+					{userData.isAdmin && (
+						<button
+							onClick={() => setActiveSection("createRestaurant")}
+							className="create-restaurant-button"
+						>
+							Crear restaurante
+						</button>
+					)}
                     <div className="data--info">
                         <img src="https://placehold.co/100x100" className="data--info-logo" alt="Perfil" />
                         <div className="data--info-name">
@@ -96,12 +106,16 @@ function Profile() {
                 </section>
 
                 <section className={`my-profile__restaurants ${activeSection === "favorites" ? "active" : "hidden"}`}>
-                    <FavoritesList />
+                    <FavoritesList/>
                 </section>
 
                 <section className={`my-profile__reviews ${activeSection === "reviews" ? "active" : "hidden"}`}>
-                    <ReviewsList />
+					<ReviewsList/>
                 </section>
+
+				<section className={`my-profile__create-restaurant ${activeSection === "createRestaurant" ? "active" : "hidden"}`}>
+					<CreateRestaurantForm onCreated={() => setActiveSection("profile")}/>
+				</section>
             </section>
         </article>
     );

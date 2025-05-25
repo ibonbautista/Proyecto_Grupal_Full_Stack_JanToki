@@ -3,6 +3,7 @@ import { getReviewsByUser } from "../../utils/api/review";
 
 export function ReviewsList() {
 	const [reviews, setReviews] = useState([]);
+	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
 		const fetchReviews = async () => {
@@ -10,22 +11,28 @@ export function ReviewsList() {
 				const res = await getReviewsByUser();
 				setReviews(res.reviews || []);
 			} catch (error) {
-				if (error.message === "Review not Found") {
-					setReviews([]);
-				} else {
-					console.error("Error al cargar reseñas:", error);
-				}
+				setReviews([]);
+			} finally {
+				setLoading(false);
 			}
 		};
 		fetchReviews();
 	}, []);
+	if (loading) return null;
 
+	if (reviews.length === 0) {
+		return <p>No has escrito ninguna reseña todavía.</p>;
+	}
 	return (
 		<div>
 			<h2>Reseñas</h2>
 			<ul>
 				{reviews.map((review) => (
-					<li key={review._id}>{review.text} - {review.rating}</li>
+					<li className="review-item" key={review._id}>
+						{review.restaurant && <p><strong>Restaurante: {review.restaurant}</strong></p>}
+						{review.text} - ⭐ {review.rating}
+						{review.image && <img src={review.image} alt={review.text} />}
+					</li>
 				))}
 			</ul>
 		</div>

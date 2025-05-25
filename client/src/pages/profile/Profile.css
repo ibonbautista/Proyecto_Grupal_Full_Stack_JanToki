@@ -47,7 +47,10 @@
     width: 70%;
 }
 
-.my-profile__data.active {
+.my-profile__data.active,
+.my-profile__restaurants.active,
+.my-profile__reviews.active,
+.my-profile__create-restaurant.active {
     display: flex;
     flex-flow: column;
     gap: 2em;
@@ -92,12 +95,26 @@
     gap: .5em;
 }
 
+.configuration-buttons button {
+    padding: .5em 1em;
+    border: none;
+    border-radius: 10px;
+
+    font-size: 1rem;
+
+    width: 100%;
+
+    background-color: var(--button-color);
+}
+
+.my-profile__data.hidden,
 .my-profile__restaurants.hidden,
 .my-profile__reviews.hidden,
-.my-profile__data.hidden {
+.my-profile__saved-restaurants.hidden,
+.my-profile__create-restaurant.hidden {
     display: none;
 
-    flex-flow: column;
+	flex-flow: column;
     gap: 1em;
 }
 
