@@ -15,13 +15,30 @@ function RestaurantDetail() {
 	const restaurant = useLoaderData();
 	const [reviews, setReviews] = useState([]);
 	const { isFavorite, toggleFavorite } = useFavorite(userData?.id, restaurant._id);
+	const [averageRating, setAverageRating] = useState(0);
+
+	const calculateAverageRating = (reviewsList) => {
+		if (reviewsList.length === 0) return 0;
+		const sum = reviewsList.reduce((acc, review) => acc + Number(review.rating), 0);
+		return (sum / reviewsList.length).toFixed(1);
+	}
 
 	useEffect(() => {
 		window.scrollTo({ top: 0 });
 		const fetchReviews = async () => {
 			try {
 				const res = await getReviewsByRestaurant(restaurant._id);
+				const fetchedReviews = res.results || [];
+
 				setReviews(res.results || []);
+				setAverageRating(calculateAverageRating(fetchedReviews));
+
+				if (fetchedReviews.length > 0) {
+					const avg = fetchedReviews.reduce((acc, review) => acc + review.rating, 0) / fetchedReviews.length;
+					setAverageRating(avg.toFixed(1));
+				} else {
+					setAverageRating(0);
+				}
 			} catch (error) {
 				if (error.message === "No reviews for this restaurant") {
 					setReviews([]);
@@ -60,8 +77,7 @@ function RestaurantDetail() {
 				</div>
 				<p className="restaurant-description">{restaurant.Description}</p>
 				<p className="cuisine-type">Tipo de cocina: {restaurant.Categories.CuisineType}</p>
-				<p className="restaurant-rating">Valoración del restaurante: {restaurant.rating}</p>
-				<div className="restaurant-address">
+				<p className="restaurant-rating">Valoración media: ⭐ {averageRating}</p>				<div className="restaurant-address">
 					<MapLeaflet latitude={restaurant.Latitude} longitude={restaurant.Longitude} />
 					<p>{restaurant.Address}</p>
 					<p>{restaurant.Municipality}</p>
@@ -75,10 +91,13 @@ function RestaurantDetail() {
 				) : (
 					<ul>
 						{reviews.map((review, i) => (
-							<li key={i}>
-								<strong>{review.user || "Anónimo"}:</strong> {review.text} - ⭐ {review.rating}
+							<li key={i} className="review-item">
+								<div className="review-rating">⭐ {review.rating}</div>
+								<p className="review-text">
+									<strong>{review.user || "Anónimo"}:</strong> {review.text}
+								</p>
 								{review.image && (
-									<div>
+									<div className="review-image">
 										<img
 											src={`http://localhost:3003/images/reviews/${review.image}`}
 											alt="Imagen de la reseña"
@@ -88,6 +107,7 @@ function RestaurantDetail() {
 							</li>
 						))}
 					</ul>
+
 				)}
 
 				{userData && (
