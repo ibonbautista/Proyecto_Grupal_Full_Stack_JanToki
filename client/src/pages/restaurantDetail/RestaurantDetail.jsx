@@ -15,7 +15,7 @@ function RestaurantDetail() {
 	const restaurant = useLoaderData();
 	const [reviews, setReviews] = useState([]);
 	const { isFavorite, toggleFavorite } = useFavorite(userData?.id, restaurant._id);
-	const [averageRating, setAverageRating] = useState(0);
+	const [averageRating, setAverageRating] = useState(restaurant.Rating || 0);
 
 	const calculateAverageRating = (reviewsList) => {
 		if (reviewsList.length === 0) return 0;
@@ -31,7 +31,7 @@ function RestaurantDetail() {
 				const fetchedReviews = res.results || [];
 
 				setReviews(res.results || []);
-				setAverageRating(calculateAverageRating(fetchedReviews));
+				setAverageRating(res.updatedRestaurant?.Rating || restaurant.Rating);
 
 				if (fetchedReviews.length > 0) {
 					const avg = fetchedReviews.reduce((acc, review) => acc + review.rating, 0) / fetchedReviews.length;
