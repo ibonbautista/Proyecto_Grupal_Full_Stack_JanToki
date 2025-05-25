@@ -1,12 +1,15 @@
 import {Router} from "express";
 import userController from "../controllers/userController.js";
+import { isAdmin } from '../middlewares/isAdmin.js';
 
 const router = Router();
 
-router.get("/",userController.getUsers);
-router.get("/:id",userController.getUserById);
-router.post("/",userController.createUser);
-router.put("/:id",userController.updateUser);
-router.delete("/:id",userController.deleteUser);
+router.put("/me",userController.updateCurrentUser);
+
+router.get("/",isAdmin,userController.getUsers);
+router.get("/:id",isAdmin, userController.getUserById);
+router.post("/",isAdmin, userController.createUser);
+router.put("/:id",isAdmin,userController.updateUser);
+router.delete("/:id",isAdmin, userController.deleteUser);
 
 export default router

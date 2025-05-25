@@ -20,7 +20,7 @@ function Navbar({ onLoginClick, onRegisterClick }) {
                         </>
                     ) : (
                         <li className={"nav-item "}>
-                            <NavLink to="/user"><span className='nav-item'>{userData.name}</span></NavLink>
+                            <NavLink to="/user"><span className='nav-item'>{userData.username}</span></NavLink>
                             <button onClick={onLogout} className='nav-item'>Logout</button>
                         </li>
                     )}

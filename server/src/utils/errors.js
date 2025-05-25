@@ -160,13 +160,13 @@ class NotAuthorizedToDeleteFavorite extends Error {
 
 class EmailNotFound extends Error{
     constructor(){
-        super("User email does not exist");
+        super("El email de usuario no existe");
         this.statusCode = 400;
     }
 }
 class IncorrectPassword extends Error{
     constructor(){
-        super("Incorrect password");
+        super("Contraseña incorrecta");
         this.statusCode = 400;
     }
 }
@@ -175,20 +175,20 @@ class IncorrectPassword extends Error{
  */
 class UserNameNotProvided extends Error {
     constructor(){
-        super("User name not provided");
+        super("Nombre de usuario no introducido");
         this.statusCode = 400;
     }
 }
 
 class UserEmailNotProvided extends Error {
     constructor(){
-        super("User email not provided");
+        super("Email no introducido");
         this.statusCode = 400;
     }
 }
 class UserPasswordNotProvided extends Error {
     constructor(){
-        super("User password not provided");
+        super("Contraseña no introducida");
         this.statusCode = 400;
     }
 }
@@ -208,7 +208,7 @@ class UserRoleIncorrect extends Error {
 }
 class UserEmailAlreadyExists extends Error{
     constructor(){
-        super("User email already exists");
+        super("Email de usuario ya existe");
         this.statusCode = 400;
     }
 }
@@ -220,14 +220,14 @@ class UsernameAlreadyExists extends Error{
 }
 class NoUsersFound extends Error {
   constructor() {
-    super("No users found");
+    super("No se encuentra este usuario");
     this.statusCode = 404;
   }
 }
 
 class UserInvalidCredentials extends Error {
     constructor(){
-        super("Invalid credentials");
+        super("Credenciales incorrectas");
         this.statusCode = 401;
     }
 }
