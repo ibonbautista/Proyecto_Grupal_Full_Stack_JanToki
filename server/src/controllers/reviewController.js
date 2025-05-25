@@ -44,7 +44,7 @@ const showReviewByUser = async (req, res, next) => {
     const formattedReviews = results.map((review) => ({
       text: review.text,
       rating: review.rating,
-      restaurant: review.restaurantId?.name || null,
+      restaurant: review.restaurantId?.Name || null,
       createdAt: review.createdAt,
     }));
 
@@ -74,10 +74,6 @@ const showReviewByRestaurant = async (req, res, next) => {
       ],
       sort: { createdAt: -1 },
     });
-
-    if (!data.results.length) {
-      throw new NoRestaurantReviewsFound();
-    }
 
     const formattedReviews = data.results.map((review) => ({
       text: review.text,

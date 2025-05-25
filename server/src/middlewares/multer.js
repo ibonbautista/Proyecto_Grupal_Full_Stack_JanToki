@@ -69,4 +69,22 @@ const storage = multer.diskStorage({
   }
 });
 
+const restaurantStorage = multer.diskStorage({
+	destination: (req, file, cb) => {
+		cb(null, "public/images/restaurants");
+	},
+	filename: (req, file, cb) => {
+		const userId = req.user ? String(req.user._id).slice(0, 5) : "anon";
+		const now = new Date();
+		const shortYear = String(now.getFullYear()).slice(2);
+		const month = ("0" + (now.getMonth() + 1)).slice(-2);
+		const day = ("0" + now.getDate()).slice(-2);
+		const time = now.toTimeString().slice(0, 8).replace(/:/g, "");
+		const extension = path.extname(file.originalname);
+		const formattedDate = `${shortYear}${month}${day}${time}`;
+		cb(null, `${userId}-restaurant-${formattedDate}${extension}`);
+	}
+})
+
 export const upload = multer({ storage });
+export const uploadRestaurant = multer({ storage: restaurantStorage });

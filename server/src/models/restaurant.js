@@ -22,7 +22,7 @@ const restaurantSchema = new mongoose.Schema({
     },
     Address: {
         type: String,
-        required:true,
+        required: false,
         trim:true
     },
     Latitude: {
@@ -61,7 +61,7 @@ const restaurantSchema = new mongoose.Schema({
     },
     Phone: {
         type: String,
-        required:true,
+        required: false,
         trim:true
     },
     Website: {
@@ -73,7 +73,14 @@ const restaurantSchema = new mongoose.Schema({
         type: String,
         required:false,
         enum: ["facebook","instagram","twitter"],
-        default: null
+        default: null,
+		validate: {
+			validator: function (v) {
+				// Permitir null o string vacío además del enum
+				return !v || ["facebook", "instagram", "twitter"].includes(v);
+			},
+			message: props => `"${props.value}" no es una red social válida`
+		}
     },
     Image: {
         type: String,
