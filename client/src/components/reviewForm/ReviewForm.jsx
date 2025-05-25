@@ -65,9 +65,10 @@ function ReviewForm({ restaurantId, setReviews }) {
 			<input 
 				type="file" 
 				accept="image/*" 
-				onChange={(e) => setImage(e.target.files[0])} 
+				onChange={(e) => setImage(e.target.files[0])}
+				className="file-input" 
 			/>
-			<button type="submit" disabled={loading}>
+			<button type="submit" disabled={loading} className="submit-button">
 				{loading ? "Enviando..." : "Enviar reseña"}
 			</button>
 			{error && <p className="error">{error}</p>}

@@ -23,7 +23,7 @@ function SearchFilter({ onSearch }) {
 
 	return (
 		<section className="search-bar">
-			<h3>Explora la mejor gastronomía vasca</h3>
+			<h3>Explora la mejor gastronomía del País Vasco</h3>
 			<form onSubmit={handleSearchName} className="search-filter">
 				<div className="search-input">
 					<input

@@ -41,16 +41,7 @@
 
     font-size: 1rem;
 
-    background-color: var(--main-color);
+    background-color: var(--input-color);
     color: var(--text-color);
-}
-
-.search-button {
-    border: none;
-    border-radius: 10px;
-    padding: .5em 1em;
-    font-size: 1rem;
-
-    background-color: var(--button-color);
 }
 
