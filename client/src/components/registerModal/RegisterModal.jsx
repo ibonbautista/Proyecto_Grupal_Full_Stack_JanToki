@@ -33,7 +33,7 @@ function RegisterModal({ onClose }) {
 				<h2>Registrarse</h2>
 				<form onSubmit={handleSubmit}>
 					<label>Nombre de usuario:
-						<input type="text" required value={username} onChange={(e) => setUsername(e.target.value)} />
+						<input type="text" autoFocus required value={username} onChange={(e) => setUsername(e.target.value)} />
 					</label>
 					<label>Email:
 						<input type="email" required value={email} onChange={(e) => setEmail(e.target.value)} />

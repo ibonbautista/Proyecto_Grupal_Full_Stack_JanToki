@@ -17,6 +17,7 @@ function RestaurantDetail() {
 	const { isFavorite, toggleFavorite } = useFavorite(userData?.id, restaurant._id);
 
 	useEffect(() => {
+		window.scrollTo({ top: 0 });
 		const fetchReviews = async () => {
 			try {
 				const res = await getReviewsByRestaurant(restaurant._id);
@@ -35,14 +36,27 @@ function RestaurantDetail() {
 	return (
 		<article className="restaurant-page">
 			<button className="back-button" onClick={() => Navigate(-1)}>
-				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-arrow-left-short" viewBox="0 0 16 16">
-					<path fillRule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5" />
+				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-caret-left" viewBox="0 0 16 16">
+					<path d="M10 12.796V3.204L4.519 8zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753" />
 				</svg>
 			</button>
 			<section className="restaurant-detail">
 				<div className="restaurant-page-image">
 					<h1>{restaurant.Name}</h1>
 					<img src={restaurant.Image} alt={restaurant.Name} className="restaurant-detail--image" />
+					{userData && (
+						<div className="favorite-button">
+							<button onClick={toggleFavorite}>
+								{isFavorite ? (
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-bookmark-fill" viewBox="0 0 16 16" >
+										<path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2z" />
+									</svg>) : (
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-bookmark" viewBox="0 0 16 16">
+										<path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z" />
+									</svg>)}
+							</button>
+						</div>
+					)}
 				</div>
 				<p className="restaurant-description">{restaurant.Description}</p>
 				<p className="cuisine-type">Tipo de cocina: {restaurant.Categories.CuisineType}</p>
@@ -77,26 +91,13 @@ function RestaurantDetail() {
 				)}
 
 				{userData && (
-					<>
-						<div className="review-form">
-							<h3>Deja tu reseña</h3>
-							<ReviewForm
-								restaurantId={restaurant._id}
-								setReviews={setReviews}
-							/>
-						</div>
-						<div className="favorite-button">
-							<button onClick={toggleFavorite}>
-								{isFavorite ? (
-									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-bookmark-fill" viewBox="0 0 16 16" >
-										<path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2z" />
-									</svg>) : (
-									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-bookmark" viewBox="0 0 16 16">
-										<path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z" />
-									</svg>)}
-							</button>
-						</div>
-					</>
+					<div className="review-form-section">
+						<h3>Deja tu reseña</h3>
+						<ReviewForm
+							restaurantId={restaurant._id}
+							setReviews={setReviews}
+						/>
+					</div>
 				)}
 
 				<p className="restaurant-website">{restaurant.Website}</p>

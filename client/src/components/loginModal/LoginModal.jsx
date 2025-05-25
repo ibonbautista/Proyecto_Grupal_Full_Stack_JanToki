@@ -26,7 +26,7 @@ function LoginModal({ onClose }) {
 				<h2>Iniciar Sesión</h2>
 				<form onSubmit={handleSubmit}>
 					<label>Email: 
-						<input type="email" required value={email} onChange={(e) => setEmail(e.target.value)} />
+						<input type="email" autoFocus required value={email} onChange={(e) => setEmail(e.target.value)} />
 					</label>
 					<label>Contraseña:
 						<input type="password" required value={password} onChange={(e) => setPassword(e.target.value)} />

@@ -5,12 +5,14 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 1000;
 
     background-color: var(--input-color);
     display: flex;
     justify-content: center;  
     align-items: center;  
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 header nav {
@@ -36,5 +38,6 @@ header nav {
 .nav-items {
     display: flex;
     flex-flow: row;
+    align-items: center;
     gap: 1em;
 }

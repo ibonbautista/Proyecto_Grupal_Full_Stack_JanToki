@@ -13,7 +13,6 @@
     background: var(--button-color);
     color: var(--text-color);
 
-    border: none;
     border-radius: 100px;
     width: 2em;
     height: 2em;
@@ -66,16 +65,7 @@
 }
 
 .modal form button[type="submit"] {
-    width: 100%;
-    padding: .5em 1em;
-
-    background-color: var(--button-color);
-    color: var(--text-color);
-    border: none;
-    border-radius: 10px;
-    font-size: 1rem;
-    cursor: pointer;
-    margin-top: 1rem;
+    width: 100%;    
 }
 
 .modal h2 {

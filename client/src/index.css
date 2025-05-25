@@ -216,16 +216,23 @@ button {
   background-color: var(--button-color);
   color: white;
 
-  border: none;
+  border: 1px solid transparent;
   border-radius: 10px;
 
   padding: .5em 1em;
 
+  font-size: 1rem;
   font-weight: 600;
 
   cursor: pointer;
 
   transition: all .3s ease;
+}
+
+button:hover {
+  background-color: var(--input-color);
+  border: 1px solid var(--button-color);
+  color: var(--button-color);
 }
 
 #theme-toggle {
@@ -236,7 +243,6 @@ button {
   width: 3em;
   height: 3em;
 
-  border: none;
   border-radius: 100px;
 
   display: flex;
@@ -245,10 +251,10 @@ button {
 }
 
 body.light-theme {
-  --main-color: #ffffff;
+  --main-color: #FEF9F3;
   --searchbar-color: #ebebebbb;
-  --button-color: rgb(124, 69, 47);
-  --items-color: white;
-  --input-color: #c59e7a;
+  --button-color: #FF956D;
+  --items-color: #ffebe6;
+  --input-color: #ffebe6;
   --text-color: #3E3E3E;
 }

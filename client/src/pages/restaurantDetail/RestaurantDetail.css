@@ -7,22 +7,21 @@
 }
 
 .back-button {
+    position: fixed;
+    top: 6em;
+    left: 1em;
+    cursor: pointer;
+
+    z-index: 100;
+    border-radius: 100px;
+    cursor: pointer;
+
     width: 3em;
     height: 3em;
 
     display: flex;
     justify-content: center;
     align-items: center;
-
-    position: fixed;
-    top: 6em;
-    left: 10%;
-    cursor: pointer;
-
-    border-radius: 100px;
-    font-size: 1rem;
-
-    z-index: 100;
 }
 
 .restaurant-page-image {
@@ -39,6 +38,21 @@
     position: absolute;
     bottom: .5em;
     left: 10%;
+}
+
+.favorite-button {
+    position: absolute;
+    bottom: 2.2em;
+    right: 10%;
+}
+.favorite-button button {
+    width: 3em;
+    height: 3em;
+    border-radius: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
