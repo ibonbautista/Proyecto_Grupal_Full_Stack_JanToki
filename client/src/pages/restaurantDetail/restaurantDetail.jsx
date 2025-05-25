@@ -180,9 +180,9 @@ function RestaurantDetail() {
 						<select name="CuisineType" value={editData.CuisineType} onChange={handleInputChange} required>
 							<option value="">Tipo de cocina</option>
 							{[
-								"asador", "sidreria", "fusion", "alta cocina", "tradicional", "pintxos",
-								"variado", "marisqueria", "asiatica", "vegetariano", "halal", "vegano",
-								"francesa", "italiana", "riojana", "mediterranea", "internacional"
+								"asador","sidreria","fusion","alta cocina","tradicional","pintxos",
+            					"marisqueria","asiatica","francesa","italiana","riojana","mediterranea",
+								"internacional", "moderna", "autor", "contemporanea", "vegetariano"
 							].map((cuisineType) => (
 								<option key={cuisineType} value={cuisineType}>
 									{cuisineType}

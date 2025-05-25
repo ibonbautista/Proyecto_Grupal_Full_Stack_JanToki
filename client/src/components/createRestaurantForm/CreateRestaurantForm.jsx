@@ -2,9 +2,9 @@ import { useState } from "react";
 import { createRestaurant } from "../../utils/api/restaurant";
 
 const cuisine_types = [
-	"asador", "sidreria", "fusion", "alta cocina", "tradicional", "pintxos",
-	"variado", "marisqueria", "asiatica", "vegetariano", "halal", "vegano",
-	"francesa", "italiana", "riojana", "mediterranea", "internacional"
+	"asador","sidreria","fusion","alta cocina","tradicional","pintxos",
+    "marisqueria","asiatica","francesa","italiana","riojana","mediterranea",
+	"internacional", "moderna", "autor", "contemporanea", "vegetariano"
   ];
   
 
