@@ -2,7 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import MapLeaflet from "../../components/mapLeaflet/MapLeaflet";
 import { AuthContext } from "../../context/AuthContext";
 import { useContext, useEffect, useState } from "react";
-import { getReviewsByRestaurant } from "../../utils/api/review";
+import { getReviewsByRestaurant, updateReview, deleteReview } from "../../utils/api/review";
 import ReviewForm from "../../components/reviewForm/ReviewForm";
 import { useFavorite } from "../../hooks/useFavorite";
 import { deleteRestaurant, editRestaurant } from "../../utils/api/restaurant";
@@ -22,6 +22,7 @@ function RestaurantDetail() {
 		SocialMedia: restaurant.SocialMedia || "",
 		Image: null
 	});
+	const [editingReview, setEditingReview] = useState(null);
 	
 	useEffect(() => {
 		const fetchReviews = async () => {
@@ -93,6 +94,58 @@ function RestaurantDetail() {
 			alert("No se pudo eliminar el restaurante");
 		}
 	};
+
+	const handleEditReview = (review) => {
+		setEditingReview({
+			id: review._id,
+			text: review.text,
+			rating: review.rating,
+			image: null
+		});
+	};
+
+	const handleUpdateReview = async (e) => {
+		e.preventDefault();
+		console.log("editingReview", editingReview);
+
+		const formData = new FormData();
+		formData.append("text", editingReview.text);
+		formData.append("rating", editingReview.rating);
+		if (editingReview.image) {
+			formData.append("image", editingReview.image);
+		}
+		try {
+			await updateReview(editingReview.id, formData);
+			setEditingReview(null);
+			const res = await getReviewsByRestaurant(restaurant._id);
+			setReviews(res.results || []);
+		} catch (error) {
+			console.error("Error al actualizar la reseña:", error);
+		}
+	}
+
+	const handleEditInputChange = (e) => {
+		const { name, value } = e.target;
+		setEditingReview({ ...editingReview, [name]: value });
+	};
+
+	const handleEditImageChange = (e) => {
+		setEditingReview({ ...editingReview, image: e.target.files[0] });
+	};
+
+	const handleDeleteReview = async (review) => {
+		const confirmDelete = window.confirm("¿Estás seguro de que deseas eliminar esta reseña?");
+		if (!confirmDelete) {
+			return;
+		}
+		try {
+			await deleteReview(review._id);
+			const res = await getReviewsByRestaurant(restaurant._id);
+			setReviews(res.results || []);
+		} catch (error) {
+			console.error("Error al eliminar la reseña:", error);
+		}
+	}
 
 	return (
 		<article className="restaurant-page">
@@ -170,9 +223,41 @@ function RestaurantDetail() {
 										/>
 									</div>
 								)}
+
+								{userData?.id === review.userId && (
+									<div className="review-controls">
+										<button onClick={() => handleEditReview(review)}>Editar</button>
+										<button onClick={() => handleDeleteReview(review)}>Eliminar</button>
+									</div>
+								)}
 							</li>
 						))}
 					</ul>
+				)}
+				{editingReview && (
+					<form onSubmit={handleUpdateReview} className="edit-review-form">
+						<textarea
+							name="text"
+							value={editingReview.text}
+							onChange={handleEditInputChange}
+						/>
+						<input
+							type="number"
+							name="rating"
+							value={editingReview.rating}
+							onChange={handleEditInputChange}
+							min="0"
+							max="5"
+							step="1"
+						/>
+						<input
+							type="file"
+							name="image"
+							onChange={handleEditImageChange}
+						/>
+						<button type="submit">Guardar cambios</button>
+						<button type="button" onClick={() => setEditingReview(null)}>Cancelar</button>
+					</form>
 				)}
 			
 			{userData && (

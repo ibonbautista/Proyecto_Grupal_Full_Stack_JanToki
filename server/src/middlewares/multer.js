@@ -8,7 +8,7 @@ import Review from "../models/review.js";
 export async function prepareRestaurantName(req, res, next) {
   try {
     const restaurantId = req.params.restaurantId;
-    const reviewId = req.params.reviewId;
+    const reviewId = req.params.reviewId || req.params.id;
     let restaurantName = "unknown";
 
     if (restaurantId) {
