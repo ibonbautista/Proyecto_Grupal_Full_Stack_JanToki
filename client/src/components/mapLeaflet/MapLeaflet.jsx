@@ -18,7 +18,7 @@ function MapLeaflet({ latitude, longitude }) {
 	const googleMapsURL = `https://www.google.com/maps/dir/?api=1&destination=${latitude},${longitude}`;
 
 	return (
-	  <MapContainer center={position} zoom={15} style={{ height: '100vh' }}>
+	  <MapContainer center={position} zoom={15} style={{ height: '30vh' }}>
 		<TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
 		<Marker position={position}>
 			<Popup>

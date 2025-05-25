@@ -9,4 +9,26 @@
 .pagination {
     margin: 1em 10%;
     text-align: center;
+
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.pagination button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+}
+.pagination button:hover {
+    background-color: transparent;
+    border: none;
+    color: var(--button-color);
 }

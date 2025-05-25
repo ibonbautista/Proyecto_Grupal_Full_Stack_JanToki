@@ -1,9 +1,3 @@
-.restaurants-list--restaurants {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1em;
-}
-
 .restaurants-list--restaurants .restaurant {
     width: 100%;
     padding: 1em;
@@ -22,6 +16,19 @@
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
-.restaurant-image img {
+.restaurant-image {
+    width: 100%;
+    overflow: hidden;
     border-radius: 10px;
+}
+
+.restaurant-image img {
+    width: 100%s;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.restaurant-image img:hover {
+    scale: 110%;
 }

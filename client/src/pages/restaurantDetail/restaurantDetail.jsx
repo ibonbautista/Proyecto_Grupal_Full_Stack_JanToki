@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import MapLeaflet from "../../components/mapLeaflet/MapLeaflet";
 import { AuthContext } from "../../context/AuthContext";
 import { useContext, useEffect, useState } from "react";
@@ -10,6 +10,7 @@ import { deleteRestaurant, editRestaurant } from "../../utils/api/restaurant";
 import "./RestaurantDetail.css";
 
 function RestaurantDetail() {
+	const Navigate = useNavigate();
 	const { userData } = useContext(AuthContext);
 	const restaurant = useLoaderData();
 	const [reviews, setReviews] = useState([]);
@@ -25,8 +26,18 @@ function RestaurantDetail() {
 		Image: null
 	});
 	const [editingReview, setEditingReview] = useState(null);
+	const [averageRating, setAverageRating] = useState(restaurant.Rating || 0);
+
+	const calculateAverageRating = (reviewsList) => {
+		if (reviewsList.length === 0) {
+			return 0;
+		}
+		const sum = reviewsList.reduce((acc, review) => acc + Number(review.rating), 0);
+		return (sum / reviewsList.length).toFixed(1);
+	};
 	
 	useEffect(() => {
+		window.scrollTo( { top: 0 });
 		const fetchReviews = async () => {
 			try {
 				const res = await getReviewsByRestaurant(restaurant._id);
@@ -151,6 +162,10 @@ function RestaurantDetail() {
 
 	return (
 		<article className="restaurant-page">
+			<button className="back-button" onClick={() => navigate(-1)}>
+				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-caret-left" viewBox="0 0 16 16">
+					<path d="M10 12.796V3.204L4.519 8zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.50615.48-4.796A1 1 0 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753"/></svg>
+			</button>
 			<section className="restaurant-detail">
 				<h1>{restaurant.Name}</h1>
 				<img src={
