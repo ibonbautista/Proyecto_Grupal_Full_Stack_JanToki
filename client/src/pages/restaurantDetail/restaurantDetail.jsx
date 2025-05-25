@@ -7,6 +7,8 @@ import ReviewForm from "../../components/reviewForm/ReviewForm";
 import { useFavorite } from "../../hooks/useFavorite";
 import { deleteRestaurant, editRestaurant } from "../../utils/api/restaurant";
 
+import "./RestaurantDetail.css";
+
 function RestaurantDetail() {
 	const { userData } = useContext(AuthContext);
 	const restaurant = useLoaderData();
