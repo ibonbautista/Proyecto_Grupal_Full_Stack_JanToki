@@ -5,15 +5,26 @@ import './CategoriesList.css';
 function CategoriesList({ onSelectCategory }) {
 
     const categories = [
-        "Asador", "Sidrería", "Fusión", "Alta Cocina", "Tradicional", "Pintxos",
-        "Variado", "Marisquería", "Asiática", "Vegetariano", "Vegano",
-        "Francesa", "Italiana", "Riojana", "Mediterránea", "Internacional"
+        'Moderna',
+        'Alta cocina',
+        'Asador',
+        'Tradicional',
+        'Sidreria',
+        'Fusion',
+        'Pintxos',
+        'Marisqueria',
+        'Internacional',
+        'Asiatica',
+        'Francesa',
+        'Autor',
+        'Contemporanea',
+        'Vegetariana'
     ];
 
     const scrollRef = useRef(null);
 
     const [isDragging, setIsDragging] = useState(false);
-	const [startX, setStartX] = useState(0);
+    const [startX, setStartX] = useState(0);
     const scrollLeft = () => {
         scrollRef.current.scrollBy({ left: -200, behavior: "smooth" });
     };
@@ -22,30 +33,30 @@ function CategoriesList({ onSelectCategory }) {
         scrollRef.current.scrollBy({ left: 200, behavior: "smooth" });
     };
 
-	const scrollLeftClick = () => {
-		scrollRef.current.scrollBy({ left: -200, behavior: "smooth" });
-	};
+    const scrollLeftClick = () => {
+        scrollRef.current.scrollBy({ left: -200, behavior: "smooth" });
+    };
 
-	const scrollRightClick = () => {
-		scrollRef.current.scrollBy({ left: 200, behavior: "smooth" });
-	};
+    const scrollRightClick = () => {
+        scrollRef.current.scrollBy({ left: 200, behavior: "smooth" });
+    };
 
-	const handleMouseDown = (e) => {
-		setIsDragging(true);
-		setStartX(e.pageX - scrollRef.current.offsetLeft);
-		setScrollLeft(scrollRef.current.scrollLeft);
-	};
+    const handleMouseDown = (e) => {
+        setIsDragging(true);
+        setStartX(e.pageX - scrollRef.current.offsetLeft);
+        setScrollLeft(scrollRef.current.scrollLeft);
+    };
 
-	const handleMouseLeave = () => setIsDragging(false);
-	const handleMouseUp = () => setIsDragging(false);
+    const handleMouseLeave = () => setIsDragging(false);
+    const handleMouseUp = () => setIsDragging(false);
 
-	const handleMouseMove = (e) => {
-		if (!isDragging) return;
-		e.preventDefault();
-		const x = e.pageX - scrollRef.current.offsetLeft;
-		const walk = (x - startX) * 1.5; // velocidad
-		scrollRef.current.scrollLeft = scrollLeft - walk;
-	};
+    const handleMouseMove = (e) => {
+        if (!isDragging) return;
+        e.preventDefault();
+        const x = e.pageX - scrollRef.current.offsetLeft;
+        const walk = (x - startX) * 1.5; // velocidad
+        scrollRef.current.scrollLeft = scrollLeft - walk;
+    };
 
     return (
         <section className="categories-list">
@@ -54,17 +65,17 @@ function CategoriesList({ onSelectCategory }) {
                 <button className="scroll-button left" onClick={() => scrollLeftClick()}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-caret-left" viewBox="0 0 16 16">
                         <path d="M10 12.796V3.204L4.519 8zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753" />
-                    </svg>                    
+                    </svg>
                 </button>
 
                 <div
-					className="scroll-container"
-					ref={scrollRef}
-					onMouseDown={handleMouseDown}
-					onMouseLeave={handleMouseLeave}
-					onMouseUp={handleMouseUp}
-					onMouseMove={handleMouseMove}
-				>
+                    className="scroll-container"
+                    ref={scrollRef}
+                    onMouseDown={handleMouseDown}
+                    onMouseLeave={handleMouseLeave}
+                    onMouseUp={handleMouseUp}
+                    onMouseMove={handleMouseMove}
+                >
                     <div className="categories-list--categories">
                         <div className="categories-item" onClick={() => onSelectCategory(null)}>
                             <div className="categories-img">
