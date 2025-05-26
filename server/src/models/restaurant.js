@@ -39,7 +39,7 @@ const restaurantSchema = new mongoose.Schema({
           required: true,
           enum: ["asador","sidreria","fusion","alta cocina","tradicional","pintxos",
             	"marisqueria","asiatica","francesa","italiana","riojana","mediterranea",
-				"internacional", "moderna", "autor", "contemporanea", "vegetariano"],
+				"internacional", "moderna", "autor", "contemporanea", "vegetariana"],
           default: "tradicional"
         },
         Brands: {

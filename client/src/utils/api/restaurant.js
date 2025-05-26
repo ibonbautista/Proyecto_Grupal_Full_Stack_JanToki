@@ -18,7 +18,7 @@ async function getAllRestaurants({ request }) {
 	}
 	// Llamar a la API con los filtros
     const restaurants = await fetchData(`/restaurant${query}`);
-	console.log("filtros", query);
+	console.log("restaurants", restaurants);
     return restaurants;
 }
 

@@ -241,8 +241,8 @@ const updateReviewImage = async (req, res, next) => {
 const deleteReview = async (req, res, next) => {
   try {
     const reviewId = req.params.id;
-
     const review = await reviewModel.findById(reviewId);
+
     if (!review) {
       throw new ReviewNotFound();
     }
@@ -252,6 +252,16 @@ const deleteReview = async (req, res, next) => {
     }
 
     await review.deleteOne();
+
+	const reviews = await reviewModel.find({ restaurantId });
+    const totalRating = reviews.reduce((sum, r) => sum + r.rating, 0);
+    const averageRating = reviews.length > 0 ? (totalRating / reviews.length).toFixed(1) : 0;
+
+	await restaurantModel.findByIdAndUpdate(
+		restaurantId,
+		{ Rating: averageRating },
+		{ new: true }
+	);
 
     res.status(200).json({ message: "Review eliminada correctamente" });
 
