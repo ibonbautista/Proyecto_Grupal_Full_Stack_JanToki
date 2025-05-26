@@ -19,10 +19,10 @@ function Navbar({ onLoginClick, onRegisterClick }) {
                             <button onClick={onRegisterClick} className='nav-item'>Registrarme</button>
                         </>
                     ) : (
-                        <li className={"nav-item "}>
-                            <NavLink to="/user"><span className='nav-item'>{userData.name}</span></NavLink>
+                        <>
+                            <NavLink to="/user"><span className='nav-item'>{userData.username}</span></NavLink>
                             <button onClick={onLogout} className='nav-item'>Logout</button>
-                        </li>
+                        </>
                     )}
                 </div>
             </ul>

@@ -3,7 +3,7 @@ import Root from './pages/root/Root';
 import Home from './pages/home/Home';
 
 import { getAllRestaurants, getRestaurantById } from './utils/api/restaurant';
-import RestaurantDetail from './pages/restaurantDetail/restaurantDetail';
+import RestaurantDetail from './pages/restaurantDetail/RestaurantDetail';
 import Profile from './pages/profile/Profile';
 import CategoriesList from './components/categoriesList/CategoriesList';
 

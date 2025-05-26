@@ -5,8 +5,6 @@ import { AuthContext } from "../../context/AuthContext";
 import './RestaurantCard.css';
 
 function RestaurantCard({ restaurant }) {
-	const { userData } = useContext(AuthContext);
-
 	return (
 		<article className="article restaurant">
 			<Link to={`/restaurant/${restaurant._id}`}>
@@ -17,7 +15,10 @@ function RestaurantCard({ restaurant }) {
 				<section className="restaurant-data">
 					<h2>{restaurant.Name}</h2>
 					<p className="restaurant-council">{restaurant.Municipality}</p>
-					{restaurant.rating && <p className="restaurant-rating">{restaurant.rating}</p>}
+					{restaurant.Rating > 0 && (
+						<p className="restaurant-card-rating">⭐ Valoración media: {restaurant.Rating}</p>
+					)}
+
 				</section>
 			</Link>
 		</article >

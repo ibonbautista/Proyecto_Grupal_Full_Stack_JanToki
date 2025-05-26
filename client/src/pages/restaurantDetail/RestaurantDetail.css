@@ -1,0 +1,100 @@
+.restaurant-page {
+    width: 100%;
+
+    display: flex;
+    flex-flow: column;
+    gap: 1em;
+}
+
+.back-button {
+    position: fixed;
+    top: 6em;
+    left: 1em;
+    cursor: pointer;
+
+    z-index: 100;
+    border-radius: 100px;
+    cursor: pointer;
+
+    width: 3em;
+    height: 3em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.restaurant-page-image {
+    width: 100%;
+    position: relative;
+}
+
+.restaurant-detail--image {
+    height: 30vh;
+    object-fit: cover;
+}
+
+.restaurant-page-image h1 {
+    position: absolute;
+    bottom: .5em;
+    left: 10%;
+}
+
+.favorite-button {
+    position: absolute;
+    bottom: 2.2em;
+    right: 10%;
+}
+.favorite-button button {
+    width: 3em;
+    height: 3em;
+    border-radius: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.cuisine-type, .restaurant-description, .restaurant-rating, .restaurant-address {
+    margin: 1em 10%;
+    font-size: 1.2rem;
+}
+
+.restaurant-address {
+    display: flex;
+    flex-flow: column;
+    gap: .5em;
+}
+
+.restaurant-address p {
+    font-size: 1rem;    
+}
+
+.restaurant-reviews {
+    margin: 1em 10%;
+
+    display: flex;
+    flex-flow: column;
+    gap: 1em;
+
+    font-size: 1.2rem;
+}
+
+.restaurant-website {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: underline;
+
+    padding: .5em 1em;
+    border-radius: 10px;
+    background-color: transparent;
+    color: var(--text-color);
+
+    text-align: center;
+    width: 100%;
+}
+
+.restaurant-website:hover {
+    background-color: var(--items-color);
+}

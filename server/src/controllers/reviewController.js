@@ -42,9 +42,10 @@ const showReviewByUser = async (req, res, next) => {
     }
 
     const formattedReviews = results.map((review) => ({
+	  _id: review._id,
       text: review.text,
       rating: review.rating,
-      restaurant: review.restaurantId?.name || null,
+      restaurant: review.restaurantId?.Name || null,
       createdAt: review.createdAt,
     }));
 
@@ -75,15 +76,13 @@ const showReviewByRestaurant = async (req, res, next) => {
       sort: { createdAt: -1 },
     });
 
-    if (!data.results.length) {
-      throw new NoRestaurantReviewsFound();
-    }
-
     const formattedReviews = data.results.map((review) => ({
+	  _id: review._id,
       text: review.text,
       rating: review.rating,
       restaurant: review.restaurantId?.name || null,
       user: review.userId?.username || null,
+	  userId: review.userId?._id,
       createdAt: review.createdAt,
       image: review.image
     }));
@@ -142,6 +141,7 @@ const updateReview = async (req, res, next) => {
   try {
     const { text, rating } = req.body;
     const userId = req.user._id;
+	const newImage = req.file;
 
     if (!text || typeof rating === "undefined") {
       throw new MissingReviewFields();
@@ -159,13 +159,38 @@ const updateReview = async (req, res, next) => {
 
     review.text = text;
     review.rating = rating;
+
+	if (newImage) {
+		if (review.image) {
+			const oldImagePath = path.join(__dirname, "../../public/images/reviews", review.image);
+			if (fs.existsSync(oldImagePath)) {
+				try {
+					fs.unlinkSync(oldImagePath);
+				} catch (err) {
+					console.error("Error al eliminar la imagen anterior:", err);
+				}
+			}
+		}
+		review.image = newImage.filename;
+	}
     const updatedReview = await review.save();
 
+	const reviews = await reviewModel.find({ restaurantId: review.restaurantId });
+	const totalRating = reviews.reduce((sum, review) => sum + review.rating, 0);
+	const averageRating = reviews.length > 0 ? (totalRating / reviews.length).toFixed(1) : 0;
+	await restaurantModel.findByIdAndUpdate(
+      review.restaurantId._id,
+      { Rating: averageRating },
+      { new: true }
+    );
+
     const formattedReview = {
+	  _id: updatedReview._id,
       text: updatedReview.text,
       rating: updatedReview.rating,
       restaurant: updatedReview.restaurantId?.name || null,
       createdAt: updatedReview.createdAt,
+	  image: updatedReview.image
     };
 
     res.status(200).json({ message: "Review actualizada", review: formattedReview });
@@ -216,8 +241,8 @@ const updateReviewImage = async (req, res, next) => {
 const deleteReview = async (req, res, next) => {
   try {
     const reviewId = req.params.id;
-
     const review = await reviewModel.findById(reviewId);
+
     if (!review) {
       throw new ReviewNotFound();
     }
@@ -227,6 +252,16 @@ const deleteReview = async (req, res, next) => {
     }
 
     await review.deleteOne();
+
+	const reviews = await reviewModel.find({ restaurantId });
+    const totalRating = reviews.reduce((sum, r) => sum + r.rating, 0);
+    const averageRating = reviews.length > 0 ? (totalRating / reviews.length).toFixed(1) : 0;
+
+	await restaurantModel.findByIdAndUpdate(
+		restaurantId,
+		{ Rating: averageRating },
+		{ new: true }
+	);
 
     res.status(200).json({ message: "Review eliminada correctamente" });
 

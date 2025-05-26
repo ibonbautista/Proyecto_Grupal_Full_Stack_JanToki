@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -104,10 +106,11 @@ section {
 }
 
 body {
-  line-height: 1;
-  font-family: 'Rubik', sans-serif;
-
-  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
 }
 
 ol,
@@ -162,8 +165,8 @@ img {
   --main-color: #1E1E1E;
   --searchbar-color: #1e1e1ec2;
   --items-color: #444444;
-  --button-color: #613d3c;
-  --input-color: #4C3A32;
+  --button-color: #8f0500;
+  --input-color: #000000;
   --text-color: #F2F2F2;
 
 }
@@ -174,6 +177,7 @@ body {
 }
 
 main {
+  margin-top: 4em;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -182,24 +186,37 @@ main {
 }
 
 h1 {
-  font-size: 2rem;
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
   font-weight: 600;
+  font-style: normal;
+
+  font-size: 3rem;
 }
 
 h2 {
-  font-size: 1.8rem;
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
   font-weight: 600;
+  font-style: normal;
+
+  font-size: 2rem;
 }
 
 h3 {
-  font-size: 1.4rem;
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
   font-weight: 600;
+  font-style: normal;
+
+  font-size: 1.4rem;
 }
 
 button {
   background-color: var(--button-color);
+  color: white;
 
-  border: none;
+  border: 1px solid transparent;
   border-radius: 10px;
 
   padding: .5em 1em;
@@ -213,7 +230,9 @@ button {
 }
 
 button:hover {
-  scale: 110%;
+  background-color: var(--input-color);
+  border: 1px solid var(--button-color);
+  color: var(--button-color);
 }
 
 #theme-toggle {
@@ -224,7 +243,6 @@ button:hover {
   width: 3em;
   height: 3em;
 
-  border: none;
   border-radius: 100px;
 
   display: flex;
@@ -233,10 +251,10 @@ button:hover {
 }
 
 body.light-theme {
-  --main-color: #ebebeb;
+  --main-color: #FEF9F3;
   --searchbar-color: #ebebebbb;
-  --items-color: white;
-  --button-color: #A43F3F;
-  --input-color: #D9BF77;
+  --button-color: #FF956D;
+  --items-color: #ffebe6;
+  --input-color: #ffebe6;
   --text-color: #3E3E3E;
 }

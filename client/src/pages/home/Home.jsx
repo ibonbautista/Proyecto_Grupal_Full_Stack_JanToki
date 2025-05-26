@@ -25,13 +25,13 @@ function Home() {
 	useEffect(() => {
 		// Si la URL no tiene parámetros y venimos de otra URL, asumimos que es clic en logo
 		if (location.search === "" && !isFirstRender.current) {
-		  fromNavigation.current = true;
-		  window.scrollTo({ top: 0, behavior: 'smooth' });
+			fromNavigation.current = true;
+			window.scrollTo({ top: 0, behavior: 'smooth' });
 		} else {
-		  fromNavigation.current = false;
+			fromNavigation.current = false;
 		}
 		isFirstRender.current = false;
-	  }, [location]);
+	}, [location]);
 
 	// Scroll a la lista de restaurantes si se cambia de página manualmente
 	useEffect(() => {
@@ -49,19 +49,25 @@ function Home() {
 
 	const handleCategorySelect = (category) => {
 		setSelectedCategory(category);
+		console.log("category", category)
 		if (category) {
 			const filtered = restaurants.filter(r =>
-				r.Categories?.cuisineType?.toLowerCase() === category.toLowerCase(),
+				r.Categories?.CuisineType?.toLowerCase() === category.toLowerCase(),
 			);
 			setFilteredRestaurants(filtered);
+			console.log("filtered", filtered)
 		} else {
 			setFilteredRestaurants(restaurants);
+			console.log("restaurants", restaurants);
 		}
 	};
 
 	useEffect(() => {
-		setFilteredRestaurants(restaurants);
-	}, [restaurants]);
+		if (!selectedCategory) {
+			setFilteredRestaurants(restaurants);
+		}
+	}, [restaurants, selectedCategory]);
+
 
 	return (
 		<article className="home-page">
@@ -76,11 +82,19 @@ function Home() {
 
 			<section className="pagination">
 				{currentPage > 1 && (
-					<button onClick={() => goToPage(currentPage - 1)}>Anterior</button>
+					<button onClick={() => goToPage(currentPage - 1)}>
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-caret-left" viewBox="0 0 16 16">
+							<path d="M10 12.796V3.204L4.519 8zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753" />
+						</svg>
+					</button>
 				)}
 				<span>Página {currentPage} de {totalPages}</span>
 				{currentPage < totalPages && (
-					<button onClick={() => goToPage(currentPage + 1)}>Siguiente</button>
+					<button onClick={() => goToPage(currentPage + 1)}>
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-caret-right" viewBox="0 0 16 16">
+							<path d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753" />
+						</svg>
+					</button>
 				)}
 			</section>
 		</article>

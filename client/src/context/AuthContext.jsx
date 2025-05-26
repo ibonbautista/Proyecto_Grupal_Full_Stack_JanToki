@@ -1,6 +1,6 @@
 import { createContext,useState,useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { login,logout, register } from "../utils/api/auth";
+import { login,logout, register, getUserInfo } from "../utils/api/auth";
 import { saveToken, removeToken, getToken } from "../utils/localStorage";
 
 const AuthContext = createContext({
@@ -14,6 +14,20 @@ const AuthProvider = ({children}) => {
     const [userData, setUserData] = useState(null);
     const navigate = useNavigate();
 
+	const handleGetUserInfo = async() => {
+		try {
+			const result = await getUserInfo();
+			if(result.user) {
+				const isAdmin = result.user.role === "admin";
+				setUserData({...result.user, isAdmin});
+			}
+		} catch (error) {
+			console.error("Error al cargar perfil:", error);
+			removeToken();
+			setUserData(null);
+		}
+	}
+
 	useEffect(() => {
 		const token = getToken();
 		if(token) {
@@ -21,26 +35,13 @@ const AuthProvider = ({children}) => {
 		}
 	}, [])
 	
-	const handleGetUserInfo = async() => {
-		try {
-			const result = await getUserInfo();
-			if(result.user) {
-				setUserData(result.user);
-			}
-		} catch (error) {
-			console.error("Error al cargar perfil:", error);
-			removeToken(); // Limpia el token si hay error
-			setUserData(null);
-		}
-	}
-
     const handleLogin = async (email, password) => {
         const result = await login(email, password);
         if (result.error) {
 			removeToken();
             return {error: result.error};
         } else {
-            setUserData(result.user);
+            setUserData({ ...result.user, isAdmin: result.user.role === "admin" });
             saveToken(result.token);
             navigate("/");
             return { success: true};
@@ -49,6 +50,7 @@ const AuthProvider = ({children}) => {
     const handleLogout = () => {
         logout();
         setUserData(null);
+		removeToken();
         navigate("/");
     }
 
@@ -58,7 +60,7 @@ const AuthProvider = ({children}) => {
 		if (result.error) {
 			return {error: result.error};
 		} else {
-			setUserData(result.user);
+			setUserData({ ...result.user, isAdmin: result.user.role === "admin" });
 			navigate("/");
 			console.log("token",result.token);
 			return {success: true};
@@ -66,7 +68,7 @@ const AuthProvider = ({children}) => {
 	}
 
     return (
-        <AuthContext.Provider value={{userData:userData,onLogin:handleLogin,onLogout:handleLogout, onRegister:handleRegister}}>
+        <AuthContext.Provider value={{userData, setUserData, onLogin:handleLogin,onLogout:handleLogout, onRegister:handleRegister}}>
             {children}
         </AuthContext.Provider>
     )
