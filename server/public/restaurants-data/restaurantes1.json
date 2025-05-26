@@ -1,0 +1,503 @@
+[
+  {
+    "Name": "Agorregi",
+    "Description": "Agorregi es un restaurante de cocina vasca contemporánea que combina tradición y técnica moderna. Ofrece menús degustación elaborados con productos de temporada y una cuidada presentación. Destaca por su calidad, creatividad y servicio atento.",
+    "Town": "Donostia / San Sebastián",
+    "Municipality": "Donostia / San Sebastián",
+    "Address": "Portuetxe, 14",
+    "Latitude": 43.30240464,
+    "Longitude": -2.011846,
+    "Categories": {
+      "CuisineType": "Moderna",
+      "Brands": ["Costa Vasca", "San Sebastián"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "943 224 328",
+    "Website": "https://agorregi.com/",
+    "SocialMedia": null,
+    "Image": "https://agorregi.com/wp-content/uploads/2022/04/Local.jpg"
+  },
+  {
+    "Name": "Aizian",
+    "Description": "Aizian es un restaurante que fusiona la cocina tradicional vasca con técnicas vanguardistas, dirigido por el chef Josemi Olazabalaga. Ubicado en un entorno elegante con vistas al parque de Doña Casilda, destaca por su compromiso con productos locales y de temporada, avalado por el distintivo Kilómetro Cero.",
+    "Town": "Bilbao",
+    "Municipality": "Bilbao",
+    "Address": "Lehendakari Leizaola, 29. (H. Meliá Bilbao)",
+    "Latitude": 43.26751936,
+    "Longitude": -2.94180662,
+    "Categories": {
+      "CuisineType": "Moderna",
+      "Brands": ["Bilbao"],
+      "MichelinStars": null,
+      "RepsolSuns": 2,
+      "Recommended": false
+    },
+    "Phone": "944 280 039",
+    "Website": "http://www.restaurante-aizian.com",
+    "SocialMedia": null,
+    "Image": "https://farm6.static.flickr.com/5095/5453933209_cc6c29b8d0.jpg"
+  },
+  {
+    "Name": "Akelarre",
+    "Description": "Akelarre es un restaurante de alta cocina vasca liderado por el chef Pedro Subijana, reconocido con tres estrellas Michelin desde 2007. Situado en el monte Igeldo, ofrece menús degustación innovadores que combinan tradición y creatividad, con vistas panorámicas al mar Cantábrico. Desde 2017, también cuenta con un hotel de lujo y el restaurante Oteiza, ampliando su propuesta gastronómica y de hospedaje.",
+    "Town": "Igeldo",
+    "Municipality": "Donostia / San Sebastián",
+    "Address": "Padre Orcolaga, 56",
+    "Latitude": 43.3077501796958,
+    "Longitude": -2.0431346731414806,
+    "Categories": {
+      "CuisineType": "Alta Cocina",
+      "Brands": ["San Sebastián"],
+      "MichelinStars": 3,
+      "RepsolSuns": 3,
+      "Recommended": true
+    },
+    "Phone": "943 311 209",
+    "Website": "http://www.akelarre.net",
+    "SocialMedia": null,
+    "Image": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/644871223.jpg?hp=1&k=6a5529ce1662d3bf0c4c50d19560e6bfab4f870e7a995fe916b41436f9db4e1c&o="
+  },
+  {
+    "Name": "Alameda",
+    "Description": "El Restaurante Alameda es un establecimiento familiar con más de 80 años de historia, dirigido por los hermanos Txapartegi. Su propuesta culinaria, conocida como "Cocina del Bidasoa", combina la tradición vasca con técnicas contemporáneas, utilizando productos locales y de temporada",
+    "Town": null,
+    "Municipality": "Hondarribia",
+    "Address": "Minasorroeta, 1",
+    "Latitude": 43.36124178,
+    "Longitude": -1.79269146,
+    "Categories": {
+      "CuisineType": "Mediterranea",
+      "Brands": ["Costa Vasca"],
+      "MichelinStars": null,
+      "RepsolSuns": 2,
+      "Recommended": true
+    },
+    "Phone": "943 642 789",
+    "Website": "http://www.restaurantealameda.net",
+    "SocialMedia": null,
+    "Image": "https://www.guiarepsol.com/content/dam/repsol-guia/contenidos-imagenes/comer/nuestros-favoritos/restaurante-alameda-hondarribia-guipuzcoa/gr-cms-media-filer_public-90-8f-908f2fef-30ca-4672-b040-e2d2ec5d7c0e-2.jpg.transform/rp-rendition-xs/image.jpg"
+  },
+  {
+    "Name": "Almiketxu",
+    "Description": "El Restaurante Asador Almiketxu es un caserío restaurado de 1850 que ofrece cocina vasca tradicional con productos locales y vistas panorámicas al mar y al puerto. Cuenta con tres comedores de estilo rústico, terraza, jardines y zona infantil, brindando una experiencia gastronómica auténtica y familiar",
+    "Town": "Almika | Diseminado",
+    "Municipality": "Bermeo",
+    "Address": "Almike Auzoa, 8",
+    "Latitude": 43.40890469,
+    "Longitude": -2.73422921,
+    "Categories": {
+      "CuisineType": "Asador",
+      "Brands": ["Costa Vasca"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "946 880 925",
+    "Website": "https://almiketxu.com/",
+    "SocialMedia": null,
+    "Image": "https://i0.wp.com/laguiadeltxakoli.com/wp-content/uploads/2024/01/La-guia-del-txakoli-Remenetxe.jpg?resize=950%2C571&ssl=1"
+  },
+  {
+    "Name": "Andere",
+    "Description": "El Restaurante Andere, fundado en 1976, es un referente de la gastronomía vasca que combina tradición e innovación culinaria. Ubicado en el centro de Vitoria-Gasteiz, ofrece una experiencia única en espacios versátiles como su jardín climatizado y salones elegantes, ideales para celebraciones y eventos. Su cocina destaca por el uso de productos de temporada y una presentación cuidada",
+    "Town": "Vitoria-Gasteiz",
+    "Municipality": "Vitoria-Gasteiz",
+    "Address": "Gorbea, 8",
+    "Latitude": 42.849356605632124,
+    "Longitude": -2.6795801790984797,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Vitoria-Gasteiz"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "945 214 930",
+    "Website": "https://www.restauranteandere.com/",
+    "SocialMedia": null,
+    "Image": "https://www.vitoria-gasteiz.org/docs/h05/547/547_3.JPG"
+  },
+  {
+    "Name": "Andra Mari",
+    "Description": "u propuesta gastronómica combina sabores rurales y marinos con una presentación contemporánea, utilizando productos de temporada y una conexión constante con pequeños productores locales .",
+    "Town": "Elexalde",
+    "Municipality": "Galdakao",
+    "Address": "Bº Elexalde, 22",
+    "Latitude": 43.23503044,
+    "Longitude": -2.83249703,
+    "Categories": {
+      "CuisineType": "Moderna",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": 1,
+      "RepsolSuns": 2,
+      "Recommended": true
+    },
+    "Phone": "944 560 005",
+    "Website": "https://andra-mari.com/es/index.php",
+    "SocialMedia": null,
+    "Image": "https://www.disfrutabizkaia.com/wp-content/uploads/2022/03/Foto-Interior-Andra-Mari.jpg"
+  },
+  {
+    "Name": "Aretxondo",
+    "Description": "El Restaurante Arkupe, ubicado en el casco histórico de Vitoria-Gasteiz, ofrece cocina vasca contemporánea en un entorno elegante y acogedor. Dispone de dos espacios: una planta baja informal para picoteo y una planta superior más íntima para menús y carta completa. Destacan sus menús degustación, platos de temporada y una cuidada selección de vinos .",
+    "Town": "Elexalde",
+    "Municipality": "Galdakao",
+    "Address": "Bº Elexalde, 20",
+    "Latitude": 43.23358348966164,
+    "Longitude": -2.8327792843780553,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": 1,
+      "RepsolSuns": 1,
+      "Recommended": true
+    },
+    "Phone": "944 567 671",
+    "Website": "http://www.aretxondo.com",
+    "SocialMedia": null,
+    "Image": "https://www.disfrutabizkaia.com/wp-content/uploads/2022/03/Foto-Interior-Aretxondo.jpg"
+  },
+  {
+    "Name": "Arkupe",
+    "Description": "El restaurante Arkupe se encuentra situado en un edificio del siglo XVII en el mismísimo centro de Vitoria-Gasteiz...",
+    "Town": "Vitoria-Gasteiz",
+    "Municipality": "Vitoria-Gasteiz",
+    "Address": "Mateo Moraza, 13",
+    "Latitude": 42.84701683,
+    "Longitude": -2.67229971,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Vitoria-Gasteiz"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "945 230 080",
+    "Website": "https://www.restaurantearkupe.com/",
+    "SocialMedia": null,
+    "Image": "https://www.restaurantearkupe.com/wp-content/uploads/2015/07/merkagune_arkupe_01.jpg"
+  },
+  {
+    "Name": "Arlobi",
+    "Description": "El Restaurante Arlobi, ubicado en un caserío de piedra en Sarria (Zuia), ofrece cocina tradicional vasca con toques creativos. Destacan sus ensaladas, verduras y platos de caza, elaborados con productos locales y de temporada. Es un lugar ideal para disfrutar de la gastronomía local en un entorno rústico y acogedor .",
+    "Town": "Sarria",
+    "Municipality": "Zuia",
+    "Address": "Elizalde, 31",
+    "Latitude": 42.968627,
+    "Longitude": -2.8254722000000356,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "945 430 212",
+    "Website": null,
+    "SocialMedia": null,
+    "Image": "https://images.openai.com/thumbnails/c6a1f3294e0ef8b64cd3542eb2294d47.jpeg"
+  },
+  {
+    "Name": "Casa Nicolás",
+    "Description": "El Asador Casa Nicolás, fundado en 1960 en Tolosa por Nicolás Ruiz y su esposa Pepita Elizondo, es un referente de la parrilla vasca. Especializado en la txuleta de vacuno mayor, su tercera generación, liderada por Xabi Ruiz, mantiene la tradición con una meticulosa selección de carne y una técnica de asado impecable. La carne se atempera durante horas, se recorta minuciosamente y se sirve con una capa ligera de sal al final, sin contacto directo con el fuego. El restaurante también ofrece una bodega destacada y postres caseros como tarta de queso y suflé de chocolate.",
+    "Town": "Tolosa",
+    "Municipality": "Tolosa",
+    "Address": "Paseo Zumalakarregi, 7",
+    "Latitude": 43.0507807,
+    "Longitude": -2.1744642,
+    "Categories": {
+      "CuisineType": "Asador",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 654 759",
+    "Website": "https://asadornicolas.com/",
+    "SocialMedia": null,
+    "Image": "https://tolosandco.org/wp-content/uploads/2020/11/casa-nicolas-out.jpg"
+  },
+  {
+    "Name": "San Martin",
+    "Description": "El Asador San Martín, ubicado en Orio (Gipuzkoa), es un referente de la parrilla vasca. Especializado en txuletas de vacuno mayor, ofrece una experiencia gastronómica auténtica con un ambiente rústico y acogedor. Ideal para disfrutar de la cocina tradicional vasca en un entorno pintoresco .",
+    "Town": "Orio",
+    "Municipality": "Orio",
+    "Address": "Barrio San Martín, s/n",
+    "Latitude": 43.28076707095564,
+    "Longitude": -2.1212947368621826,
+    "Categories": {
+      "CuisineType": "Asador",
+      "Brands": ["Costa Vasca"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 580 058",
+    "Website": "http://www.asadorsanmartin.com/",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_DP2AREkXHdpU0sXTi2dHCVA_CFM5S-kwWw&s"
+  },
+  {
+    "Name": "Urkiola",
+    "Description": "El Asador Urkiola, ubicado en Beasain (Gipuzkoa), es un restaurante tradicional vasco con más de 30 años de historia. Especializado en parrilla, ofrece platos como chuletón, kokotxas y pescados a la brasa, elaborados con productos de temporada y de calidad. Su ambiente acogedor y su cocina casera lo convierten en un lugar ideal para disfrutar de la gastronomía vasca.",
+    "Town": "Beasain",
+    "Municipality": "Beasain",
+    "Address": "Kale Nagusia, 7",
+    "Latitude": 43.04729034,
+    "Longitude": -2.19531265,
+    "Categories": {
+      "CuisineType": "Asador",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "943 086 131",
+    "Website": null,
+    "SocialMedia": null,
+    "Image": "https://macarfi.twentic.com/storage/restaurants/81/imagen-403-restaurante-98.jpg"
+  },
+  {
+    "Name": "Astelena",
+    "Description": "Cocina vasca moderna en el corazón de la Parte Vieja, liderada por Ander González. Destaca por su creatividad y ambiente sidrería. Reconocido con 1 Sol Repsol.",
+    "Town": "Donostia / San Sebastián",
+    "Municipality": "Donostia / San Sebastián",
+    "Address": "Calle Euskal Herria, 3",
+    "Latitude": 43.32415624,
+    "Longitude": -1.98247745,
+    "Categories": {
+      "CuisineType": "Sidreria",
+      "Brands": ["Costa Vasca", "San Sebastián"],
+      "MichelinStars": null,
+      "RepsolSuns": 1,
+      "Recommended": true
+    },
+    "Phone": "943 425 867",
+    "Website": "https://restauranteastelena.com/",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRCbd_wao0-OF-QOoWyMk0dqyawi5tsTdNWQ&s"
+  },
+  {
+    "Name": "Atalaia",
+    "Description": "En Irun, este versátil restaurante ofrece desde menús tradicionales vascos hasta propuestas de alta cocina en sus tres comedores temáticos. Su carta cambia según la temporada, priorizando productos locales como el txangurro y las alubias de Tolosa. Perfecto para celebraciones, une elegancia y sabor en el corazón de la Costa Vasca.",
+    "Town": "Irun",
+    "Municipality": "Irun",
+    "Address": "Aritz Ondo, 69 (Centro Comercial Txingudi)",
+    "Latitude": 43.32238144,
+    "Longitude": -1.83356007,
+    "Categories": {
+      "CuisineType": "Moderna",
+      "Brands": ["Costa Vasca"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 629 433",
+    "Website": "https://hotelatalaia.com/restaurante",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDNfOS1hxQMsZzeIUFxvKhdvM1yzGSI4TRbA&s"
+  },
+  {
+    "Name": "Azkue",
+    "Description": "Un caserío familiar en Getaria que mantiene viva la cocina tradicional vasca desde cuatro generaciones. Especializado en pescados a la parrilla y guisos como el marmitako, su terraza con vistas al mar completa la experiencia. Aquí la sencillez y la calidad son el alma de cada plato.",
+    "Town": "Meaga | Diseminado",
+    "Municipality": "Getaria",
+    "Address": "Alto de Meagas",
+    "Latitude": 43.28657468,
+    "Longitude": -2.20608351,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Costa Vasca"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "943 830 554",
+    "Website": "https://hotelazkue.com/restaurante.php",
+    "SocialMedia": null,
+    "Image": "https://turismo.euskadi.eus/contenidos/b_restauracion/0000003127_b1_rec_turismo/es_3127/images/GL_azkue_H.jpg"
+  },
+  {
+    "Name": "Azurmendi",
+    "Description": "Tres estrellas Michelin y tres Soles Repsol avalan este santuario gastronómico de Eneko Atxa, cerca de Bilbao. Su menú degustación es un viaje por la biodiversidad vasca, servido en un edificio sostenible rodeado de viñedos. Innovación, ecología y lujo se fusionan en cada detalle.",
+    "Town": null,
+    "Municipality": "Larrabetzu",
+    "Address": "Bº Legina, s/n",
+    "Latitude": 43.26057330760114,
+    "Longitude": -2.815940000327153,
+    "Categories": {
+      "CuisineType": "Alta Cocina",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": 3,
+      "RepsolSuns": 3,
+      "Recommended": true
+    },
+    "Phone": "944 558 359",
+    "Website": "https://azurmendi.restaurant/",
+    "SocialMedia": null,
+    "Image": "https://1.bp.blogspot.com/-X0uYsAPkLA8/WOu9NWiem6I/AAAAAAAAoMg/NG440drlpX8X4rcwLWUGUYiI_ceyTpPRQCK4B/s1600/restaurante-azurmendi-cubo-cristal.jpg"
+  },
+  {
+    "Name": "Baserri Maitea",
+    "Description": "Instalado en un caserío del siglo XVIII dentro de la Reserva de Urdaibai, este rincón ofrece cocina vasca rústica con ingredientes de huerta propia. Platos como el cordero al carbón o la kokotxas en salsa verde se disfrutan en un entorno bucólico. Naturaleza y tradición en estado puro.",
+    "Town": "Elexalde Forua",
+    "Municipality": "Forua",
+    "Address": "Atxondo, s/n",
+    "Latitude": 43.339609,
+    "Longitude": -2.680343,
+    "Categories": {
+      "CuisineType": "Caserío",
+      "Brands": ["Costa Vasca", "Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "946 253 408",
+    "Website": "http://www.baserrimaitea.com/",
+    "SocialMedia": null,
+    "Image": "https://cdn0.bodas.net/vendor/32696/3_2/960/jpg/exteriores.jpeg"
+  },
+  {
+    "Name": "Bedua",
+    "Description": "Un clásico en Zumaia famoso por sus pescados a la brasa y carnes rojas, siempre acompañados de sidra natural de la casa. El ambiente marinero y su ubicación junto al río lo hacen ideal para comidas informales pero memorables. La parrilla es su altar y el producto local, su religión.",
+    "Town": "Oikia",
+    "Municipality": "Zumaia",
+    "Address": "Barrio Bedua",
+    "Latitude": 43.279111196115,
+    "Longitude": -2.25432157516479,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Costa Vasca"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 860 551",
+    "Website": "https://www.bedua.eus/",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDoqz1el1qn1T_ITCfbC0alS4lwnXwjWOWCQ&s"
+  },
+  {
+    "Name": "Beltz",
+    "Description": "En la azotea del lujoso THE ARTIST GRAND HOTEL de Bilbao, este restaurante fusiona cocina vasca con técnicas globales, acompañado de vistas panorámicas de la ciudad. Platos como el bacalao pil-pil reinterpretado o los postres de autor atraen a un público cosmopolita. Sofisticación con raíces.",
+    "Town": "Bilbao",
+    "Municipality": "Bilbao",
+    "Address": "Alameda Mazarredo, 61",
+    "Latitude": 43.26753037,
+    "Longitude": -2.93374754,
+    "Categories": {
+      "CuisineType": "Fusion",
+      "Brands": ["Bilbao"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "944 253 300",
+    "Website": null,
+    "SocialMedia": null,
+    "Image": "https://console.listae.com/files/2018/01/restaurante_beltz_bilbao_interiores.jpg"
+  },
+  {
+    "Name": "Beti-Jai",
+    "Description": "Un icono de la Parte Vieja de San Sebastián, donde la barra de pintxos compite en fama con sus raciones tradicionales como las croquetas de jamón o las kokotxas. Tres décadas de historia respaldan su ambiente animado y familiar. Esencia donostiarra en cada bocado.",
+    "Town": "Donostia / San Sebastián",
+    "Municipality": "Donostia / San Sebastián",
+    "Address": "Fermín Calbetón, 22",
+    "Latitude": 43.323312961612686,
+    "Longitude": -1.984512114715244,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Costa Vasca", "San Sebastián"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "943 441 944",
+    "Website": "https://betijaiberria.eus/",
+    "SocialMedia": null,
+    "Image": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/28656463.jpg?k=581eb38c9a3b1d727cccae3eb473d02a01edf37d7fe95632a1d8dd34f189726f&o=&hp=1"
+  },
+  {
+    "Name": "Betixu",
+    "Description": "Rodeado de bosques en Iurreta, este restaurante destaca por sus amplias terrazas y menús caseros como el pollo al chilindrón o la merluza en salsa verde. Un refugio para desconectar, donde el sonido del río y los platos reconfortantes son los protagonistas.",
+    "Town": "Iurreta",
+    "Municipality": "Iurreta",
+    "Address": "Iturburu, 9",
+    "Latitude": 43.17772937,
+    "Longitude": -2.62707117,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "944 717 154",
+    "Website": "http://www.betixu.es/",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD970XR2OBdcQYyg-14jT29ChWfe8xXUg5rg&s"
+  },
+  {
+    "Name": "Bideko",
+    "Description": "Hogareño y acogedor, ocupa un caserío del siglo XVII en Amurrio, con 1 Sol Repsol por su cocina tradicional bien ejecutada. El cordero asado y las alubias con sacramentos son emblemas, servidos en un entorno rural que invita a quedarse horas.",
+    "Town": "Lezama | Diseminado",
+    "Municipality": "Amurrio",
+    "Address": "Bideko, s/n",
+    "Latitude": 43.02597196407113,
+    "Longitude": -2.9559245873108466,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": 1,
+      "Recommended": true
+    },
+    "Phone": "945 890 633",
+    "Website": "https://restaurantebideko.com/",
+    "SocialMedia": null,
+    "Image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/64/4f/94/restaurante-bideko-caserio.jpg?w=900&h=-1&s=1"
+  },
+  {
+    "Name": "Bodegón Alejandro",
+    "Description": "Uno de los locales más antiguos de San Sebastián, donde se respira historia vasca en cada rincón. Sus pintxos de bacalao y sus raciones generosas, como la lubina al horno, atraen a locales y turistas por igual. Autenticidad sin pretensiones en la Parte Vieja.",
+    "Town": "Donostia / San Sebastián",
+    "Municipality": "Donostia / San Sebastián",
+    "Address": "Fermín Calbetón, 4",
+    "Latitude": 43.32364662815975,
+    "Longitude": -1.9833244361763036,
+    "Categories": {
+      "CuisineType": "Pintxos",
+      "Brands": ["Costa Vasca", "San Sebastián"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "943 427 158",
+    "Website": "https://www.bodegonalejandro.com/",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSesiFMk4q8YUQ5IzRjXga7TQh0vImJtLZRDw&s"
+  },
+  {
+    "Name": "Boliña",
+    "Description": "En el centro de Gernika, este acogedor restaurante es famoso por su marisco fresco y platos contundentes como el chuletón de buey. La carta, basada en productos de la costa vizcaína, se disfruta en un ambiente familiar y relajado.",
+    "Town": "Gernika-Lumo",
+    "Municipality": "Gernika-Lumo",
+    "Address": "Barrenkale, 3",
+    "Latitude": 43.31505089359146,
+    "Longitude": -2.6775049097869896,
+    "Categories": {
+      "CuisineType": "Marisqueria",
+      "Brands": ["Costa Vasca", "Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "946 250 300",
+    "Website": "https://www.hotelbolina.com/",
+    "SocialMedia": null,
+    "Image": "https://de.cdn-website.com/2c5188df6a994d0f8a9c2d6dfb2b00dc/MOBILE/jpg/restaurante-bolina-el-viejo-fachada-de-restaurante.jpg"
+  }
+  
+]

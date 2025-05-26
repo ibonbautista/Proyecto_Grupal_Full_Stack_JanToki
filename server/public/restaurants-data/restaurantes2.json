@@ -1,0 +1,482 @@
+[
+  {
+    "Name": "Boroa",
+    "Description": "Un caserío del siglo XV que combina tradición y excelencia gastronómica, con platos vascos de mercado como el txuleta de buey o el bacalao al pil-pil. Su ambiente rústico y cuidado servicio lo hacen ideal para comidas familiares o eventos. Reconocido con 1 estrella Michelin y 2 soles Repsol.",
+    "Town": "Amorebieta",
+    "Municipality": "Amorebieta-Etxano",
+    "Address": "Boroa Auzoa. Caserío Garai, 11",
+    "Latitude": 43.24060966599207,
+    "Longitude": -2.7529740846557593,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": 1,
+      "RepsolSuns": 2,
+      "Recommended": true
+    },
+    "Phone": "946 734 747",
+    "Website": "http://www.boroa.com",
+    "SocialMedia": null,
+    "Image": "https://www.disfrutabizkaia.com/wp-content/uploads/2022/03/FotoExterior_BoroaJatetxea.jpg"
+  },
+  {
+    "Name": "Casa Cámara",
+    "Description": "Emblema de Pasai Donibane desde 1945, famoso por su pescado a la parrilla y mariscos frescos, servidos en un comedor acristalado con vistas al puerto. Destacan sus lubinas y rodaballos, preparados con sencillez y maestría. Un clásico recomendado por su autenticidad.",
+    "Town": "Pasai Donibane",
+    "Municipality": "Pasaia",
+    "Address": "San Juan, 79",
+    "Latitude": 43.32660183301518,
+    "Longitude": -1.9199864291831545,
+    "Categories": {
+      "CuisineType": "Asador",
+      "Brands": ["Costa Vasca"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 523 699",
+    "Website": "https://www.casacamara.com/",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTndfIdfBx5KvU4wcIno2gB5PSStm-vgTJXjZN2gO-UHCgLIhp3dHKUOOK65ACvYbyDPi8&usqp=CAU"
+  },
+  {
+    "Name": "Casa Urola",
+    "Description": "Joya de la Parte Vieja de San Sebastián, regentada por la misma familia desde 1956. Especializado en recetas tradicionales como las kokotxas al pil-pil o el marmitako. Con 2 soles Repsol, mantiene el encanto de la cocina vasca más arraigada.",
+    "Town": "Donostia / San Sebastián",
+    "Municipality": "Donostia / San Sebastián",
+    "Address": "Fermín Calbetón, 20",
+    "Latitude": 43.3235403688984,
+    "Longitude": -1.9846194890490096,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Costa Vasca", "San Sebastián"],
+      "MichelinStars": null,
+      "RepsolSuns": 2,
+      "Recommended": false
+    },
+    "Phone": "943 441 371",
+    "Website": "https://casaurolajatetxea.es/",
+    "SocialMedia": null,
+    "Image": "https://i.blogs.es/0b4995/urolajatetxea12/650_1200.jpg"
+  },
+  {
+    "Name": "El Mirador Castillo El Collado",
+    "Description": "Ubicado en un castillo histórico de Laguardia, ofrece cocina internacional con toques riojanos, como sus verduras asadas o carnes maduradas. Las vistas panorámicas y su terraza lo convierten en un lugar único para cenas románticas.",
+    "Town": "Laguardia",
+    "Municipality": "Laguardia",
+    "Address": "Pº El Collado, 1",
+    "Latitude": 42.55572069999999,
+    "Longitude": -2.5849726000000146,
+    "Categories": {
+      "CuisineType": "Internacional",
+      "Brands": ["Rioja Alavesa"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "945 621 200",
+    "Website": "https://hotelcollado.com",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO_m4XFmYqmDsXkUzG0PE7bpahIKp5tQ6UNw&s"
+  },
+  {
+    "Name": "Chalcha",
+    "Description": "Local pionero en fusionar sabores asiáticos con productos vascos, como su tataki de atún con salsa de soja o los noodles de txangurro. Ambiente moderno y carta de vinos cuidadosamente seleccionada. Un must en Eibar.",
+    "Town": "Eibar",
+    "Municipality": "Eibar",
+    "Address": "Isasi, 7",
+    "Latitude": 43.18379656,
+    "Longitude": -2.47409919,
+    "Categories": {
+      "CuisineType": "Asiática",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 201 126",
+    "Website": null,
+    "SocialMedia": null,
+    "Image": "https://lh3.googleusercontent.com/gps-cs-s/AC9h4no2n6VK5F9E0AjMXr4f0H3oibfVyKZxYpMe9miALynaHXbbd8EhioFG93DD-YUfKnGrHngibxuGuaPecyNKpk_ed5MxVLQsUq2yoaHPJNZWq4yjgxMg0NEFSnHCsj1OpCiong8"
+  },
+  {
+    "Name": "Conde de Álava",
+    "Description": "Referente en Vitoria por su cocina de temporada, con platos como las alcachofas con jamón o el risotto de hongos. Ideal para negocios o cenas elegantes, con una bodega repleta de vinos de Rioja Alavesa.",
+    "Town": "Vitoria-Gasteiz",
+    "Municipality": "Vitoria-Gasteiz",
+    "Address": "Cruz Blanca, 8",
+    "Latitude": 42.85280473,
+    "Longitude": -2.67971318,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Vitoria-Gasteiz"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "945 225 040",
+    "Website": "http://www.condedealava.com/",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz3pg3B4Tx_OQ5RwV9Znk5K6K4899GCiQOrg&s"
+  },
+  {
+    "Name": "Egaña",
+    "Description": "Comedor amplio en Lekeitio, especializado en pescados del Cantábrico como la merluza en salsa verde o los chipirones en su tinta. Perfecto para banquetes, con un servicio impecable y recomendado por locales.",
+    "Town": "Lekeitio",
+    "Municipality": "Lekeitio",
+    "Address": "Antiguako Ama, 2",
+    "Latitude": 43.36611531085625,
+    "Longitude": -2.503588773942571,
+    "Categories": {
+      "CuisineType": "Marisqueria",
+      "Brands": ["Costa Vasca"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "946 840 103",
+    "Website": "https://www.eganarestaurante.com/",
+    "SocialMedia": null,
+    "Image": "https://www.disfrutabizkaia.com/wp-content/uploads/2022/03/egana_bar_bilbao_disfrutabizkaia_pintxos_bizkaikotortillakopa-1024x683.jpg"
+  },
+  {
+    "Name": "Zumeltzegi",
+    "Description": "Antigua sidrería reconvertida en restaurante, donde destacan sus menús degustación con productos locales como el queso Idiazábal o el txuleton. Ambiente histórico y paredes de piedra que evocan la esencia donostiarra.",
+    "Town": "Donostia / San Sebastián",
+    "Municipality": "Donostia / San Sebastián",
+    "Address": "Fermín Calbetón, 15",
+    "Latitude": 43.32329456,
+    "Longitude": -1.98430013,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Costa Vasca", "San Sebastián"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "943 970 153",
+    "Website": "http://www.restaurantezumeltzegidonostia.com",
+    "SocialMedia": null,
+    "Image": "https://res.cloudinary.com/tf-lab/image/upload/restaurant/a4e30a4b-5468-47e9-838b-24d0cbf4a0ea/eaf6cd00-72bb-46ba-a2d6-e27a8e3aeaf7.jpg"
+  },
+  {
+    "Name": "El Medoc Alavés",
+    "Description": "Cocina francesa con influencia riojana, como su foie gras con reducción de vino o el magret de pato. Ubicado en un hotel boutique, es ideal para maridajes con vinos de la zona.",
+    "Town": "Laguardia",
+    "Municipality": "Laguardia",
+    "Address": "Pº San Raimundo, 15",
+    "Latitude": 42.549036960984246,
+    "Longitude": -2.580686014819321,
+    "Categories": {
+      "CuisineType": "Francesa",
+      "Brands": ["Rioja Alavesa"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "945 600 560",
+    "Website": "https://www.hotelvilladelaguardia.com",
+    "SocialMedia": null,
+    "Image": "https://res.cloudinary.com/tf-lab/image/upload/restaurant/6c9c0002-d0ff-41c3-9c7e-84e156c5ef9f/657320a8-bce0-4182-84f2-7f4210917605.jpg"
+  },
+  {
+    "Name": "El Portalón",
+    "Description": "Situado en un edificio del siglo XV en Vitoria, combina historia y gastronomía con platos como el cordero asado o las pochas con codorniz. Sus techos de madera y chimenea crean un ambiente medieval único.",
+    "Town": "Vitoria-Gasteiz",
+    "Municipality": "Vitoria-Gasteiz",
+    "Address": "Correría, 147-149",
+    "Latitude": 42.8515827,
+    "Longitude": -2.673093999999992,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Vitoria-Gasteiz"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "945 142 755",
+    "Website": "https://www.restauranteelportalon.com/",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_oNN3RjCbZzKAE8j79O5Fi1YGpeEauSDt-g&s"
+  },
+  {
+    "Name": "El Refor",
+    "Description": "Asador especializado en carnes a la parrilla y pescados frescos, con un toque casero en sus postres tradicionales. Ambiente rústico y familiar perfecto para disfrutar de la cocina vasca más auténtica. Destaca por sus chuletones de buey y su cálida atención al cliente.",
+    "Town": "Amurrio",
+    "Municipality": "Amurrio",
+    "Address": "Maskuribai, 21",
+    "Latitude": 43.046627,
+    "Longitude": -2.999673,
+    "Categories": {
+      "CuisineType": "Asador",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "945 393 314",
+    "Website": "http://www.elrefor.com/",
+    "SocialMedia": null,
+    "Image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/28/fc/8b/principal-vista.jpg?w=1200&h=900&s=1"
+  },
+  {
+    "Name": "Elkano",
+    "Description": "Leyenda gastronómica de Getaria, famoso por revolucionar la parrilla con pescados como el rodaballo asado al estilo Elkano. Con 1 estrella Michelin y 3 soles Repsol, es un templo del marisco y los sabores costeros. Su sencillez y calidad lo han convertido en un referente internacional.",
+    "Town": "Getaria",
+    "Municipality": "Getaria",
+    "Address": "Herrerieta, 2",
+    "Latitude": 43.30299777,
+    "Longitude": -2.20505178,
+    "Categories": {
+      "CuisineType": "Asador",
+      "Brands": ["Costa Vasca"],
+      "MichelinStars": 1,
+      "RepsolSuns": 3,
+      "Recommended": true
+    },
+    "Phone": "943 140 024",
+    "Website": "https://www.restauranteelkano.com/",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5rngm1pXdpQa5vayITugh-edb4NaDa42h8A&s"
+  },
+  {
+    "Name": "Embarcadero",
+    "Description": "Restaurante de cocina vasca tradicional con vistas al Abra de Bilbao, ubicado en un hotel de diseño moderno. Ideal para comidas con vistas al mar, destacando sus platos de pescado fresco y arroces. Aunque sin premios, ofrece una experiencia gastronómica consistente.",
+    "Town": "Areeta/Las Arenas",
+    "Municipality": "Getxo",
+    "Address": "Avda. Zugazarte, 51",
+    "Latitude": 43.33293296,
+    "Longitude": -3.01183538,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Costa Vasca", "Bilbao"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "944 803 100",
+    "Website": "https://hotelembarcadero.com/restaurante-arenas-getxo/",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1oF63cHVcBnvh--eAdHu918sp-I_ZrbKHYA&s"
+  },
+  {
+    "Name": "Eneperi",
+    "Description": "Encantador caserío del siglo XVIII con terraza panorámica, famoso por sus pintxos creativos y banquetes con productos locales. Ambiente rústico-elegante y servicio cercano, perfecto para eventos en un entorno natural cerca de Bakio.",
+    "Town": "Gibelorratzagako San Pelaio",
+    "Municipality": "Bakio",
+    "Address": "Gibelorratzagako San Pelaio, 80",
+    "Latitude": 43.44092038172961,
+    "Longitude": -2.7835274046936043,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Costa Vasca"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "946 194 065",
+    "Website": "https://eneperi.com/es/",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQWzFxxxy3qkQebXLCBgmd0bT-AmEFCu_rZg&s"
+  },
+  {
+    "Name": "Ermintxo",
+    "Description": "Restaurante hotelero con vistas al Cantábrico, especializado en recetas vascas clásicas como el marmitako o el bacalao al pil-pil. Cocina honesta y entorno relajado, ideal para desconectar en la costa de Ea.",
+    "Town": "Natxitua",
+    "Municipality": "Ea",
+    "Address": "Bº Elejalde, 14",
+    "Latitude": 43.381769271838294,
+    "Longitude": -2.6138342398811476,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Costa Vasca"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "946 277 700",
+    "Website": "https://www.hotelermintxo.com/",
+    "SocialMedia": null,
+    "Image": "https://cdn.turisapps.com/site-1743/1c78238a-4245-4db8-8c7a-f54651dff0f8/main.webp"
+  },
+  {
+    "Name": "Eskarne",
+    "Description": "Joya familiar en Eibar que preserva la tradición vasca con platos como las alubias de Tolosa o el txuletón. Dos comedores íntimos y trato personalizado, aunque sin distinciones oficiales.",
+    "Town": "Eibar",
+    "Municipality": "Eibar",
+    "Address": "Arragueta, 4",
+    "Latitude": 43.18590599,
+    "Longitude": -2.46539073,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "943 121 650",
+    "Website": null,
+    "SocialMedia": null,
+    "Image": "https://media-cdn.tripadvisor.com/media/photo-s/0b/cc/08/e9/img-20160630-150853-largejpg.jpg"
+  },
+  {
+    "Name": "Atelier Etxanobe",
+    "Description": "Alta cocina vasca de autor por Fernando Canales, con platos vanguardistas como el huevo roto de foie. 2 soles Repsol avalan su creatividad y técnica impecable en pleno Bilbao.",
+    "Town": "Bilbao",
+    "Municipality": "Bilbao",
+    "Address": "Juan Ajuriaguerra, 8",
+    "Latitude": 43.265529480046936,
+    "Longitude": -2.9314387533729587,
+    "Categories": {
+      "CuisineType": "Alta Cocina",
+      "Brands": ["Bilbao"],
+      "MichelinStars": null,
+      "RepsolSuns": 2,
+      "Recommended": true
+    },
+    "Phone": "944 421 071",
+    "Website": "https://atelieretxanobe.com/",
+    "SocialMedia": null,
+    "Image": "https://etxanobe.com/files/2018/01/la-despensa-etxanobe-1024x682.jpg"
+  },
+  {
+    "Name": "Etxe-Berri",
+    "Description": "Caserío tradicional en Zumarraga donde destacan sus guisos de cuchara y carnes a la brasa. Cocina de mercado con productos de proximidad y ambiente acogedor.",
+    "Town": "Zumarraga",
+    "Municipality": "Zumarraga",
+    "Address": "Bº Etxeberri, s/n",
+    "Latitude": 43.09930358,
+    "Longitude": -2.31640222,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 721 211",
+    "Website": "http://www.etxeberri.com",
+    "SocialMedia": null,
+    "Image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/ae/7a/d7/hotel-restaurante-etxeberri.jpg?w=800&h=500&s=1"
+  },
+  {
+    "Name": "Fagollaga",
+    "Description": "Histórico restaurante desde 1903, famoso por su txuleta y menú degustación con productos de Hernani. 2 soles Repsol reconocen su equilibrio entre tradición y calidad.",
+    "Town": "Ereñotzu",
+    "Municipality": "Hernani",
+    "Address": "Ereñozu auzoa, 68",
+    "Latitude": 43.24848426,
+    "Longitude": -1.95158458,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Montes y Valles vascos", "San Sebastián"],
+      "MichelinStars": null,
+      "RepsolSuns": 2,
+      "Recommended": true
+    },
+    "Phone": "943 550 031",
+    "Website": "https://www.fagollaga.com/",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyMIQ53QFb3jZWUa-4jopMVxFzvrN1pQpXYA&s"
+  },
+  {
+    "Name": "Gaminiz",
+    "Description": "Ubicado en el Parque Tecnológico de Zamudio, combina arquitectura moderna con cocina vasca clásica. Ideal para comidas de negocios o grupos, con menús diarios bien elaborados.",
+    "Town": "Geldo | Diseminado",
+    "Municipality": "Zamudio",
+    "Address": "Ibaizabal, 212. Parque Científico y Tecnológico de Bizkaia",
+    "Latitude": 43.29372709,
+    "Longitude": -2.86138949,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "944 317 025",
+    "Website": "http://www.gaminiz.com",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDTvLf7AIXetmm93Y-5KxW7GEAOblx2uGHOA&s"
+  },
+  {
+    "Name": "Gaztañaga",
+    "Description": "Local centenario en Sondika, conocido por su clientela fiel y platos como la merluza en salsa verde. Cocina honesta sin pretensiones, pero con sabores bien ejecutados.",
+    "Town": "Basozabal",
+    "Municipality": "Sondika",
+    "Address": "Txorierri Etorbidea, 34",
+    "Latitude": 43.299221,
+    "Longitude": -2.9255810846557706,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "688 762 672",
+    "Website": null,
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjK--y9THMeplg5NXWB_eLi5vfGwvHBIFYNQ&s"
+  },
+  {
+    "Name": "Gotzon",
+    "Description": "Elegante restaurante frente a la playa de Bakio, con terraza acristalada y especialidades como el rape al horno. Perfecto para cenas con vistas al mar y productos de temporada.",
+    "Town": null,
+    "Municipality": "Bakio",
+    "Address": "Luzarragako bidea, 2",
+    "Latitude": 43.42984597,
+    "Longitude": -2.80319907,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Costa Vasca"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "946 194 043",
+    "Website": "https://www.gotzonjatetxea.com/",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQP_z_yxQFxq6Qobw6YTb90FsYwbJrxIDU06Q&s"
+  },
+  {
+    "Name": "Gran Sol",
+    "Description": "Pequeño local en Hondarribia que reinventa la cocina vasca con pintxos innovadores y toques modernos. Buen lugar para tapear en un ambiente informal pero cuidado.",
+    "Town": null,
+    "Municipality": "Hondarribia",
+    "Address": "San Pedro, 63",
+    "Latitude": 43.36857423,
+    "Longitude": -1.79424299,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Costa Vasca"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "943 642 701",
+    "Website": "https://www.bargransol.com/",
+    "SocialMedia": null,
+    "Image": "https://dam.melia.com/melia/accounts/f8/4000018/projects/127/assets/89/44352/43f68be5a36c0ea7c68ea11002fa0862-1603277843.jpg?im=RegionOfInterestCrop=(360,432),regionOfInterest=(1476.5,985.0)"
+  },
+  {
+    "Name": "Guetaria",
+    "Description": "Asador bilbaíno con solera, especializado en carnes a la brasa y pescados, con comedores privados para eventos. Tradición y buen servicio en el centro de la ciudad.",
+    "Town": "Bilbao",
+    "Municipality": "Bilbao",
+    "Address": "Colón de Larreategui, 12",
+    "Latitude": 43.26309562,
+    "Longitude": -2.92998687,
+    "Categories": {
+      "CuisineType": "Asador",
+      "Brands": ["Bilbao"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "944 243 923",
+    "Website": "http://www.guetaria.com",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTU4WsbC0GpsC5snbzIttTQwScrro4YU36rw&s"
+  }
+]

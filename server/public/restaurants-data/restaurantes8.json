@@ -1,0 +1,1002 @@
+[
+  {
+    "Name": "Iriarte",
+    "Description": "Inaugurado en 1999, el restaurante Iriarte se encuentra en Berrobi y destaca por su comedor de moderna decoración. Ofrece cocina vasca tradicional en un entorno cuidado y actual. Muy recomendado para quienes buscan calidad gastronómica en un ambiente contemporáneo",
+    "Town": "Berrobi",
+    "Municipality": "Berrobi",
+    "Address": "José María Goikoetxea, 34",
+    "Latitude": 43.145429,
+    "Longitude": -2.0255650999999943,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 683 078",
+    "Website": "https://www.iriartejatetxea.com/eu/",
+    "SocialMedia": null,
+    "Image": "https://www.guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-57-20-57204f0b-0539-419d-99e7-a19bd92d2378-tmptmp7a2ol69a97dad42a89cc47e48e738c5fe5dee5e1.jpeg.transform/rp-rendition-xs/image.jpeg"
+  },
+  {
+    "Name": "Otzaurteko Benta",
+    "Description": "Otzaurteko Benta es un restaurante familiar situado en Zegama, en la subida al Parque Natural de Aizkorri-Aratz. Ofrece cocina vasca tradicional en un entorno natural y rústico, ideal para quienes disfrutan del turismo rural. Aunque no está marcado como recomendado, es una opción auténtica y acogedora",
+    "Town": "Zegama",
+    "Municipality": "Zegama",
+    "Address": "Otzaurte auzoa",
+    "Latitude": 42.93860249791985,
+    "Longitude": -2.2599845653625152,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "943 801 293",
+    "Website": "http://www.otzaurtekobenta.com/",
+    "SocialMedia": null,
+    "Image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/13/97/27/restaurante-otzaurteko.jpg?w=900&h=500&s=1"
+  },
+  {
+    "Name": "Bartzelona",
+    "Description": "Bartzelona es un restaurante y agroturismo ubicado en el barrio Esnaola de Legorreta, rodeado de naturaleza. Ofrece cocina vasca tradicional en un entorno rural y tranquilo, ideal para una escapada gastronómica con encanto. Muy recomendado por su autenticidad y entorno natural",
+    "Town": "Legorreta",
+    "Municipality": "Legorreta",
+    "Address": "Esnaola auzoa, 7",
+    "Latitude": 43.082189,
+    "Longitude": -2.135854,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 806 206",
+    "Website": null,
+    "SocialMedia": null,
+    "Image": "https://goierriturismo.com/wp-content/themes/yootheme/cache/7f/bar_agroturismo_bartzelona-7f1d50ef.jpeg"
+  },
+  {
+    "Name": "Mandio",
+    "Description": "Ubicado en la plaza principal de Zerain, el restaurante Mandio ofrece platos de cocina tradicional vasca elaborados con mimo y productos locales. Es un sitio recomendado para quienes buscan una experiencia auténtica en un entorno rural y tranquilo",
+    "Town": "Zerain",
+    "Municipality": "Zerain",
+    "Address": "Herriko plaza",
+    "Latitude": 43.012613745846636,
+    "Longitude": -2.2731439404754616,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 801 705",
+    "Website": null,
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCMN1J40-YtTGGKJv1eAdy1HxZ4_j-VZoZZQ&s"
+  },
+  {
+    "Name": "Iturrigoxo",
+    "Description": "Iturrigoxo se encuentra en la pintoresca plaza de Amasa, en Villabona. Este restaurante ofrece cocina vasca tradicional en un comedor acogedor, siendo una opción recomendada para disfrutar de platos caseros en un entorno encantador y tranquilo",
+    "Town": "Amasa",
+    "Municipality": "Villabona",
+    "Address": "Plaza de Amasa",
+    "Latitude": 43.183694721607566,
+    "Longitude": -2.048373780053716,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "654 684 505",
+    "Website": null,
+    "SocialMedia": null,
+    "Image": "https://estaticosgn-cdn.deia.eus/clip/29b136de-0e1c-4ac6-975e-8b0dc63f94bb_16-9-aspect-ratio_default_0.jpg"
+  },
+  {
+    "Name": "Oteñe",
+    "Description": "Oteñe está ubicado en un enclave privilegiado entre los montes Txindoki y Aralar, en Gaintza. Ofrece cocina vasca tradicional en un entorno natural espectacular, ideal para quienes buscan tranquilidad y buena gastronomía, aunque no figura como recomendado oficialmente",
+    "Town": "Gaintza",
+    "Municipality": "Gaintza",
+    "Address": "Larraitz bidea",
+    "Latitude": 43.046444,
+    "Longitude": -2.123659,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "943 889 848",
+    "Website": null,
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRkXk0-wYdpit9AJwJTOyPLfvPliwXnsjIcA&s"
+  },
+  {
+    "Name": "Karrika",
+    "Description": "Karrika, inaugurado en 1997 en Laudio/Llodio, destaca por su amplio espacio de más de 400 m² y su cocina vasca tradicional. Es un restaurante recomendado, ideal para celebraciones o comidas de grupo en un entorno funcional y acogedor",
+    "Town": "Laudio/Llodio",
+    "Municipality": "Laudio/Llodio",
+    "Address": "Polígono Industrialdea, Pab. 4-4",
+    "Latitude": 43.134365332652656,
+    "Longitude": -2.9687189949371486,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "946 728 207",
+    "Website": "https://karrikabarria.es/",
+    "SocialMedia": null,
+    "Image": "https://karrikabarria.es/wp-content/uploads/DSC_6004-dyd-.jpg"
+  },
+  {
+    "Name": "Xerbera",
+    "Description": "El restaurante Xerbera ofrece una cocina de autor que destaca por el uso de ingredientes frescos y de alta calidad. Su propuesta gastronómica combina tradición y creatividad para sorprender a sus comensales. Ubicado en Beasain, es un lugar ideal para los amantes de la innovación culinaria vasca",
+    "Town": "Beasain",
+    "Municipality": "Beasain",
+    "Address": "Nafarroa Etorbidea, 21",
+    "Latitude": 43.0467996,
+    "Longitude": -2.2020457999999508,
+    "Categories": {
+      "CuisineType": "Autor",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "943 888 829",
+    "Website": null,
+    "SocialMedia": null,
+    "Image": "https://turismo.euskadi.eus/contenidos/b_restauracion/0000045461_b1_rec_turismo/es_45461/images/GL_xerberainteriorH.jpg"
+  },
+  {
+    "Name": "Balintxarreketa",
+    "Description": "El restaurante Balintxarreketa, abierto desde 1999, se encuentra en Laudio/Llodio y ofrece cocina vasca tradicional. Destaca por su ambiente acogedor y su compromiso con los productos locales de calidad. Ideal para disfrutar de platos clásicos en un entorno familiar.",
+    "Town": "Laudio/Llodio",
+    "Municipality": "Laudio/Llodio",
+    "Address": "Camino de Malkuartu, 1",
+    "Latitude": 43.144246364288094,
+    "Longitude": -2.9769397497070713,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "946 724 350",
+    "Website": "https://www.restaurantebalintxarreketa.com/",
+    "SocialMedia": null,
+    "Image": "https://www.restaurantebalintxarreketa.com/wp-content/uploads/2017/01/comedor-barra.jpg"
+  },
+  {
+    "Name": "Arenalde Maitea",
+    "Description": "Situado en un caserío tradicional en Amurrio, Arenalde Maitea ofrece una experiencia gastronómica vasca auténtica. Su decoración rústica crea un ambiente cálido que complementa su cocina basada en recetas clásicas y productos frescos. Perfecto para quienes buscan tradición y sabor",
+    "Town": "Amurrio",
+    "Municipality": "Amurrio",
+    "Address": "Cerrajería, 1",
+    "Latitude": 43.057615550904615,
+    "Longitude": -2.999027915344186,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "945 892 426",
+    "Website": null,
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn3mQFuuIdPvERaY0igZAbInrxemgRI5-gqA&s"
+  },
+  {
+    "Name": "Kafe Antzokia de Bermeo",
+    "Description": "Kafe Antzokia de Bermeo ofrece cocina vasca tradicional con toques modernos, abierto todos los días. Está ubicado en el centro de Bermeo, destacando por su ambiente acogedor. Ideal para disfrutar de platos locales en un espacio cultural.",
+    "Town": "Bermeo",
+    "Municipality": "Bermeo",
+    "Address": "Aurrekoetxea, 27",
+    "Latitude": 43.4209681,
+    "Longitude": -2.7218520000000126,
+    "Categories": {
+      "CuisineType": "Fusion",
+      "Brands": ["Costa Vasca"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "946 880 216",
+    "Website": "http://www.bermeokokafeantzokia.com/",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeeX1DFzCZgCx9Cwu5hs9Aa18sle6Sdh1maA&s"
+  },
+  {
+    "Name": "Cannon Etxea",
+    "Description": "Situado en Sollube, Cannon Etxea ofrece vistas espectaculares junto a su cocina vasca tradicional. Su entorno natural realza la experiencia gastronómica con platos elaborados con productos de la zona. Perfecto para una comida tranquila rodeada de naturaleza.",
+    "Town": "Mañu",
+    "Municipality": "Bermeo",
+    "Address": "Barrio Mañu. Alto de Sollube, s/n",
+    "Latitude": 43.40516660507755,
+    "Longitude": -2.7601608922516374,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Costa Vasca"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "946 883 476",
+    "Website": "https://cannonetxea.com/",
+    "SocialMedia": null,
+    "Image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/e4/19/60/magnificoii.jpg?w=900&h=500&s=1"
+  },
+  {
+    "Name": "Arroka Berri",
+    "Description": "Caserío familiar reformado situado en un entorno natural privilegiado en Hondarribia. Ofrece cocina vasca tradicional con productos frescos de la región. Un lugar acogedor para disfrutar de la gastronomía local en un ambiente rural",
+    "Town": null,
+    "Municipality": "Hondarribia",
+    "Address": "Higer bidea, 6",
+    "Latitude": 43.37762737932916,
+    "Longitude": -1.8007838871025115,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Costa Vasca"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 642 712",
+    "Website": "https://arrokaberri.es/es/",
+    "SocialMedia": null,
+    "Image": "https://www.macarfi.com/storage/restaurants/1838/arrokaberri1.jpg"
+  },
+  {
+    "Name": "Kasino Jatetxea",
+    "Description": "Ubicado en uno de los edificios más emblemáticos de Bermeo, este restaurante ofrece cocina vasca tradicional. Su atmósfera combina historia y sabor para brindar una experiencia auténtica. Ideal para degustar platos típicos en un espacio singular",
+    "Town": "Bermeo",
+    "Municipality": "Bermeo",
+    "Address": "Lamera, s/n",
+    "Latitude": 43.41859475107192,
+    "Longitude": -2.7236801653594878,
+    "Categories": {
+      "CuisineType": "Fusion",
+      "Brands": ["Costa Vasca"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "946 039 411",
+    "Website": null,
+    "SocialMedia": null,
+    "Image": "https://turismo.euskadi.eus/contenidos/b_restauracion/0000045563_b1_rec_turismo/es_45563/images/640x315-kasino-jatetxea.jpg"
+  },
+  {
+    "Name": "Hilarion",
+    "Description": "Restaurante con decoración sencilla ubicado en Arrasate/Mondragón. Ofrece cocina tradicional vasca con un ambiente familiar y acogedor. Ideal para disfrutar platos clásicos con productos locales frescos",
+    "Town": "Arrasate/Mondragón",
+    "Municipality": "Arrasate / Mondragón",
+    "Address": "Plaza Larrea, 5",
+    "Latitude": 43.06431852831717,
+    "Longitude": -2.4963764355040894,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 770 169",
+    "Website": "https://www.restaurantehilarion.com/",
+    "SocialMedia": null,
+    "Image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/18/93/e3/img-20190114-154037-largejpg.jpg?w=1100&h=-1&s=1"
+  },
+  {
+    "Name": "Pablo Urzay",
+    "Description": "Restaurante acogedor de dos plantas situado en Getxo, en la zona de Las Arenas. Su carta está basada en la cocina tradicional vasca con toques modernos. Perfecto para una experiencia gastronómica cuidada y cercana al mar",
+    "Town": "Areeta/Las Arenas",
+    "Municipality": "Getxo",
+    "Address": "Bidebarrieta, 4",
+    "Latitude": 43.3253183,
+    "Longitude": -3.0105934,
+    "Categories": {
+      "CuisineType": "Marisqueria",
+      "Brands": ["Costa Vasca"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "944 649 829",
+    "Website": "http://www.restaurantepablourzay.com",
+    "SocialMedia": null,
+    "Image": "https://placehold.co/300x150"
+  },
+  {
+    "Name": "Bengoetxe",
+    "Description": "Restaurante asador renovado en 2006, gestionado por la familia Gete. Ubicado en Artika, Bermeo, destaca por su cocina vasca tradicional y su ambiente familiar. Ideal para los amantes de las carnes a la brasa y productos locales",
+    "Town": "Artika",
+    "Municipality": "Bermeo",
+    "Address": "Barrio Artike, 27",
+    "Latitude": 43.4156629,
+    "Longitude": -2.7271780999999464,
+    "Categories": {
+      "CuisineType": "Asador",
+      "Brands": ["Costa Vasca"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "946 881 676",
+    "Website": "https://restaurantebengoetxe.com/",
+    "SocialMedia": null,
+    "Image": "https://totalfood.es/uploads/images/restaurant/bengoetxeerretegia/profile/fachada-completa-bengoetxe-erretegia-bermeo.jpg"
+  },
+  {
+    "Name": "Basalbo Baserria",
+    "Description": "Caserío acogedor situado en la zona rural de Getxo, en Andra Mari. Ofrece cocina tradicional vasca en un entorno tranquilo y auténtico. Perfecto para disfrutar platos caseros elaborados con ingredientes de proximidad.",
+    "Town": "Andra Mari",
+    "Municipality": "Getxo",
+    "Address": "Martiturri Estarta, 18",
+    "Latitude": 43.3661132,
+    "Longitude": -3.009921200000008,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Costa Vasca"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "944 913 491",
+    "Website": "https://basalbobaserria.com/",
+    "SocialMedia": null,
+    "Image": "https://basalbobaserria.com/wp-content/uploads/2012/11/copy-basalbo-baserria-jatetxea-fotos-000001.jpg"
+  },
+  {
+    "Name": "Iturri",
+    "Description": "Restaurante ubicado en el centro de Azkoitia, especializado en cocina vasca tradicional. Ofrece platos elaborados con recetas clásicas y productos locales. Ambiente acogedor ideal para disfrutar de la gastronomía regional",
+    "Town": "Azkoitia",
+    "Municipality": "Azkoitia",
+    "Address": "Nagusia, 120",
+    "Latitude": 43.1790971,
+    "Longitude": -2.3096328000000312,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 850 017",
+    "Website": null,
+    "SocialMedia": null,
+    "Image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/4d/cd/bb/comedor-grande-250-personas.jpg?w=700&h=500&s=1"
+  },
+  {
+    "Name": "Batzokia",
+    "Description": "Restaurante de la cadena Batzokia S.L. situado en Beasain, conocido por su cocina vasca tradicional. Destaca por sus platos caseros y su ambiente familiar. Un lugar perfecto para saborear sabores auténticos del País Vasco",
+    "Town": "Beasain",
+    "Municipality": "Beasain",
+    "Address": "Kale Nagusia, 26",
+    "Latitude": 43.0468080232054,
+    "Longitude": -2.1968745896186874,
+    "Categories": {
+      "CuisineType": "Variado",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 086 855",
+    "Website": "http://baibatzokia.eus/es/portfolio-item/batzoki-de-beasain/",
+    "SocialMedia": null,
+    "Image": "https://www.ondojan.com/images/sobipro/entries/452/BATZOKI%20BEASAIN%20comedor_9816.jpg"
+  },
+  {
+    "Name": "Patxine",
+    "Description": "En Patxine, ubicado en Asteasu, se ofrecen platos tradicionales de la cocina vasca. Su ambiente familiar y acogedor realza la experiencia gastronómica. Ideal para quienes buscan sabores auténticos y caseros",
+    "Town": "Asteasu",
+    "Municipality": "Asteasu",
+    "Address": "Errementari, 1",
+    "Latitude": 43.1943664,
+    "Longitude": -2.0977273999999397,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 691 025",
+    "Website": null,
+    "SocialMedia": null,
+    "Image": "https://turismo.euskadi.eus/contenidos/b_restauracion/0000045761_b1_rec_turismo/es_45761/images/GL_PatxineBarraAsteasuH.jpg"
+  },
+  {
+    "Name": "Oquendo",
+    "Description": "Restaurante situado en el centro de San Sebastián con una decoración clásica y elegante. Destaca por su cocina vasca tradicional con un toque contemporáneo. Perfecto para disfrutar la gastronomía local en un entorno céntrico",
+    "Town": "Donostia / San Sebastián",
+    "Municipality": "Donostia / San Sebastián",
+    "Address": "Okendo, 8",
+    "Latitude": 43.3223892,
+    "Longitude": -1.98162769999999,
+    "Categories": {
+      "CuisineType": "Fusion",
+      "Brands": ["Costa Vasca", "San Sebastián"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 420 736",
+    "Website": "https://www.caferestauranteoquendo.com/",
+    "SocialMedia": null,
+    "Image": "https://media-cdn.tripadvisor.com/media/photo-s/01/57/07/e5/zona-entrada.jpg"
+  },
+  {
+    "Name": "Marqués de Riscal",
+    "Description": "Situado en el hotel Marqués de Riscal en Elciego, ofrece cocina vasca de autor con dos soles Repsol. Destaca por su creatividad y alta calidad gastronómica. Una experiencia culinaria de lujo en Rioja Alavesa",
+    "Town": "Elciego",
+    "Municipality": "Elciego",
+    "Address": "Calle Torrea, 1",
+    "Latitude": 42.51121507841922,
+    "Longitude": -2.618134971163954,
+    "Categories": {
+      "CuisineType": "Autor",
+      "Brands": ["Rioja Alavesa"],
+      "MichelinStars": null,
+      "RepsolSuns": 2,
+      "Recommended": true
+    },
+    "Phone": "945 180 888",
+    "Website": "https://www.restaurantemarquesderiscal.com/",
+    "SocialMedia": null,
+    "Image": "https://www.marquesderiscal.com/public/Image/2020/6/1860.jpg"
+  },
+  {
+    "Name": "1860 Tradición",
+    "Description": "Ubicado también en el Hotel Marqués de Riscal, 1860 Tradición ofrece platos tradicionales de la cocina vasca. Su ambiente elegante resalta la esencia de la gastronomía local. Perfecto para degustar sabores clásicos en Rioja Alavesa",
+    "Town": "Elciego",
+    "Municipality": "Elciego",
+    "Address": "Calle Torrea, 1",
+    "Latitude": 42.51116367179126,
+    "Longitude": -2.618188615344252,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Rioja Alavesa"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "945 180 880",
+    "Website": "https://www.marquesderiscal.com/ciudad-del-vino/restaurantes",
+    "SocialMedia": null,
+    "Image": "https://www.guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-b4-26-b4266d0e-6c62-4fac-9f2f-a522086e7414-tmptmp_d2d9mmjadddd59261e545d0ba9ad11d94d38190.jpeg.transform/rp-rendition-xs/image.jpg"
+  },
+  {
+    "Name": "Nerua",
+    "Description": "Situado junto al Guggenheim Bilbao, Nerua ofrece cocina vasca de autor con una estrella Michelin y tres soles Repsol. Destaca por su creatividad y excelencia culinaria. Un referente gastronómico en Bilbao",
+    "Town": "Bilbao",
+    "Municipality": "Bilbao",
+    "Address": "Avda. Abandoibarra, 2",
+    "Latitude": 43.26896879161392,
+    "Longitude": -2.9329412348877213,
+    "Categories": {
+      "CuisineType": "Autor",
+      "Brands": ["Bilbao"],
+      "MichelinStars": 1,
+      "RepsolSuns": 3,
+      "Recommended": true
+    },
+    "Phone": "944 000 430",
+    "Website": "https://www.neruaguggenheimbilbao.com/",
+    "SocialMedia": null,
+    "Image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/03/c7/ff/b2/nerua.jpg?w=900&h=500&s=1"
+  },
+  {
+    "Name": "Txiki Polit",
+    "Description": "Restaurante en el corazón de Zarautz que ofrece cocina tradicional vasca con ingredientes de alta calidad. Reconocido por su sabor auténtico y ambiente acogedor. Ideal para disfrutar la esencia de la Costa Vasca",
+    "Town": "Zarautz",
+    "Municipality": "Zarautz",
+    "Address": "Musika plaza",
+    "Latitude": 43.2861977,
+    "Longitude": -2.1767743999999993,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Costa Vasca"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 835 357",
+    "Website": "http://www.txikipolit.eus",
+    "SocialMedia": null,
+    "Image": "https://y.cdrst.com/foto/hotel-sf/d0fbd67/granderesp/foto-hotel-d0fb2bd.jpg"
+  },
+  {
+    "Name": "Portu",
+    "Description": "El asador Portu está ubicado en plena naturaleza en Aia, ofreciendo un ambiente acogedor y tradicional. Especializado en cocina vasca a la parrilla. Ideal para disfrutar de platos auténticos en un entorno rural",
+    "Town": "Santio Erreka",
+    "Municipality": "Aia",
+    "Address": "Barrio Santiago Erreka, s/n",
+    "Latitude": 43.26661742327006,
+    "Longitude": -2.1180513613769563,
+    "Categories": {
+      "CuisineType": "Asador",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 894 434",
+    "Website": "http://asadorportu.com/",
+    "SocialMedia": null,
+    "Image": "https://turismo.euskadi.eus/contenidos/b_restauracion/0000045921_b1_rec_turismo/es_45921/images/GL_asadorportuinteriorH.jpg"
+  },
+  {
+    "Name": "Villa Lucía",
+    "Description": "Este asador en Laguardia destaca por su respeto a la tradición culinaria vasca y riojana. Su comedor principal ofrece una experiencia cálida y auténtica. Perfecto para degustar asados con gran calidad y sabor",
+    "Town": "Laguardia",
+    "Municipality": "Laguardia",
+    "Address": "Ctra. Logroño, s/n",
+    "Latitude": 42.54825492709323,
+    "Longitude": -2.578186036462398,
+    "Categories": {
+      "CuisineType": "Asador",
+      "Brands": ["Rioja Alavesa"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "945 600 032",
+    "Website": "https://villa-lucia.com/",
+    "SocialMedia": null,
+    "Image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/52/5d/8b/villa-lucia-principal.jpg?w=900&h=500&s=1"
+  },
+  {
+    "Name": "Artza",
+    "Description": "El bar-restaurante Artza, junto al puerto de Bermeo, ofrece un ambiente familiar y acogedor. Destacan sus especialidades en cocina tradicional vasca. Un lugar ideal para disfrutar de productos frescos del mar",
+    "Town": "Bermeo",
+    "Municipality": "Bermeo",
+    "Address": "Askatasun Bidea, 1",
+    "Latitude": 43.4183128,
+    "Longitude": -2.724042499999996,
+    "Categories": {
+      "CuisineType": "Marisqueria",
+      "Brands": ["Costa Vasca"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "946 029 371",
+    "Website": null,
+    "SocialMedia": null,
+    "Image": "https://turismo.euskadi.eus/contenidos/b_restauracion/0000046461_b1_rec_turismo/es_46461/images/GL_ArtzaComedor2BermeoH.jpg"
+  },
+  {
+    "Name": "Lagunak",
+    "Description": "Situado en el centro de Zarautz, el asador Lagunak destaca por sus platos a la parrilla con sabor auténtico. Su ambiente cálido y tradicional atrae tanto a locales como visitantes. Perfecto para amantes de la cocina vasca clásica",
+    "Town": "Zarautz",
+    "Municipality": "Zarautz",
+    "Address": "San Francisco, 10",
+    "Latitude": 43.2842615,
+    "Longitude": -2.1736739,
+    "Categories": {
+      "CuisineType": "Asador",
+      "Brands": ["Costa Vasca"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 833 701",
+    "Website": "http://www.asadorlagunak.com/",
+    "SocialMedia": null,
+    "Image": "https://www.turismozarautz.eus/documents/2957482/3255451/Lagunak.jpg/a4aa4cdb-2c45-8712-d101-a6d4d4f8cae8?t=1531293743000"
+  },
+  {
+    "Name": "Goiko Benta",
+    "Description": "Restaurante centenario en Arantzazu que mantiene la esencia de la cocina vasca tradicional. Destacan sus platos típicos elaborados con productos locales. Un lugar emblemático para disfrutar de la gastronomía vasca en Oñati.",
+    "Town": "Arantzazu",
+    "Municipality": "Oñati",
+    "Address": "Barrio Arantzazu, 12",
+    "Latitude": 42.97993890973872,
+    "Longitude": -2.3979522279419143,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 781 305",
+    "Website": "https://www.goikobenta.net/",
+    "SocialMedia": null,
+    "Image": "https://www.goikobenta.net/uploads/d8dWxlYl/goiko-benta-interior-del-restaurante.jpg"
+  },
+  {
+    "Name": "Santa Bárbara",
+    "Description": "Restaurante ideal en Zarautz para celebraciones y eventos especiales. Ofrece una cocina tradicional vasca con un ambiente acogedor. Perfecto para disfrutar en grupo en un entorno costero",
+    "Town": "Zarautz",
+    "Municipality": "Zarautz",
+    "Address": "Nafarroa kalea, 26",
+    "Latitude": 43.2858603,
+    "Longitude": -2.168158500000004,
+    "Categories": {
+      "CuisineType": "Variado",
+      "Brands": ["Costa Vasca"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 832 993",
+    "Website": "https://www.hotelzarauz.com/restaurante",
+    "SocialMedia": null,
+    "Image": "https://www.hotelzarauz.com/media/pages/restaurante/ef281e95d1-1639460994/restaurante1.jpg"
+  },
+  {
+    "Name": "Kirkilla",
+    "Description": "Restaurante en Zarautz que ofrece menús del día y menús de degustación con cocina vasca tradicional. Ideal para quienes buscan calidad y tradición en un ambiente acogedor. Perfecto para disfrutar de la gastronomía local en el centro de Zarautz",
+    "Town": "Zarautz",
+    "Municipality": "Zarautz",
+    "Address": "Santa Marina, 12",
+    "Latitude": 43.2854248,
+    "Longitude": -2.1770782999999483,
+    "Categories": {
+      "CuisineType": "Variado",
+      "Brands": ["Costa Vasca"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 131 982",
+    "Website": "http://www.kirkilla.com/",
+    "SocialMedia": null,
+    "Image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/b6/9e/c6/restaurante-kirkilla.jpg?w=900&h=500&s=1"
+  },
+  {
+    "Name": "Toki Alai",
+    "Description": "Ubicado en Arama, este restaurante ofrece menú del día de lunes a viernes a buen precio. Destaca por su cocina vasca tradicional y ambiente familiar. Una opción accesible y auténtica en Montes y Valles Vascos",
+    "Town": "Arama",
+    "Municipality": "Arama",
+    "Address": "Herriko Plaza",
+    "Latitude": 43.063539,
+    "Longitude": -2.1655574000000115,
+    "Categories": {
+      "CuisineType": "Variado",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 888 953",
+    "Website": null,
+    "SocialMedia": null,
+    "Image": "https://goierriturismo.com/wp-content/themes/yootheme/cache/4f/Restaurante-Toki-Alai-4fc5044b.jpeg"
+  },
+  {
+    "Name": "Gandarias",
+    "Description": "Restaurante ubicado en el corazón de la Parte Vieja de Donostia/San Sebastián. Ofrece cocina vasca tradicional con una gran variedad de productos frescos. Un clásico muy recomendado para disfrutar de la gastronomía local en un ambiente animado.",
+    "Town": "Donostia / San Sebastián",
+    "Municipality": "Donostia / San Sebastián",
+    "Address": "31 de agosto, 23 bajo",
+    "Latitude": 43.3245516,
+    "Longitude": -1.9845499000000473,
+    "Categories": {
+      "CuisineType": "Fusion",
+      "Brands": ["Costa Vasca", "San Sebastián"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 426 362",
+    "Website": "https://www.restaurantegandarias.com/es/",
+    "SocialMedia": null,
+    "Image": "https://conventionbureau.sansebastianturismoa.eus/images/externas/316/316_-restaurante-casa-gandarias.jpg"
+  },
+  {
+    "Name": "La Huerta Vieja",
+    "Description": "Situado entre viñas y campo en Laguardia, con grandes ventanales que ofrecen vistas espectaculares. Cocina tradicional vasca con productos de la Rioja Alavesa. Ideal para una experiencia gastronómica tranquila y en plena naturaleza",
+    "Town": "Laguardia",
+    "Municipality": "Laguardia",
+    "Address": "Ctra. de la Hoya, s/n",
+    "Latitude": 42.5591591667472,
+    "Longitude": -2.5869856460632263,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Rioja Alavesa"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "945 600 203",
+    "Website": "http://www.lahuertavieja.com/",
+    "SocialMedia": null,
+    "Image": "https://www.lahuertavieja.com/wp-content/uploads/2024/01/2312_HUERTA-VIEJA_erredehierro_8114_HDR_Panorama-1.jpg"
+  },
+  {
+    "Name": "Kandela",
+    "Description": "Ubicado en el centro de Zarautz, muy cerca de la playa, el restaurante Kandela ofrece cocina tradicional vasca en un ambiente cercano y agradable. Perfecto para quienes buscan sabores locales con la brisa del mar cerca",
+    "Town": "Zarautz",
+    "Municipality": "Zarautz",
+    "Address": "Torre Luzea Parkea",
+    "Latitude": 43.28513710611675,
+    "Longitude": -2.1739513115005416,
+    "Categories": {
+      "CuisineType": "Marisqueria",
+      "Brands": ["Costa Vasca"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 834 959",
+    "Website": "http://www.restaurantekandela.com/",
+    "SocialMedia": null,
+    "Image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/92/4d/ff/comedor-diafano-con-vistas.jpg?w=1200&h=900&s=1"
+  },
+  {
+    "Name": "Guardi",
+    "Description": "Situado en Idiazabal, el restaurante Guardi destaca por su variada carta y ofrece menús del día. Su propuesta se centra en la cocina tradicional vasca, ideal para disfrutar platos caseros en un entorno industrial tranquilo",
+    "Town": "Idiazabal",
+    "Municipality": "Idiazabal",
+    "Address": "Polígono Industrial Guardi, 13",
+    "Latitude": 43.0149656622704,
+    "Longitude": -2.232177104229777,
+    "Categories": {
+      "CuisineType": "Variado",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 801 918",
+    "Website": "http://www.guardijatetxea.com/",
+    "SocialMedia": null,
+    "Image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/27/a1/92/20171101-171603-largejpg.jpg?w=900&h=500&s=1"
+  },
+  {
+    "Name": "Abeletxe",
+    "Description": "Situado en un entorno natural en Zizurkil, Abeletxe es un albergue-restaurante que combina la tranquilidad del paraje con la calidad de un restaurante clásico vasco. Su cocina tradicional es recomendada para quienes buscan autenticidad y buen sabor en un ambiente relajado",
+    "Town": "Zizurkil",
+    "Municipality": "Zizurkil",
+    "Address": "Zarate Bidea, s/n",
+    "Latitude": 43.200105403602,
+    "Longitude": -2.0748274730163985,
+    "Categories": {
+      "CuisineType": "Variado",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 693 983",
+    "Website": "http://www.abeletxe.com/",
+    "SocialMedia": null,
+    "Image": "https://turismo.euskadi.eus/contenidos/b_restauracion/0000046901_b1_rec_turismo/es_46901/images/GL_AbeletxeComedorZizurkilH.jpg"
+  },
+  {
+    "Name": "Martín Cendoya (Eguren Ugarte)",
+    "Description": "Ubicado en Páganos, dentro de la Rioja Alavesa, este restaurante ofrece una cocina basada en productos de temporada y de calidad, combinando tradición vasca con un entorno de viñedos. Ideal para los amantes de la gastronomía local y el buen vino",
+    "Town": "Páganos",
+    "Municipality": "Laguardia",
+    "Address": "Carretera A-124, km. 61",
+    "Latitude": 42.569627774206545,
+    "Longitude": -2.6154785741576916,
+    "Categories": {
+      "CuisineType": "Fusion",
+      "Brands": ["Rioja Alavesa"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "945 600 766",
+    "Website": "https://egurenugarte.com/producto/martin-cendoya-reserva-2014/",
+    "SocialMedia": null,
+    "Image": "https://res.cloudinary.com/tf-lab/image/upload/restaurant/3d49982f-fd04-4af3-a200-f19ebd50bbc8/cf8dce83-d8d4-42f3-af2e-cb1e85a18a1a.jpg"
+  },
+  {
+    "Name": "Lazkao etxe",
+    "Description": "El restaurante está en pleno parque natural de Aralar. Su comedor ofrece un ambiente acogedor con vistas al entorno natural. Cocina vasca tradicional basada en productos locales.",
+    "Town": "Zaldibia",
+    "Municipality": "Zaldibia",
+    "Address": "Aiestaran Erreka",
+    "Latitude": 43.01468514921371,
+    "Longitude": -2.146945988330117,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 880 044",
+    "Website": "http://www.lazkaoetxe.com/es/restaurante.html",
+    "SocialMedia": null,
+    "Image": "https://www.lazkaoetxe.com/templates/yootheme/cache/49/comedor-lazkaoetxe-49e62750.jpeg"
+  },
+  {
+    "Name": "Txoko Mendibile",
+    "Description": "Fundado en 2013, mantiene las tradiciones de un txoko vasco. Ofrece platos tradicionales en un ambiente familiar. Ubicado en Leioa, es ideal para disfrutar de la gastronomía vasca auténtica.",
+    "Town": null,
+    "Municipality": "Leioa",
+    "Address": "Mendibile, 42",
+    "Latitude": 43.32396383742944,
+    "Longitude": -2.980060017443853,
+    "Categories": {
+      "CuisineType": "Variado",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "946 001 950",
+    "Website": "http://mendibilejauregia.com/",
+    "SocialMedia": null,
+    "Image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/ac/3d/d5/restaurante-txoko-mendibile.jpg?w=900&h=500&s=1"
+  },
+  {
+    "Name": "Taberna Berri",
+    "Description": "Ofrecen una variada carta con especial atención a carnes y pescados. Restaurante tradicional vasco en Aretxabaleta. Ambiente acogedor y familiar.",
+    "Town": "Aretxabaleta",
+    "Municipality": "Aretxabaleta",
+    "Address": "Durana kalea, 26",
+    "Latitude": 43.0345581583587,
+    "Longitude": -2.504132034393251,
+    "Categories": {
+      "CuisineType": "Variado",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 792 067",
+    "Website": null,
+    "SocialMedia": null,
+    "Image": "https://goiena.tok-md.com/argazkiak/pZk/14386-taberna-berri-argazkia-photo.jpg"
+  },
+  {
+    "Name": "Larruzz Bilbao",
+    "Description": "Ubicado junto al Museo Guggenheim y las Torres de Isozaki. Ofrece cocina vasca tradicional con toques modernos. Recomendado para una experiencia gastronómica en Bilbao.",
+    "Town": "Bilbao",
+    "Municipality": "Bilbao",
+    "Address": "Uribitarte, 24",
+    "Latitude": 43.2665127,
+    "Longitude": -2.929771800000026,
+    "Categories": {
+      "CuisineType": "Fusion",
+      "Brands": ["Bilbao"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "944 230 820",
+    "Website": "https://www.larruzzbilbao.com/",
+    "SocialMedia": null,
+    "Image": "https://lh5.googleusercontent.com/p/AF1QipNdXAljl4r0C2WyETnMM6tF_P0-yCkv6h0ONKl5=w800-h500-k-no"
+  },
+  {
+    "Name": "Tartufo",
+    "Description": "Es un restaurante y sala multifuncional que ofrece eventos culturales. Cocina tradicional vasca en un ambiente versátil. Ubicado en Bergara, ideal para gastronomía y cultura",
+    "Town": "Bergara",
+    "Municipality": "Bergara",
+    "Address": "Barrio de San Juan, 35",
+    "Latitude": 43.1301208,
+    "Longitude": -2.4365238000000318,
+    "Categories": {
+      "CuisineType": "Variado",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 763 551",
+    "Website": "http://www.tartufobergara.com/",
+    "SocialMedia": null,
+    "Image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/34/8a/e2/only-after-you-tasted.jpg?w=900&h=500&s=1"
+  },
+  {
+    "Name": "Txakoli Simon",
+    "Description": "Situado en un entorno natural privilegiado en Bilbao. Cuenta con dos comedores, terraza y una campa para eventos. Cocina vasca tradicional con vistas y ambiente relajado",
+    "Town": "Bilbao",
+    "Municipality": "Bilbao",
+    "Address": "Camino San Roque, 89",
+    "Latitude": 43.28298935826777,
+    "Longitude": -2.91622915291748,
+    "Categories": {
+      "CuisineType": "Asador",
+      "Brands": ["Bilbao"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "944 457 499",
+    "Website": null,
+    "SocialMedia": null,
+    "Image": "https://txakolisimon.com/wp-content/uploads/2023/02/txakoli-exterior.jpg"
+  },
+  {
+    "Name": "Beraia",
+    "Description": "El restaurante Beraia utiliza mariscos, pescados y carnes de primera calidad. Ofrece cocina tradicional vasca con sabor auténtico. Está ubicado en Bilbao, con ambiente clásico y cercano.",
+    "Town": "Bilbao",
+    "Municipality": "Bilbao",
+    "Address": "Alameda Recalde, 20",
+    "Latitude": 43.2654242,
+    "Longitude": -2.9341127000000142,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Bilbao"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "944 052 844",
+    "Website": "http://restauranteberaia.com/",
+    "SocialMedia": null,
+    "Image": "https://www.disfrutabizkaia.com/wp-content/uploads/2022/03/Foto-interior1Beraia.jpg"
+  },
+  {
+    "Name": "Algorri",
+    "Description": "Especializado en platos de la cocina tradicional vasca elaborados con recetas locales. Destaca por la calidad y el respeto a la tradición. Situado en Donostia / San Sebastián, en un entorno acogedor",
+    "Town": "Donostia / San Sebastián",
+    "Municipality": "Donostia / San Sebastián",
+    "Address": "Camino Zubiberri, 29",
+    "Latitude": 43.29830066346091,
+    "Longitude": -2.00500042764736,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Costa Vasca", "San Sebastián"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 218 279",
+    "Website": "https://algorrijatetxea.com/es/home/",
+    "SocialMedia": null,
+    "Image": "https://algorrijatetxea.com/images/1528968249-11%20DAVID%20IDOIA%20BRUTO%20RAW%200388.jpg"
+  },
+  {
+    "Name": "Dolomiti",
+    "Description": "Ubicado en el centro de Vitoria-Gasteiz, Dolomiti tiene dos comedores con decoración cuidada. Ofrece cocina vasca tradicional con platos de calidad. Un lugar recomendado para disfrutar de la gastronomía local",
+    "Town": "Vitoria-Gasteiz",
+    "Municipality": "Vitoria-Gasteiz",
+    "Address": "Ramon y Cajal, 1",
+    "Latitude": 42.8434596,
+    "Longitude": -2.677018500000031,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Vitoria-Gasteiz"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "945 233 426",
+    "Website": "https://www.dolomiti.es/",
+    "SocialMedia": null,
+    "Image": "https://www.dolomiti.es/assets/img/dolomiti/galeria-dolomiti-02.jpg"
+  },
+  {
+    "Name": "Katxi",
+    "Description": "El restaurante Katxi cuenta con tres comedores climatizados para acoger todo tipo de celebraciones. Ofrece cocina vasca tradicional y forma parte de la marca Montes y Valles vascos. Está recomendado.",
+    "Town": "Andra Mari",
+    "Municipality": "Morga",
+    "Address": "Barrio Andra Mari, s/n",
+    "Latitude": 43.299292772593425,
+    "Longitude": -2.7535108265975716,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "946 250 295",
+    "Website": "http://www.katxi.com",
+    "SocialMedia": null,
+    "Image": "https://www.katxi.com/archivos/201507/restaurante-1920xXx80xX.jpg?1"
+  }
+]
