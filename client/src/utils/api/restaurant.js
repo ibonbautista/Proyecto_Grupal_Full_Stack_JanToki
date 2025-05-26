@@ -1,4 +1,5 @@
 import fetchData from "./fetch.js";
+import { getToken } from "../localStorage.js";
 
 const BASE_URL = "http://localhost:3003";
 
@@ -17,7 +18,7 @@ async function getAllRestaurants({ request }) {
 	}
 	// Llamar a la API con los filtros
     const restaurants = await fetchData(`/restaurant${query}`);
-	console.log("filtros", query);
+	console.log("restaurants", restaurants);
     return restaurants;
 }
 
@@ -31,25 +32,59 @@ async function deleteRestaurant(id) {
     return response
 }
 
-async function createRestaurant(name, description, ubication, category, phone, webpage, socialMedia, image) {
-    // subir el contenido con formData para que detecte la imagen
-    const data = {
-        name,
-        description,
-        ubication,
-        category,
-        phone,
-        webpage,
-        socialMedia,
-        image
-    }
-    const response = await fetchData("/restaurant", "POST", data);
-    return response;
+async function createRestaurant(formData) {
+	const url = BASE_URL + "/restaurant";
+	const token = getToken();
+
+	if (!token) {
+		throw new Error("No hay token de autenticación");
+	}
+
+	const response = await fetch(url, {
+		method: "POST",
+		headers: {
+			Authorization: `Bearer ${token}`
+		},
+		body: formData
+	});
+	let responseData;
+	try {
+		responseData = await response.json();
+	} catch (e) {
+		console.error("Error al parsear JSON:", e);
+		throw new Error("Respuesta no válida del servidor");
+	}
+
+	if(!response.ok){
+		console.error("Error response:", response.status, responseData);
+		responseData.status = response.status;
+		throw new Error(responseData?.error || "Error en la solicitud");
+	}
+
+	return responseData;
 }
 
-async function editRestaurant(restaurantId, restaurantData) {
-    const response = await fetchData("/restaurant/" + restaurantId, "PUT", restaurantData);
-    return response;
+async function editRestaurant(restaurantId, formData) {
+	const url = BASE_URL + "/restaurant/" + restaurantId;
+	const token = getToken();
+    const response = await fetch(url, {
+		method: "PUT",
+		headers: {
+			Authorization: `Bearer ${token}`
+		},
+		body: formData,
+	});
+	let responseData;
+	try {
+		responseData = await response.json();
+	} catch (e) {
+		console.error("Error al parsear JSON:", e);
+		throw new Error("Respuesta no válida del servidor");
+	}
+	if (!response.ok) {
+		throw new Error(responseData?.error || "Error al actualizar restaurante");
+	}
+    return responseData;
 }
 function getRestaurantImage(restaurant) {
     const url = BASE_URL + "/images/" + restaurant.image;

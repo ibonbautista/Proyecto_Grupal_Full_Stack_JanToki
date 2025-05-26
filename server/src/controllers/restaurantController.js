@@ -104,7 +104,7 @@ const createRestaurant = async (req, res, next) => {
   try {
     const data = req.body;
 
-    if (!data.Name || !data.Municipality || !data.Category) {
+    if (!data.Name || !data.Municipality || !data.Categories) {
       throw new InvalidRestaurantData("Faltan campos obligatorios (Name, Municipality o category)");
     }
 
@@ -125,13 +125,22 @@ const createRestaurant = async (req, res, next) => {
       throw new RestaurantAlreadyExists();
     }
 
+	if (req.file) {
+		data.Image = `/images/restaurants/${req.file.filename}`
+	}
+
+	if (data.SocialMedia) {
+		data.SocialMedia = null;
+	}
+
     const newRestaurant = new restaurantModel(data);
     await newRestaurant.save();
 
     res.status(201).json(newRestaurant);
 
   } catch (error) {
-    next(error);
+    console.error("Error en createRestaurant:", error);
+  	res.status(500).json({ error: error.message || "Error inesperado del servidor" });
   }
 };
 
@@ -146,7 +155,7 @@ const updateRestaurant = async (req, res, next) => {
     Town,
     Municipality,
     Address,
-    Category,
+    Categories,
     Phone,
     Website,
     SocialMedia,
@@ -174,12 +183,12 @@ const updateRestaurant = async (req, res, next) => {
     if (Address !== undefined && typeof Address !== "string") {
       return next(new ValidationError("La dirección debe ser una cadena de texto"));
     }
-    if (Category !== undefined) {
-      if (typeof Category !== "object") {
-        return next(new ValidationError("Category debe ser un objeto"));
+    if (Categories !== undefined) {
+      if (typeof Categories !== "object") {
+        return next(new ValidationError("Categories debe ser un objeto"));
       }
 
-      const { CuisineType, Brands, MichelinStars, RepsolSuns, Recommended } = Category;
+      const { CuisineType, Brands, MichelinStars, RepsolSuns, Recommended } = Categories;
 
       const validCategories = [
         "asador", "sideria", "fusion", "alta cocina", "tradicional", "pintxos",
@@ -213,7 +222,10 @@ const updateRestaurant = async (req, res, next) => {
     if (Website !== undefined && typeof Website !== "string") {
       return next(new ValidationError("Website debe ser texto"));
     }
-    if (SocialMedia !== undefined && !validSocialMedia.includes(SocialMedia)) {
+	if (SocialMedia === "" || SocialMedia === "null") {
+		req.body.SocialMedia = null;
+	}
+    if (SocialMedia !== undefined && SocialMedia !== null && !validSocialMedia.includes(SocialMedia)) {
       return next(new ValidationError("Red social inválida"));
     }
     if (Rating !== undefined) {
@@ -231,12 +243,16 @@ const updateRestaurant = async (req, res, next) => {
     if (Town !== undefined) updateData.Town = Town;
     if (Municipality !== undefined) updateData.Municipality = Municipality;
     if (Address !== undefined) updateData.Address = Address;
-    if (Category !== undefined) updateData.Category = Category;
+    if (Categories !== undefined) updateData.Categories = Categories;
     if (Phone !== undefined) updateData.Phone = Phone;
     if (Website !== undefined) updateData.Website = Website;
     if (SocialMedia !== undefined) updateData.SocialMedia = SocialMedia;
     if (Rating !== undefined) updateData.Rating = Rating;
     if (Image !== undefined) updateData.Image = Image;
+
+	if (req.file) {
+		updateData.Image = `/images/restaurants/${req.file.filename}`
+	}
 
     const updatedRestaurant = await restaurantModel.findByIdAndUpdate(
       id,

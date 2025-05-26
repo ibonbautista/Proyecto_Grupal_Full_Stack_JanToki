@@ -18,7 +18,8 @@ const AuthProvider = ({children}) => {
 		try {
 			const result = await getUserInfo();
 			if(result.user) {
-				setUserData(result.user);
+				const isAdmin = result.user.role === "admin";
+				setUserData({...result.user, isAdmin});
 			}
 		} catch (error) {
 			console.error("Error al cargar perfil:", error);
@@ -40,7 +41,7 @@ const AuthProvider = ({children}) => {
 			removeToken();
             return {error: result.error};
         } else {
-            setUserData(result.user);
+            setUserData({ ...result.user, isAdmin: result.user.role === "admin" });
             saveToken(result.token);
             navigate("/");
             return { success: true};
@@ -59,7 +60,7 @@ const AuthProvider = ({children}) => {
 		if (result.error) {
 			return {error: result.error};
 		} else {
-			setUserData(result.user);
+			setUserData({ ...result.user, isAdmin: result.user.role === "admin" });
 			navigate("/");
 			console.log("token",result.token);
 			return {success: true};

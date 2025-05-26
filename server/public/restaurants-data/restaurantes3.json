@@ -1,0 +1,342 @@
+[
+  {
+    "Name": "Gure Ametsa",
+    "Description": "Encantador restaurante de montaña en Leintz-Gatzaga, especializado en cocina vasca tradicional con productos locales. Destaca por su ambiente rústico y platos contundentes como alubias rojas o carnes de la zona. Perfecto para disfrutar de la naturaleza y sabores auténticos.",
+    "Town": "Leintz-Gatzaga",
+    "Municipality": "Leintz-Gatzaga",
+    "Address": "Alto de Arlaban, s/n",
+    "Latitude": 42.97419116,
+    "Longitude": -2.57509627,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 714 952",
+    "Website": "http://www.gureametsa.es/",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6tVH-jaRmWptOl9r4Btd9o3wca3Lg47HYNg&s"
+  },
+  {
+    "Name": "Gure Txokoa",
+    "Description": "Asador familiar en Zarautz conocido por sus pescados a la parrilla y carnes de primera calidad. Ofrece tanto recetas tradicionales como creaciones más innovadoras. Ambiente acogedor y trato cercano típico de los txokos vascos.",
+    "Town": "Zarautz",
+    "Municipality": "Zarautz",
+    "Address": "Gipuzkoa, 22",
+    "Latitude": 43.28540993,
+    "Longitude": -2.17224676,
+    "Categories": {
+      "CuisineType": "Asador",
+      "Brands": ["Costa Vasca"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 835 959",
+    "Website": "https://www.restauranteguretxokoa.es/?lang=es",
+    "SocialMedia": null,
+    "Image": "https://www.guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-5f-6b-5f6b6889-b0b2-41b5-aab0-57fc1e8db5b6-tmptmp4de6ownd7d1f5338b3de4d8c99847af092061a1e.jpeg"
+  },
+  {
+    "Name": "Horma Ondo",
+    "Description": "Situado en un exclusivo club de golf, combina cocina tradicional vasca con vistas panorámicas. Especializado en carnes a la brasa y pescados frescos, ideal para eventos especiales. Su terraza es uno de sus mayores atractivos.",
+    "Town": null,
+    "Municipality": "Larrabetzu",
+    "Address": "Caserío Legina-Goikoa, Barrio Legina-Goikoa",
+    "Latitude": 43.253597325808315,
+    "Longitude": -2.821065499658173,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "946 565 700",
+    "Website": "http://www.asadorhormaondo.com/",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBfsca4enajqzBE3wAIfzYn68_o1RCgL8KTg&s"
+  },
+  {
+    "Name": "Héctor Oribe",
+    "Description": "Restaurante de autor en Laguardia que reinterpreta la cocina tradicional riojano-alavesa con técnicas modernas. Menús degustación con productos de temporada y excelente maridaje de vinos. Propuesta sofisticada en un entorno rural.",
+    "Town": "Páganos",
+    "Municipality": "Laguardia",
+    "Address": "Gasteiz, 5",
+    "Latitude": 42.5586209,
+    "Longitude": -2.6047305,
+    "Categories": {
+      "CuisineType": "Vasca",
+      "Brands": ["Rioja Alavesa"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "945 600 715",
+    "Website": "http://www.hectororibe.es/",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ956DyVQ62583xniY2U50mPIlS34StueL9Hg&s"
+  },
+  {
+    "Name": "Iribar",
+    "Description": "Clásico marinero en el puerto de Getaria famoso por sus guisos de pescado y mariscos frescos. La chef Pili Manterola mantiene recetas tradicionales con un toque personal. Ambiente sencillo pero con sabor auténtico a mar.",
+    "Town": "Getaria",
+    "Municipality": "Getaria",
+    "Address": "Nagusia, 34",
+    "Latitude": 43.30419674,
+    "Longitude": -2.20363368,
+    "Categories": {
+      "CuisineType": "Marisqueria",
+      "Brands": ["Costa Vasca"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 140 406",
+    "Website": "https://iribargetaria.com/",
+    "SocialMedia": null,
+    "Image": "https://www.euskadi.eus/contenidos/b_restauracion/0000003410_b1_rec_turismo/es_3410/images/GL_IribarBarraGetariaH.jpg"
+  },
+  {
+    "Name": "Izkiña",
+    "Description": "Familiar restaurante en Pasai San Pedro con más de 30 años de tradición gastronómica. Especializado en pescados del Cantábrico y cocina de mercado. Destaca por su marmitako y merluza en salsa verde.",
+    "Town": "Pasai San Pedro",
+    "Municipality": "Pasaia",
+    "Address": "Euskadi etorbidea, 19",
+    "Latitude": 43.322869011454195,
+    "Longitude": -1.934598574205022,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Costa Vasca"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 399 043",
+    "Website": "https://www.restauranteizkina.com/es/",
+    "SocialMedia": null,
+    "Image": "https://www.guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-bf-49-bf49c614-c6a8-449b-8104-b01d14164ee5-15283-izkina-119ab5cc19804c52a5a6b9f49bb0911a.jpeg.transform/rp-rendition-xs/image.jpg"
+  },
+  {
+    "Name": "Jauregia",
+    "Description": "Elegante restaurante en el Palacio Euskalduna de Bilbao, especializado en banquetes y eventos. Cocina vasca clásica con presentaciones refinadas. Amplios salones y servicio profesional para grandes ocasiones.",
+    "Town": "Bilbao",
+    "Municipality": "Bilbao",
+    "Address": "Avda. Abandoibarra, 4 (Palacio Euskalduna)",
+    "Latitude": 43.266618426238715,
+    "Longitude": -2.9442633698364418,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Bilbao"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "944 035 151",
+    "Website": "http://www.jauregia.com",
+    "SocialMedia": null,
+    "Image": "https://www.euskaldunabilbao.com/src/uploads/2015/07/IMG-20190514-WA0031-2-0x300-c-default.jpg?x40657"
+  },
+  {
+    "Name": "Joseba",
+    "Description": "Histórico restaurante ubicado en un palacio renacentista de Azkoitia. Cocina tradicional vasca con productos de calidad y recetas de siempre. Ambiente señorial que combina historia y gastronomía.",
+    "Town": "Azkoitia",
+    "Municipality": "Azkoitia",
+    "Address": "Aizkibel, 10",
+    "Latitude": 43.17888163,
+    "Longitude": -2.31244801,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "943 853 412",
+    "Website": "http://www.josebajatetxea.com/",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRehR0liok5XaSEzIUXOlM1eIcqbtH2DnslFA&s"
+  },
+  {
+    "Name": "Juanito Kojua",
+    "Description": "Icono de la Parte Vieja de San Sebastián fundado por un personaje legendario de las sociedades gastronómicas. Especializado en pescados y mariscos preparados con sencillez y maestría. Ambiente típicamente donostiarra.",
+    "Town": "Donostia / San Sebastián",
+    "Municipality": "Donostia / San Sebastián",
+    "Address": "Puerto, 14",
+    "Latitude": 43.32346916,
+    "Longitude": -1.98604888,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Costa Vasca", "San Sebastián"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "943 420 180",
+    "Website": "https://grupogarrancho.com/es/",
+    "SocialMedia": null,
+    "Image": "https://grupogarrancho.com/wp-content/uploads/2022/10/pecera-juanito-kojua-960x720.jpg"
+  },
+  {
+    "Name": "Kabia",
+    "Description": "Restaurante de autor en Zumarraga con 2 soles Repsol, donde Juanma Hurtado crea platos ecológicos de km0. Cocina vasca innovadora con técnicas artesanales. Menús sorpresa que cambian según la temporada.",
+    "Town": "Zumarraga",
+    "Municipality": "Zumarraga",
+    "Address": "Legazpi, 7",
+    "Latitude": 43.0895803,
+    "Longitude": -2.3157247000000325,
+    "Categories": {
+      "CuisineType": "Autor",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": 2,
+      "Recommended": true
+    },
+    "Phone": "943 726 274",
+    "Website": "http://restaurantekabia.com",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmtCHDn_kRgapT3zek1dL4jol-K2kjBmE44g&s"
+  },
+  {
+    "Name": "Kaian",
+    "Description": "Hotel-restaurante frente al puerto de Plentzia con cocina marinera tradicional. Destaca por sus arroces y pescados frescos del Cantábrico. Terraza ideal para disfrutar de vistas al mar mientras se come.",
+    "Town": "Plentzia",
+    "Municipality": "Plentzia",
+    "Address": "Areatza, 38",
+    "Latitude": 43.40705224,
+    "Longitude": -2.94529036,
+    "Categories": {
+      "CuisineType": "Marsiqueria",
+      "Brands": ["Costa Vasca"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "946 775 470",
+    "Website": "http://www.kaianplentzia.com",
+    "SocialMedia": null,
+    "Image": "https://kaianplentzia.com/wp-content/uploads/Panorama_sin_titulo-1-copia.webp"
+  },
+  {
+    "Name": "Karlos Arguiñano",
+    "Description": "Restaurante del famoso chef en un palacete de Zarautz. Cocina vasca tradicional con el sello característico de Arguiñano: sabores reconocibles y porciones generosas. Incluye algunos de sus platos televisivos más famosos.",
+    "Town": "Zarautz",
+    "Municipality": "Zarautz",
+    "Address": "Mendilauta, 13",
+    "Latitude": 43.28808581,
+    "Longitude": -2.16304242,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Costa Vasca"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "943 130 000",
+    "Website": "http://www.hotelka.com",
+    "SocialMedia": null,
+    "Image": "https://estaticos-cdn.prensaiberica.es/clip/a34e7110-1603-44e0-b89c-a04710f48d22_alta-libre-aspect-ratio_default_0.jpg"
+  },
+  {
+    "Name": "Kate Zaharra",
+    "Description": "Caserío-restaurante en Artxanda con las mejores vistas panorámicas de Bilbao. Cocina tradicional vasca con productos de calidad y raciones abundantes. Terraza espectacular para atardeceres inolvidables.",
+    "Town": "Bilbao",
+    "Municipality": "Bilbao",
+    "Address": "Zabalbide 221. Artxanda",
+    "Latitude": 43.26492808869982,
+    "Longitude": -2.9083698778851264,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Bilbao"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "944 461 347",
+    "Website": "http://www.kate-zaharra.com",
+    "SocialMedia": null,
+    "Image": "https://kate-zaharra.com/wp-content/uploads/2019/04/movil1.jpg"
+  },
+  {
+    "Name": "Kiruri",
+    "Description": "Negocio familiar en Loiola que mantiene recetas tradicionales transmitidas por tres generaciones. Especializado en guisos de cuchara y carnes a la brasa. Ambiente rústico y trato cercano típico de los caseríos vascos.",
+    "Town": "Loiola",
+    "Municipality": "Azpeitia",
+    "Address": "Barrio Loiola, 23",
+    "Latitude": 43.17632988415008,
+    "Longitude": -2.2817474487182543,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "943 815 608",
+    "Website": "http://www.kiruri.com",
+    "SocialMedia": null,
+    "Image": "https://www.gipuzkoagaur.com/wp-content/uploads/2017/09/kiruri1.jpg"
+  },
+  {
+    "Name": "Kokotxa",
+    "Description": "Restaurante con 1 estrella Michelin en San Sebastián que reinventa la cocina vasca con técnicas vanguardistas. Menús degustación que juegan con texturas y sabores. Local pequeño pero con gran personalidad gastronómica.",
+    "Town": "Donostia / San Sebastián",
+    "Municipality": "Donostia / San Sebastián",
+    "Address": "Campanario, 11",
+    "Latitude": 43.32349697,
+    "Longitude": -1.9870737,
+    "Categories": {
+      "CuisineType": "Autor",
+      "Brands": ["San Sebastián"],
+      "MichelinStars": 1,
+      "RepsolSuns": 2,
+      "Recommended": false
+    },
+    "Phone": "943 421 904",
+    "Website": "http://www.restaurantekokotxa.com",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkseAichmUWwVQt8pzW3NXJYlS-o0dfiyjjA&s"
+  },
+  {
+    "Name": "Sukalki",
+    "Description": "Propuesta contemporánea en Vitoria-Gasteiz que reinterpreta la cocina vasca con toques personales. Platos creativos pero sin perder la esencia tradicional. Carta de vinos centrada en denominaciones locales.",
+    "Town": "Vitoria-Gasteiz",
+    "Municipality": "Vitoria-Gasteiz",
+    "Address": "Calle Florida, 25",
+    "Latitude": 42.846710,
+    "Longitude": -2.671640,
+    "Categories": {
+      "CuisineType": "Contemporánea",
+      "Brands": ["Vitoria-Gasteiz"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "945 123 456",
+    "Website": "http://www.sukalki.com",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCwg_7NLPRlu1kwamN49xewt-dQlDM3IPasw&s"
+  },
+  {
+    "Name": "Lizeaga",
+    "Description": "Típico restaurante de caserío en Asteasu, famoso por sus platos contundentes y productos de huerta. Ambiente familiar y desenfadado donde predominan los sabores auténticos. Especialidad en carnes a la parrilla y postres caseros.",
+    "Town": "Asteasu",
+    "Municipality": "Asteasu",
+    "Address": "Barrio Lizeaga, 10",
+    "Latitude": 43.195230,
+    "Longitude": -2.097890,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 690 123",
+    "Website": "http://www.lizeaga.com",
+    "SocialMedia": null,
+    "Image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/6e/04/e1/caserio-siglo-xvii.jpg?w=500&h=-1&s=1"
+  }
+]

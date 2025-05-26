@@ -1,0 +1,682 @@
+[
+  {
+    "Name": "La Escuela",
+    "Description": "Restaurante didáctico en la Escuela de Hostelería de Bilbao, con cocina vasca clásica ejecutada por futuros chefs. Menús asequibles que demuestran excelente técnica. Ideal para descubrir nuevos talentos gastronómicos.",
+    "Town": "Bilbao",
+    "Municipality": "Bilbao",
+    "Address": "Ctra. Enekuri-Artxanda Km 3",
+    "Latitude": 43.27921416797802,
+    "Longitude": -2.940225233875726,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Bilbao"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "944 745 200",
+    "Website": "http://www.restaurantelaescuela.com",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQEK0BFgoMZB8GRKQOecYiubDMIe4xuEgVrQ&s"
+  },
+  {
+    "Name": "La Perla",
+    "Description": "Emblemático restaurante frente a la playa de La Concha en San Sebastián. Cocina vasca de mercado con especialidades como el rodaballo al horno. Terraza privilegiada para disfrutar del ambiente donostiarra.",
+    "Town": "Donostia / San Sebastián",
+    "Municipality": "Donostia / San Sebastián",
+    "Address": "Pº de la Concha, 12",
+    "Latitude": 43.3153168,
+    "Longitude": -1.9890844,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Costa Vasca", "San Sebastián"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 462 484",
+    "Website": "https://la-perla.net/restaurante-la-perla",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3qTSnM1QCyx0rUPNTaeCcALvzkrsAoj-Jeg&s"
+  },
+  {
+    "Name": "Le Bol Blanc",
+    "Description": "Propuesta moderna bajo asesoramiento de Ferrán Adrià en el corazón de Bilbao. Cocina vasca contemporánea con toques internacionales. Ambiente elegante y servicio impecable en el NH Collection Villa de Bilbao.",
+    "Town": "Bilbao",
+    "Municipality": "Bilbao",
+    "Address": "Gran Vía, 87 (H. Villa de Bilbao)",
+    "Latitude": 43.26487984,
+    "Longitude": -2.9441953,
+    "Categories": {
+      "CuisineType": "Moderna",
+      "Brands": ["Bilbao"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "944 416 000",
+    "Website": "https://www.nh-hoteles.es/hotel/nh-collection-villa-de-bilbao",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHI3upR4EW-x0Q1LhsSCupSq9U_anhRGWyLQ&s"
+  },
+  {
+    "Name": "La Rampa",
+    "Description": "Clásico restaurante junto al puerto de San Sebastián con vistas al mar. Especializado en pescados y mariscos frescos preparados con sencillez. Ambiente marinero y carta centrada en productos del Cantábrico.",
+    "Town": "Donostia / San Sebastián",
+    "Municipality": "Donostia / San Sebastián",
+    "Address": "Muelle, 26-27",
+    "Latitude": 43.32302374,
+    "Longitude": -1.99131804,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Costa Vasca", "San Sebastián"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 421 652",
+    "Website": "https://www.restaurantelarampa.com/es/index.php",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd75hwbQ8EdXbYo9KS-w68HZ5Or3EUUH2Zag&s"
+  },
+  {
+    "Name": "Los Arcos de Quejana",
+    "Description": "Encantador restaurante en un palacio del siglo XVII en Quejana. Cocina tradicional alavesa con productos de la zona como las patatas con chorizo. Ambiente histórico perfecto para comidas especiales.",
+    "Town": "Quejana/Kexaa",
+    "Municipality": "Ayala/Aiara",
+    "Address": "Ctra. Quejana-Beotegui, s/n",
+    "Latitude": 43.0806981,
+    "Longitude": -3.0724509000000353,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "945 399 320",
+    "Website": "https://www.arcosdequejana.com/",
+    "SocialMedia": null,
+    "Image": "https://www.visitenkarterri.com/default/imagenes/2019/12/1210954_es-.sw810.sh575.ct1.jpg"
+  },
+  {
+    "Name": "Maider",
+    "Description": "Restaurante bilbaíno con tradición desde 1982, especializado en pescados y mariscos. Cocina vasca clásica con platos como la merluza en salsa verde. Ambiente funcional ideal para comidas de negocios.",
+    "Town": "Bilbao",
+    "Municipality": "Bilbao",
+    "Address": "Colón de Larreategui, 5",
+    "Latitude": 43.26222963,
+    "Longitude": -2.92685278,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Bilbao"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "944 248 990",
+    "Website": null,
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcC3hyfoh5BFvopVmpiw532Ew5zcZL8eYPQg&s"
+  },
+  {
+    "Name": "Marina Berri",
+    "Description": "Restaurante moderno en Zumaia con amplios ventanales al mar. Cocina vasca actualizada, destacando sus creativos platos de pescado. Diseño minimalista y ambiente relajado frente a la ría.",
+    "Town": "Zumaia",
+    "Municipality": "Zumaia",
+    "Address": "Santiago, 1",
+    "Latitude": 43.29615716,
+    "Longitude": -2.25103016,
+    "Categories": {
+      "CuisineType": "Moderna",
+      "Brands": ["Costa Vasca"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "943 865 617",
+    "Website": "http://www.marinaberri.com",
+    "SocialMedia": null,
+    "Image": "https://ondojan.com/images/stories/flexicontent/m_marina-berri_7731_oj144.jpg"
+  },
+  {
+    "Name": "Marixa",
+    "Description": "Encantador restaurante en el corazón medieval de Laguardia. Cocina tradicional riojano-alavesa con productos locales y excelente relación calidad-precio. Ideal para combinar con visitas a bodegas.",
+    "Town": "Laguardia",
+    "Municipality": "Laguardia",
+    "Address": "Sancho Abarca, 8",
+    "Latitude": 42.5538886,
+    "Longitude": -2.5842597,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Rioja Alavesa"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "945 600 165",
+    "Website": "http://www.hotelmarixa.com/restaurante",
+    "SocialMedia": null,
+    "Image": "https://lh5.googleusercontent.com/p/AF1QipMpw7F74TMgXuMhayaVPr7enmn4MSP_AbT8_Ozz"
+  },
+  {
+    "Name": "Martín Berasategui",
+    "Description": "Templo gastronómico con 3 estrellas Michelin en Lasarte-Oria. Experiencia culinaria de alta gama con menús degustación que son obras de arte. Uno de los máximos exponentes de la cocina vasca a nivel mundial.",
+    "Town": "Lasarte",
+    "Municipality": "Lasarte-Oria",
+    "Address": "Loidi, 4",
+    "Latitude": 43.266755094644935,
+    "Longitude": -2.015575885180624,
+    "Categories": {
+      "CuisineType": "Autor",
+      "Brands": ["San Sebastián"],
+      "MichelinStars": 3,
+      "RepsolSuns": 3,
+      "Recommended": true
+    },
+    "Phone": "943 366 471",
+    "Website": "https://www.martinberasategui.com/es/inicio",
+    "SocialMedia": null,
+    "Image": "https://media.traveler.es/photos/613777c93decec3303bac7d7/master/w_1600%2Cc_limit/103379.jpg"
+  },
+  {
+    "Name": "Martínez",
+    "Description": "Histórico restaurante desde 1890 en Ordizia, especializado en cocina tradicional guipuzcoana. Famosa su marmita de bonito y las alubias de Tolosa. Conserva el encanto de los antiguos restaurantes de pueblo.",
+    "Town": "Ordizia",
+    "Municipality": "Ordizia",
+    "Address": "Santa Maria 10",
+    "Latitude": 43.05340927,
+    "Longitude": -2.17915419,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 880 641",
+    "Website": "http://www.martinez1890.com",
+    "SocialMedia": null,
+    "Image": "https://resizer.otstatic.com/v3/photos/25839916-1?width=1280&height=720&webp=true"
+  },
+  {
+    "Name": "Matxete",
+    "Description": "Asador de referencia en el casco medieval de Vitoria, especializado en carnes a la brasa y pescados. Ambiente cálido con paredes de piedra y vigas de madera. Muy recomendable su chuletón de buey.",
+    "Town": "Vitoria-Gasteiz",
+    "Municipality": "Vitoria-Gasteiz",
+    "Address": "Plaza del Matxete, 4-5",
+    "Latitude": 42.84720812472261,
+    "Longitude": -2.6720287031351972,
+    "Categories": {
+      "CuisineType": "Asador",
+      "Brands": ["Vitoria-Gasteiz"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "945 131 821",
+    "Website": "https://www.matxete.com/es/index.html",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-_NYAtK2ZUoTfrBpik5wzaDSQqMHo9NKKsA&s"
+  },
+  {
+    "Name": "MendiGoikoa Bekoa",
+    "Description": "Caserío del siglo XIX en las faldas del monte Anboto con cocina tradicional vizcaína. Productos locales preparados con técnicas sencillas pero precisas. Entorno natural perfecto para escapadas gastronómicas.",
+    "Town": "San Juan",
+    "Municipality": "Atxondo",
+    "Address": "Bº San Juan, 33 (Axpe)",
+    "Latitude": 43.11460640998302,
+    "Longitude": -2.6022938256866412,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "946 058 039",
+    "Website": "http://mendigoikoabekoa.com/restaurante/",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHRMmo8hXR5vRk-9PCgsCWm1-lugBe_G5XaQ&s"
+  },
+  {
+    "Name": "Mesa",
+    "Description": "Restaurante en Vitoria-Gasteiz especializado en pescados y mariscos de calidad. Cocina vasca clásica con toques contemporáneos en platos como el bacalao al pil-pil. Ambiente elegante pero sin pretensiones.",
+    "Town": "Vitoria-Gasteiz",
+    "Municipality": "Vitoria-Gasteiz",
+    "Address": "Chile, 1",
+    "Latitude": 42.851456448409245,
+    "Longitude": -2.6818306939178456,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Vitoria-Gasteiz"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "945 228 494",
+    "Website": "https://www.restaurantemesa.com/",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc-BmT7l5BD9h4pt0btgBrW9inyaIGatgmIA&s"
+  },
+  {
+    "Name": "Mugaritz",
+    "Description": "Vanguardista restaurante con 2 estrellas Michelin dirigido por Andoni Luis Aduriz. Experiencia gastronómica que desafía los sentidos con texturas y sabores innovadores. Uno de los templos de la cocina de autor mundial.",
+    "Town": "Errenteria",
+    "Municipality": "Errenteria",
+    "Address": "Aldura Aldea, 20. Bº Otzazulueta",
+    "Latitude": 43.27226454,
+    "Longitude": -1.91713483,
+    "Categories": {
+      "CuisineType": "Autor",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": 2,
+      "RepsolSuns": 3,
+      "Recommended": false
+    },
+    "Phone": "943 518 343",
+    "Website": "http://www.mugaritz.com/",
+    "SocialMedia": null,
+    "Image": "https://www.mugaritz.com/wp-content/uploads/2024/08/About-Exterior-1024x585.webp"
+  },
+  {
+    "Name": "Deslorian",
+    "Description": "Restaurante moderno en Vitoria que fusiona la cocina vasca con influencias internacionales. Platos creativos pero accesibles, con buena relación calidad-precio. Ambiente urbano y carta que cambia según temporada.",
+    "Town": "Vitoria-Gasteiz",
+    "Municipality": "Vitoria-Gasteiz",
+    "Address": "Adriano VI, 15",
+    "Latitude": 42.84735054417312,
+    "Longitude": -2.6824137908073453,
+    "Categories": {
+      "CuisineType": "Moderna",
+      "Brands": ["Vitoria-Gasteiz"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "945 223 134",
+    "Website": "https://www.deslorian.com/",
+    "SocialMedia": null,
+    "Image": "https://turismo.euskadi.eus/contenidos/b_restauracion/0000003522_b1_rec_turismo/es_3522/images/DESLORIAN-H.jpg"
+  },
+  {
+    "Name": "Otzarreta",
+    "Description": "Sidrería-restaurante en Zarautz especializada en banquetes y eventos. Menú tradicional vasco con productos de temporada. Amplios comedores ideales para celebraciones familiares o de empresa.",
+    "Town": "Zarautz",
+    "Municipality": "Zarautz",
+    "Address": "Santa Clara, 5",
+    "Latitude": 43.28381285,
+    "Longitude": -2.1736006,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Costa Vasca"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "943 131 243",
+    "Website": "http://www.restauranteotzarreta.com",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8gTEryORm5ygJ5dGtu4dlI1E2ltf7pXra-Q&s"
+  },
+  {
+    "Name": "Palacio de Anuncibai",
+    "Description": "Restaurante en una casa solariega del siglo XVIII en Laudio. Cocina tradicional vizcaína con especialidades como las kokotxas de bacalao. Jardines espectaculares para comer en verano.",
+    "Town": "Laudio/Llodio",
+    "Municipality": "Laudio/Llodio",
+    "Address": "Anuncibai, s/n",
+    "Latitude": 43.1406939,
+    "Longitude": -2.9395008999999845,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "946 726 188",
+    "Website": "http://www.palacioanuncibai.com",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGWlTDA3wcwzeO6y3ymqsJshqcaru-4wEiCg&s"
+  },
+  {
+    "Name": "Asador Portuondo",
+    "Description": "Asador con vistas espectaculares a la ría de Mundaka. Especializado en carnes a la brasa y pescados de la zona. Terraza ideal para disfrutar de puestas de sol inolvidables.",
+    "Town": "Portuondo-Basaran",
+    "Municipality": "Mundaka",
+    "Address": "Barrio Portuondo, s/n",
+    "Latitude": 43.398740336306915,
+    "Longitude": -2.6960726074191332,
+    "Categories": {
+      "CuisineType": "Asador",
+      "Brands": ["Costa Vasca"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "946 876 050",
+    "Website": "https://www.restauranteportuondo.com/",
+    "SocialMedia": null,
+    "Image": "https://www.guiarepsol.com/content/dam/repsol-guia/guia-cf/restaurante/imagenes/media-filer_public-c1-2d-c12d02fa-f7e4-4078-965a-dea706431272-63_asador_portuondo1_mundaka.jpg"
+  },
+  {
+    "Name": "Posada Mayor de Migueloa",
+    "Description": "Encantador restaurante en un palacio del siglo XVII en Laguardia. Cocina riojano-alavesa con productos locales y excelente carta de vinos. Ambiente histórico perfecto para comidas especiales.",
+    "Town": "Laguardia",
+    "Municipality": "Laguardia",
+    "Address": "Mayor, 20",
+    "Latitude": 42.554379637174755,
+    "Longitude": -2.5855964221248087,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Rioja Alavesa"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "945 600 187",
+    "Website": "https://www.mayordemigueloa.com",
+    "SocialMedia": null,
+    "Image": "https://tourism.euskadi.eus/contenidos/a_alojamiento/0000000237_a1_rec_turismo/es_237/images/posada_mayor_migueloa_h.jpg"
+  },
+  {
+    "Name": "Rekondo",
+    "Description": "Famoso restaurante donostiarra con una de las mejores bodegas de España (100,000 botellas). Cocina tradicional vasca con platos como el rape a la parrilla. 2 soles Repsol avalan su calidad.",
+    "Town": "Donostia / San Sebastián",
+    "Municipality": "Donostia / San Sebastián",
+    "Address": "Paseo de Igeldo, 57",
+    "Latitude": 43.3142108,
+    "Longitude": -2.0122277,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["San Sebastián"],
+      "MichelinStars": null,
+      "RepsolSuns": 2,
+      "Recommended": true
+    },
+    "Phone": "943 212 907",
+    "Website": "http://www.rekondo.com",
+    "SocialMedia": null,
+    "Image": "https://muselines.com/wp-content/uploads/2017/09/muselines-restaurante-rekondo-45.jpg"
+  },
+  {
+    "Name": "Remenetxe",
+    "Description": "Típico caserío del siglo XIX en Muxika con cocina tradicional vizcaína. Ambiente rústico y familiar, especializado en guisos de cuchara y carnes a la brasa. Ideal para experiencias auténticas.",
+    "Town": "Ugarte",
+    "Municipality": "Muxika",
+    "Address": "Kurtzero Auzoa, 65",
+    "Latitude": 43.2949772214155,
+    "Longitude": -2.687297197192393,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "946 253 520",
+    "Website": "http://www.remenetxe.com",
+    "SocialMedia": null,
+    "Image": "https://www.remenetxe.com/mobile/img/home/2.jpg"
+  },
+  {
+    "Name": "Rubiorena",
+    "Description": "Restaurante en Beasain especializado en cocina vasca tradicional. Productos de calidad preparados con técnicas clásicas. Buen lugar para probar especialidades como el txuleton o las alubias de Tolosa.",
+    "Town": "Beasain",
+    "Municipality": "Beasain",
+    "Address": "Zaldizurrieta, 7",
+    "Latitude": 43.0462503,
+    "Longitude": -2.19428017,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 089 519",
+    "Website": null,
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdpiTxnvVHeGADBOvC_iDMFF-96_rFvVzUtA&s"
+  },
+  {
+    "Name": "Sagartoki",
+    "Description": "Asador en el centro de Vitoria-Gasteiz conocido por sus carnes a la brasa. Ambiente moderno pero acogedor, con buena relación calidad-precio. Muy recomendable su chuletón de buey madurado.",
+    "Town": "Vitoria-Gasteiz",
+    "Municipality": "Vitoria-Gasteiz",
+    "Address": "Prado, 18",
+    "Latitude": 42.84598104,
+    "Longitude": -2.67511506,
+    "Categories": {
+      "CuisineType": "Asador",
+      "Brands": ["Vitoria-Gasteiz"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "945 288 676",
+    "Website": "https://www.sagartoki.com/",
+    "SocialMedia": null,
+    "Image": "https://www.sagartoki.com/wp-content/uploads/2020/05/terraza-sagartoki.jpg"
+  },
+  {
+    "Name": "Salegi",
+    "Description": "Restaurante junto al Santuario de Itziar con cocina tradicional marinera. Especializado en pescados del Cantábrico y guisos de cuchara. Terraza con vistas espectaculares al valle.",
+    "Town": "Itziar",
+    "Municipality": "Deba",
+    "Address": "Galtzada, 13-15. Itziar",
+    "Latitude": 43.2762936,
+    "Longitude": -2.3315652,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Costa Vasca"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 199 004",
+    "Website": "http://www.salegi.net",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeLF9c3vrktb84BbGe-Xw4PdQ0TsDY9W-srw&s"
+  },
+  {
+    "Name": "Sausta",
+    "Description": "Asador innovador en Tolosa que reinventa la cocina tradicional vasca. Productos de primera calidad con presentaciones creativas. Buen equilibrio entre tradición y modernidad.",
+    "Town": "Tolosa",
+    "Municipality": "Tolosa",
+    "Address": "Paseo Belate, 7-8 bajo",
+    "Latitude": 43.1451197,
+    "Longitude": -2.0725864,
+    "Categories": {
+      "CuisineType": "Asador",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "943 655 453",
+    "Website": "http://www.sausta.com/",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBRn6oUyt3L_o_ajw8s0e4-w2_ztoP4155gw&s"
+  },
+  {
+    "Name": "Serantes",
+    "Description": "Clásico restaurante bilbaíno especializado en cocina marinera. Pescados y mariscos frescos preparados con técnicas tradicionales. Ambiente funcional ideal para comidas rápidas de calidad.",
+    "Town": "Bilbao",
+    "Municipality": "Bilbao",
+    "Address": "Licenciado Poza, 16",
+    "Latitude": 43.26145921,
+    "Longitude": -2.93761084,
+    "Categories": {
+      "CuisineType": "Marisqueria",
+      "Brands": ["Bilbao"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "944 212 129",
+    "Website": "http://www.restauranteserantes.com/",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrwZvWglCt0ne-3vWaDBjluPkU8ydoMbq8rQ&s"
+  },
+  {
+    "Name": "Serantes II",
+    "Description": "Versión moderna del clásico Serantes, manteniendo la esencia marinera pero con toques contemporáneos. Buena relación calidad-precio en pleno centro de Bilbao.",
+    "Town": "Bilbao",
+    "Municipality": "Bilbao",
+    "Address": "Alameda de Urquijo, 51",
+    "Latitude": 43.26049933,
+    "Longitude": -2.93866857,
+    "Categories": {
+      "CuisineType": "Marisqueria",
+      "Brands": ["Bilbao"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "944 102 699",
+    "Website": "http://www.restauranteserantes.com/",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROWT84TsLve-HwQmk2HikrrF_11l5HlfVxrQ&s"
+  },
+  {
+    "Name": "Axpe",
+    "Description": "Tradicional sidrería en Markina-Xemein donde disfrutar de txakoli y menú sidrero. Ambiente auténtico y rústico típico de las sidrerías vascas. Ideal para grupos y celebraciones.",
+    "Town": "Markina-Xemein",
+    "Municipality": "Markina-Xemein",
+    "Address": "Caserío Axpe, barrio Atxondo",
+    "Latitude": 43.2774188418512,
+    "Longitude": -2.499214375671379,
+    "Categories": {
+      "CuisineType": "Vasca, Sidrería",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "655 734 625",
+    "Website": "http://www.axpesagardotegia.es",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTASmvoBpxNBfp8r9ptZIIQrxBtQmcuOq6XpQ&s"
+  },
+  {
+    "Name": "Laka-Erdi",
+    "Description": "Sidrería en Berriatua que sólo abre fines de semana y festivos. Auténtica experiencia del txotx con sidra natural y menú tradicional. Entorno rural perfecto para desconectar.",
+    "Town": "Merelludi",
+    "Municipality": "Berriatua",
+    "Address": "Alto de Millioi (Ctra. Markina - Lekeitio)",
+    "Latitude": 43.306486805307394,
+    "Longitude": -2.4820733085815583,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Costa Vasca"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "946 139 178",
+    "Website": null,
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQU-GKHk1wPrkH9fikRGYER2crk26n1cmiC9A&s"
+  },
+  {
+    "Name": "Aburuza",
+    "Description": "Sidrería familiar en Aduna con larga tradición desde 1979. Elaboran su propia sidra y ofrecen menús típicos sidreros. Ambiente auténtico y productos de calidad.",
+    "Town": "Aduna",
+    "Municipality": "Aduna",
+    "Address": "Barrio Goiburu",
+    "Latitude": 43.2048134,
+    "Longitude": -2.0525653,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 692 452",
+    "Website": "https://bodegaaburuza.com/",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnLDwCx2f-86scAtBGC37y8z0JHK_trS7Ksw&s"
+  },
+  {
+    "Name": "Aginaga",
+    "Description": "Sidrería en Usurbil donde disfrutar del txotx durante la temporada. Menú sidrero tradicional con productos locales. Ambiente rural y familiar muy auténtico.",
+    "Town": "Aginaga",
+    "Municipality": "Usurbil",
+    "Address": "Barrio Aginaga, s/n",
+    "Latitude": 43.27829343,
+    "Longitude": -2.07247162,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 366 710",
+    "Website": "http://www.aginagasagardotegia.com/",
+    "SocialMedia": null,
+    "Image": "https://www.sagardoa.eus/img/m/39-large_marcas.jpg"
+  },
+  {
+    "Name": "Akarregi",
+    "Description": "Sidrería en un caserío del siglo XVIII en Hernani. Experiencia tradicional del txotx con menús contundentes. Ideal para grupos que busquen autenticidad.",
+    "Town": null,
+    "Municipality": "Hernani",
+    "Address": "Barrio Akarregi, 5",
+    "Latitude": 43.267494,
+    "Longitude": -1.963202,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 330 713",
+    "Website": null,
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvtHvB0zwgO_trf1GxH-U_4qO8JihM2krt5Q&s"
+  },
+  {
+    "Name": "Akelenea",
+    "Description": "Sidrería en Astigarraga con amplios comedores para eventos. Ofrece tanto menú sidrero como cocina tradicional vasca. Buena opción para celebraciones.",
+    "Town": "Astigarraga",
+    "Municipality": "Astigarraga",
+    "Address": "Camino Oialume, 57",
+    "Latitude": 43.2725401,
+    "Longitude": -1.9513230000000021,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "943 333 333",
+    "Website": null,
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSog9yxaaaxQG0fzk6lxNIHo2XgXKHuY1QKyQ&s"
+  },
+  {
+    "Name": "Alorrenea",
+    "Description": "Sidrería en Astigarraga que combina tradición y modernidad. Menú sidrero de enero a mayo y propuestas innovadoras el resto del año. Buena relación calidad-precio.",
+    "Town": "Astigarraga",
+    "Municipality": "Astigarraga",
+    "Address": "Camino Alorrene, 4",
+    "Latitude": 43.28740879,
+    "Longitude": -1.94637344,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Montes y Valles vascos", "San Sebastián"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 336 999",
+    "Website": "https://alorrenea.com/",
+    "SocialMedia": null,
+    "Image": "https://turismo.euskadi.eus/contenidos/b_restauracion/0000003577_b1_rec_turismo/es_3577/images/GL_AlorreneaExteriorAstigarragaH.jpg"
+  }
+]

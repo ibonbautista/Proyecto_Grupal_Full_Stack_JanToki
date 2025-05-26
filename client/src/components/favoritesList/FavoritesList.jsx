@@ -6,6 +6,7 @@ import './FavoritesList.css';
 
 export function FavoritesList() {
 	const [favorites, setFavorites] = useState([]);
+	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
 		const fetchFavorites = async () => {
@@ -13,15 +14,19 @@ export function FavoritesList() {
 				const data = await getFavorites();
 				setFavorites(data.results || []);
 			} catch (error) {
-				if (error.message !== "No favorites yet") {
-					console.error("Error al obtener los favoritos:", error);
-				} else {
-					setFavorites([]);
-				}
+				setFavorites([]);
+			} finally {
+				setLoading(false);
 			}
 		};
 		fetchFavorites();
 	}, []);
+
+	if (loading) return null;
+
+	if (favorites.length === 0) {
+		return <p>No tienes favoritos todavía.</p>;
+	}
 
 	return (
 		<div>

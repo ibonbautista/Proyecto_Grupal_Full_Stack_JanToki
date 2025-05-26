@@ -1,0 +1,242 @@
+[
+  {
+    "Name": "Loiu",
+    "Description": "La Sidrería Loiu es un asador tradicional vasco ubicado en Zabaloetxe, cerca del aeropuerto de Bilbao. Ofrece una amplia variedad de menús, incluyendo opciones sin gluten y vegetarianas, además de un bufé libre con más de 25 platos rotatorios. Su ambiente familiar y acogedor, junto con una terraza rodeada de naturaleza, hacen de este lugar una excelente opción para disfrutar de la gastronomía vasca en un entorno tranquilo y sin aglomeraciones",
+    "Town": "Zabaloetxe",
+    "Municipality": "Loiu",
+    "Address": "Zabaloetxe Etorbidea, 18",
+    "Latitude": 43.31088261000004,
+    "Longitude": -2.9294813967211897,
+    "Categories": {
+      "CuisineType": "Asador",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "944 530 077",
+    "Website": "http://www.sidreria-loiu.com",
+    "SocialMedia": null,
+    "Image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/03/b8/dc/c0/getlstd-property-photo.jpg?h=500&s=1&w=900"
+  },
+  {
+    "Name": "Mizpiradi",
+    "Description": "La Sidrería Mizpiradi se encuentra en un caserío tradicional en el barrio Leizotz de Andoain, rodeado de naturaleza. Ofrece una experiencia auténtica de sidrería vasca, con un menú que destaca por platos como el bacalao al pil-pil, el cochinillo y el cabrito al burduntzi. Además, dispone de una terraza, aparcamiento y un espacio seguro para que los niños jueguen",
+    "Town": "Andoain",
+    "Municipality": "Andoain",
+    "Address": "Barrio Leizotz, s/n",
+    "Latitude": 43.2187221,
+    "Longitude": -1.9972872,
+    "Categories": {
+      "CuisineType": "Sidreria",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "943 593 954",
+    "Website": null,
+    "SocialMedia": null,
+    "Image": "https://www.mizpiradi.eus/sites/default/files/Mizpiradi%20sagardotegia-0968-editar.jpg"
+  },
+  {
+    "Name": "Oarso",
+    "Description": "La Sidrería Oarso, ubicada en Errenteria, ofrece una experiencia gastronómica auténtica con menús tradicionales de sidrería durante la temporada de txotx (enero a mayo). Fuera de temporada, mantiene una oferta variada con menús del día y carta. Con capacidad para 60 comensales y aparcamiento disponible, es un lugar ideal para disfrutar de la cocina vasca en un ambiente acogedor",
+    "Town": "Errenteria",
+    "Municipality": "Errenteria",
+    "Address": "Zubiaurre, 8 (trasera)",
+    "Latitude": 43.31428216,
+    "Longitude": -1.89737211,
+    "Categories": {
+      "CuisineType": "Sidreria",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "943 515 956",
+    "Website": null,
+    "SocialMedia": null,
+    "Image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/ef/30/ac/holztische-neben-fassern.jpg?h=500&s=1&w=900"
+  },
+  {
+    "Name": "Oianume",
+    "Description": "La Sidrería Oianume, fundada en 1992 en un antiguo caserío de Urnieta, destaca por su sidra artesanal elaborada con manzanas propias y de otras regiones como Galicia y Asturias. Ofrece un menú tradicional que incluye tortilla de bacalao, cogote de merluza o bacalao frito, chuleta de buey, queso, membrillo y nueces, todo acompañado de su sidra al txotx. Además, dispone de tres salones con capacidad total para 350 personas, ideales para celebraciones como bodas, comuniones y comidas de grupos. La sidrería está abierta todo el año, con horarios especiales durante la temporada de txotx (enero a mayo)",
+    "Town": "Urnieta",
+    "Municipality": "Urnieta",
+    "Address": "Barrio Ergoien, 18",
+    "Latitude": 43.23737163,
+    "Longitude": -1.99651863,
+    "Categories": {
+      "CuisineType": "Sidreria",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 556 683",
+    "Website": "http://www.oianume.com",
+    "SocialMedia": null,
+    "Image": "https://lh6.googleusercontent.com/proxy/g2Msq2DDygnrkTzD9W82J8URdjKxFNhe3O4w-Z9sI63CQU7UcSx_uzD44vDiRocwNQqbcDDj1IZG4-d77Yfa6vjn3gvoicuedREfIN6_EB7YzaFov9ouPxEFgAd7TTRtjvR2C3n61qS1lXtfD0zJPnPfMg9grpBQTglRkQ"
+  },
+  {
+    "Name": "Oiarbide",
+    "Description": "La Sidrería Oiarbide, fundada hace más de 100 años en Astigarraga, es una de las sidrerías más antiguas de la región. La familia Zabalegi sigue manteniendo la tradición de elaborar sidra natural sin aditivos, utilizando manzanas en su mayoría de producción propia. Durante la temporada de txotx (enero a finales de abril), ofrecen su menú clásico con tortilla de bacalao, bacalao frito, chuletón y postre tradicional, todo acompañado de su sidra al txotx. La sidrería dispone de tres espacios diferenciados con capacidad para 100 comensales y cuenta con un amplio aparcamiento",
+    "Town": "Astigarraga",
+    "Municipality": "Astigarraga",
+    "Address": "Oiarbide Bidea, z/g",
+    "Latitude": 43.26931,
+    "Longitude": -1.950555,
+    "Categories": {
+      "CuisineType": "Sidreria",
+      "Brands": ["Montes y Valles vascos", "San Sebastián"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "943 553 199",
+    "Website": "http://www.oyarbidesagardotegia.com",
+    "SocialMedia": null,
+    "Image": "https://sagardoarenlurraldea.eus/wp-content/uploads/2016/10/SIDOIA-F00.jpg"
+  },
+  {
+    "Name": "Ola",
+    "Description": "La Sidrería Ola Sagardotegia se encuentra en una antigua ferrería del siglo XIII en el barrio Meaka de Irun. Desde 1999, la familia Bengoetxea ha restaurado este histórico edificio para ofrecer una experiencia auténtica de sidrería vasca. En su amplio comedor, los comensales pueden degustar el tradicional menú de sidrería acompañado de sidra al txotx. Además, la sidrería organiza visitas guiadas por sus manzanos y bodega, y ofrece eventos culturales y gastronómicos a lo largo del año. Con una capacidad para 250 personas, dispone de terraza, parque infantil y aparcamiento.",
+    "Town": "Irun",
+    "Municipality": "Irun",
+    "Address": "Barrio Meaka, s/n",
+    "Latitude": 43.321332420704465,
+    "Longitude": -1.7842959128149687,
+    "Categories": {
+      "CuisineType": "Sidreria",
+      "Brands": ["Costa Vasca"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 623 130",
+    "Website": "https://olasagardotegia.eus/",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToTxpk6OD2y9yGo4ZlE3YL4ASIjACtVAi0HQ&s"
+  },
+  {
+    "Name": "Olagi",
+    "Description": "La Sidrería Olagi, fundada en 1996, se encuentra en el corazón de Altzaga, en el Goierri. Además de ofrecer el tradicional menú de sidrería, destacan por su cocina de base tradicional, utilizando productos de temporada y ofreciendo postres caseros. Durante todo el año, los comensales pueden disfrutar de sidra al txotx y, con cita previa, degustar pollos Eusko Label criados por ellos mismos. La sidrería cuenta con dos comedores y una capacidad para 100 personas, siendo un lugar ideal para celebraciones y comidas en grupo",
+    "Town": "Altzaga",
+    "Municipality": "Altzaga",
+    "Address": "Altzaga bidea, 1",
+    "Latitude": 43.06453871,
+    "Longitude": -2.1542995,
+    "Categories": {
+      "CuisineType": "Sidreria",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 887 726",
+    "Website": null,
+    "SocialMedia": null,
+    "Image": "https://euskalsagardoa.eus/wp-content/uploads/2020/05/olagi-sagardotegia.png"
+  },
+  {
+    "Name": "Ordo-Zelai",
+    "Description": "La Sidrería Ordo-Zelai, fundada en 1993 y abierta al público en 1996, está situada en un entorno natural en Oiartzun. Elabora su propia sidra a partir de sus 1.300 manzanos y ofrece un menú tradicional de sidrería con sidra al txotx. Dispone de un amplio comedor con capacidad para 200 personas, terraza, aparcamiento para autocares y está adaptada para personas con movilidad reducida",
+    "Town": null,
+    "Municipality": "Oiartzun",
+    "Address": "Txalaka bidea, 3 - Ugaldetxo Auzoa",
+    "Latitude": 43.2875843,
+    "Longitude": -1.8358318000000509,
+    "Categories": {
+      "CuisineType": "Sidreria",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "943 491 686",
+    "Website": "https://ordozelaisagardotegia.com/",
+    "SocialMedia": null,
+    "Image": "https://cdn0.bodas.net/vendor/37272/3_2/960/jpg/imagen-de-whatsapp-2024-01-24-a-las-19-42-07-6054fee7_1_237272-170612687190971.jpeg"
+  },
+  {
+    "Name": "Otegi",
+    "Description": "La Sidrería Otegi, ubicada en el pintoresco barrio Ilarratzueta de Lasarte-Oria, abrió sus puertas al público en 1982 y se especializa en la elaboración tradicional de sidra. Durante la temporada de txotx (enero–abril), ofrece su menú típico de sidrería, que incluye sidra directamente de las kupelas. Los comensales pueden llevar su propia carne para cocinarla en el establecimiento. La sidrería cuenta con una capacidad para 150 personas y está adaptada para personas con movilidad reducida. Además, dispone de aparcamiento para coches y autobuses",
+    "Town": "Lasarte",
+    "Municipality": "Lasarte-Oria",
+    "Address": "Caserío Solla-Enea, barrio Ilarratzueta",
+    "Latitude": 43.26897934,
+    "Longitude": -2.00814436,
+    "Categories": {
+      "CuisineType": "Sidreria",
+      "Brands": ["Montes y Valles vascos", "San Sebastián"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "943 365 029",
+    "Website": "https://www.sagardoa.eus/32_sidreria-otegi-otegi-sagardotegia-lasarte-oria",
+    "SocialMedia": null,
+    "Image": "https://sagardoarenlurraldea.eus/wp-content/uploads/2016/10/SIDOTE-F00.jpg"
+  },
+  {
+    "Name": "Otsu Enea",
+    "Description": "La Sidrería Otsua-Enea, fundada en 1987 por los hermanos Etxeberria, se dedica a la elaboración tradicional de sidra utilizando los avances tecnológicos actuales. Situada en el barrio Osinaga de Hernani, ofrece el menú típico de sidrería con sidra directamente de las kupelas. Cuenta con una capacidad para 100 personas y dispone de aparcamiento. Durante la temporada de txotx (enero–abril), está abierta de viernes a domingo a partir de las 14:00. Fuera de temporada, permanece cerrada",
+    "Town": "Osinaga",
+    "Municipality": "Hernani",
+    "Address": "Osinaga Auzoa",
+    "Latitude": 43.24593815,
+    "Longitude": -1.9635727,
+    "Categories": {
+      "CuisineType": "Sidreria",
+      "Brands": ["Montes y Valles vascos", "San Sebastián"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 556 894",
+    "Website": "https://www.sagardoa.eus/29_sidreria-otsua-enea-otsua-enea-sagardotegia-hernani",
+    "SocialMedia": null,
+    "Image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/31/45/44/une-cidrerie-typique.jpg?w=900&h=500&s=1"
+  },
+  {
+    "Name": "Petritegi",
+    "Description": "La Sidrería Petritegi, fundada en 1526, es una de las sidrerías más antiguas de Gipuzkoa y está regentada por la quinta generación de la familia Otaño-Goikoetxea. Ofrece una experiencia cultural y gastronómica única en torno a la sidra natural, al txotx y a platos típicos de la cocina vasca. Durante la temporada de txotx, los comensales pueden degustar sidra directamente de las kupelas en un ambiente singular. Además, Petritegi ofrece visitas guiadas a la bodega, catas de sidra y talleres infantiles. La sidrería cuenta con tres comedores climatizados: Sagar, Baserri y Arrantzale, cada uno ambientado en una temática relacionada con la sidra",
+    "Town": "Astigarraga",
+    "Municipality": "Astigarraga",
+    "Address": "Petritegi Bidea, 8",
+    "Latitude": 43.29106818326372,
+    "Longitude": -1.9413847681228162,
+    "Categories": {
+      "CuisineType": "Sidreria",id
+      "Brands": ["Montes y Valles vascos", "San Sebastián"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 457 188",
+    "Website": "https://www.petritegi.com/es",
+    "SocialMedia": null,
+    "Image": "https://tourism.euskadi.eus/contenidos/b_restauracion/0000003684_b1_rec_turismo/en_3684/images/FP_sidreriapetritegi3.jpg"
+  },
+  {
+    "Name": "Rezola",
+    "Description": "La Sidrería Rezola, fundada en 1991, es una sidrería tradicional vasca ubicada a solo 100 metros del centro de Astigarraga. Cuenta con dos bodegas y tres comedores donde se puede degustar sidra de primera calidad, tanto de pie como sentado. Durante la temporada de sidra (enero–abril), ofrece el clásico menú de sidrería con platos como tortilla de bacalao, chuleta y sidra al txotx. Fuera de temporada, también dispone de una carta variada. Además, alberga un museo con instrumentos antiguos relacionados con la elaboración de la sidra",
+    "Town": "Astigarraga",
+    "Municipality": "Astigarraga",
+    "Address": "Santio Zeharra, 12",
+    "Latitude": 43.2780939,
+    "Longitude": -1.94915134,
+    "Categories": {
+      "CuisineType": "Sidreria",
+      "Brands": ["Montes y Valles vascos", "San Sebastián"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "608 143 332",
+    "Website": "http://sidreriarezola.com/",
+    "SocialMedia": null,
+    "Image": "https://media-cdn.tripadvisor.com/media/photo-s/0a/81/0b/f8/rezola-inside.jpg"
+  }
+]

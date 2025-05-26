@@ -1,0 +1,1002 @@
+[
+  {
+    "Name": "Altuna",
+    "Description": "Sidrería tradicional en un caserío rodeado de manzanales en Urnieta. Ofrece sidra artesanal de producción propia y menú sidrero típico. Ambiente rústico perfecto para disfrutar del auténtico txotx.",
+    "Town": "Urnieta",
+    "Municipality": "Urnieta",
+    "Address": "Caserío Galarraga, barrio Lategi",
+    "Latitude": 43.24948178,
+    "Longitude": -1.98583277,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "943 554 917",
+    "Website": "https://www.sagardoa.eus/3_sidreria-altuna",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6yE1-_p3eCB9IlkxY8HCwKQ5L9AXERsnfrQ&s"
+  },
+  {
+    "Name": "Altzueta",
+    "Description": "Encantadora sidrería en caserío vasco de Osinaga, con sidra artesanal y ambiente tradicional. Menú sidrero con productos locales y calidad contrastada. Recomendado para vivir la experiencia sidrera auténtica..",
+    "Town": "Osinaga",
+    "Municipality": "Hernani",
+    "Address": "Osinaga, 7",
+    "Latitude": 43.25295806,
+    "Longitude": -1.96339809,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Montes y Valles vascos", "San Sebastián"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 551 502",
+    "Website": "https://www.altzuetasagardotegia.com/",
+    "SocialMedia": null,
+    "Image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/c2/ec/ea/sidreria-altzueta-sagardotegia.jpg?w=900&h=500&s=1"
+  },
+  {
+    "Name": "Amaike",
+    "Description": "Sidrería en Portugalete que combina menú tradicional con opciones más elaboradas. Buena relación calidad-precio en un ambiente acogedor. Ideal para disfrutar de la sidra cerca de Bilbao.",
+    "Town": "Portugalete",
+    "Municipality": "Portugalete",
+    "Address": "Doctor José Zaldua, 31",
+    "Latitude": 43.31990979959505,
+    "Longitude": -3.0315142693115082,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Costa Vasca", "Bilbao"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "944 832 667",
+    "Website": null,
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTWnM4BTGtYPCIuKcatDCyN2VMptL4LEgpTg&s"
+  },
+  {
+    "Name": "Amebi",
+    "Description": "Sidrería tradicional en Lazkao con menú típico vasco y productos de temporada. Ambiente sencillo y familiar, perfecto para comidas informales. Ofrece auténtica experiencia sidrera.",
+    "Town": "Lazkao",
+    "Municipality": "Lazkao",
+    "Address": "Zubierreka, 9",
+    "Latitude": 43.02287310169155,
+    "Longitude": -2.177130303149397,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "943 162 523",
+    "Website": null,
+    "SocialMedia": null,
+    "Image": "https://www.sistersandthecity.com/wp-content/uploads/2025/01/Dropbox_IMG_8149-640x979.jpg"
+  },
+  {
+    "Name": "Ander",
+    "Description": "Sidrería bilbaína que mezcla tradición y modernidad en el barrio de Indautxu. Menú sidrero junto a platos vascos más elaborados. Buena opción para grupos en ambiente animado.",
+    "Town": "Bilbao",
+    "Municipality": "Bilbao",
+    "Address": "Andalucia, 1",
+    "Latitude": 43.28283332,
+    "Longitude": -2.96479602,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Bilbao"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "944 476 666",
+    "Website": "http://www.sidreriasenbilbao.com/",
+    "SocialMedia": null,
+    "Image": "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrF6Y52yREJnXYTXOlRT-d5u0EP3hoTl-3lvxwpc5egdToNM5RW2-Bg0MfmOCZU3QgqBnGO5aqQhSiCAPwVm5X8BUPGMspvnlPAnFX71wnM3IrqIKAkfELzUqVr2URyHIAts9eO"
+  },
+  {
+    "Name": "Ankapalu Berria",
+    "Description": "Sidrería situada en las faldas del Gaztelumendi en Larrabetzu. Sidra artesanal y menú tradicional en entorno natural. Ideal para escapadas gastronómicas cerca de Bilbao.",
+    "Town": null,
+    "Municipality": "Larrabetzu",
+    "Address": "Loroño Behekoa, s/n",
+    "Latitude": 43.27374881775719,
+    "Longitude": -2.7999282115252933,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "944 558 197",
+    "Website": null,
+    "SocialMedia": null,
+    "Image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/21/b6/c9/5c/local.jpg?w=500&h=-1&s=1"
+  },
+  {
+    "Name": "Araeta",
+    "Description": "Restaurante en Zubieta con tres ambientes distintos y cocina tradicional vasca. Destacan sus carnes a la brasa y pescados frescos. Entorno natural perfecto para eventos especiales.",
+    "Town": "Zubieta",
+    "Municipality": "Donostia / San Sebastián",
+    "Address": "Camino de Berridi, 22",
+    "Latitude": 43.2715536,
+    "Longitude": -2.031403599999976,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Costa Vasca", "San Sebastián"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 362 049",
+    "Website": "https://araeta.com/",
+    "SocialMedia": null,
+    "Image": "https://araeta.com/wp-content/uploads/2015/05/galeria-1440x900.jpg"
+  },
+  {
+    "Name": "Aritxi",
+    "Description": "Asador tradicional en Mungia con amplia experiencia en parrilla. Carnes de primera calidad y pescados frescos del Cantábrico. Ambiente rústico y servicio profesional.",
+    "Town": null,
+    "Municipality": "Mungia",
+    "Address": "Camino de Meñaka, 1",
+    "Latitude": 43.3670617,
+    "Longitude": -2.8099219,
+    "Categories": {
+      "CuisineType": "Asador",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "946 741 181",
+    "Website": null,
+    "SocialMedia": null,
+    "Image": "https://www.euskadi.eus/contenidos/b_restauracion/0000003588_b1_rec_turismo/es_3588/images/aritxi_h.jpg"
+  },
+  {
+    "Name": "Armentegi",
+    "Description": "Sidrería-asador en Vitoria con amplia carta y menús sidreros. Especializado en carnes a la brasa y platos tradicionales alaveses. Buena relación calidad-precio.",
+    "Town": "Armentia",
+    "Municipality": "Vitoria-Gasteiz",
+    "Address": "Mendibe, 4",
+    "Latitude": 42.83307432702906,
+    "Longitude": -2.699771709821681,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Vitoria-Gasteiz"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "945 132 101",
+    "Website": "http://www.sidreriaasadorarmentegui.es/",
+    "SocialMedia": null,
+    "Image": "https://lh3.googleusercontent.com/gps-cs-s/AC9h4no_fBb-IrZmjaJ_caUqnqM85n0RXYO06V7Z1vYxOcGhb8pR15M0e6inIBBmsGazeUEVyZRUmSeimDP7Jrmave6U4D9QW3rsOZsHAX6t8DzhOybjtgmOJel78eOpTUT-x41rf2gQ"
+  },
+  {
+    "Name": "Arraiz",
+    "Description": "Asador en caserío típico con vistas panorámicas de Bilbao. Carnes maduradas y pescados a la parrilla en ambiente rústico. Terraza ideal para días soleados.",
+    "Town": "Bilbao",
+    "Municipality": "Bilbao",
+    "Address": "Monte Arraiz, 116",
+    "Latitude": 43.241779573427,
+    "Longitude": -2.9602789878845215,
+    "Categories": {
+      "CuisineType": "Asador",
+      "Brands": ["Bilbao"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "944 431 919",
+    "Website": "http://www.asadorarraiz.com/",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAMKhY7qp0RDycnxd_oRn2XPcAkYvjLQPvqQ&s"
+  },
+  {
+    "Name": "Arratzain",
+    "Description": "Sidrería en Usurbil abierta todo el año con txotx en temporada. Menú tradicional y ambiente agroturístico. Buena opción para grupos y celebraciones.",
+    "Town": "Kalezar",
+    "Municipality": "Usurbil",
+    "Address": "Kale Zahar Auzoa, 21",
+    "Latitude": 43.267053,
+    "Longitude": -2.056552,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "943 366 663",
+    "Website": "http://www.agroturismoarratzain.com/",
+    "SocialMedia": null,
+    "Image": "https://sagardoarenlurraldea.eus/wp-content/uploads/2016/08/SIDARR-F00.jpg"
+  },
+  {
+    "Name": "Artzai-Enea",
+    "Description": "Antigua sidrería reconvertida en asador en Beasain. Especializado en carnes a la brasa de primera calidad. Ambiente rústico y trato familiar.",
+    "Town": "Beasain",
+    "Municipality": "Beasain",
+    "Address": "Andre Mari Kalea, 15",
+    "Latitude": 43.04872566,
+    "Longitude": -2.19740059,
+    "Categories": {
+      "CuisineType": "Asador",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 163 116",
+    "Website": "https://artzaienea.com/",
+    "SocialMedia": null,
+    "Image": "https://artzaienea.com/wp-content/uploads/2019/02/restaurante-artzai-enea-a%C3%B1os-90.jpg"
+  },
+  {
+    "Name": "La Gabarra",
+    "Description": "Sidrería-asador junto a la ría de Bilbao con dos comedores rústicos. Pescados frescos y carnes a la parrilla. Ubicación privilegiada con vistas al agua.",
+    "Town": "Bilbao",
+    "Municipality": "Bilbao",
+    "Address": "Botica Vieja, 18",
+    "Latitude": 43.269229,
+    "Longitude": -2.943789,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Bilbao"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "946 970 156",
+    "Website": null,
+    "SocialMedia": null,
+    "Image": "https://www.sidrerias.ws/uploads/sidrerias/la-gabarra/sidreria-la-gabarra-bilbao-001-ficha.jpg"
+  },
+  {
+    "Name": "Astarbe",
+    "Description": "Una de las sidrerías más famosas de Astigarraga con amplio comedor. Sidra artesanal y menú tradicional de alta calidad. Experiencia sidrera completa.",
+    "Town": "Astigarraga",
+    "Municipality": "Astigarraga",
+    "Address": "Txoritokieta bidea, 13",
+    "Latitude": 43.2833897,
+    "Longitude": -1.9449055000000044,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Montes y Valles vascos", "San Sebastián"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 551 527",
+    "Website": "https://astarbe.eus/es",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWXZwdXdAERRyrs8b6U5KZIijzCL4eSd0ECA&s"
+  },
+  {
+    "Name": "Aulia",
+    "Description": "Sidrería tradicional en caserío de Legorreta con producción artesanal. Menú sidero con productos locales en ambiente auténtico. Terraza con vistas al valle.",
+    "Town": "Legorreta",
+    "Municipality": "Legorreta",
+    "Address": "Barrio Guadalupe 12",
+    "Latitude": 43.08503525,
+    "Longitude": -2.1454925,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 806 066",
+    "Website": "https://www.auliasagardotegia.com/",
+    "SocialMedia": null,
+    "Image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/a0/f5/1d/photo6jpg.jpg?w=900&h=500&s=1"
+  },
+  {
+    "Name": "Ayoberri",
+    "Description": "Acogedora sidrería en caserío rural de Urduliz. Menú tradicional y ambiente familiar. Entorno perfecto para desconectar y disfrutar del txotx.",
+    "Town": "Mendiondo",
+    "Municipality": "Urduliz",
+    "Address": "Carretera de Butrón, barrio Mendiondo",
+    "Latitude": 43.367966232653046,
+    "Longitude": -2.9425533211791643,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "946 764 257",
+    "Website": null,
+    "SocialMedia": null,
+    "Image": "https://console.listae.com/files/2018/03/sidreria_ayoberri_urduliz.jpg"
+  },
+  {
+    "Name": "Añota",
+    "Description": "Sidrería en Azpeitia con vistas a los montes Ernio e Izarraitz. Producción artesanal y menú típico vasco. Ambiente rústico y familiar.",
+    "Town": "Azpeitia",
+    "Municipality": "Azpeitia",
+    "Address": "Barrio Elosiaga, s/n",
+    "Latitude": 43.16701944,
+    "Longitude": -2.23239181,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 812 092",
+    "Website": null,
+    "SocialMedia": null,
+    "Image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/2c/d5/5d/sidreria-anota.jpg?w=900&h=500&s=1"
+  },
+  {
+    "Name": "Baleio",
+    "Description": "Sidrería familiar en Oiartzun que elabora y comercializa su propia sidra. Menú tradicional en entorno rural. Producción limitada y artesanal.",
+    "Town": "Iturriotz",
+    "Municipality": "Oiartzun",
+    "Address": "Ananedes Bidea. Caserío Baleione. Iturrioz",
+    "Latitude": 43.294988,
+    "Longitude": -1.870507,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "943 491 340",
+    "Website": "https://www.sagardoa.eus/33_sidreria-baleio-baleio-sagardotegia-oiartzun",
+    "SocialMedia": null,
+    "Image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/4b/ab/c1/local-para-compras-boas.jpg?w=900&h=500&s=1"
+  },
+  {
+    "Name": "Barkaiztegi",
+    "Description": "Amplia sidrería en Martutene con menús variados además del tradicional. Comedor climatizado y capacidad para grupos. Buena opción cerca de San Sebastián.",
+    "Town": "Donostia / San Sebastián",
+    "Municipality": "Donostia / San Sebastián",
+    "Address": "Paseo de Barkaiztegi, 42, Martutene",
+    "Latitude": 43.292812388470765,
+    "Longitude": -1.9587274933929848,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Costa Vasca", "San Sebastián"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 451 304",
+    "Website": "https://www.barkaiztegi.com",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC-lee9Md1bxkfu16tJ-wy4DQQzE7aA5BBKw&s"
+  },
+  {
+    "Name": "Bereziartua",
+    "Description": "Tradicional sidrería de Astigarraga con amplio comedor. Menú sidrero de calidad y producción artesanal. Una de las más conocidas de la zona.",
+    "Town": "Astigarraga",
+    "Municipality": "Astigarraga",
+    "Address": "Camino de Iparralde, 16",
+    "Latitude": 43.28280513432915,
+    "Longitude": -1.940282776721233,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Montes y Valles vascos", "San Sebastián"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 555 798",
+    "Website": "https://www.bereziartuasagardoa.com/es/",
+    "SocialMedia": null,
+    "Image": "https://euskalsagardoa.eus/wp-content/uploads/2020/05/bereziartua-sagardotegia.jpg"
+  },
+  {
+    "Name": "Donibane",
+    "Description": "Asador en San Vicente de Barakaldo con decoración rústica. Carnes a la brasa y pescados frescos. Buena relación calidad-precio en ambiente tradicional.",
+    "Town": "San Vicente de Barakaldo",
+    "Municipality": "Barakaldo",
+    "Address": "San Juan, 15",
+    "Latitude": 43.29783728,
+    "Longitude": -2.98664131,
+    "Categories": {
+      "CuisineType": "Asador",
+      "Brands": ["Bilbao"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "944 384 905",
+    "Website": "http://www.donibaneasador.com/",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsXR3SPh4N77mlP2VMKN7HcvzUm8QlW76l4w&s"
+  },
+  {
+    "Name": "Egiluze",
+    "Description": "Sidrería en entorno natural de Errenteria con dos comedores espaciosos. Menú sidrero tradicional y producción propia. Ideal para celebraciones.",
+    "Town": "Errenteria",
+    "Municipality": "Errenteria",
+    "Address": "Barrio Zamalbide, s/n",
+    "Latitude": 43.269089,
+    "Longitude": -1.9121149999999716,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 523 905",
+    "Website": "http://egiluze.es/",
+    "SocialMedia": null,
+    "Image": "https://sagardoarenlurraldea.eus/wp-content/uploads/2016/08/SIDEGI-F00.jpg"
+  },
+  {
+    "Name": "Eguzkitza",
+    "Description": "Sidrería en Tolosa con comedor climatizado para disfrutar del txotx. Menú tradicional y ambiente familiar. Buena opción en la comarca del Goierri.",
+    "Town": "Usabal",
+    "Municipality": "Tolosa",
+    "Address": "Barrio Usabal, 25",
+    "Latitude": 43.12738982,
+    "Longitude": -2.08593264,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 672 613",
+    "Website": "https://www.tolosaldea.eus/jatetxea/eguzkitza/",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ45UPx2suud7L3Nb4rVPNVsUdvH-jjPU6MCQ&s"
+  },
+  {
+    "Name": "Elexalde",
+    "Description": "Sidrería típica en Galdakao con menú tradicional y otros platos vascos. Ambiente rural y producción artesanal. Terraza exterior en temporada.",
+    "Town": "Elexalde",
+    "Municipality": "Galdakao",
+    "Address": "Barrio Elexalde s/n",
+    "Latitude": 43.23636616374324,
+    "Longitude": -2.8342169484100377,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "944 571 614",
+    "Website": "http://sidreriaelexalde.com/",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx4rpHcSGTjgPJqdkQ7I9JGGV1nbjc3pexpw&s"
+  },
+  {
+    "Name": "Elorrabi",
+    "Description": "Sidrería histórica en caserío de 500 años en Hernani. Producción propia con manzanos autóctonos. Ambiente auténtico y tradición centenaria.",
+    "Town": "Osinaga",
+    "Municipality": "Hernani",
+    "Address": "Osinaga bailara, 13",
+    "Latitude": 43.25644805,
+    "Longitude": -1.96176612,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Montes y Valles vascos", "San Sebastián"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "943 336 990",
+    "Website": "https://www.elorrabi.com/es/inicio/",
+    "SocialMedia": null,
+    "Image": "https://www.sidrerias.ws/uploads/sidrerias/elorrabi/sidreria-elorrabi-hernani-001-ficha.jpg"
+  },
+  {
+    "Name": "Elutxeta",
+    "Description": "Sidrería en Urnieta con 2.000 manzanos propios. Producción artesanal y menú tradicional. Una de las más grandes de la zona.",
+    "Town": "Urnieta",
+    "Municipality": "Urnieta",
+    "Address": "Caserío Elutxeta, 34",
+    "Latitude": 43.25981308,
+    "Longitude": -1.99424749,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 556 981",
+    "Website": "http://elutxeta.com/",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK_uCgonvRBGvM8Ce-HoQSAaKmJPsJyAZ4NA&s"
+  },
+  {
+    "Name": "Etxe Zuri",
+    "Description": "Sidrería en Olaberria con dos comedores y menú variado. Tradición y modernidad en un mismo espacio. Buena opción en el Goierri.",
+    "Town": "Olaberria",
+    "Municipality": "Olaberria",
+    "Address": "Barrio Errekalde",
+    "Latitude": 43.02548687682575,
+    "Longitude": -2.1940074497069872,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 882 049",
+    "Website": "http://www.etxezurisagardotegia.net/",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRTygsf6gBDKtVV5V2WcZD00LDnMNUDmicZw&s"
+  },
+  {
+    "Name": "Etxeberria",
+    "Description": "Sidrería en Astigarraga con comedor climatizado y txotx. Menú tradicional y producción artesanal. Una de las más populares de la zona.",
+    "Town": "Astigarraga",
+    "Municipality": "Astigarraga",
+    "Address": "Sagardotegi zeharra, 5",
+    "Latitude": 43.2641486,
+    "Longitude": -1.94028354,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Montes y Valles vascos", "San Sebastián"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 555 697",
+    "Website": "https://sidreriaetxeberria.com/",
+    "SocialMedia": null,
+    "Image": "https://encuinarte.com/wp-content/uploads/2020/03/Etxebarri_02-1024x683.jpg"
+  },
+  {
+    "Name": "Eula",
+    "Description": "Sidrería tradicional en Urnieta con amplio comedor. Sistema de txotx y menú vasco de calidad. Ambiente rústico y familiar.",
+    "Town": "Urnieta",
+    "Municipality": "Urnieta",
+    "Address": "Barrio Lategi, 19",
+    "Latitude": 43.24917971,
+    "Longitude": -1.97816274,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "943 552 744",
+    "Website": "http://www.eulasagardotegia.com/",
+    "SocialMedia": null,
+    "Image": "hhttps://turismo.euskadi.eus/contenidos/b_restauracion/0000003624_b1_rec_turismo/es_3624/images/GL_EulaExteriorUrnietaH.jpg"
+  },
+  {
+    "Name": "Gartziategi",
+    "Description": "Una de las sidrerías más antiguas de Astigarraga. Producción artesanal y menú tradicional. Conserva métodos centenarios de elaboración.",
+    "Town": "Astigarraga",
+    "Municipality": "Astigarraga",
+    "Address": "Paseo de Martutene, 139",
+    "Latitude": 43.2910177,
+    "Longitude": -1.9514328999999861,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Montes y Valles vascos", "San Sebastián"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "943 469 674",
+    "Website": "https://gartziategi.com/",
+    "SocialMedia": null,
+    "Image": "https://turismo.euskadi.eus/contenidos/b_restauracion/0000003629_b1_rec_turismo/es_3629/images/GL_GartziategiExteriorAstigarragaH.jpg"
+  },
+  {
+    "Name": "Gaztañaga",
+    "Description": "Sidrería moderna en Andoain con tecnología punta. Elaboración y comercialización de sidra artesanal. Menú tradicional con productos locales.",
+    "Town": "Buruntza",
+    "Municipality": "Andoain",
+    "Address": "Barrio Buruntza",
+    "Latitude": 43.223149541048755,
+    "Longitude": -2.0183614318029868,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "943 591 968",
+    "Website": "http://www.sidreriagaztanaga.com/",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr3UXj6BeutnohEPWD_5plGdhwgr236hnA1w&s"
+  },
+  {
+    "Name": "Goiko Lastola",
+    "Description": "Sidrería junto al río Urumea en Hernani. Menú tradicional y txotx en temporada. Ambiente agradable con vistas al agua.",
+    "Town": "Ereñotzu",
+    "Municipality": "Hernani",
+    "Address": "Barrio Ereñotzu, 89",
+    "Latitude": 43.25691509,
+    "Longitude": -1.94978893,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Montes y Valles vascos", "San Sebastián"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "943 553 272",
+    "Website": null,
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_BpFmnQJ8mDljio5irKJ4Fezytwk9dideUQ&s"
+  },
+  {
+    "Name": "Gorozika",
+    "Description": "Sidrería tradicional en Muxika con menú vasco típico. Producción artesanal y ambiente rural. Buena opción para escapadas gastronómicas.",
+    "Town": "Gorozika",
+    "Municipality": "Muxika",
+    "Address": "Bº Gorozika s/n",
+    "Latitude": 43.25688641796392,
+    "Longitude": -2.703080886260991,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "946 309 150",
+    "Website": null,
+    "SocialMedia": null,
+    "Image": "https://console.listae.com/files/2014/04/fachada_sidreria_gorozika.jpg"
+  },
+  {
+    "Name": "Gurutzeta",
+    "Description": "Bodega familiar en Astigarraga que produce sidra natural. Menú tradicional y txotx en temporada. Calidad contrastada desde 1920.",
+    "Town": "Astigarraga",
+    "Municipality": "Astigarraga",
+    "Address": "Oialume Bidea, 63",
+    "Latitude": 43.27202166650028,
+    "Longitude": -1.952371955958597,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 552 242",
+    "Website": "http://www.gurutzeta.com",
+    "SocialMedia": null,
+    "Image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/63/3c/19/gurutzeta.jpg?w=900&h=500&s=1"
+  },
+  {
+    "Name": "Iarritu",
+    "Description": "Caserío vasco de 200 años en Amurrio dedicado a la sidra artesanal. Producción limitada y menú tradicional. Ambiente histórico y auténtico.",
+    "Town": "Lezama",
+    "Municipality": "Amurrio",
+    "Address": "Barrio Arrotegui, 114",
+    "Latitude": 43.0243530690838,
+    "Longitude": -2.96519279479981,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "945 386 131",
+    "Website": null,
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMlAigudhT3C88fZRxvOeXUSBABdVENQjuQw&s"
+  },
+  {
+    "Name": "Ibarra",
+    "Description": "Sidrería en caserío típico de Amorebieta. Dos comedores con decoración rústica y menú tradicional. Buena relación calidad-precio.",
+    "Town": "Amorebieta",
+    "Municipality": "Amorebieta-Etxano",
+    "Address": "Barrio Ibarra, s/n",
+    "Latitude": 43.212322097202744,
+    "Longitude": -2.7193097248535114,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "946 731 100",
+    "Website": "http://www.ibarrabarria.eus/",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1hEHRG9nAwiCCd0olKvkAiKh98as7jMHCGA&s"
+  },
+  {
+    "Name": "Iparragirre",
+    "Description": "Sidrería centenaria en Osinaga que combina tradición y modernidad. Producción artesanal y menú de calidad. Ambiente auténtico vasco.",
+    "Town": "Osinaga",
+    "Municipality": "Hernani",
+    "Address": "Barrio Osiñaga",
+    "Latitude": 43.2539057022193,
+    "Longitude": -1.9628947623278918,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Montes y Valles vascos", "San Sebastián"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 550 328",
+    "Website": "https://iparragirresagardotegia.eus/",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG7sYcQ_oEbRKn2KHcxzgQvLzsLxfJQ_QMHg&s"
+  },
+  {
+    "Name": "Irigoien",
+    "Description": "Sidrería histórica de Astigarraga con más de 200 años de tradición. Conocida también como Herrero. Menú tradicional y txotx.",
+    "Town": "Astigarraga",
+    "Municipality": "Astigarraga",
+    "Address": "Camino de Iparralde, 12",
+    "Latitude": 43.28288323790351,
+    "Longitude": -1.9401111153442798,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Montes y Valles vascos", "San Sebastián"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "943 550 333",
+    "Website": "https://www.sidreriairigoien.com/es/",
+    "SocialMedia": null,
+    "Image": "https://www.sidreriairigoien.com/static/images/sidreria/sidreria-irigoien-astigarraga.jpg"
+  },
+  {
+    "Name": "Isastegi",
+    "Description": "Sidrería familiar en Tolosa desde 1983. Producción artesanal y menú tradicional. Una de las más conocidas del Goierri.",
+    "Town": "Aldaba",
+    "Municipality": "Tolosa",
+    "Address": "Aldaba Txiki, 15",
+    "Latitude": 43.12055384,
+    "Longitude": -2.09485991,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 652 964",
+    "Website": "http://www.isastegi.com/",
+    "SocialMedia": null,
+    "Image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/0e/91/93/isastegi-sagardotegia.jpg?w=800&h=-1&s=1"
+  },
+  {
+    "Name": "Itsasburu",
+    "Description": "Sidrería en Osinaga abierta todo el año con txotx en temporada. Menú tradicional y ambiente familiar. A solo 10 minutos de Hernani.",
+    "Town": "Osinaga",
+    "Municipality": "Hernani",
+    "Address": "Osiñaga Auzoa, 10",
+    "Latitude": 43.25381974737111,
+    "Longitude": -1.9627874739672961,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Montes y Valles vascos", "San Sebastián"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 556 879",
+    "Website": null,
+    "SocialMedia": null,
+    "Image": "https://www.sagardoa.eus/img/m/slider/65-4.jpg"
+  },
+  {
+    "Name": "Iturrieta",
+    "Description": "Sidrería en Aramaio que produce su propia sidra en el caserío. Menú tradicional y txotx. Entorno rural perfecto para desconectar.",
+    "Town": "Ibarra",
+    "Municipality": "Aramaio",
+    "Address": "Barrio Arraga, s/n",
+    "Latitude": 43.05224013,
+    "Longitude": -2.57521137,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "685 721 593",
+    "Website": "https://www.iturrieta.eus/",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3GlegBj6uTxjxq224xSUVuRw69K0wZuaaKg&s"
+  },
+  {
+    "Name": "Itxaropena",
+    "Description": "Restaurante en Donostia que ofrece menú sidrero con toque moderno. Cocina tradicional vasca actualizada. Buena opción en Parte Vieja.",
+    "Town": "Donostia / San Sebastián",
+    "Municipality": "Donostia / San Sebastián",
+    "Address": "Embeltran, 16",
+    "Latitude": 43.32248027,
+    "Longitude": -1.98557065,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Costa Vasca", "San Sebastián"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 436 210",
+    "Website": null,
+    "SocialMedia": null,
+    "Image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/7c/aa/e9/bar-itxaropena.jpg?w=900&h=500&s=1"
+  },
+  {
+    "Name": "Izeta",
+    "Description": "Sidrería-restaurante en Aia con menú tradicional y productos locales. Ambiente rústico y vistas al valle. Ideal para comidas campestres.",
+    "Town": "Urdaneta",
+    "Municipality": "Aia",
+    "Address": "Barrio Urdaneta",
+    "Latitude": 43.2611847,
+    "Longitude": -2.1854657,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Costa Vasca", "Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 131 693",
+    "Website": "https://www.izeta.es/",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6a6_NRHkqAr__51ijkibbGIVhTTXSDZQTGw&s"
+  },
+  {
+    "Name": "Calonge",
+    "Description": "Sidrería en Igeldo, cerca de San Sebastián, con txotx en temporada. Menú tradicional y ambiente familiar. Terraza con vistas al mar.",
+    "Town": "Igeldo",
+    "Municipality": "Donostia / San Sebastián",
+    "Address": "Paseo Padre Orkolaga, 8",
+    "Latitude": 43.308882663979624,
+    "Longitude": -2.0367042073486346,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Costa Vasca", "San Sebastián"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "943 213 251",
+    "Website": "https://www.calongesagardotegia.es/",
+    "SocialMedia": null,
+    "Image": "https://www.elnacional.cat/uploads/s1/42/80/58/39/refugi-pescadors-historia-terrassa-2016-actualitat-970x774.jpeg"
+  },
+  {
+    "Name": "Katxarro",
+    "Description": "Restaurante en Elorrio con menú del día económico y opción sidrera. Cocina tradicional vasca en entorno natural. Buena relación calidad-precio.",
+    "Town": "Elorrio",
+    "Municipality": "Elorrio",
+    "Address": "San Fausto Kalea, 17",
+    "Latitude": 43.13058921859014,
+    "Longitude": -2.5520266538684044,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "946 550 279",
+    "Website": "https://restaurantekatxarr.wixsite.com/katxarro",
+    "SocialMedia": null,
+    "Image": "https://console.listae.com/files/2016/05/katxarro_elorrio.jpg"
+  },
+  {
+    "Name": "Korta",
+    "Description": "Restaurante en Gabiria con cocina tradicional e innovadora. Productos de temporada y elaboraciones creativas. Entorno rural perfecto para eventos..",
+    "Town": "Gabiria",
+    "Municipality": "Gabiria",
+    "Address": "Zuazola Azpikoa Baserria, z/g",
+    "Latitude": 43.0517959,
+    "Longitude": -2.2951762,
+    "Categories": {
+      "CuisineType": "Tradicional",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 887 186",
+    "Website": "http://www.restaurantekorta.com",
+    "SocialMedia": null,
+    "Image": "https://turismo.euskadi.eus/contenidos/b_restauracion/0000003653_b1_rec_turismo/es_3653/images/korta_h.jpg"
+  },
+  {
+    "Name": "Larrarte",
+    "Description": "Sidrería en Astigarraga con sidra natural recién escanciada. Menú tradicional y ambiente auténtico. Una de las más populares de la zona.",
+    "Town": "Astigarraga",
+    "Municipality": "Astigarraga",
+    "Address": "Muñagorri Enea Baserria, s/n",
+    "Latitude": 43.26684179999999,
+    "Longitude": -1.9380799,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Montes y Valles vascos", "San Sebastián"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": true
+    },
+    "Phone": "943 555 647",
+    "Website": "https://larrarte.net/",
+    "SocialMedia": null,
+    "Image": "https://www.sidrerias.ws/uploads/sidrerias/larrarte/sidreria-larrarte-astigarraga-001-ficha.jpg"
+  },
+  {
+    "Name": "Larre-Gain",
+    "Description": "Sidrería tradicional en Hernani con menú típico y producción propia. Ambiente rústico en caserío vasco. Txotx en temporada.",
+    "Town": "Hernani",
+    "Municipality": "Hernani",
+    "Address": "Barrio Ereñozu, 58",
+    "Latitude": 43.2420071,
+    "Longitude": -1.9390665,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Montes y Valles vascos", "San Sebastián"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "943 555 846",
+    "Website": "http://www.larregain.eus",
+    "SocialMedia": null,
+    "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXC8QKTKM-W9sxXWbhDX3PKJuSZ4OkIbVZdw&s"
+  },
+  {
+    "Name": "Lezama",
+    "Description": "Sidrería en Lezama con dos comedores de decoración rústica. Menú tradicional y txotx en temporada. Buena opción cerca de Bilbao.",
+    "Town": "Garaioltza",
+    "Municipality": "Lezama",
+    "Address": "Barrio Garaioltza, 146",
+    "Latitude": 43.27803712793327,
+    "Longitude": -2.8410601074096964,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Montes y Valles vascos"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "944 556 368",
+    "Website": "http://www.sidrerialezama.com",
+    "SocialMedia": null,
+    "Image": "https://totalfood.es/uploads/images/restaurant/palaciodelezamaleguizamon/profile/fachada-exterior-palacio-lezama-leguizamon-etxebarri.jpg"
+  },
+  {
+    "Name": "Lizeaga",
+    "Description": "Sidrería tradicional en el caserío Gartziategi de Astigarraga. Menú típico y txotx con sidra artesanal. Conserva métodos centenarios.",
+    "Town": "Astigarraga",
+    "Municipality": "Astigarraga",
+    "Address": "Gartziategi Baserria, Martutene Pasealekua, 139",
+    "Latitude": 43.281303,
+    "Longitude": -1.945642,
+    "Categories": {
+      "CuisineType": "Sidrería",
+      "Brands": ["Montes y Valles vascos", "San Sebastián"],
+      "MichelinStars": null,
+      "RepsolSuns": null,
+      "Recommended": false
+    },
+    "Phone": "943 468 290",
+    "Website": "https://lizeaga.eus/",
+    "SocialMedia": null,
+    "Image": "https://www.sagardoa.eus/img/m/slider/23-4.jpg"
+  }
+]

@@ -7,7 +7,6 @@ export function useFavorite(userId, restaurantId) {
 	
 	useEffect(() => {
 		const checkFavorite = async () => {
-			console.log("check favorite",userId,restaurantId)
 			if (!userId || !restaurantId) return;
 
 			try {
