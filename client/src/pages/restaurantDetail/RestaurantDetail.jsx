@@ -41,7 +41,9 @@ function RestaurantDetail() {
 		const fetchReviews = async () => {
 			try {
 				const res = await getReviewsByRestaurant(restaurant._id);
-				setReviews(res.results || []);
+				const reviewsList = res.results || [];
+				setReviews(reviewsList);
+				setAverageRating(calculateAverageRating(reviewsList));
 			} catch (error) {
 				console.error("Error al cargar reseñas:", error);
 			}
@@ -132,6 +134,7 @@ function RestaurantDetail() {
 			setEditingReview(null);
 			const res = await getReviewsByRestaurant(restaurant._id);
 			setReviews(res.results || []);
+			setAverageRating(calculateAverageRating(res.results || []));
 		} catch (error) {
 			console.error("Error al actualizar la reseña:", error);
 		}
@@ -155,6 +158,7 @@ function RestaurantDetail() {
 			await deleteReview(review._id);
 			const res = await getReviewsByRestaurant(restaurant._id);
 			setReviews(res.results || []);
+			setAverageRating(calculateAverageRating(res.results || []));
 		} catch (error) {
 			console.error("Error al eliminar la reseña:", error);
 		}
@@ -162,7 +166,7 @@ function RestaurantDetail() {
 
 	return (
 		<article className="restaurant-page">
-			<button className="back-button" onClick={() => navigate(-1)}>
+			<button className="back-button" onClick={() => Navigate(-1)}>
 				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-caret-left" viewBox="0 0 16 16">
 					<path d="M10 12.796V3.204L4.519 8zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.50615.48-4.796A1 1 0 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753"/></svg>
 			</button>
@@ -210,7 +214,7 @@ function RestaurantDetail() {
 							{[
 								"asador","sidreria","fusion","alta cocina","tradicional","pintxos",
             					"marisqueria","asiatica","francesa","italiana","riojana","mediterranea",
-								"internacional", "moderna", "autor", "contemporanea", "vegetariano"
+								"internacional", "moderna", "autor", "contemporanea", "vegetariana"
 							].map((cuisineType) => (
 								<option key={cuisineType} value={cuisineType}>
 									{cuisineType}
