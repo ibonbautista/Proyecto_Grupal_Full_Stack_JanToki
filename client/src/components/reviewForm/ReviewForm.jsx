@@ -61,6 +61,7 @@ function ReviewForm({ restaurantId, setReviews }) {
 				max="5"
 				step="1"
 				required
+				placeholder="Calificación (de 0 a 5)"
 			/>
 			<input 
 				type="file" 

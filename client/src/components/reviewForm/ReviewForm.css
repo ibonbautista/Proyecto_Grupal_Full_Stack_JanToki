@@ -27,6 +27,15 @@
     padding: 1em;
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
 .review-form .file-input {
     background-color: transparent;
     padding: 0;
@@ -41,6 +50,7 @@
     cursor: pointer;
 
     transition: all 0.3s ease;
+    color: white;
 }
 
 .review-form input::file-selector-button:hover {

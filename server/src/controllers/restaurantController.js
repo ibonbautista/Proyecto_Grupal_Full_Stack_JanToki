@@ -12,16 +12,15 @@ import {
 
 const getRestaurants = async (req, res) => {
   try {
-    const { Category, Municipality, Rating, Name } = req.query;
+    const { Categories, Municipality, Rating, Name } = req.query;
 
     const filter = {};
     let activeFilters = [];
 
-    if (Category) {
-      filter["Category.CuisineType"] = Category;
-      activeFilters.push(`de categoría "${Category}"`);
+    if (Categories) {
+      filter["Categories.CuisineType"] = Categories;
+      activeFilters.push(`de categoría "${Categories}"`);
     }
-    console.log("Filtro construido:", filter);
 
     if (Municipality) {
       filter["Municipality"] = { $regex: Municipality, $options: "i" };

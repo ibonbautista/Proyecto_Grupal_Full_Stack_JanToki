@@ -2,13 +2,13 @@ import { useState } from "react";
 import { createRestaurant } from "../../utils/api/restaurant";
 
 const cuisine_types = [
-	"asador","sidreria","fusion","alta cocina","tradicional","pintxos",
-    "marisqueria","asiatica","francesa","italiana","riojana","mediterranea",
+	"asador", "sidreria", "fusion", "alta cocina", "tradicional", "pintxos",
+	"marisqueria", "asiatica", "francesa", "italiana", "riojana", "mediterranea",
 	"internacional", "moderna", "autor", "contemporanea", "vegetariana"
-  ];
-  
+];
 
-export function CreateRestaurantForm({ onCreated}) {
+
+export function CreateRestaurantForm({ onCreated }) {
 	const [formData, setFormData] = useState({
 		Name: "",
 		Description: "",
@@ -83,17 +83,24 @@ export function CreateRestaurantForm({ onCreated}) {
 			setError(error.message || "Error al crear el restaurante");
 		}
 	};
-	
+
 	return (
 		<form onSubmit={handleSubmit} className="create-restaurant-form">
 			<h3>Nuevo restaurante</h3>
 			<input type="text" name="Name" value={formData.Name} onChange={handleChange} placeholder="Nombre" required />
 			<input type="text" name="Description" value={formData.Description} onChange={handleChange} placeholder="Descripción" required />
-			<input type="text" name="Town" value={formData.Town} onChange={handleChange} placeholder="Pueblo" required />
-			<input type="text" name="Municipality" value={formData.Municipality} onChange={handleChange} placeholder="Municipio" required />
+
+			<div className="create-restaurant-form--location">
+				<input type="text" name="Town" value={formData.Town} onChange={handleChange} placeholder="Pueblo" required />
+				<input type="text" name="Municipality" value={formData.Municipality} onChange={handleChange} placeholder="Municipio" required />
+			</div>
+
 			<input type="text" name="Address" value={formData.Address} onChange={handleChange} placeholder="Dirección" />
-			<input type="number" name="Latitude" value={formData.Latitude} onChange={handleChange} placeholder="Latitud" required />
-			<input type="number" name="Longitude" value={formData.Longitude} onChange={handleChange} placeholder="Longitud" required />
+
+			<div className="create-restaurant-form--coordinates">
+				<input type="number" name="Latitude" value={formData.Latitude} onChange={handleChange} placeholder="Latitud" required />
+				<input type="number" name="Longitude" value={formData.Longitude} onChange={handleChange} placeholder="Longitud" required />
+			</div>
 
 			<select name="CuisineType" value={formData.CuisineType} onChange={handleChange} required>
 				<option value="">Tipo de cocina</option>
@@ -107,10 +114,12 @@ export function CreateRestaurantForm({ onCreated}) {
 			<input type="text" name="Phone" value={formData.Phone} onChange={handleChange} placeholder="Teléfono" />
 			<input type="text" name="Website" value={formData.Website} onChange={handleChange} placeholder="Página web" />
 			<input type="text" name="SocialMedia" value={formData.SocialMedia} onChange={handleChange} placeholder="Red social" />
-			<input type="file" accpet="image/*" onChange={handleFileChange} />
-			
-			<button type="submit">Crear restaurante</button>
-			<button type="button" onClick={onCreated}>Cancelar</button>
+			<input type="file" className="create-restaurant-form--file" accept="image/*" onChange={handleFileChange} />
+
+			<div className="create-restaurant-form--buttons">
+				<button type="submit">Crear restaurante</button>
+				<button type="button" onClick={onCreated}>Cancelar</button>
+			</div>
 
 			{success && <p className="modal-success">{success}</p>}
 			{error && <p className="modal-error">{error}</p>}
