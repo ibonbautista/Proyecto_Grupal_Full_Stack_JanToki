@@ -84,9 +84,56 @@
 }
 
 
-.cuisine-type, .restaurant-description, .restaurant-rating, .restaurant-address, .admin-controls {
+.cuisine-type, .restaurant-description, .restaurant-rating, .restaurant-address, .admin-controls, .edit-restaurant-form {
     margin: 1em 10%;
     font-size: 1.2rem;
+}
+
+.edit-restaurant-form {
+    display: flex;
+    flex-flow: column;
+    gap: 1em;
+}
+
+.edit-restaurant-form input, .edit-restaurant-form select {
+    width: 100%;
+    padding: 1em;
+    border: none;
+    border-radius: 10px;
+
+    background-color: var(--items-color);
+    color: var(--text-color);
+
+    font-size: 1rem;
+}
+
+.edit-restaurant-form input[type=file] {
+    background-color: transparent;
+    padding: 0;
+}
+
+.edit-restaurant-form input::file-selector-button {
+    background-color: var(--button-color);
+    color: var(--text-color);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: .5em 1em;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.edit-restaurant-form input::file-selector-button:hover {
+    background-color: var(--input-color);
+    color: var(--button-color);
+    border: 1px solid var(--button-color);
+}
+
+.edit-restaurant-buttons {
+    display: flex;
+    flex-flow: row;
+    gap: .5em;
 }
 
 .restaurant-rating {
@@ -121,12 +168,18 @@
     font-size: 1.2rem;
 }
 
+.restaurant-reviews--review {
+    display: flex;
+    flex-flow: column;
+    gap: 1em;
+}
+
 .restaurant-reviews--review ul {
     padding: 1em;
 
     display: flex;
     flex-flow: column;
-    gap: 1em;
+    gap: em;
 
     background-color: var(--input-color);
     border-radius: 10px;
@@ -163,4 +216,87 @@
 
 .restaurant-website:hover {
     background-color: var(--items-color);
+}
+
+
+
+
+
+.edit-review-form {
+    background-color: var(--main-color);
+    border-radius: 10px;
+    padding: 1em;
+    gap: .5em;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 800px;
+}
+
+.edit-review-form textarea, .edit-review-form input {
+    display: block;
+    width: 100%;
+    max-width: 1000px;
+
+    background-color: white;
+    color: black;
+    padding: 1em;
+
+    border: none;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.editing-review {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.edit-review-form input[type="file"] {
+    background-color: transparent;
+    padding: 0;
+    color: white;
+}
+
+.edit-review-form input::file-selector-button {
+    background-color: var(--button-color);
+    color: var(--text-color);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: .5em 1em;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.edit-review-form input::file-selector-button:hover {
+    background-color: var(--input-color);
+    color: var(--button-color);
+    border: 1px solid var(--button-color);
+}
+
+.edit-review-form-buttons {
+    display: flex;
+    flex-flow: row;
+    gap: .5em;
+    margin-top: 1em;
+    width: 100%;
+}
+
+.edit-review-form-buttons button {
+    width: 100%;
 }

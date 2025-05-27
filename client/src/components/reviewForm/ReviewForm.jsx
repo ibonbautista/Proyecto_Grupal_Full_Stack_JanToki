@@ -2,7 +2,7 @@ import { useState } from "react";
 import { addReview, getReviewsByRestaurant } from "../../utils/api/review";
 import "./ReviewForm.css";
 
-function ReviewForm({ restaurantId, setReviews }) {
+function ReviewForm({ restaurantId, refreshReviews }) {
 	const [reviewText, setReviewText] = useState("");
 	const [rating, setRating] = useState(0);
 	const [image, setImage] = useState(null);
@@ -26,17 +26,11 @@ function ReviewForm({ restaurantId, setReviews }) {
 			setReviewText("");
 			setRating(0);
 			setImage(null);
-			
-			try {
-				const res = await getReviewsByRestaurant(restaurantId);
-				setReviews(res.results || []);
-			} catch (error) {
-				if (error.message === "No reviews for this restaurant") {
-					setReviews([]);
-				} else {
-					console.error("Error al obtener reseñas:", error);
-				}
+
+			if (refreshReviews) {
+				await refreshReviews();
 			}
+			
 		} catch (error) {
 			console.error("Error al agregar reseña:", error);
 			setError("Error al agregar reseña");

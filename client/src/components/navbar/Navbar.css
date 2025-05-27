@@ -66,3 +66,16 @@ body.light-theme .logo-dark {
     align-items: center;
     gap: 1em;
 }
+
+
+@media(max-width: 768px) {
+    .nav-logo {
+        width: 100px;
+    }
+    .nav-items {
+        gap: .5em;
+    }
+    .nav-items button {
+        font-size: .8rem;
+    }
+}
