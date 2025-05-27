@@ -47,7 +47,7 @@
 
 ## 🗄️ Estructura de carpetas (resumen)
 
-### Backend (`/backend`)
+### Backend (`/server`)
 ```
 /controllers
     authController.js        → Controla el registro, login y autenticación de usuarios
@@ -75,8 +75,11 @@
     → Archivos relacionados con la configuración y despliegue en Docker (Dockerfile, docker-compose.yml, etc.)
 
 
+
+```
 ### Frontend (`/client`)
 ```
+
 /components
     categoriesList/          → Lista de categorías de restaurantes
     createRestaurantForm/    → Formulario para crear nuevos restaurantes
@@ -106,7 +109,7 @@
 /utils
     → Funciones reutilizables, helpers, validaciones, etc.
 
-
+```
 ---
 
 ## 📦 Instalación local
