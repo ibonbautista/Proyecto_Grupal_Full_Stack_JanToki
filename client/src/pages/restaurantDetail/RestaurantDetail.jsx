@@ -197,8 +197,8 @@ function RestaurantDetail() {
 
 				{userData?.isAdmin && (
 					<div className="admin-controls">
-						<button onClick={() => handleEdit()}>Editar restuarante</button>
-						<button onClick={() => handleDelete()}>Eliminar restuarante</button>
+						<button onClick={() => handleEdit()}>Editar restaurante</button>
+						<button onClick={() => handleDelete()}>Eliminar restaurante</button>
 					</div>
 				)}
 
