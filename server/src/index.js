@@ -7,6 +7,7 @@ import { connectDB } from "./config/mongoose.js";
 import errorHandler from "./middlewares/errorHandler.js";
 import path, { dirname } from "path";
 import { fileURLToPath } from "url";
+import { swaggerUi, swaggerSpec } from "../swagger.js";
 
 dotenv.config();
 connectDB();
@@ -31,6 +32,7 @@ app.use(cookieParser());
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.use("/images", express.static(path.join(__dirname, "public", "images")));
 app.use(express.static(path.join(__dirname, "public")));
