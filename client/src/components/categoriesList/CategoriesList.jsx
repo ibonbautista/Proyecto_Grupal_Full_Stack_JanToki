@@ -80,7 +80,7 @@ function CategoriesList({ onSelectCategory }) {
                         </div>
 
                         {categories.map((category) => (
-                            <div className="categories-item" onClick={() => onSelectCategory(category)}>
+                            <div key={category} className="categories-item" onClick={() => onSelectCategory(category)}>
                                 <div className="categories-img">
                                     <img src={`../../../public/images/${category.toLowerCase()}.jpg`} alt="category-icon" />
                                 </div>

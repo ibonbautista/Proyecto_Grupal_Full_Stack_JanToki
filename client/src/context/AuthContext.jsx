@@ -62,7 +62,6 @@ const AuthProvider = ({children}) => {
 		} else {
 			setUserData({ ...result.user, isAdmin: result.user.role === "admin" });
 			navigate("/");
-			console.log("token",result.token);
 			return {success: true};
 		}
 	}

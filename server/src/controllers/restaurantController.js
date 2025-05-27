@@ -190,9 +190,20 @@ const updateRestaurant = async (req, res, next) => {
       const { CuisineType, Brands, MichelinStars, RepsolSuns, Recommended } = Categories;
 
       const validCategories = [
-        "asador", "sideria", "fusion", "alta cocina", "tradicional", "pintxos",
-        "variado", "marisqueria", "asiatica", "vegetariano", "halal", "vegano",
-        "francesa", "italiana", "riojana", "mediterranea", "internacional"
+        'moderna',
+        'alta cocina',
+        'asador',
+        'tradicional',
+        'sidreria',
+        'fusion',
+        'pintxos',
+        'marisqueria',
+        'internacional',
+        'asiatica',
+        'francesa',
+        'autor',
+        'contemporanea',
+        'vegetariana'
       ];
 
       if (CuisineType !== undefined && !validCategories.includes(CuisineType)) {
