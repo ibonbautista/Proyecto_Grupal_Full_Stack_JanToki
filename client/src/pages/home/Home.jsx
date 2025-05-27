@@ -44,28 +44,28 @@ function Home() {
 	}, [currentPage]);
 
 	const goToPage = (newPage) => {
-		navigate(`?page=${newPage}`);
+		const currentParams = new URLSearchParams(searchParams); // para acceder a los parámetros
+		currentParams.set("page", newPage);
+		navigate(`?${currentParams.toString()}`);
 	};
 
 	const handleCategorySelect = (category) => {
 		setSelectedCategory(category);
-		console.log("category", category)
+		const currentParams = new URLSearchParams(searchParams); // para acceder a los parámetros
 		if (category) {
-			const filtered = restaurants.filter(r =>
-				r.Categories?.CuisineType?.toLowerCase() === category.toLowerCase(),
-			);
-			setFilteredRestaurants(filtered);
-			console.log("filtered", filtered)
+			currentParams.set("Category", category);
 		} else {
-			setFilteredRestaurants(restaurants);
-			console.log("restaurants", restaurants);
+			currentParams.delete("Category");
 		}
+		currentParams.set("page", 1);
+		navigate(`?${currentParams.toString()}`);
 	};
 
 	useEffect(() => {
-		if (!selectedCategory) {
-			setFilteredRestaurants(restaurants);
-		}
+		const categoryFromURl = searchParams.get('category');
+		setSelectedCategory(categoryFromURl);
+
+		setFilteredRestaurants(restaurants);
 	}, [restaurants, selectedCategory]);
 
 

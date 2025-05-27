@@ -5,6 +5,9 @@ import LoginModal from "../../components/loginModal/LoginModal";
 import RegisterModal from "../../components/registerModal/RegisterModal";
 import { AuthProvider } from "../../context/AuthContext";
 
+import LightLogo from '../../../public/images/JanToki.svg';
+import DarkLogo from '../../../public/images/JanToki-white.svg';
+
 function Root() {
     const [showLoginModal, setShowLoginModal] = useState(false);
     const [showRegisterModal, setShowRegisterModal] = useState(false);
@@ -43,7 +46,12 @@ function Root() {
                     )}
                 </button>
             </main>
-            <footer></footer>
+            <footer>
+                <img src={LightLogo} alt="logo claro" className='logo logo-light' />
+                <img src={DarkLogo} alt="logo oscuro" className='logo logo-dark' />
+
+                <p>Copyright © 2025</p>
+            </footer>
         </AuthProvider>
     );
 }

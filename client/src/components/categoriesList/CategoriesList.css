@@ -3,15 +3,15 @@
     overflow-x: auto;
     scroll-behavior: smooth;
     width: 100%;
-    padding: 0 2rem;
 }
 
 .scroll-container::-webkit-scrollbar {
-	display: none;
+    display: none;
 }
+
 .scroll-container {
-	-ms-overflow-style: none; 
-	scrollbar-width: none;  
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .scroll-wrapper {
@@ -92,4 +92,28 @@
     align-items: center;
 
     border-radius: 100px;
+}
+
+
+
+
+
+@media(max-width: 768px) {
+    .categories-list {
+        text-align: center;
+    }
+
+    .scroll-button {
+        display: none;
+    }
+
+    .categories-img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .categories-item p {
+        font-size: 1rem;
+        text-align: center;
+    }
 }

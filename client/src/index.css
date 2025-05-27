@@ -250,11 +250,26 @@ button:hover {
   align-items: center;
 }
 
+footer {
+    width: 100vw;
+
+    background-color: var(--input-color);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+
+    padding: 2em;
+}
+
 body.light-theme {
   --main-color: #FEF9F3;
   --searchbar-color: #ebebebbb;
   --button-color: #FF956D;
-  --items-color: #ffebe6;
-  --input-color: #ffebe6;
+  --items-color: #ffe0d9;
+  --input-color: #ffe0d9;
   --text-color: #3E3E3E;
 }

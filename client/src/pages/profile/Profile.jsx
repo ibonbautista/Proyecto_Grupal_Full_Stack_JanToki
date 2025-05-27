@@ -6,6 +6,10 @@ import { ReviewsList } from "../../components/reviewsList/ReviewsList";
 import { updateUser } from "../../utils/api/user";
 import { CreateRestaurantForm } from "../../components/createRestaurantForm/CreateRestaurantForm";
 
+import LightLogo from '../../../public/images/JanToki.svg';
+import DarkLogo from '../../../public/images/JanToki-white.svg';
+
+
 import './Profile.css';
 
 function Profile() {
@@ -21,7 +25,7 @@ function Profile() {
     const [confirmPassword, setConfirmPassword] = useState("");
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
-	const [showCreateForm, setShowCreateForm] = useState(false);
+    const [showCreateForm, setShowCreateForm] = useState(false);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -51,7 +55,10 @@ function Profile() {
     return (
         <article className="my-profile">
             <section className="my-profile__index">
-                <h2>Jantoki</h2>
+                <div className="my-profile__logo">
+                    <img src={LightLogo} alt="logo claro" className='logo logo-light' />
+                    <img src={DarkLogo} alt="logo oscuro" className='logo logo-dark' />
+                </div>
                 <div className="index-item" onClick={() => setActiveSection("profile")}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-person" viewBox="0 0 16 16">
                         <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
@@ -71,22 +78,25 @@ function Profile() {
                     </svg>
                     <p className="reviews-link">Reseñas</p>
                 </div>
+                <div className="index-item create-restaurant-button">
+                    {userData.isAdmin && (
+                        <button
+                            onClick={() => setActiveSection("createRestaurant")}
+                        >
+                            Crear restaurante
+                        </button>
+                    )}
+                </div>
             </section>
 
             <section className="my-profile__content">
                 <section className={`my-profile__data ${activeSection === "profile" ? "active" : "hidden"}`}>
                     <h2>Datos personales</h2>
-					{userData.isAdmin && (
-						<button
-							onClick={() => setActiveSection("createRestaurant")}
-							className="create-restaurant-button"
-						>
-							Crear restaurante
-						</button>
-					)}
+
                     <div className="data--info">
-                        <img src="https://placehold.co/100x100" className="data--info-logo" alt="Perfil" />
-                        <div className="data--info-name">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="data--info-logo" width="60" height="60" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
+                        </svg>                        <div className="data--info-name">
                             <h3 className="data--name">{userData.username}</h3>
                             <p className="data--email">{userData.email}</p>
                         </div>
@@ -106,16 +116,16 @@ function Profile() {
                 </section>
 
                 <section className={`my-profile__restaurants ${activeSection === "favorites" ? "active" : "hidden"}`}>
-                    <FavoritesList/>
+                    <FavoritesList />
                 </section>
 
                 <section className={`my-profile__reviews ${activeSection === "reviews" ? "active" : "hidden"}`}>
-					<ReviewsList/>
+                    <ReviewsList />
                 </section>
 
-				<section className={`my-profile__create-restaurant ${activeSection === "createRestaurant" ? "active" : "hidden"}`}>
-					<CreateRestaurantForm onCreated={() => setActiveSection("profile")}/>
-				</section>
+                <section className={`my-profile__create-restaurant ${activeSection === "createRestaurant" ? "active" : "hidden"}`}>
+                    <CreateRestaurantForm onCreated={() => setActiveSection("profile")} />
+                </section>
             </section>
         </article>
     );

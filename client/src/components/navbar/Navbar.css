@@ -9,8 +9,8 @@ header {
 
     background-color: var(--input-color);
     display: flex;
-    justify-content: center;  
-    align-items: center;  
+    justify-content: center;
+    align-items: center;
 
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
@@ -23,6 +23,31 @@ header nav {
     flex-flow: row;
     justify-content: center;
     align-items: center;
+}
+
+.nav-logo a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 100%;
+    height: 30px;
+}
+
+/* Por defecto, solo se muestra el logo oscuro */
+.logo-light {
+    display: none;
+}
+
+/* Si el body tiene la clase 'light-theme', se invierte */
+body.light-theme .logo-light {
+    display: inline;
+}
+
+body.light-theme .logo-dark {
+    display: none;
 }
 
 .nav-list {

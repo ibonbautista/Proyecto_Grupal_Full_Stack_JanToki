@@ -12,7 +12,8 @@ function SearchFilter({ onSearch }) {
 		const params = {};
 		if (name.trim()) {
 			params.name = name.trim();
-		} else if (town.trim()) {
+		}
+		if (town.trim()) {
 			params.town = town.trim();
 		}
 		params.page = 1;

@@ -41,7 +41,7 @@ function RegisterModal({ onClose }) {
 					<label>Contraseña:
 						<input type="password" required value={password} onChange={(e) => setPassword(e.target.value)} />
 					</label>
-					<label>Email:
+					<label>Repetir contraseña:
 						<input type="password" required value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
 					</label>
 					{error && <p className="modal-error">{error}</p>}

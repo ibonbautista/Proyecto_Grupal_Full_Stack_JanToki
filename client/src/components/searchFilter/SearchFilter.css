@@ -35,7 +35,7 @@
 
 .search-input input {
     padding: .5em 1em;
-    
+
     border: none;
     border-radius: 10px;
 
@@ -45,3 +45,24 @@
     color: var(--text-color);
 }
 
+
+
+@media(max-width: 768px) {
+
+    .search-bar {
+        width: 90%;
+        text-align: center;
+    }
+
+    .search-filter {
+        flex-flow: column;
+    }
+
+    .search-input {
+        flex-flow: column;
+    }
+
+    .search-input input {
+        text-align: center;
+    }
+}

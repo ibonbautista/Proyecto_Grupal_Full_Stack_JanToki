@@ -6,30 +6,35 @@ const BASE_URL = "http://localhost:3003";
 async function getAllRestaurants({ request }) {
 	const url = new URL(request.url); // para acceder a los parámetros
 	const page = url.searchParams.get("page") || 1; // extraer los parámetros
-	const name	= url.searchParams.get("name") || "";
+	const name = url.searchParams.get("name") || "";
 	const town = url.searchParams.get("town") || "";
-	
+	const category = url.searchParams.get("category") || "";
+
 	// Montar la query para llamar a la API con los filtros
 	let query = `?page=${page}&limit=10`;
 	if (name) {
 		query += `&Name=${name}`;
-	} else if (town) {
+	}
+	if (town) {
 		query += `&Municipality=${town}`;
 	}
+
+	if (category) {
+		query += `&CuisineType=${category}`;
+	}
 	// Llamar a la API con los filtros
-    const restaurants = await fetchData(`/restaurant${query}`);
-	console.log("restaurants", restaurants);
-    return restaurants;
+	const restaurants = await fetchData(`/restaurant${query}`);
+	return restaurants;
 }
 
-async function getRestaurantById({params}) {
-    const restaurant = await fetchData(`/restaurant/${params.id}`)
-    return restaurant;
+async function getRestaurantById({ params }) {
+	const restaurant = await fetchData(`/restaurant/${params.id}`)
+	return restaurant;
 }
 
 async function deleteRestaurant(id) {
-    const response = await fetchData(`/restaurant/${id}`, "DELETE")
-    return response
+	const response = await fetchData(`/restaurant/${id}`, "DELETE")
+	return response
 }
 
 async function createRestaurant(formData) {
@@ -55,7 +60,7 @@ async function createRestaurant(formData) {
 		throw new Error("Respuesta no válida del servidor");
 	}
 
-	if(!response.ok){
+	if (!response.ok) {
 		console.error("Error response:", response.status, responseData);
 		responseData.status = response.status;
 		throw new Error(responseData?.error || "Error en la solicitud");
@@ -67,7 +72,7 @@ async function createRestaurant(formData) {
 async function editRestaurant(restaurantId, formData) {
 	const url = BASE_URL + "/restaurant/" + restaurantId;
 	const token = getToken();
-    const response = await fetch(url, {
+	const response = await fetch(url, {
 		method: "PUT",
 		headers: {
 			Authorization: `Bearer ${token}`
@@ -84,17 +89,17 @@ async function editRestaurant(restaurantId, formData) {
 	if (!response.ok) {
 		throw new Error(responseData?.error || "Error al actualizar restaurante");
 	}
-    return responseData;
+	return responseData;
 }
 function getRestaurantImage(restaurant) {
-    const url = BASE_URL + "/images/" + restaurant.image;
-    return url
+	const url = BASE_URL + "/images/" + restaurant.image;
+	return url
 }
 export {
-    getAllRestaurants,
-    deleteRestaurant,
-    createRestaurant,
-    getRestaurantById,
-    editRestaurant,
-    getRestaurantImage
+	getAllRestaurants,
+	deleteRestaurant,
+	createRestaurant,
+	getRestaurantById,
+	editRestaurant,
+	getRestaurantImage
 }

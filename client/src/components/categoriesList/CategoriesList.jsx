@@ -29,10 +29,6 @@ function CategoriesList({ onSelectCategory }) {
         scrollRef.current.scrollBy({ left: -200, behavior: "smooth" });
     };
 
-    const scrollRight = () => {
-        scrollRef.current.scrollBy({ left: 200, behavior: "smooth" });
-    };
-
     const scrollLeftClick = () => {
         scrollRef.current.scrollBy({ left: -200, behavior: "smooth" });
     };
@@ -44,7 +40,6 @@ function CategoriesList({ onSelectCategory }) {
     const handleMouseDown = (e) => {
         setIsDragging(true);
         setStartX(e.pageX - scrollRef.current.offsetLeft);
-        setScrollLeft(scrollRef.current.scrollLeft);
     };
 
     const handleMouseLeave = () => setIsDragging(false);

@@ -1,5 +1,8 @@
 .restaurants-list--restaurants .restaurant {
     width: 100%;
+    max-width: 400px;
+    max-height: 400px;
+
     padding: 1em;
     background-color: var(--items-color);
     border-radius: 10px;
@@ -7,6 +10,8 @@
     display: flex;
     flex-flow: column;
     gap: 1em;
+
+    overflow: hidden;
 
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     transition: box-shadow 0.3s ease;
@@ -17,18 +22,26 @@
 }
 
 .restaurant-image {
-    width: 100%;
-    overflow: hidden;
     border-radius: 10px;
+    overflow: hidden;
+
+    height: 200px;
 }
 
 .restaurant-image img {
-    width: 100%s;
+    width: 100%;
     height: 100%;
     object-fit: cover;
     transition: all 0.3s ease;
 }
 
 .restaurant-image img:hover {
-    scale: 110%;
+    transform: scale(1.1);
+}
+
+.restaurant-card-rating {
+    display: flex;
+    flex-flow: row;
+    gap: .5em;
+    align-items: center;
 }
