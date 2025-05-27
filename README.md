@@ -218,4 +218,4 @@ Este proyecto está bajo la licencia MIT. Ver el archivo `LICENSE` para más det
 
 ## ✨ Autor
 
-**janToki** ha sido desarrollado por Sandra, Anaias, Ibon y Gaizka con ❤️ por la cultura gastronómica vasca.
+**janToki** ha sido desarrollado por Sandra, Anais, Ibon y Gaizka con ❤️ por la cultura gastronómica vasca.
