@@ -25,7 +25,7 @@ header nav {
     align-items: center;
 }
 
-.nav-logo {
+.nav-logo a {
     display: flex;
     justify-content: center;
     align-items: center;

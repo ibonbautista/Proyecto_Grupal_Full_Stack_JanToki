@@ -250,6 +250,21 @@ button:hover {
   align-items: center;
 }
 
+footer {
+    width: 100vw;
+
+    background-color: var(--input-color);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+
+    padding: 2em;
+}
+
 body.light-theme {
   --main-color: #FEF9F3;
   --searchbar-color: #ebebebbb;
