@@ -19,7 +19,7 @@ function RestaurantDetail() {
 	const [editData, setEditData] = useState({
 		Name: restaurant.Name || "",
 		Description: restaurant.Description || "",
-		CuisineType: restaurant.Categories?.CuisineType || "",
+		CuisineType: restaurant.Categories?.CuisineType?.toLowerCase() || "",
 		Phone: restaurant.Phone || "",
 		Website: restaurant.Website || "",
 		SocialMedia: restaurant.SocialMedia || "",
@@ -36,19 +36,22 @@ function RestaurantDetail() {
 		return (sum / reviewsList.length).toFixed(1);
 	};
 
+	const updateReviewAndRating = async () => {
+		try {
+			const res = await getReviewsByRestaurant(restaurant._id);
+			const reviewsList = res.results || [];
+			setReviews(reviewsList);
+			setAverageRating(calculateAverageRating(reviewsList));
+		} catch (error) {
+			console.error("Error al actualizar reseñas y rating", error);
+			setReviews([]);
+			setAverageRating(0);
+		}
+	}
+
 	useEffect(() => {
 		window.scrollTo({ top: 0 });
-		const fetchReviews = async () => {
-			try {
-				const res = await getReviewsByRestaurant(restaurant._id);
-				const reviewsList = res.results || [];
-				setReviews(reviewsList);
-				setAverageRating(calculateAverageRating(reviewsList));
-			} catch (error) {
-				console.error("Error al cargar reseñas:", error);
-			}
-		};
-		fetchReviews();
+		updateReviewAndRating();
 	}, [restaurant._id]);
 
 	const handleInputChange = (e) => {
@@ -131,9 +134,7 @@ function RestaurantDetail() {
 		try {
 			await updateReview(editingReview.id, formData);
 			setEditingReview(null);
-			const res = await getReviewsByRestaurant(restaurant._id);
-			setReviews(res.results || []);
-			setAverageRating(calculateAverageRating(res.results || []));
+			await updateReviewAndRating();
 		} catch (error) {
 			console.error("Error al actualizar la reseña:", error);
 		}
@@ -155,9 +156,7 @@ function RestaurantDetail() {
 		}
 		try {
 			await deleteReview(review._id);
-			const res = await getReviewsByRestaurant(restaurant._id);
-			setReviews(res.results || []);
-			setAverageRating(calculateAverageRating(res.results || []));
+			await updateReviewAndRating();
 		} catch (error) {
 			console.error("Error al eliminar la reseña:", error);
 		}
@@ -167,7 +166,8 @@ function RestaurantDetail() {
 		<article className="restaurant-page">
 			<button className="back-button" onClick={() => Navigate(-1)}>
 				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-caret-left" viewBox="0 0 16 16">
-					<path d="M10 12.796V3.204L4.519 8zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.50615.48-4.796A1 1 0 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753" /></svg>
+					<path d="M10 12.796V3.204L4.519 8zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753" />
+				</svg>
 			</button>
 			<section className="restaurant-detail">
 				<div className="restaurant-page-image">
@@ -210,26 +210,28 @@ function RestaurantDetail() {
 						}}>
 						<input type="text" name="Name" value={editData.Name} onChange={handleInputChange} placeholder="Nombre" />
 						<input type="text" name="Description" value={editData.Description} onChange={handleInputChange} placeholder="Descripción" />
-						<select name="CuisineType" value={editData.CuisineType} onChange={handleInputChange} required>
+						<select name="CuisineType" value={editData.CuisineType} onChange={handleInputChange}>
 							<option value="">Tipo de cocina</option>
 							{[
-								'Moderna',
-								'Alta cocina',
-								'Asador',
-								'Tradicional',
-								'Sidreria',
-								'Fusion',
-								'Pintxos',
-								'Marisqueria',
-								'Internacional',
-								'Asiatica',
-								'Francesa',
-								'Autor',
-								'Contemporanea',
-								'Vegetariana'
+								'moderna',
+								'alta cocina',
+								'asador',
+								'tradicional',
+								'sidreria',
+								'fusion',
+								'pintxos',
+								'marisqueria',
+								'internacional',
+								'asiatica',
+								'francesa',
+								'autor',
+								'contemporanea',
+								'vegetariana'
 							].map((cuisineType) => (
 								<option key={cuisineType} value={cuisineType}>
-									{cuisineType}
+									{cuisineType.split(' ')
+										.map(word => word.charAt(0).toUpperCase() + word.slice(1))
+										.join(' ')}
 								</option>
 							))}
 						</select>
@@ -268,17 +270,11 @@ function RestaurantDetail() {
 					<p>No hay reseñas todavía.</p>
 				) : (
 					<div className="restaurant-reviews--review">
-						{reviews.map((review, i) => (
+						{reviews.map((review) => (
 							<>
-								<ul>
-									<li className="review-user">
-										{review.user || "Anónimo"}:
-									</li>
-
-									<li>
-										{review.text}
-									</li>
-
+								<ul key={review._id}>
+									<li className="review-user">{review.user || "Anónimo"}:</li>
+									<li>{review.text}</li>
 									<li>
 										{<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
 											<path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z" />
@@ -310,29 +306,34 @@ function RestaurantDetail() {
 					</div>
 				)}
 				{editingReview && (
-					<form onSubmit={handleUpdateReview} className="edit-review-form">
-						<textarea
-							name="text"
-							value={editingReview.text}
-							onChange={handleEditInputChange}
-						/>
-						<input
-							type="number"
-							name="rating"
-							value={editingReview.rating}
-							onChange={handleEditInputChange}
-							min="0"
-							max="5"
-							step="1"
-						/>
-						<input
-							type="file"
-							name="image"
-							onChange={handleEditImageChange}
-						/>
-						<button type="submit">Guardar cambios</button>
-						<button type="button" onClick={() => setEditingReview(null)}>Cancelar</button>
-					</form>
+					<div className="editing-review">
+						<form onSubmit={handleUpdateReview} className="edit-review-form">
+							<h2>Editar reseña</h2>
+							<textarea
+								name="text"
+								value={editingReview.text}
+								onChange={handleEditInputChange}
+							/>
+							<input
+								type="number"
+								name="rating"
+								value={editingReview.rating}
+								onChange={handleEditInputChange}
+								min="0"
+								max="5"
+								step="1"
+							/>
+							<input
+								type="file"
+								name="image"
+								onChange={handleEditImageChange}
+							/>
+							<div className="edit-review-form-buttons">
+								<button type="submit">Guardar cambios</button>
+								<button type="button" onClick={() => setEditingReview(null)}>Cancelar</button>
+							</div>
+						</form>
+					</div>
 				)}
 
 				{userData && (
@@ -340,7 +341,7 @@ function RestaurantDetail() {
 						<h3>Deja tu reseña</h3>
 						<ReviewForm
 							restaurantId={restaurant._id}
-							setReviews={setReviews}
+							refreshReviews={updateReviewAndRating}
 						/>
 					</div>
 				)}
