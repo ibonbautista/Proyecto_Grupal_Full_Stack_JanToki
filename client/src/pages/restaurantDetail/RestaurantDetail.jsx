@@ -121,7 +121,6 @@ function RestaurantDetail() {
 
 	const handleUpdateReview = async (e) => {
 		e.preventDefault();
-		console.log("editingReview", editingReview);
 
 		const formData = new FormData();
 		formData.append("text", editingReview.text);
@@ -214,9 +213,20 @@ function RestaurantDetail() {
 						<select name="CuisineType" value={editData.CuisineType} onChange={handleInputChange} required>
 							<option value="">Tipo de cocina</option>
 							{[
-								"asador", "sidreria", "fusion", "alta cocina", "tradicional", "pintxos",
-								"marisqueria", "asiatica", "francesa", "italiana", "riojana", "mediterranea",
-								"internacional", "moderna", "autor", "contemporanea", "vegetariana"
+								'Moderna',
+								'Alta cocina',
+								'Asador',
+								'Tradicional',
+								'Sidreria',
+								'Fusion',
+								'Pintxos',
+								'Marisqueria',
+								'Internacional',
+								'Asiatica',
+								'Francesa',
+								'Autor',
+								'Contemporanea',
+								'Vegetariana'
 							].map((cuisineType) => (
 								<option key={cuisineType} value={cuisineType}>
 									{cuisineType}

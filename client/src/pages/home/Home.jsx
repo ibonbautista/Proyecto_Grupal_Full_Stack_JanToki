@@ -53,19 +53,28 @@ function Home() {
 		setSelectedCategory(category);
 		const currentParams = new URLSearchParams(searchParams); // para acceder a los parámetros
 		if (category) {
-			currentParams.set("Category", category);
+			currentParams.set("category", category);
 		} else {
-			currentParams.delete("Category");
+			currentParams.delete("category");
 		}
 		currentParams.set("page", 1);
 		navigate(`?${currentParams.toString()}`);
 	};
 
 	useEffect(() => {
-		const categoryFromURl = searchParams.get('category');
-		setSelectedCategory(categoryFromURl);
+		const categoryFromURL = searchParams.get("category");
+		setSelectedCategory(categoryFromURL);
+	}, [restaurants, selectedCategory]);
 
-		setFilteredRestaurants(restaurants);
+	useEffect(() => {
+		if (!selectedCategory) {
+			setFilteredRestaurants(restaurants);
+		} else {
+			const filtered = restaurants.filter(r =>
+				r.Categories?.CuisineType?.toLowerCase() === selectedCategory.toLowerCase(),
+			);
+			setFilteredRestaurants(filtered);
+		}
 	}, [restaurants, selectedCategory]);
 
 
@@ -74,7 +83,6 @@ function Home() {
 			<section className="searchbar">
 				<SearchFilter />
 			</section>
-			{/* <img src="/src/assets/logotipo.svg" alt="logotipo" className='logotipo-home-page' /> */}
 			<CategoriesList onSelectCategory={handleCategorySelect} />
 			<div ref={restaurantsRef}>
 				<RestaurantsList restaurants={filteredRestaurants} />

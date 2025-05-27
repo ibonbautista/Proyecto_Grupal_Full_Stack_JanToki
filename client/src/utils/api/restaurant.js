@@ -20,7 +20,7 @@ async function getAllRestaurants({ request }) {
 	}
 
 	if (category) {
-		query += `&CuisineType=${category}`;
+		query += `&Categories=${category}`;
 	}
 	// Llamar a la API con los filtros
 	const restaurants = await fetchData(`/restaurant${query}`);
