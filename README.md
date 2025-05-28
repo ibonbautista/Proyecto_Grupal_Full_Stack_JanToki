@@ -1,4 +1,4 @@
-# Proyecto_Grupal_Full_Stack_JanToki# 🍽️ janToki
+# 🍽️ janToki
 
 **janToki** es una aplicación web full-stack que conecta a los amantes de la gastronomía vasca con restaurantes organizados por categorías como **asador**, **alta cocina**, **sidrería**, **fusion**, **pintxos**, y muchas más. Los usuarios pueden descubrir, valorar y guardar sus restaurantes favoritos, mientras que los administradores pueden gestionar el contenido de la plataforma.
 
