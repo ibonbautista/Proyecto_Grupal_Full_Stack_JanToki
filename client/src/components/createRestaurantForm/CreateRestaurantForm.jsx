@@ -59,7 +59,7 @@ export function CreateRestaurantForm({ onCreated }) {
 		if (formData.Address) form.append("Address", formData.Address);
 		form.append("Latitude", formData.Latitude);
 		form.append("Longitude", formData.Longitude);
-		form.append("Categories[CuisineType]", formData.CuisineType).toLowerCase();
+		form.append("Categories[CuisineType]", formData.CuisineType.toLowerCase());
 		if (formData.Phone) form.append("Phone", formData.Phone);
 		if (formData.Website) form.append("Website", formData.Website);
 		if (formData.SocialMedia) form.append("SocialMedia", formData.SocialMedia);
